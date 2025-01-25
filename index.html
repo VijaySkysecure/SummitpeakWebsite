@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-3">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+          <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
+          <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Career</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Our Process</a>
+            </li>
+          </ul>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="me-2"
+            ><i class="bi bi-facebook" style="color: #1877f2"></i
+          ></a>
+          <a href="#" class="me-2"
+            ><i class="bi bi-envelope" style="color: #ea4335"></i
+          ></a>
+          <a href="#" class="me-2"
+            ><i class="bi bi-instagram" style="color: #c13584"></i
+          ></a>
+          <a href="#"><i class="bi bi-linkedin" style="color: #0077b5"></i></a>
+        </div>
+      </div>
+    </header>
+ 
+    <section class="home-banner">
+        <img src="img/home/homebanner.png" alt="Banner Image" class="banner-image">
+        <div class="banner-content">
+        </div>
+    </section>
+
+    <button class="get-started-btn">Get Started</button>
+
+    <!-- Partner Logos -->
+    <img src="img/partner-logos.png" alt="Partner Logos" class="centered-image">
+
+
+    <!--Who We Are-->
+        <section class="whoweare-section">
+            <div class="whoweare-content">
+              <h1>Who We Are</h1>
+              <h2 class="highlight-text">
+                Trusted For Driving Innovation And<br>Unlocking New Possibilities
+              </h2>
+              <p>
+                At SummitPeak Software, we excel in providing innovative technology<br>solutions designed to empower businesses. With
+                a client-centric<br>focus and a commitment to innovation, we ensure each project<br>achieves its highest potential.
+              </p>
+            </div>
+        
+            <div class="whoweare-image">
+              <img src="img/home/wwa1.png" alt="Image 1" class="carousel-image">
+              <img src="img/home/wwa2.png" alt="Image 2" class="carousel-image">
+            </div>
+        </section>
+        
+          <script>
+            let currentImageIndex = 0;
+            const images = document.querySelectorAll('.carousel-image');
+            const totalImages = images.length;
+        
+            function changeImage() {
+              // Remove the "active" class from the current image
+              images[currentImageIndex].classList.remove('active');
+        
+              // Increment the image index
+              currentImageIndex = (currentImageIndex + 1) % totalImages;
+        
+              // Add the "active" class to the next image
+              images[currentImageIndex].classList.add('active');
+            }
+        
+            // Change image every 2 seconds (2000 milliseconds)
+            setInterval(changeImage, 2000);
+        
+            // Initially show the first image
+            images[currentImageIndex].classList.add('active');
+          </script>
+
+    <section class="statistics-section">
+        <div class="statistics-container">
+        <!-- Numbers -->
+        <div class="stat">
+            <h1 class="stat-number" style="color: lightpink;">5+</h1>
+            <p class="stat-text">Years Experience</p>
+        </div>
+        <div class="stat">
+            <h1 class="stat-number" style="color: lightblue;">250+</h1>
+            <p class="stat-text">Clients Served</p>
+        </div>
+        <div class="stat">
+            <h1 class="stat-number" style="color: lightgreen;">50+</h1>
+            <p class="stat-text">Team Members</p>
+        </div>
+        </div>
+
+
+        <!-- Button -->
+        <button class="read-more-btn">Read More</button>
+    </section>
+
+        <!--Our Services Section-->
+        <section class="our-services">
+            <h1>Our Services</h1>
+            <h2 class="highlight-text">
+                Solutions That Elevate Your Business
+              </h2>
+            <p class="services-description">
+              From innovative software development to seamless IT solutions, SummitPeak Software offers a range of services designed to meet your
+              unique business needs.<br>We specialize in delivering cutting-edge technologies, ensuring efficiency, scalability and success for clients worldwide.
+            </p>
+          
+            <div class="centered-tab-container">
+              <button class="tab-button active" data-target="build-an-app">Build An Application</button>
+              <button class="tab-button" data-target="cloud-adoption">Cloud Adoption</button>
+              <button class="tab-button" data-target="web-presence">Web Presence Solutions</button>
+              <button class="tab-button" data-target="trending-tech">Trending Technology</button>
+            </div>
+          
+            <div class="tab-content">
+              <img id="build-an-app" class="service-image active" src="img/home/buildanapp.png" alt="Build An Application">
+              <img id="cloud-adoption" class="service-image" src="img/home/cloudadoption.png" alt="Cloud Adoption">
+              <img id="web-presence" class="service-image" src="img/home/webprescence.png" alt="Web Presence Solutions">
+              <img id="trending-tech" class="service-image" src="img/home/trendingtech.png" alt="Trending Technology">
+            </div>
+          
+            <button class="explore-more-btn">Explore More</button>
+        </section>
+
+        <script>
+            const tabButtons = document.querySelectorAll(".tab-button");
+            const serviceImages = document.querySelectorAll(".service-image");
+
+            // Add click event listeners to each button
+            tabButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                // Remove active class from all buttons and images
+                    tabButtons.forEach(btn => btn.classList.remove("active"));
+                    serviceImages.forEach(image => image.classList.remove("active"));
+
+                    // Add active class to the clicked button and its corresponding image
+                    button.classList.add("active");
+                     const targetId = button.getAttribute("data-target");
+                    document.getElementById(targetId).classList.add("active");
+                });
+            });
+        </script>
+
+    <div class="contact-section">
+        <div class="content">
+        <h2 class="main-text">Which custom development service are you<br>looking for?</h2>
+        <p class="sub-text">Share your requirements with our industry leading team of experts and leverage best-in-class software<br>
+        development teams to launch applications that represent your business.</p>
+        <button class="contact-btn">Contact Us</button>
+        </div>
+    </div>
+
+    <!--Technology Stack Section-->
+    <section class="our-services">
+        <h2 class="highlight-text">
+            Technology Stack
+          </h2>
+        <p class="services-description">
+          We specialize in leveraging advanced technology stacks to deliver innovative solutions tailored to your brand.
+      
+        <div class="centered-tab-container">
+          <button class="tab-button active" data-target="frontend">Frontend</button>
+          <button class="tab-button" data-target="backend">Backend</button>
+          <button class="tab-button" data-target="mobileapp">Mobile App</button>
+          <button class="tab-button" data-target="cloud">Cloud</button>
+          <button class="tab-button" data-target="databases">Databases</button>
+        </div>
+      
+        <div class="tab-content">
+          <img id="frontend" class="tech-image active" src="img/home/frontend.png" alt="Frontend">
+          <img id="backend" class="tech-image" src="img/home/backend.png" alt="Backend">
+          <img id="mobileapp" class="tech-image" src="img/home/mobileapp.png" alt="Mobile App">
+          <img id="cloud" class="tech-image" src="img/home/cloud.png" alt="Cloud">
+          <img id="databases" class="tech-image" src="img/home/databases.png" alt="Databases">
+        </div>
+
+
+        <script>
+          const techTabButtons = document.querySelectorAll(".tab-button");
+          const techImages = document.querySelectorAll(".tech-image");
+
+          // Add click event listeners to each button
+          techTabButtons.forEach(button => {
+              button.addEventListener("click", () => {
+              // Remove active class from all buttons and images
+                  techTabButtons.forEach(btn => btn.classList.remove("active"));
+                  techImages.forEach(image => image.classList.remove("active"));
+
+                  // Add active class to the clicked button and its corresponding image
+                  button.classList.add("active");
+                   const targetId = button.getAttribute("data-target");
+                  document.getElementById(targetId).classList.add("active");
+              });
+          });
+      </script>
+  
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

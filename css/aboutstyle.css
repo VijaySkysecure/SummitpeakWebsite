@@ -1,0 +1,201 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+nav {
+  display: flex;
+}
+
+.nav-link {
+  color: #666;
+  font-weight: 500;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: teal;
+  text-shadow: 0 0 5px teal;
+}
+
+.nav-link.active {
+  color: teal;
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Align icons vertically */
+  gap: 20px; /* Adds space between each icon */
+}
+
+.social-icons a {
+  font-size: 1.5rem; /* Increase icon size */
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+}
+
+.about-content {
+  flex: 1;
+  margin-left: 90px;
+}
+
+.about-content h1 {
+  font-size: 2rem; 
+}
+
+.highlight-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: teal;
+  margin: 20px 0;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  text-align: right;
+  margin-left: 30px; /* Add spacing to move the image further right */
+}
+
+.about-image img {
+  width: 90%; /* Adjust if needed to control the size */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stats-section {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: teal;
+}
+
+.stat-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: teal;
+  margin: 10px 0;
+}
+
+.stat-description {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Our Team Section */
+.ourteam {
+  padding: 60px 20px;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.ourteam h1 {
+  font-size: 2rem;
+  color: #000; /* Black title */
+  margin-bottom: 10px;
+  text-align: left; /* Align text to the left */
+}
+
+.ourteam h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: teal; /* Highlight text color */
+  margin: 20px 0;
+  text-align: left; /* Align text to the left */
+}
+
+.ourteam p {
+  font-size: 1rem;
+  color: #666; /* Muted text */
+  line-height: 1.6;
+  width: 100%; /* Make it span the full width */
+  margin: 20px 0; /* Add vertical spacing */
+}
+
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px; /* Added margin to add gap from the previous section */
+}
+
+.team-member {
+  width: 95%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: scale(1.05); /* Hover effect */
+}
+
+/* Show More Button */
+.show-more {
+  background: linear-gradient(to right, #007bff, #4e8ef7);
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 40px; /* Added margin to create more gap from the team grid */
+  transition: background 0.3s;
+  display: block;  /* Centering the button */
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.show-more:hover {
+  background: linear-gradient(to right, #0056b3, #3a77d1);
+}
+
+
+

@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+   
+  header {
+    border-bottom: 1px solid #e0e0e0;
+  }
+   
+  nav .nav-link {
+    color: #666; /* Use a more specific gray color */
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+  }
+   
+  nav .nav-link:hover {
+    color: teal;
+    text-shadow: 0 0 5px teal;
+  }
+
+  .social-icons {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Align icons vertically */
+    gap: 20px; /* Adds space between each icon */
+  }
+  
+  .social-icons a {
+    font-size: 1.5rem; /* Increase icon size */
+  }
+   
+  .contact-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: teal;
+  }
+   
+  .contact-section .badge {
+    transition: transform 0.2s ease-in-out;
+  }
+   
+  .contact-section .badge:hover {
+    transform: scale(1.1);
+    background-color: #e0f7fa;
+  }
+   
+  .btn-gradient {
+    background: linear-gradient(to right, teal, blue);
+    color: white;
+    border: none;
+    padding: 1rem 2rem; /* Add padding for better button appearance */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    transition: background 0.3s ease-in-out;
+  }
+   
+  .badge-container {
+      display: flex;
+      flex-wrap: wrap; /* Allows badges to wrap onto the next line */
+      gap: 10px; /* Space between badges */
+    }
+   
+    .badge-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+   
+    .badge-checkbox {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+   
+    .badge {
+      background-color: #f8f9fa;
+      color: black;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 1.1rem;
+      padding: 10px 20px; /* Adjust padding for better appearance */
+    }
+   
+    .badge-checkbox:checked + .badge {
+      background-color: #0e8285; /* Change to your desired active color */
+      color: white;
+      border-color: #0e8285;
+    }
+   
+    .badge-checkbox:not(:checked) + .badge:hover {
+      background-color: #e0f7fa; /* Optional hover color for unselected badges */
+      color: black;
+    }
+   
+  .btn-gradient:hover {
+    background: linear-gradient(to right, blue, teal);
+  }
+   
+  .map-section h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: teal;
+  }
