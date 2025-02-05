@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career</title>
+    <!-- Bootstrap CSS -->
+    <link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/careerstyles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-3">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+          <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
+          <ul class="nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="career.html" class="nav-link">Career</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="process.html" class="nav-link">Our Process</a></li>
+          </ul>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="me-2"
+            ><i class="bi bi-facebook" style="color: #1877f2"></i
+          ></a>
+          <a href="#" class="me-2"
+            ><i class="bi bi-envelope" style="color: #ea4335"></i
+          ></a>
+          <a href="#" class="me-2"
+            ><i class="bi bi-instagram" style="color: #c13584"></i
+          ></a>
+          <a href="#"><i class="bi bi-linkedin" style="color: #0077b5"></i></a>
+        </div>
+      </div>
+    </header>
+ 
+  <section class="about-section">
+    <div class="about-content">
+      <h1>Career</h1>
+      <h2 class="highlight-text">
+        Unlock Your<br>Potential, Build The<br>Future With Us
+      </h2>
+      <p>
+        At SummitPeak Software, we believe in fostering talent,<br>
+        encouraging growth, and creating opportunities for those<br>
+        who are passionate about technology and innovation. Join<br>
+        us and be a part of a dynamic team that's shaping the<br>future of software solutions.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="img/career/career01.png" alt="About Us" />
+    </div>
+  </section>
+
+  <button class="openings-btn">See Current Openings</button>
+
+  <section class="stats-section">
+    <div class="stat-item">
+      <img class="stat-image" src="img/career/bulb.png" alt="Years Experience Icon">
+      <p class="stat-title">Innovation</p>
+      <p class="stat-description">We foster a culture of continuous<br>learning and encourage creative<br>
+        thinking to drive innovation and stay<br>ahead in a rapidly evolving industry.</p>
+    </div>
+    <div class="stat-item">
+      <img class="stat-image" src="img/career/people.png" alt="Clients Served Icon">
+      <p class="stat-title">Customer Focus</p>
+      <p class="stat-description">Dedicated to surpassing customer<br>
+        expectations by understanding needs<br>and delivering solutions that meet<br>objectives.</p>
+    </div>
+    <div class="stat-item">
+      <img class="stat-image" src="img/career/hand.png" alt="Team Member Icon">
+      <p class="stat-title">Collaboration</p>
+      <p class="stat-description">We believe in the power of teamwork<br>and collaboration, valuing diverse<br>
+        perspectives and working together to<br>achieve common goals.</p>
+    </div>
+  </section>
+
+
+
+   
+      <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <h2>Available Opportunities</h2>
+          <div class="category active" data-category="developers">
+            Developers (7 openings)
+          </div>
+          <div class="category" data-category="design">Design (1 opening)</div>
+          <div class="category" data-category="quality">
+            Quality Analyst (1 opening)
+          </div>
+          <div class="category" data-category="sales">
+            Sales/Business (1 opening)
+          </div>
+          <div class="category" data-category="recruiter">
+            IT Recruiter (1 opening)
+          </div>
+        </div>
+   
+        <!-- Job Listings -->
+        <div class="content" id="job-listings">
+          <!-- Jobs will be injected here -->
+        </div>
+      </div>
+   
+      <script>
+        const jobData = {
+          developers: [
+            {
+              title: "Sr. Developer",
+              location: "Bangalore",
+              experience: "5+ Years",
+              description:
+                "Lead the development team and oversee project architecture.",
+            },
+            {
+              title: "UI Developer",
+              location: "Bangalore",
+              experience: "2+ Years",
+              description: "Develop user interfaces with modern UI frameworks.",
+            },
+            {
+              title: "Front End Developer",
+              location: "Bangalore",
+              experience: "2+ Years",
+              description:
+                "Implement front-end features and optimize performance.",
+            },
+            {
+              title: "Full Stack Developer",
+              location: "Bangalore",
+              experience: "2+ Years",
+              description: "Work on both front-end and back-end development.",
+            },
+            {
+              title: "UI Developer",
+              location: "Bangalore",
+              experience: "2+ Years",
+              description: "Create visually appealing and responsive designs.",
+            },
+          ],
+          design: [
+            {
+              title: "UX Designer",
+              location: "Bangalore",
+              experience: "3+ Years",
+              description: "Design user experiences and wireframes.",
+            },
+          ],
+          quality: [
+            {
+              title: "QA Engineer",
+              location: "Bangalore",
+              experience: "2+ Years",
+              description: "Test software and ensure quality standards.",
+            },
+          ],
+          sales: [
+            {
+              title: "Sales Manager",
+              location: "Bangalore",
+              experience: "4+ Years",
+              description: "Lead sales strategies and client relationships.",
+            },
+          ],
+          recruiter: [
+            {
+              title: "IT Recruiter",
+              location: "Bangalore",
+              experience: "2+ Years",
+              description: "Hire and manage IT talent.",
+            },
+          ],
+        };
+   
+        const categories = document.querySelectorAll(".category");
+        const jobListings = document.getElementById("job-listings");
+   
+        function displayJobs(category) {
+          jobListings.innerHTML = "";
+          if (jobData[category]) {
+            jobData[category].forEach((job) => {
+              const jobElement = document.createElement("div");
+              jobElement.classList.add("job");
+              jobElement.innerHTML = `
+    <div>
+      <h3>${job.title}</h3>
+    </div>
+    <div class="job-details">
+      <p>Location<br>
+        ${job.location}</p>
+      <p>Experience<br>
+        ${job.experience}</p>
+    </div>
+    <div class="arrow">
+      <img src="img/career/downarrow.png" alt="Arrow" />
+    </div>
+  `;
+   
+   
+   
+   
+              const jobDescription = document.createElement("div");
+              jobDescription.classList.add("job-description");
+              jobDescription.textContent = job.description;
+   
+              jobElement.addEventListener("click", () => {
+                jobDescription.style.display =
+                  jobDescription.style.display === "none" ? "block" : "none";
+              });
+   
+              jobListings.appendChild(jobElement);
+              jobListings.appendChild(jobDescription);
+            });
+          }
+        }
+   
+        categories.forEach((category) => {
+          category.addEventListener("click", () => {
+            categories.forEach((cat) => cat.classList.remove("active"));
+            category.classList.add("active");
+            displayJobs(category.getAttribute("data-category"));
+          });
+        });
+   
+        // Load default category (Developers)
+        displayJobs("developers");
+      </script>
+   
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+  </html>
+   

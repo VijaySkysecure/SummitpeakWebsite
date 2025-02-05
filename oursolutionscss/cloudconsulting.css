@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.nav-link {
+    font-size: 16px;
+    color: rgb(98, 97, 97);
+    margin-bottom: -6px;
+  }
+
+.nav-link {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link:hover {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link.active {
+  background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.social-icons {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Align icons vertically */
+  gap: 20px; /* Adds space between each icon */
+  margin-right: 40px;
+}
+
+.social-icons a {
+  font-size: 1.5rem; /* Increase icon size */
+}
+
+.itmgmt-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 10px;
+    margin-left: 30px;
+}
+  
+.itmgmt-content {
+    flex: 1;
+    margin-left: 80px;
+    width: 100%;
+    position: relative;
+}
+  
+.itmgmt-content h1 {
+    font-size: 2rem; 
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 75px;
+  
+}
+  
+.highlight-text {
+    font-family: 'Poppins', sans-serif; /* Added font-family */
+    font-size: 60px; /* Updated font size */
+    font-weight: 700; /* Font weight */
+    line-height: 82px; /* Line height */
+    text-align: left; /* Text alignment */
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 40px 0px;
+}
+  
+.itmgmt-content p {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(18, 18, 18, 1);
+}
+  
+.itmgmt-image {
+    flex: 1;
+    margin-right: -120px;
+    margin-top: 40px;
+}
+  
+.itmgmt-image img {
+    width: 70%; /* Adjust the width to 100% to fill the container */
+    max-width: 740px; /* Optional: limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    
+}
+  
+  
+.freequote-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Set the font family */
+    font-size: 18px; /* Set the font size */
+    font-weight: 700; /* Set the font weight */
+    line-height: 27px; /* Set the line height */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+  
+a {
+    text-decoration: none; /* Remove underline from all links */
+}
+
+.customitmgmtdesc {
+    margin-top: 70px;
+    width: 100%;
+}
+
+  
+.highlight-text1 {
+    font-weight: 600;
+    font-size: 36px;
+    background-image: linear-gradient(89deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 10px 0;
+}
+
+  
+.text-dark {
+    color: rgba(18, 18, 18, 1);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 95%; /* Make it span the full width */
+    margin: 20px 0; /* Add vertical spacing */
+}
+
+
+/* Subtitle (Key Benefits of Cloud Consulting) */
+.customitmgmtdesc .sub-title {
+    font-size: 20px;
+    font-weight: 550;
+    color: rgba(18, 18, 18, 1);
+    margin-top: 30px;
+    margin-bottom: 18px;
+}
+
+.customitmgmtdesc .bullet-points li {
+    font-size: 18px; /* Modify the font size of the points */
+    line-height: 1.2; /* Adjust vertical gap between points */
+    color: rgba(18, 18, 18, 1); /* Change text color (optional) */
+    margin-bottom: 14px; /* Vertical gap between points */
+}
+
+
+.process-section {
+    background-color: white; /* Background color of the inner section */
+    max-width: 100%;
+    padding: 40px;
+    margin: 60px 80px;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px; /* Rounded corners for the section */
+    border: 2px solid transparent; /* Base border, transparent */
+}
+
+.process-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px; /* Matching border radius for the section */
+    border: 2px solid transparent; /* Transparent base for the border */
+    z-index: -1;
+    padding: 2px; /* Make space for the gradient border */
+}
+
+.process-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    text-align: center;
+    background-image: linear-gradient(89deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.process-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.process-box {
+    width: 220px;
+    height: 100px;
+    padding: 45px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    position: relative;
+    background-color: white; /* Keep the box background white */
+    border-top-left-radius: 20px; /* Rounded corners on the top-left */
+    border-top-right-radius: 20px; /* Rounded corners on the top-right */
+    border: 2px solid; /* Transparent base for the border */
+}
+
+
+.process-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.process-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+}
+
+
+/* Cloud Implementation Consultation*/
+.customitmgmtdesc1 {
+    margin-top: 90px;
+    width: 100%;
+}
+
+  
+.highlight-text2 {
+    font-weight: 600;
+    font-size: 36px;
+    background-image: linear-gradient(89deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+}
+
+  
+.text-dark {
+    color: rgba(18, 18, 18, 1);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 95%; /* Make it span the full width */
+    margin: 20px 0; /* Add vertical spacing */
+}
+
+
+.customitmgmtdesc1 .bullet-points1 li {
+    font-size: 18px; /* Modify the font size of the points */
+    line-height: 1.6; /* Adjust vertical gap between points */
+    color: rgba(18, 18, 18, 1); /* Change text color (optional) */
+    margin-bottom: 28px; /* Vertical gap between points */
+}
+
+
+.hireadevdesc {
+    margin-top: 40px;
+    width: 100%;
+}
+
+  
+.highlight-text3 {
+    font-weight: 600;
+    font-size: 36px;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-left: 60px;
+}
+
+.custommobapp {
+    margin-top: 40px;
+    padding: 50px 0;
+}
+
+.container3 {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-bottom: 70px;
+}
+
+.custommobapp .text h2 {
+    font-size: 36px; /* Set font size */
+    font-weight: 600; /* Make the text bold */
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px; /* Add space below the heading */
+    line-height: 1.4; /* Adjust line height for better readability */
+}
+
+
+.rowreverse {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-right: 60px;
+    margin-bottom: 70px;
+}
+
+.rowreverse .text {
+    width: 55%;
+    text-align: left;
+    align-items: end;
+}
+
+.text {
+    width: 50%;
+}
+
+
+.customitmgmtdesc1 .bullet-points2 li {
+    font-size: 18px; /* Modify the font size of the points */
+    line-height: 1.6; /* Adjust vertical gap between points */
+    color: rgba(18, 18, 18, 1); /* Change text color (optional) */
+    margin-bottom: 22px; /* Vertical gap between points */
+}
+
+
+/* General styling for the section */
+.other-consultation-services {
+    background-color: #f0f0f0; /* Light grey background */
+    width: 100vw;
+    padding: 40px 0;
+    margin-left: calc(-50vw + 50%);
+
+}
+
+/* Title of the section */
+.other-consultation-services .section-title {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 40px;
+}
+
+/* Container for the row of service boxes */
+.other-consultation-services .row {
+    display: flex;
+    justify-content: space-between; /* Space between the boxes */
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-left: 60px;
+}
+
+/* Each service box styling */
+.other-consultation-services .service-box {
+    width: 30%; /* Each service box takes up 30% of the row width */
+    padding: 20px;
+}
+
+/* Title inside each service box */
+.other-consultation-services .service-title {
+    font-size: 24px;
+    font-weight: 600;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Bullet points styling */
+.other-consultation-services .bullet-points {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+/* Bullet point styling */
+.other-consultation-services .bullet-points li {
+    
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 10px;
+}
+
+/* Middot (•) customization */
+.other-consultation-services .bullet-points li::before {
+    content: "\2022"; /* Unicode for middot (•) */
+    color: #000000; /* Bullet color */
+    font-size: 18px; /* Bullet size */
+    margin-right: 10px; /* Space between bullet and text */
+    vertical-align: middle;
+}
+
+
+/* Wrapper for the entire section */
+.contact-section {
+    background-color: black; /* Black background */
+    padding: 40px 0; /* 40px padding on top and bottom */
+    margin-top: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+  
+  /* Inner content container */
+  .content {
+    text-align: center;
+    color: white; /* Default text color */
+  }
+  
+  /* Main text style */
+  .main-text {
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(80, 63, 166, 1)); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text transparent to show the gradient */
+    
+    font-size: 50px; /* Set font size */
+    font-weight: 700; /* Set font weight */
+    line-height: 65px; /* Set line height */
+    text-align: center; /* Center align the text */
+    text-underline-position: from-font; /* Text underline position */
+    text-decoration-skip-ink: none; /* Text decoration skip */
+    margin-bottom: 30px; /* Spacing between the elements */
+  }
+  
+  
+  /* Sub-text style */
+  .sub-text {
+    font-size: 0.9rem; /* 0.9rem font size */
+    margin-bottom: 30px; /* Spacing between the sub-text and button */
+    font-weight: 300;
+    font-size: 20px;
+  }
+  
+  /* Button style */
+  .contact-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers the button */
+    padding: 10px 30px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    color: white;
+    font-size: 16px; /* Set the font size */
+    font-weight: 550; /* Set the font weight */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }

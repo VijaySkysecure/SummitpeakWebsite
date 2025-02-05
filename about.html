@@ -15,7 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/aboutstyle.css" />
+    <link rel="stylesheet" href="css/aboutstyles.css" />
   </head>
   <body>
     <!-- Header -->
@@ -24,15 +24,15 @@
         <div class="d-flex align-items-center">
           <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
           <ul class="nav">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Career</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="career.html" class="nav-link">Career</a></li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Contact Us</a>
+              <a href="contact.html" class="nav-link">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Our Process</a>
+              <a href="process.html" class="nav-link">Our Process</a>
             </li>
           </ul>
         </div>
@@ -50,13 +50,12 @@
         </div>
       </div>
     </header>
-
+ 
   <section class="about-section">
     <div class="about-content">
       <h1>About SummitPeak</h1>
       <h2 class="highlight-text">
-        Trusted For Driving Innovation <br>
-        And Unlocking New <br>Possibilities
+        Trusted For Driving Innovation And<br>Unlocking New <br>Possibilities
       </h2>
       <p>
         At SummitPeak Software, we excel in providing innovative<br>technology solutions designed to empower businesses.<br>
@@ -67,7 +66,7 @@
       <img src="img/about/about01.png" alt="About Us" />
     </div>
   </section>
-
+ 
   <section class="stats-section">
     <div class="stat-item">
       <h1 class="stat-number">5+</h1>
@@ -81,19 +80,20 @@
     </div>
     <div class="stat-item">
       <h1 class="stat-number">50+</h1>
-      <p class="stat-title">Team Member</p>
+      <p class="stat-title">Team Members</p>
       <p class="stat-description">A team of experts focused on<br>advancing your success.</p>
     </div>
   </section>
-
-
+ 
+ 
   <!-- Our Team Section -->
 <section class="ourteam">
     <div class="container text-left">
       <h1 class="text-dark">Our Team</h1>
       <h2 class="highlight-text">Meet the Minds Behind the Innovation</h2>
-      <p class="text-muted mt-3">
-        At SummitPeak Software, our team is the heart of our success. A collective of visionary thinkers, skilled developers, and dedicated strategists, we<br>work together to transform challenges into opportunities. With expertise and passion, we bring your ideas to life and drive your business forward.
+      <p class="text-dark">
+        At SummitPeak Software, our team is the heart of our success. A collective of visionary thinkers, skilled developers, and dedicated strategists, we 
+        work together to transform challenges into opportunities. With expertise and passion, we bring your ideas to life and drive your business forward.
       </p>
   
       <!-- Team Members Grid -->
@@ -105,14 +105,14 @@
       <button class="btn btn-primary show-more">Show More</button>
     </div>
   </section>
-
+ 
   <!-- Footer Section -->
   <footer class="footer-section bg-black text-white py-5">
     <div class="container">
       <h2
         class="text-center mb-4"
         style="
-          background: linear-gradient(to right, #389ea2, #09252a);
+          background: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-weight: 700;
@@ -121,28 +121,40 @@
       >
         Let&apos;s Discuss Your Project
       </h2>
-
+ 
       <hr class="bg-white opacity-50" style="height: 2px" />
-
+ 
       <div class="row mt-4">
         <!-- Company Logo & Description -->
         <div class="col-lg-3 mb-4">
-          <img
-            src="img/companylogo.png"
-            alt="Logo"
-            height="60"
-            class="mb-3"
-          />
+          <div class="rectangle-container" style="position: relative; display: inline-block;">
+            <!-- Rectangle image -->
+            <img
+              src="assets/Rectangle 25.png"
+              alt="Rectangle"
+              height="100"
+              class="mb-3"
+            />
+          
+            <!-- Group image positioned inside the rectangle -->
+            <img
+              src="img/companylogo.png"
+              alt="Group Logo"
+              height="60"
+              class="mb-3"
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"
+            />
+          </div>
+          
           <p>
-            SummitPeak Software Pvt. Ltd. is a leading technology solutions
-            provider, dedicated to delivering innovative and scalable software
-            services.
+            <span class="highlight-teal">SummitPeak Software Pvt. Ltd</span>. is a leading technology solutions provider, dedicated to delivering innovative and scalable software services. With a focus on excellence, we empower businesses worldwide through cutting- edge solutions, reliable support, and a commitment to client success.
           </p>
+          
         </div>
-
+ 
         <!-- Categories -->
         <div class="col-lg-3 mb-4">
-          <h4 class="text-proper mb-3">Categories</h4>
+          <h4 class="text-proper mb-3" style="font-weight: 600;">Categories</h4>
           <ul class="list-unstyled">
             <li>Home</li>
             <li>About Us</li>
@@ -152,10 +164,11 @@
             <li>Our Process</li>
           </ul>
         </div>
-
+     
+ 
         <!-- Services -->
         <div class="col-lg-3 mb-4">
-          <h4 class="text-proper mb-3">Services</h4>
+          <h4 class="text-proper mb-3" style="font-weight: 600;">Services</h4>
           <ul class="list-unstyled">
             <li>Build An Application</li>
             <li>Cloud Adoption</li>
@@ -163,35 +176,52 @@
             <li>Trending Technology</li>
           </ul>
         </div>
-
+ 
         <!-- Follow Us -->
         <div class="col-lg-3 mb-4">
-          <h4 class="text-proper mb-3">Follow Us</h4>
+          <h4 class="text-proper mb-3" style="font-weight: 600;">Follow Us</h4>
           <ul class="list-unstyled">
-            <li class="mb-2"><i class="bi bi-facebook me-2"></i>Facebook</li>
-            <li class="mb-2"><i class="bi bi-envelope me-2"></i>Email</li>
-            <li class="mb-2">
-              <i class="bi bi-instagram me-2"></i>Instagram
+            <li class="mb-2" style="display: flex; align-items: center;">
+              <div class="icon" style="width: 16px; height: 16px; border-radius: 50%; background-color: #fff; opacity: 1; margin-right: 8px; display: flex; justify-content: center; align-items: center;">
+                <img src="img/footer/facebook Vector (1).svg" alt="Facebook" style="width: 10px; height: 10px;">
+              </div>
+              Facebook
             </li>
-            <li><i class="bi bi-linkedin me-2"></i>LinkedIn</li>
+            <li class="mb-2" style="display: flex; align-items: center;">
+              <div class="icon" style="width: 16px; height: 16px; border-radius: 50%; background-color: #fff; opacity: 1; margin-right: 8px; display: flex; justify-content: center; align-items: center;">
+                <img src="img/footer/Vector (2).svg" alt="Twitter" style="width: 10px; height: 10px;">
+              </div>
+              Twitter
+            </li>
+            <li class="mb-2" style="display: flex; align-items: center;">
+              <img src="img/footer/Vector (5).svg" alt="Instagram" style="width: 15px; height: 20px; margin-right: 8px;">
+              Instagram
+            </li>
+            
+            
+            <li style="display: flex; align-items: center;">
+              <img src="img/footer/Vector (4).svg" alt="LinkedIn" style="width: 15px; height: 20px; margin-right: 8px;">
+              LinkedIn
+            </li>
+            
           </ul>
         </div>
-      </div>
-
+        
+        
+        
+ 
       <hr class="bg-white opacity-50" style="height: 2px" />
-
+ 
       <!-- Bottom Section -->
       <div class="d-flex justify-content-between align-items-center mt-3">
         <p class="mb-0">
-          &copy; 2025 SummitPeak Software Pvt. Ltd. All rights reserved.
+          Copyright &copy; 2025 SummitPeak. All rights reserved.
         </p>
         <div>
-          <a href="#" class="text-white me-3">Terms & Conditions</a>
-          <a href="#" class="text-white">Privacy Policy</a>
+          <a href="#" class="text-white me-3" style="text-decoration: none;">Terms & Conditions</a>
+          <a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a>
         </div>
+        
       </div>
     </div>
   </footer>
-  
-
-

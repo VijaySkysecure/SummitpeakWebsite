@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-link {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link:hover {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link.active {
+  background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.social-icons {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Align icons vertically */
+  gap: 20px; /* Adds space between each icon */
+}
+
+.social-icons a {
+  font-size: 1.5rem; /* Increase icon size */
+}
+
+.webapp-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 10px;
+}
+  
+.webapp-content {
+    flex: 1;
+    margin-left: 105px;
+    width: 100%;
+    position: relative;
+}
+  
+.webapp-content h1 {
+    font-size: 2rem; 
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 75px;
+  
+}
+  
+.highlight-text {
+    font-family: 'Poppins', sans-serif; /* Added font-family */
+    font-size: 60px; /* Updated font size */
+    font-weight: 700; /* Font weight */
+    line-height: 82px; /* Line height */
+    text-align: left; /* Text alignment */
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 40px 0px;
+}
+  
+.webapp-content p {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(18, 18, 18, 1);
+}
+  
+.webapp-image {
+    flex: 1;
+    margin-right: -140px;
+    margin-top: 40px;
+}
+  
+.webapp-image img {
+    width: 70%; /* Adjust the width to 100% to fill the container */
+    max-width: 740px; /* Optional: limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    
+}
+  
+  
+.freequote-btn {
+  padding: 10px 20px;
+  background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+  color: white; /* White text */
+  font-family: 'Poppins', sans-serif; /* Set the font family */
+  font-size: 18px; /* Set the font size */
+  font-weight: 700; /* Set the font weight */
+  line-height: 27px; /* Set the line height */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 40px;
+}
+a {
+    text-decoration: none; /* Remove underline from all links */
+}
+
+
+.mobappdesc {
+    margin-top: 110px;
+    width: 100%;
+}
+
+  
+.mobappdesc h2 {
+    font-weight: 600;
+    font-size: 36px;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    margin: 10px 0;
+    line-height: 58px;
+    
+}
+  
+.mobappdesc p {
+    color: rgba(18, 18, 18, 1);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 95%; /* Make it span the full width */
+    margin: 20px 0; /* Add vertical spacing */
+}
+
+.app-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    max-width: 900px; /* Adjust as needed */
+    margin-left: 150px;
+    justify-content: center; /* Centers everything */
+    row-gap: 10px;  /* 50px space between rows */
+    column-gap: 100px;  /* 20px space between columns */
+}
+
+.app-services div {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.middot {
+    font-size: 34px; /* Make the middot bigger */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+.custommobapp {
+    margin-top: 90px;
+    background-color: rgba(245, 245, 245, 1); /* Light Grey Background */
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.row:nth-of-type(3) {
+    margin-bottom: 120px; /* Default 40px + Extra 40px */
+}
+
+.row:nth-of-type(4) {
+    margin-bottom: 120px; /* Default 40px + Extra 40px */
+}
+
+.text {
+    width: 50%;
+}
+
+.section-title {
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.text h2 {
+    font-size: 22px;
+    background-image: linear-gradient(180deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 18px;
+    color: #333;
+}
+
+.image {
+    width: 50%;
+    text-align: center;
+}
+
+.image img {
+    max-width: 75%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text, .image {
+        width: 100%;
+    }
+}
+
+
+.hiremobapp-btn {
+    padding: 10px 20px;
+    position: absolute;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Set the font family */
+    font-size: 16px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
+    line-height: 27px; /* Set the line height */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-left: 165px;
+    margin-top: 45px;
+    margin-bottom: 73px;
+}
+
+
+.codeqa-section {
+    padding: 1rem 1rem;
+    max-width: 1200px;
+    background-color: #f5f5f5;
+    margin-top: 200px;
+    border-radius: 10px;
+    margin-left: 150px;
+    align-items: left;
+}
+   
+.section-header2 {
+    position: relative;
+    padding: 20px;
+}
+
+.section-title2 {
+    font-size: 36px;
+    font-weight: 600;
+    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.section-description2 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgba(18, 18, 18, 1);
+    margin-bottom: -12px;
+    margin-left: 40px;
+    text-align: left;
+    max-width: 600px;
+}
+  
+  
+.points2 {
+    max-width: 600px;
+    margin-top: 50px;
+    justify-content: space-between; /* Ensure items are spaced apart */
+    background-color: #f5f5f5;
+}
+  
+.content-wrapper2 {
+    display: flex; /* Flexbox for wrapping content */
+    justify-content: flex-start;
+    background-color: #f5f5f5;
+    margin-left: 40px;
+}
+  
+ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+  
+}
+  
+li {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(18, 18, 18, 1);
+    margin-bottom: 10px;
+  
+}
+  
+.image-content2 {
+    margin-top: 150px;
+    margin-left: 775px; /* Adjust space between text and image */
+    margin-right: -60px;
+    position: absolute;
+    right: 0;
+    margin-bottom: 50px;
+  
+}
+  
+.image-content2 img {
+    width: 65%; /* Image width (you can adjust as needed) */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Project Section */
+   
+.projects-section {
+    padding: 1rem 1rem;
+    max-width: 1200px;
+    background-color: #f5f5f5;
+    margin-top: 100px;
+    border-radius: 10px;
+    margin-left: 150px;
+    align-items: left;
+  }
+   
+  .section-header {
+    position: relative;
+    padding: 20px;
+    
+  }
+  .section-title {
+    font-size: 35px;
+    font-weight: 600;
+    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    text-align: left; /* Explicitly set left alignment */
+  }
+   
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+   
+  /* Tablet */
+  @media (min-width: 768px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+   
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+   
+  .project-container {
+    width: 100%;
+  }
+   
+  .project-wrapper {
+    text-align: center;
+  }
+   
+  .project-wrapper img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+   
+  .project-wrapper h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+   
+  /* Basic header styling */
+  /* .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  } */
+   
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+   
+  .section-description {
+    color: rgba(18, 18, 18, 1);
+    max-width: 900px;
+    margin-left: 0px;
+    line-height: 1.6;
+  }
+  
+  .explore-button {
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Set the font family */
+    font-size: 16px;
+    font-size: 16px; /* Set the font size */
+    font-weight: 550;
+    border: none;
+    padding: 8px 35px; /* Increased padding for larger button */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Larger button text */
+    transition: background 0.3s;
+    display: block;
+    margin: 40px auto 0;
+  }
+
+/* Wrapper for the entire section */
+.contact-section {
+    background-color: black; /* Black background */
+    padding: 40px 0; /* 40px padding on top and bottom */
+    margin-top: 120px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Inner content container */
+  .content {
+    text-align: center;
+    color: white; /* Default text color */
+  }
+  
+  /* Main text style */
+  .main-text {
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(80, 63, 166, 1)); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text transparent to show the gradient */
+    
+    font-size: 50px; /* Set font size */
+    font-weight: 700; /* Set font weight */
+    line-height: 65px; /* Set line height */
+    text-align: center; /* Center align the text */
+    text-underline-position: from-font; /* Text underline position */
+    text-decoration-skip-ink: none; /* Text decoration skip */
+    margin-bottom: 30px; /* Spacing between the elements */
+  }
+  
+  
+  /* Sub-text style */
+  .sub-text {
+    font-size: 0.9rem; /* 0.9rem font size */
+    margin-bottom: 30px; /* Spacing between the sub-text and button */
+    font-weight: 300;
+    font-size: 20px;
+  }
+  
+  /* Button style */
+  .contact-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers the button */
+    padding: 10px 30px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    color: white;
+    font-size: 16px; /* Set the font size */
+    font-weight: 550; /* Set the font weight */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  

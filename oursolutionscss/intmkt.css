@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.nav-link {
+    font-size: 16px;
+    color: rgb(98, 97, 97);
+    margin-bottom: -6px;
+  }
+
+.nav-link {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link:hover {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link.active {
+  background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.social-icons {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Align icons vertically */
+  gap: 20px; /* Adds space between each icon */
+  margin-right: 40px;
+}
+
+.social-icons a {
+  font-size: 1.5rem; /* Increase icon size */
+}
+
+.itmgmt-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 10px;
+    margin-left: 30px;
+}
+  
+.itmgmt-content {
+    flex: 1;
+    margin-left: 80px;
+    width: 100%;
+    position: relative;
+}
+  
+.itmgmt-content h1 {
+    font-size: 2rem; 
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 75px;
+  
+}
+  
+.highlight-text {
+    font-family: 'Poppins', sans-serif; /* Added font-family */
+    font-size: 60px; /* Updated font size */
+    font-weight: 700; /* Font weight */
+    line-height: 82px; /* Line height */
+    text-align: left; /* Text alignment */
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 40px 0px;
+}
+  
+.itmgmt-content p {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(18, 18, 18, 1);
+}
+  
+.itmgmt-image {
+    flex: 1;
+    margin-right: -120px;
+    margin-top: 40px;
+}
+  
+.itmgmt-image img {
+    width: 70%; /* Adjust the width to 100% to fill the container */
+    max-width: 740px; /* Optional: limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    
+}
+  
+  
+.freequote-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Set the font family */
+    font-size: 18px; /* Set the font size */
+    font-weight: 700; /* Set the font weight */
+    line-height: 27px; /* Set the line height */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+  
+a {
+    text-decoration: none; /* Remove underline from all links */
+}
+
+
+.customitmgmtdesc {
+    margin-top: 70px;
+    width: 100%;
+}
+
+  
+.highlight-text1 {
+    font-weight: 600;
+    font-size: 36px;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 10px 0;
+}
+
+  
+.text-dark {
+    color: rgba(18, 18, 18, 1);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 95%; /* Make it span the full width */
+    margin: 20px 0; /* Add vertical spacing */
+    margin-bottom: 60px;
+}
+
+.bold-title {
+    font-weight: 550;
+    font-size: 20px; /* Adjust size as needed */
+    color: rgba(18, 18, 18, 1); /* Set the color */
+    margin-top: 30px;
+    margin-bottom: 10px; /* Adjust spacing below the title */
+}
+
+/* Modify the descriptive-paragraph */
+.descriptive-paragraph {
+    font-size: 16px; /* Adjust the font size */
+    color: rgba(18, 18, 18, 1); /* Set the text color */
+    line-height: 1.6; /* Adjust line height for readability */
+    margin-bottom: 20px; /* Add spacing below the paragraph */
+}
+
+
+.process-section {
+    background-color: white;
+    max-width: 100%;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+.process-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    z-index: -1;
+    padding: 2px;
+}
+
+.process-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background-image: linear-gradient(89deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.section-description1 p {
+    font-size: 18px;
+    color: #000;
+    margin: 10px 0;
+    width: 90%;
+    margin-bottom: 60px;
+    margin-left: 60px;
+    text-align: center;
+}
+
+.process-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.process-box {
+    width: 360px;
+    height: 330px;
+    padding: 40px;
+    text-align: left; /* Align text to the left */
+    font-size: 14px;
+    color: rgba(0, 0, 0, 1);
+    position: relative;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 2px solid;
+    margin-bottom: 60px;
+}
+
+.process-box:last-child {
+    margin-left: -360px; /* Remove margin on the last element */
+}
+
+.process-title-box {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 14px;
+    margin-top: -12px;
+    width: 70%;
+}
+
+.process-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.process-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between bullet and text */
+    margin-bottom: 10px; /* Vertical gap between points */
+    white-space: normal; /* Prevents wrapping */
+    width:100%;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.process-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid;
+    position: absolute;
+    top: -30px;
+    left: 70%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.process-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.step-label {
+    position: absolute;
+    bottom: -80px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+}
+
+
+.industries-support {
+    background-color: #f4f4f4; /* Light grey background for the entire section */
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* Container Styling */
+.industries-support .container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center align the content */
+}
+
+/* Section Title */
+.section-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Section Description */
+.section-description p {
+    font-size: 18px;
+    color: #000;
+    margin: 10px 0;
+    width: 90%;
+}
+
+/* Box Container (4 by 4 layout) */
+.industries-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Each Industry Box */
+.industry-box {
+    width: 270px;
+    height: 270px;
+    background-color: #fff;
+    border: 1px solid #ddd; /* Light border for the box */
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Box Title */
+.box-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 0px;
+}
+
+/* Box Image */
+.box-image {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+/* View More Button */
+.view-more {
+    background-color: white;
+    border: 1.6px solid black;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .industries-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .industry-box {
+        width: 100%;
+        max-width: 370px;
+    }
+}
+
+
+.engagement-section {
+    text-align: center;
+    width: 1500px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.tile:nth-child(1){
+    height: 1000px;
+}
+
+  
+.engagement-title {
+    font-size: 36px;
+    font-weight: 600;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+}
+  
+.engagement-description {
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: rgba(0, 0, 0, 1);
+    width: 95%;
+}
+  
+.tiles-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 60px;
+}
+  
+.tile {
+    width: 420px;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.popular-sticker {
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 5px;
+    transform: rotate(35deg); /* Diagonal rotation */
+    width: 140px;
+    text-align: center;
+   
+}
+  
+.tile-grey {
+    background-color: rgba(245, 245, 245, 1);
+    color: black;
+    margin-top: 80px;
+    height: 1600px;
+}
+  
+.tile-black {
+    background-color: black;
+    color: white;
+}
+  
+.tile-title {
+    font-size: 36px;
+    font-weight: 700;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.tile-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+  
+.tile-list li {
+    font-size: 18px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+}
+  
+.tick {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+  
+.tick::after {
+    content: '✔';
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tile-black .tick {
+    background-color: white; /* White circle for full-time tile */
+}
+  
+.tile-black .tick::after {
+    color: black; /* Black tick mark inside */
+}
+  
+hr {
+    border: none;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+    margin: 24px 0;
+}
+
+.tile-black hr {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), transparent);
+  }
+
+
+
+.hire-button {
+    padding: 8px 35px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Set the font family */
+    font-size: 16px; /* Set the font size */
+    font-weight: 550; /* Set the font weight */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.centered-image {
+    width: 100%;
+    display: block;
+    position: relative;  /* Positioning it relative to its parent container */
+    margin-top: 1600px;  /* Adjust this value to control the vertical distance */
+}
+
+
+
+/* Wrapper for the entire section */
+.contact-section {
+    background-color: black; /* Black background */
+    padding: 40px 0; /* 40px padding on top and bottom */
+    margin-top: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Inner content container */
+  .content {
+    text-align: center;
+    color: white; /* Default text color */
+  }
+  
+  /* Main text style */
+  .main-text {
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(80, 63, 166, 1)); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text transparent to show the gradient */
+    font-size: 50px; /* Set font size */
+    font-weight: 700; /* Set font weight */
+    line-height: 65px; /* Set line height */
+    text-align: center; /* Center align the text */
+    text-underline-position: from-font; /* Text underline position */
+    text-decoration-skip-ink: none; /* Text decoration skip */
+    margin-bottom: 30px; /* Spacing between the elements */
+  }
+  
+  
+  /* Sub-text style */
+  .sub-text {
+    font-size: 0.9rem; /* 0.9rem font size */
+    margin-bottom: 30px; /* Spacing between the sub-text and button */
+    font-weight: 300;
+    font-size: 20px;
+  }
+  
+  /* Button style */
+  .contact-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers the button */
+    padding: 10px 30px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    color: white;
+    font-size: 16px; /* Set the font size */
+    font-weight: 550; /* Set the font weight */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+

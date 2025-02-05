@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.nav-link {
+    font-size: 16px;
+    color: rgb(98, 97, 97);
+    margin-bottom: -6px;
+  }
+
+.nav-link {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link:hover {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link.active {
+  background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.social-icons {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Align icons vertically */
+  gap: 20px; /* Adds space between each icon */
+  margin-right: 40px;
+}
+
+.social-icons a {
+  font-size: 1.5rem; /* Increase icon size */
+}
+
+.itmgmt-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 10px;
+    margin-left: 30px;
+}
+  
+.itmgmt-content {
+    flex: 1;
+    margin-left: 80px;
+    width: 100%;
+    position: relative;
+}
+  
+.itmgmt-content h1 {
+    font-size: 2rem; 
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 75px;
+  
+}
+  
+.highlight-text {
+    font-family: 'Poppins', sans-serif; /* Added font-family */
+    font-size: 60px; /* Updated font size */
+    font-weight: 700; /* Font weight */
+    line-height: 82px; /* Line height */
+    text-align: left; /* Text alignment */
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 40px 0px;
+}
+  
+.itmgmt-content p {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(18, 18, 18, 1);
+}
+  
+.itmgmt-image {
+    flex: 1;
+    margin-right: -120px;
+    margin-top: 40px;
+}
+  
+.itmgmt-image img {
+    width: 70%; /* Adjust the width to 100% to fill the container */
+    max-width: 740px; /* Optional: limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    
+}
+  
+  
+.freequote-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Set the font family */
+    font-size: 18px; /* Set the font size */
+    font-weight: 700; /* Set the font weight */
+    line-height: 27px; /* Set the line height */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+  
+a {
+    text-decoration: none; /* Remove underline from all links */
+}
+
+
+.customitmgmtdesc {
+    margin-top: 70px;
+    width: 100%;
+}
+
+  
+.highlight-text1 {
+    font-weight: 600;
+    font-size: 36px;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 10px 0;
+}
+
+  
+.text-dark {
+    color: rgba(18, 18, 18, 1);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 95%; /* Make it span the full width */
+    margin: 20px 0; /* Add vertical spacing */
+}
+
+
+/* Container to restrict max width */
+.customitmgmtdesc .container1 {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: flex-start; /* Align items at the top */
+    gap: 10px; /* Gap between images and text */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.customitmgmtdesc .images {
+    display: flex;
+    flex-direction: row;
+    gap: 15px; /* Space between images */
+    margin-left: -240px; /* Adjustable margin */
+}
+
+/* Individual image styling */
+.customitmgmtdesc .image-item:nth-child(1) img {
+    transform: scale(0.82);
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    margin-top: 55px; /* Adjustable margin */
+
+}
+
+.customitmgmtdesc .image-item:nth-child(2) img {
+    transform: scale(0.8);
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    margin-top: 25px; /* Adjustable margin */
+}
+
+/* Styling for the text container */
+.customitmgmtdesc .text {
+    flex: 1; /* Take remaining space */
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+}
+
+/* Title styling */
+.customitmgmtdesc .text .title {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(18, 18, 18, 1);
+    margin-bottom: 10px;
+}
+
+/* Description styling */
+.customitmgmtdesc .text .description {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(18, 18, 18, 1);
+    margin-bottom: 30px; /* Space between descriptions */
+}
+
+
+.industries-support {
+    background-color: #f4f4f4; /* Light grey background for the entire section */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Container Styling */
+.industries-support .container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center align the content */
+}
+
+/* Section Title */
+.section-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Section Description */
+.section-description p {
+    font-size: 18px;
+    color: #000;
+    margin: 10px 0;
+    width: 90%;
+}
+
+/* Box Container (4 by 4 layout) */
+.industries-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Each Industry Box */
+.industry-box {
+    width: 270px;
+    height: 270px;
+    background-color: #fff;
+    border: 1px solid #ddd; /* Light border for the box */
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Box Title */
+.box-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 0px;
+}
+
+/* Box Image */
+.box-image {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+/* View More Button */
+.view-more {
+    background-color: white;
+    border: 1.6px solid black;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .industries-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .industry-box {
+        width: 100%;
+        max-width: 370px;
+    }
+}
+
+
+/* Wrapper for the entire section */
+.contact-section {
+    background-color: black; /* Black background */
+    padding: 40px 0; /* 40px padding on top and bottom */
+    margin-top: 120px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  /* Inner content container */
+  .content {
+    text-align: center;
+    color: white; /* Default text color */
+}
+  
+/* Main text style */
+.main-text {
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(80, 63, 166, 1)); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text transparent to show the gradient */
+    
+    font-size: 50px; /* Set font size */
+    font-weight: 700; /* Set font weight */
+    line-height: 65px; /* Set line height */
+    text-align: center; /* Center align the text */
+    text-underline-position: from-font; /* Text underline position */
+    text-decoration-skip-ink: none; /* Text decoration skip */
+    margin-bottom: 30px; /* Spacing between the elements */
+}
+  
+  
+/* Sub-text style */
+.sub-text {
+    font-size: 0.9rem; /* 0.9rem font size */
+    margin-bottom: 30px; /* Spacing between the sub-text and button */
+    font-weight: 300;
+    font-size: 20px;
+}
+  
+/* Button style */
+.contact-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers the button */
+    padding: 10px 30px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    color: white;
+    font-size: 16px; /* Set the font size */
+    font-weight: 550; /* Set the font weight */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  

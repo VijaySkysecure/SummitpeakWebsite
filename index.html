@@ -15,7 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <!-- Header -->
@@ -24,16 +24,12 @@
         <div class="d-flex align-items-center">
           <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
           <ul class="nav">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Career</a></li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Our Process</a>
-            </li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="career.html" class="nav-link">Career</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="process.html" class="nav-link">Our Process</a></li>
           </ul>
         </div>
         <div class="social-icons">
@@ -56,7 +52,7 @@
         <div class="banner-content">
         </div>
     </section>
-
+    
     <button class="get-started-btn">Get Started</button>
 
     <!-- Partner Logos -->
@@ -68,11 +64,11 @@
             <div class="whoweare-content">
               <h1>Who We Are</h1>
               <h2 class="highlight-text">
-                Trusted For Driving Innovation And<br>Unlocking New Possibilities
+                Trusted For Driving Innovation<br>And Unlocking New Possibilities
               </h2>
               <p>
-                At SummitPeak Software, we excel in providing innovative technology<br>solutions designed to empower businesses. With
-                a client-centric<br>focus and a commitment to innovation, we ensure each project<br>achieves its highest potential.
+                At SummitPeak Software, we excel in providing innovative technology solutions designed to empower businesses.<br>With
+                a client-centric focus and a commitment to innovation,<br>we ensure each project achieves its highest potential.
               </p>
             </div>
         
@@ -109,22 +105,24 @@
         <div class="statistics-container">
         <!-- Numbers -->
         <div class="stat">
-            <h1 class="stat-number" style="color: lightpink;">5+</h1>
+            <h1 class="stat-number" style="color:#ffa7a7;">5+</h1>
             <p class="stat-text">Years Experience</p>
         </div>
         <div class="stat">
-            <h1 class="stat-number" style="color: lightblue;">250+</h1>
+            <h1 class="stat-number" style="color: #a7c9ff;">250+</h1>
             <p class="stat-text">Clients Served</p>
         </div>
         <div class="stat">
-            <h1 class="stat-number" style="color: lightgreen;">50+</h1>
+            <h1 class="stat-number" style="color: #abe5e5;">50+</h1>
             <p class="stat-text">Team Members</p>
         </div>
         </div>
 
 
         <!-- Button -->
-        <button class="read-more-btn">Read More</button>
+        <a href="about.html">
+          <button class="read-more-btn">Read More</button>
+        </a>
     </section>
 
         <!--Our Services Section-->
@@ -138,7 +136,7 @@
               unique business needs.<br>We specialize in delivering cutting-edge technologies, ensuring efficiency, scalability and success for clients worldwide.
             </p>
           
-            <div class="centered-tab-container">
+            <div class="centered-tab-container1">
               <button class="tab-button active" data-target="build-an-app">Build An Application</button>
               <button class="tab-button" data-target="cloud-adoption">Cloud Adoption</button>
               <button class="tab-button" data-target="web-presence">Web Presence Solutions</button>
@@ -151,8 +149,10 @@
               <img id="web-presence" class="service-image" src="img/home/webprescence.png" alt="Web Presence Solutions">
               <img id="trending-tech" class="service-image" src="img/home/trendingtech.png" alt="Trending Technology">
             </div>
-          
-            <button class="explore-more-btn">Explore More</button>
+            
+            <a href="services.html">
+              <button class="explore-more-btn">Explore More</button>
+            </a>
         </section>
 
         <script>
@@ -179,7 +179,10 @@
         <h2 class="main-text">Which custom development service are you<br>looking for?</h2>
         <p class="sub-text">Share your requirements with our industry leading team of experts and leverage best-in-class software<br>
         development teams to launch applications that represent your business.</p>
-        <button class="contact-btn">Contact Us</button>
+        <a href="contact.html">
+          <button class="contact-btn">Contact Us</button>
+        </a>
+        
         </div>
     </div>
 
@@ -191,7 +194,7 @@
         <p class="services-description">
           We specialize in leveraging advanced technology stacks to deliver innovative solutions tailored to your brand.
       
-        <div class="centered-tab-container">
+        <div class="centered-tab-container2">
           <button class="tab-button active" data-target="frontend">Frontend</button>
           <button class="tab-button" data-target="backend">Backend</button>
           <button class="tab-button" data-target="mobileapp">Mobile App</button>
@@ -226,8 +229,399 @@
               });
           });
       </script>
+
+
+
+
+
+      
+<div class="industries-section">
+  <h2 class="section-title">Industries <span class="highlight">We Cater</span></h2>
+  <div class="tabs">
+    <button class="tab active" data-content="education">Education</button>
+    <button class="tab" data-content="healthcare">Health Care</button>
+    <button class="tab" data-content="bfsi">BFSI</button>
+    <button class="tab" data-content="hosting">Hosting</button>
+    <button class="tab" data-content="media">Media</button>
+    <button class="tab" data-content="startup">Start Up</button>
+    <button class="tab" data-content="ecommerce">E-commerce</button>
+  </div>
+  <div class="content-container">
+    <!-- Education -->
+    <div id="education" class="tab-content.active">
+      <div class="content-row">
+        <!-- Left Side: Grid for Cards -->
+        <div class="grid">
+          <div class="card"><img src="img/home/education/image.png" alt="Education Image 1"></div>
+          <div class="card"><img src="img/home/education/image-1.png" alt="Education Image 2"></div>
+          <div class="card"><img src="img/home/education/image-2.png" alt="Education Image 3"></div>
+          <div class="card"><img src="img/home/education/image-3.png" alt="Education Image 4"></div>
+        </div>
+    
+        <!-- Right Side: Text Content -->
+        <div class="description">
+          <h3>Education</h3>
+          <p>
+            Implement innovative eLearning solutions that benefit both teachers and learners. Provide personalized learning
+            experiences while empowering your management team to streamline operations effectively.
+          </p>
+          <button class="explore-btn">Explore more</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Health Care -->
+    <div id="healthcare" class="tab-content1">
+      <div class="content-row">
+        <!-- Left Side: Grid for Cards -->
+        <div class="grid">
+          <div class="card"><img src="img/home/healthcare/image.png" alt="Health Care Image 1"></div>
+          <div class="card"><img src="img/home/education/image-1.png" alt="Health Care Image 2"></div>
+          <div class="card"><img src="img/home/healthcare/image-2.png" alt="Health Care Image 3"></div>
+          <div class="card"><img src="img/home/healthcare/image-3.png" alt="Health Care Image 4"></div>
+        </div>
+    
+        <!-- Right Side: Description -->
+        <div class="description">
+          <h3>Health Care</h3>
+          <p>
+            Deliver cutting-edge health care solutions to improve patient outcomes and operational efficiency.
+          </p>
+          <button class="explore-btn">Explore more</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional sections (e.g., BFSI, Hosting, etc.) -->
+    <!-- Repeat the same structure for other tabs -->
+    <div id="bfsi" class="tab-content1">
+      <div class="content-row">
+        <div class="grid">
+          <div class="card"><img src="assets/IndustriesWeCater/bfsi1.svg" alt="BFSI Image 1"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/bfsi2.svg" alt="BFSI Image 2"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/bfsi3.svg" alt="BFSI Image 3"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/bfsi4.svg" alt="BFSI Image 4"></div>
+        </div>
+        <div class="description">
+          <h3>BFSI</h3>
+          <p>
+            Empower financial institutions with scalable solutions tailored to their dynamic needs.
+          </p>
+          <button class="explore-btn">Explore more</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Hosting -->
+    <div id="hosting" class="tab-content1">
+      <div class="content-row">
+        <div class="grid">
+          <div class="card"><img src="assets/IndustriesWeCater/hosting1.svg" alt="Hosting Image 1"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/hosting2.svg" alt="Hosting Image 2"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/hosting3.svg" alt="Hosting Image 3"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/hosting4.svg" alt="Hosting Image 4"></div>
+        </div>
+        <div class="description">
+          <h3>Hosting</h3>
+          <p>
+            Ensure reliable and efficient hosting solutions that meet your business needs.
+          </p>
+          <button class="explore-btn">Explore more</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Media -->
+    <div id="media" class="tab-content1">
+      <div class="content-row">
+        <div class="grid">
+          <div class="card"><img src="assets/IndustriesWeCater/media1.svg" alt="Media Image 1"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/media2.svg" alt="Media Image 2"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/media3.svg" alt="Media Image 3"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/media4.svg" alt="Media Image 4"></div>
+        </div>
+        <div class="description">
+          <h3>Media</h3>
+          <p>
+            Transform your media and entertainment services with innovative digital solutions.
+          </p>
+          <button class="explore-btn">Explore more</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Start Up -->
+    <div id="startup" class="tab-content1">
+      <div class="content-row">
+        <div class="grid">
+          <div class="card"><img src="assets/IndustriesWeCater/startup1.svg" alt="Start-Up Image 1"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/startup2.svg" alt="Start-Up Image 2"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/startup3.svg" alt="Start-Up Image 3"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/startup4.svg" alt="Start-Up Image 4"></div>
+        </div>
+        <div class="description">
+          <h3>Start Up</h3>
+          <p>
+            Scale your start-up with cutting-edge technology and strategic support.
+          </p>
+          <button class="explore-btn">Explore more</button>
+        </div>
+      </div>
+    </div>
+    <!-- E-commerce -->
+    <div id="ecommerce" class="tab-content1">
+      <div class="content-row">
+        <div class="grid">
+          <div class="card"><img src="assets/IndustriesWeCater/ecommerce1.svg" alt="E-commerce Image 1"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/ecommerce2.svg" alt="E-commerce Image 2"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/ecommerce3.svg" alt="E-commerce Image 3"></div>
+          <div class="card"><img src="assets/IndustriesWeCater/ecommerce4.svg" alt="E-commerce Image 4"></div>
+        </div>
+        <div class="description">
+          <h3>E-commerce</h3>
+          <p>
+            Revolutionize your e-commerce platform with tailored solutions that drive growth.
+          </p>
+          <button class="explore-btn">Explore more</button>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </div>
+    </p>
+
+    <script>
+      // Get all the tab buttons and tab content sections
+const tabs = document.querySelectorAll('.tab');
+const tabContents = document.querySelectorAll('.tab-content1');
+
+// Add click event listener to each tab
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Remove 'active' class from all tabs and content
+    tabs.forEach(t => t.classList.remove('active'));
+    tabContents.forEach(content => content.classList.remove('active'));
+
+    // Add 'active' class to the clicked tab
+    tab.classList.add('active');
+
+    // Get the content to show based on the 'data-content' attribute of the tab
+    const contentId = tab.getAttribute('data-content');
+    const activeContent = document.getElementById(contentId);
+    
+    // Show the corresponding content
+    if (activeContent) {
+      activeContent.classList.add('active');
+    }
+  });
+});
+    </script>
+    </section>
+
+
+    <div class="contact-section">
+      <div class="content">
+      <h2 class="main-text">Looking for Something Else?</h2>
+      <p class="sub-text">We&apos;re sure our extensive range of services has got you covered. Share your requirementswith us and our<br>
+      team shall get back to you shortly.</p>
+      <button class="contact-btn">Contact Us</button>
+      </div>
+    </div>
+
+
+
+
+    <!--Project Section-->
+    
+    <section class="projects-section">
+      <div class="section-header">
+          <h2 class="section-title">Our Projects</h2>
+        
+          <p class="section-description">
+              Enhance your projects, no matter how complex, with our vast expertise. Just as others have successfully done!
+          </p>
+      </div>
+  
+      <div class="projects-grid">
+          <!-- Project Container 1 -->
+          <div class="project-container">
+              <div class="project-wrapper">
+                  <img src="img/home/Our Project Cards.svg" alt="Project 1">
+                  <h3 style="font-weight: bold;">Project Name</h3>
+
+              </div>
+          </div>
+  
+          <!-- Project Container 2 -->
+          <div class="project-container">
+              <div class="project-wrapper">
+                  <img src="img/home/Our Project Cards (1).svg" alt="Project 2">
+                  <h3 style="font-weight: bold;">Project Name</h3>
+
+              </div>
+          </div>
+  
+          <!-- Project Container 3 -->
+          <div class="project-container">
+              <div class="project-wrapper">
+                  <img src="img/home/Our Project Cards (2).svg" alt="Project 3">
+                  <h3 style="font-weight: bold;">Project Name</h3>
+
+              </div>
+        </div>
+
+        <!-- Project Container 4 -->
+        <div class="project-container">
+            <div class="project-wrapper">
+                <img src="img/home/Our Project Cards (3).svg" alt="Project 4">
+                <!-- <h3>Project Name</h3> -->
+            </div>
+        </div>
+    </div>
+
+
+    <button class="explore-button">Explore More</button>
+</section>
+
+<!--Testimonials-->
+
+<section class="testimonials">
+<!-- Text Section -->
+<div class="text-content">
+<h2>Testimonials</h2>
+<h3>Client Success Stories</h3>
+<p>Harmony of Happiness: Cherished Tales From Our<br>Valued Clients</p>
+
+<!-- Navigation Section -->
+<div class="navigation">
+<button class="slider-btn prev-btn">←</button>
+<div class="dots">
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+
+
+</div>
+<button class="slider-btn next-btn">→</button>
+</div>
+</div>
+
+<!-- Image Slider Section -->
+<div class="slider-container">
+<div class="slider">
+<div class="slides">
+<div class="slide">
+  <img src="img/home/image (4).svg" alt="Client Image 1">
+</div>
+<div class="slide">
+  <img src="img/home/image (5).svg" alt="Client Image 2">
+</div>
+<div class="slide">
+  <img src="img/home/image (6).svg" alt="Client Image 3">
+</div>
+<div class="slide">
+  <img src="img/home/image (7).svg" alt="Client Image 3">
+</div>  
+</div>
+</div>
+</div>
+
+</section>
+ <script>
+ function openTab(event, tabId) {
+// Hide all tab content
+const tabContents = document.querySelectorAll('.tab-content');
+tabContents.forEach((content) => content.classList.remove('active'));
+
+// Deactivate all tab links
+const tabLinks = document.querySelectorAll('.tab-link');
+tabLinks.forEach((link) => link.classList.remove('active'));
+
+// Show the selected tab content
+document.getElementById(tabId).classList.add('active');
+
+// Activate the clicked tab
+event.currentTarget.classList.add('active');
+}
+
+</script>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let currentIndex = 0;
+
+/**
+ * Update the visibility of slides and the active dot
+ */
+function updateSlider() {
+  slides.forEach((slide, index) => {
+    slide.style.display = index === currentIndex ? 'block' : 'none';
+  });
+  
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentIndex);
+  });
+}
+
+/**
+ * Handle previous button click
+ */
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateSlider();
+});
+
+/**
+ * Handle next button click
+ */
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlider();
+});
+
+/**
+ * Handle dot click
+ */
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    updateSlider();
+  });
+});
+
+// Initialize the slider on page load
+updateSlider();
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const tabs = document.querySelectorAll(".tab");
+const tabContents = document.querySelectorAll(".tab-content");
+
+tabs.forEach((tab) => {
+tab.addEventListener("click", () => {
+// Remove active class from all tabs and their contents
+tabs.forEach((t) => t.classList.remove("active"));
+tabContents.forEach((content) => content.classList.remove("active"));
+
+// Add active class to the clicked tab and its respective content
+tab.classList.add("active");
+document.getElementById(tab.dataset.content).classList.add("active");
+    });
+});
+});
+
+</script>
+
   
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

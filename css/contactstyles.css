@@ -1,21 +1,30 @@
-body {
-    font-family: Arial, sans-serif;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
    
   header {
     border-bottom: 1px solid #e0e0e0;
   }
    
-  nav .nav-link {
-    color: #666; /* Use a more specific gray color */
-    font-weight: 500;
-    margin-right: 15px;
-    transition: color 0.3s ease-in-out;
+  .nav-link {
+    color: rgb(98, 97, 97);
   }
-   
-  nav .nav-link:hover {
-    color: teal;
-    text-shadow: 0 0 5px teal;
+  
+  .nav-link:hover {
+    color: rgb(98, 97, 97);
+  }
+  
+  .nav-link.active {
+    background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .social-icons {
@@ -27,11 +36,18 @@ body {
   .social-icons a {
     font-size: 1.5rem; /* Increase icon size */
   }
-   
+  
   .contact-section h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: teal;
+    font-family: 'Poppins', sans-serif; /* Added font-family */
+    font-size: 40px; /* Updated font size */
+    font-weight: 600; /* Font weight */
+    line-height: 60px; /* Line height */
+    text-align: left; /* Text alignment */
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 60px;
   }
    
   .contact-section .badge {

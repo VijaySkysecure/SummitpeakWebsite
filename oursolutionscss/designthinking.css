@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.nav-link {
+    font-size: 16px;
+    color: rgb(98, 97, 97);
+    margin-bottom: -16px;
+  }
+
+.nav-link {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link:hover {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link.active {
+  background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.social-icons {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Align icons vertically */
+  gap: 20px; /* Adds space between each icon */
+}
+
+.social-icons a {
+  font-size: 1.5rem; /* Increase icon size */
+}
+
+.webapp-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 10px;
+}
+  
+.webapp-content {
+    flex: 1;
+    margin-left: 105px;
+    width: 100%;
+    position: relative;
+}
+  
+.webapp-content h1 {
+    font-size: 2rem; 
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 75px;
+  
+}
+  
+.highlight-text {
+    font-family: 'Poppins', sans-serif; /* Added font-family */
+    font-size: 60px; /* Updated font size */
+    font-weight: 700; /* Font weight */
+    line-height: 82px; /* Line height */
+    text-align: left; /* Text alignment */
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 40px 0px;
+}
+  
+.webapp-content p {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(18, 18, 18, 1);
+}
+  
+.webapp-image {
+    flex: 1;
+    margin-right: -140px;
+    margin-top: 40px;
+}
+  
+.webapp-image img {
+    width: 70%; /* Adjust the width to 100% to fill the container */
+    max-width: 740px; /* Optional: limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    
+}
+  
+  
+.freequote-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Set the font family */
+    font-size: 18px; /* Set the font size */
+    font-weight: 700; /* Set the font weight */
+    line-height: 27px; /* Set the line height */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+  
+a {
+    text-decoration: none; /* Remove underline from all links */
+}
+
+
+/* Section Styles */
+.desthinkapproach {
+    background-color: #f0f0f0;  /* Grey background */
+    padding: 40px 20px;
+    text-align: center;
+}
+  
+/* Title */
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 100px;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-left: 430px;
+}
+  
+/* Box Container */
+.boxes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 374px);  /* 3 boxes per row */
+    gap: 90px 30px;  /* 70px gap between rows and 30px gap between columns */
+    justify-content: center;
+    margin-top: 100px;
+}
+  
+/* Box Styles */
+.box {
+    border: 10px;
+    background-color: #fff;
+    width: 350px;  /* Set width of each box */
+    height: 230px;  /* Set height of each box */
+    padding-top: 40px;  /* Space for the circle */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+  
+/* Circle Styling */
+.circle {
+    border: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: white;  /* Green color for circle */
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;  /* Half of the circle is outside */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+  
+/* Circle Icon/Image */
+.circle img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+  
+/* Box Title */
+.box-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 40px;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+  
+/* Box Description */
+.box-description {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 1);
+    margin-top: 10px;
+    width: 85%;
+}
+
+
+.dtoutcome-section {
+    padding: 1rem 1rem;
+    max-width: 100%;
+    margin-top: 100px;
+    border-radius: 10px;
+    margin-left: 150px;
+    align-items: left;
+}
+   
+.section-header {
+    position: relative;
+    padding: 20px;
+    
+}
+  
+.section-title1 {
+    font-size: 35px;
+    font-weight: 600;
+    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+  
+  
+.points {
+    max-width: 75%;
+    margin-top: 50px;
+    justify-content: space-between; /* Ensure items are spaced apart */
+}
+  
+.content-wrapper {
+    display: flex; /* Flexbox for wrapping content */
+    justify-content: flex-start;
+    text-align: left;
+}
+  
+ul {
+      list-style: none; /* Remove default bullets */
+    padding: 0;
+  
+}
+  
+li {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(18, 18, 18, 1);
+    margin-bottom: 10px;
+  
+}
+  
+.image-content {
+    margin-left: 775px; /* Adjust space between text and image */
+    margin-right: -40px;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+  
+}
+  
+.image-content img {
+    width: 80%; /* Image width (you can adjust as needed) */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.dtoutcome-section2 {
+    padding: 1rem 1rem;
+    max-width: 100%;
+    margin-top: 60px;
+    border-radius: 10px;
+    margin-right: 230px;
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 1 part for image, 3 parts for text */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.image-content1 {
+    margin-left: 75px;
+    margin-top: 100px;
+    grid-column: 1; /* Place the image in the first column */
+
+}
+
+.image-content1 img {
+    width: 200%; /* Image width (you can adjust as needed) */
+    
+}
+
+.section-header2 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack the title and content vertically */
+    align-items: flex-end; /* Align the header text to the right */
+    grid-column: 2; /* Place the text content in the second column */
+}
+
+.section-title2 {
+    font-size: 35px;
+    font-weight: 600;
+    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    text-align: right; /* Align title text to the right */
+}
+
+.section-items {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Gap between items */
+    grid-column: 2;
+    text-align: left;
+    margin-left: 440px;
+    margin-top: -470px;
+}
+
+.item-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
+.dtoutcome-section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    margin-top: 80px;
+}
+  
+.section-header3 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 160px;
+}
+
+.section-title3 {
+    font-size: 35px;
+    font-weight: 600;
+    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+
+}
+  
+.content-wrapper3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+  
+.text-content3 {
+    width: 50%;
+    padding-right: 20px;
+}
+  
+.app-services3 {
+    margin-top: 20px;
+}
+  
+.points3 {
+    display: inline;
+    white-space: nowrap;
+   
+    gap: 10px;
+    
+}
+  
+.middot {
+    font-size: 20px; /* Make the middot bigger */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+  
+.image-content3 {
+    width: 45%;
+}
+  
+.image-content3 img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    margin-left: 60px;
+}
+
+
+.codeqa-section4 {
+    padding: 1rem 1rem;
+    max-width: 1200px;
+    background-color: #f5f5f5;
+    margin-top: 60px;
+    border-radius: 10px;
+    margin-left: 150px;
+    align-items: left;
+}
+   
+.section-header4 {
+    position: relative;
+    padding: 20px;
+}
+
+.section-title4 {
+    font-size: 36px;
+    font-weight: 600;
+    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.section-description4 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgba(18, 18, 18, 1);
+    margin-bottom: -12px;
+    margin-left: 40px;
+    text-align: left;
+    max-width: 600px;
+}
+  
+  
+.points4 {
+    max-width: 600px;
+    margin-top: 50px;
+    justify-content: space-between; /* Ensure items are spaced apart */
+    background-color: #f5f5f5;
+}
+  
+.content-wrapper4 {
+    display: flex; /* Flexbox for wrapping content */
+    justify-content: flex-start;
+    background-color: #f5f5f5;
+    margin-left: 40px;
+}
+  
+ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+  
+}
+  
+li {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(18, 18, 18, 1);
+    margin-bottom: 10px;
+  
+}
+  
+.image-content4 {
+    margin-top: -580px;
+    margin-left: 675px; /* Adjust space between text and image */
+    margin-right: -60px;
+    position: absolute;
+    right: 0;
+    margin-bottom: 50px;
+  
+}
+  
+.image-content4 img {
+    width: 90%; /* Image width (you can adjust as needed) */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Project Section */
+   
+.projects-section {
+    padding: 1rem 1rem;
+    max-width: 1200px;
+    background-color: #f5f5f5;
+    margin-top: 100px;
+    border-radius: 10px;
+    margin-left: 150px;
+    align-items: left;
+  }
+   
+  .section-header {
+    position: relative;
+    padding: 20px;
+    
+  }
+  .section-title {
+    font-size: 35px;
+    font-weight: 600;
+    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    text-align: left; /* Explicitly set left alignment */
+  }
+   
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+   
+  /* Tablet */
+  @media (min-width: 768px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+   
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+   
+  .project-container {
+    width: 100%;
+  }
+   
+  .project-wrapper {
+    text-align: center;
+  }
+   
+  .project-wrapper img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+   
+  .project-wrapper h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+   
+  /* Basic header styling */
+  /* .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  } */
+   
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+   
+  .section-description {
+    color: rgba(18, 18, 18, 1);
+    max-width: 900px;
+    margin-left: 0px;
+    line-height: 1.6;
+  }
+  
+  .explore-button {
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Set the font family */
+    font-size: 16px;
+    font-size: 16px; /* Set the font size */
+    font-weight: 550;
+    border: none;
+    padding: 8px 35px; /* Increased padding for larger button */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Larger button text */
+    transition: background 0.3s;
+    display: block;
+    margin: 40px auto 0;
+  }
+
+/* Wrapper for the entire section */
+.contact-section {
+    background-color: black; /* Black background */
+    padding: 40px 0; /* 40px padding on top and bottom */
+    margin-top: 120px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Inner content container */
+  .content {
+    text-align: center;
+    color: white; /* Default text color */
+  }
+  
+  /* Main text style */
+  .main-text {
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(80, 63, 166, 1)); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text transparent to show the gradient */
+    
+    font-size: 50px; /* Set font size */
+    font-weight: 700; /* Set font weight */
+    line-height: 65px; /* Set line height */
+    text-align: center; /* Center align the text */
+    text-underline-position: from-font; /* Text underline position */
+    text-decoration-skip-ink: none; /* Text decoration skip */
+    margin-bottom: 30px; /* Spacing between the elements */
+  }
+  
+  
+  /* Sub-text style */
+  .sub-text {
+    font-size: 0.9rem; /* 0.9rem font size */
+    margin-bottom: 30px; /* Spacing between the sub-text and button */
+    font-weight: 300;
+    font-size: 20px;
+  }
+  
+  /* Button style */
+  .contact-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers the button */
+    padding: 10px 30px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    color: white;
+    font-size: 16px; /* Set the font size */
+    font-weight: 550; /* Set the font weight */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  

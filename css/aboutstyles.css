@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link:hover {
+  color: rgb(98, 97, 97);
+}
+
+.nav-link.active {
+  background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.social-icons {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Align icons vertically */
+  gap: 20px; /* Adds space between each icon */
+}
+
+.social-icons a {
+  font-size: 1.5rem; /* Increase icon size */
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 40px;
+}
+
+.about-content {
+  flex: 1;
+  margin-left: 60px;
+}
+
+.about-content h1 {
+  font-size: 2rem; 
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 52.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+}
+
+.highlight-text {
+  font-family: 'Poppins', sans-serif; /* Added font-family */
+  font-size: 60px; /* Updated font size */
+  font-weight: 700; /* Font weight */
+  line-height: 75px; /* Line height */
+  text-align: left; /* Text alignment */
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 30px 0;
+}
+
+.about-content p {
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(18, 18, 18, 1);
+
+}
+
+.about-image {
+  flex: 1;
+  margin-bottom: 20px; /* Retain the bottom margin as per your requirement */
+}
+
+.about-image img {
+  width: 130%; /* Adjust the width to 100% to fill the container */
+  max-width: 740px; /* Optional: limit the maximum width of the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px;
+  display: block; /* Removes any extra space below the image */
+}
+
+.stats-section {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: 'Poppins', sans-serif; /* Added font-family */
+  font-size: 75px; /* Updated font size */
+  font-weight: 700; /* Font weight */
+  line-height: 70px; /* Line height */
+  text-align: center; /* Text alignment */
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 20px 0;
+}
+
+.stat-title {
+  font-family: 'Poppins', sans-serif; /* Added font-family */
+  font-size: 40px; /* Updated font size */
+  font-weight: 500; /* Font weight */
+  line-height: 50px; /* Line height */
+  text-align: center; /* Text alignment */
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 20px 0;
+}
+
+.stat-description {
+  font-size: 15px;
+  color: #aaa;
+}
+
+/* Our Team Section */
+.ourteam {
+  padding: 60px 20px;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.ourteam h1 {
+  font-size: 32px; /* Updated font size */
+  font-weight: 300; /* Font weight */
+  color: #000; /* Black title */
+  text-align: left; /* Align text to the left */
+}
+
+.ourteam h2 {
+  font-size: 2rem;
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  margin: 10px 0;
+  text-align: left; /* Align text to the left */
+}
+
+.ourteam p {
+  color: black; /* Black title */
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  width: 80%; /* Make it span the full width */
+  margin: 10px 0; /* Add vertical spacing */
+}
+
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px; /* Added margin to add gap from the previous section */
+}
+
+.team-member {
+  width: 95%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: scale(1.05); /* Hover effect */
+}
+
+/* Show More Button */
+.show-more {
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-weight: 550; /* Font weight */
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 40px; /* Added margin to create more gap from the team grid */
+  transition: background 0.3s;
+  display: block;  /* Centering the button */
+  margin-left: auto; 
+  margin-right: auto;
+}
