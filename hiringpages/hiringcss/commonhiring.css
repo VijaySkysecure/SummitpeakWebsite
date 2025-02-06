@@ -16,7 +16,6 @@ body, html {
 .nav-link {
     font-size: 16px;
     color: rgb(98, 97, 97);
-    margin-bottom: -6px;
   }
 
 .nav-link {
@@ -45,22 +44,22 @@ body, html {
   font-size: 1.5rem; /* Increase icon size */
 }
 
-.webapp-section {
+.itmgmt-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 40px 10px;
-    margin-left: 30px;
+    margin-left: 10px;
 }
   
-.webapp-content {
+.itmgmt-content {
     flex: 1;
-    margin-left: 105px;
+    margin-left: 80px;
     width: 100%;
     position: relative;
 }
-  
-.webapp-content h1 {
+
+.itmgmt-content h1 {
     font-size: 2rem; 
     font-family: Poppins;
     font-size: 16px;
@@ -69,9 +68,9 @@ body, html {
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    margin-bottom: 75px;
+    margin-bottom: 75px; 
+  }
   
-}
   
 .highlight-text {
     font-family: 'Poppins', sans-serif; /* Added font-family */
@@ -83,10 +82,10 @@ body, html {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin: 40px 0px;
+    margin: 50px 0px;
 }
   
-.webapp-content p {
+.itmgmt-content p {
     font-family: Poppins;
     font-size: 22px;
     font-weight: 400;
@@ -97,13 +96,13 @@ body, html {
     color: rgba(18, 18, 18, 1);
 }
   
-.webapp-image {
+.itmgmt-image {
     flex: 1;
-    margin-right: -60px;
+    margin-right: -140px;
     margin-top: 40px;
 }
   
-.webapp-image img {
+.itmgmt-image img {
     width: 70%; /* Adjust the width to 100% to fill the container */
     max-width: 740px; /* Optional: limit the maximum width of the image */
     height: auto; /* Maintain aspect ratio */
@@ -125,7 +124,7 @@ body, html {
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     margin-top: 40px;
-    margin-bottom: 40px;
+
 }
   
 a {
@@ -133,9 +132,10 @@ a {
 }
 
 
-.hireadevdesc {
-    margin-top: 40px;
-    width: 100%;
+.customitmgmtdesc {
+    margin-top: 60px;
+    margin-left: 60px;
+    width: 92%;
 }
 
   
@@ -146,114 +146,39 @@ a {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin-left: 60px;
+    margin: 20px 0;
 }
 
-.custommobapp {
-    margin-top: 40px;
-    padding: 50px 0;
-}
-
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.row {
-    display: flex;
-    align-items: left;
-    justify-content: space-between;
-    margin-left: 60px;
-    margin-bottom: 70px;
-}
-
-.rowreverse {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    margin-right: 60px;
-    margin-bottom: 70px;
-}
-
-.rowreverse .text {
-    width: 55%;
-    text-align: left;
-    align-items: end;
-}
-
-.text {
-    width: 50%;
-}
-
-.row:nth-of-type(3) {
-    margin-bottom: 120px; /* Default 40px + Extra 40px */
-}
-
-.row:nth-of-type(4) {
-    margin-top: 120px; /* Default 40px + Extra 40px */
-}
-
-.text h2 {
-    font-size: 22px;
-    color: black;
-    margin-bottom: 20px;
-}
-
-.text p {
+  
+.text-dark {
+    color: rgba(18, 18, 18, 1);
+    font-family: Poppins;
     font-size: 18px;
-    color: #333;
+    font-weight: 400;
+    line-height: 27px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 95%; /* Make it span the full width */
+    margin: 20px 0; /* Add vertical spacing */
+    margin-bottom: 30px;
 }
 
 
-.services-section {
-    background-color: rgba(245, 245, 245, 1);
-    padding: 40px;
-    text-align: left;
+.know-btn {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 8px 35px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Set the font family */
+    font-size: 16px; /* Set the font size */
+    font-weight: 550; /* Set the font weight */
+    line-height: 27px; /* Set the line height */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 550px;
 }
-.services-title {
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 60px;
-    text-align: center;
-    background-image: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 100px; /* Keeps horizontal spacing the same */
-    row-gap: 60px; /* Adjusted vertical spacing between rows */
-    max-width: 80%;
-    margin: 10px auto;
-}
-.service-item {
-    display: flex;
-    align-items: center; /* Ensures icon and text are aligned horizontally */
-    font-size: 16px;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 1);
-    white-space: nowrap; /* Prevents text from wrapping */
-}
-.icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: #ddd;
-}
-.icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
 
 
 .process-section {
@@ -264,7 +189,7 @@ a {
     position: relative;
     z-index: 1;
     border-radius: 10px; /* Rounded corners for the section */
-    border: 2px solid transparent; /* Base border, transparent */
+    border: 2px solid rgba(22, 5, 111, 1); /* Base border, transparent */
 }
 
 .process-section::before {
@@ -276,7 +201,6 @@ a {
     bottom: 0;
     border-radius: 10px; /* Matching border radius for the section */
     border: 2px solid transparent; /* Transparent base for the border */
-
     z-index: -1;
     padding: 2px; /* Make space for the gradient border */
 }
@@ -341,12 +265,12 @@ a {
 .vertical-line {
     width: 2px;
     height: 42px;
+    
     position: absolute;
     left: 50%;
     top: 100%;
     transform: translateX(-50%);
 }
-
 .vertical-line {
     width: 2px;
     height: 42px;
@@ -458,17 +382,6 @@ a {
     color: #555;
 }
   
-.schedule-button {
-    margin-top: 30px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #0D9488; /* Example color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
   
 .schedule-button {
     padding: 12px 24px;
@@ -481,8 +394,13 @@ a {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 40px;
     margin-bottom: 60px;
 }
+
+
+
+
 
 
 .expertise-section {
@@ -697,6 +615,7 @@ hr {
     cursor: pointer;
     margin-bottom: 20px;
 }
+  
 
 /* Project Section */
    
@@ -797,6 +716,8 @@ hr {
     margin: 40px auto 0;
 }
 
+
+
 /* Wrapper for the entire section */
 .contact-section {
     background-color: black; /* Black background */
@@ -828,7 +749,7 @@ hr {
     text-decoration-skip-ink: none; /* Text decoration skip */
     margin-bottom: 30px; /* Spacing between the elements */
 }
-  
+
   
 /* Sub-text style */
 .sub-text {
@@ -837,6 +758,75 @@ hr {
     font-weight: 300;
     font-size: 20px;
 }
+
+
+/* Button style */
+.contact-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers the button */
+    padding: 10px 30px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    color: white;
+    font-size: 16px; /* Set the font size */
+    font-weight: 550; /* Set the font weight */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+.services-section {
+    background-color: rgba(245, 245, 245, 1);
+    padding: 40px;
+    text-align: left;
+}
+.services-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    text-align: center;
+    background-image: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 100px; /* Keeps horizontal spacing the same */
+    row-gap: 60px; /* Adjusted vertical spacing between rows */
+    max-width: 80%;
+    margin: 10px auto;
+}
+.service-item {
+    display: flex;
+    align-items: center; /* Ensures icon and text are aligned horizontally */
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #ddd;
+}
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 
 
@@ -953,18 +943,46 @@ hr {
 }
 
 
-/* Button style */
-.contact-btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; /* Centers the button */
-    padding: 10px 30px;
-    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-    color: white;
-    font-size: 16px; /* Set the font size */
-    font-weight: 550; /* Set the font weight */
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.footer-section {
+    margin-top: -90px; /* Remove any top margin */
 }
+
+
+.footer-section .col-lg-3:nth-child(1) {
+    width: 34%;
+    line-height: 2;
+  }
+
+/* Move the Categories section */
+.footer-section .col-lg-3:nth-child(2) {
+    margin-left: 100px; /* Add top margin to Categories */
+    line-height: 2.5;
+  }
+  
+  /* Move the Services section */
+  .footer-section .col-lg-3:nth-child(3) {
+    margin-left: -40px; /* Add top margin to Services */
+    line-height: 2.6;
+  }
+  
+  /* Move the Follow Us section */
+  .footer-section .col-lg-3:nth-child(4) {
+    margin-left: -190px; /* Add top margin to Follow Us */
+    line-height: 2.5;
+}
+
+/* Style the links to look like normal text */
+ul.list-unstyled a.btn-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent */
+    font-weight: normal; /* Normal weight for text */
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove any border radius */
+  }
+  
+  ul.list-unstyled a.btn-link:hover {
+    color: inherit; /* Keep the color unchanged on hover */
+    background-color: transparent; /* No background color on hover */
+  }
+  
+  
