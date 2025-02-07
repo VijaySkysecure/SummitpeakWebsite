@@ -13,26 +13,25 @@ body, html {
   overflow-x: hidden;
 }
 
-.nav-link {
-    font-size: 16px;
-    color: rgb(98, 97, 97);
-    margin-bottom: -6px;
-  }
 
-.nav-link {
-  color: rgb(98, 97, 97);
+/* Default styles for the navigation items */
+.nav-item .nav-link {
+    font-size: 14px;
+    font-weight: 450;
+    color: rgba(112, 112, 112, 1); /* Inactive state - Grey */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+  
+/* Hover effect - Dark blue when hovered */
+.nav-item .nav-link:hover {
+    color: rgba(22, 5, 111, 1);
+}
+  
+/* Active state - Blue teal gradient for the active link */
+.nav-item .nav-link.active {
+    color: rgba(22, 5, 111, 1);
 }
 
-.nav-link:hover {
-  color: rgb(98, 97, 97);
-}
-
-.nav-link.active {
-  background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
 
 .social-icons {
   display: flex; /* Use flexbox for horizontal alignment */

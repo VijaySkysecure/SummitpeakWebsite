@@ -13,25 +13,22 @@ body, html {
   overflow-x: hidden;
 }
 
-.nav-link {
-    font-size: 16px;
-    color: rgb(98, 97, 97);
-    margin-bottom: -6px;
-  }
-
-.nav-link {
-  color: rgb(98, 97, 97);
+/* Default styles for the navigation items */
+.nav-item .nav-link {
+  font-size: 14px;
+  font-weight: 450;
+  color: rgba(112, 112, 112, 1); /* Inactive state - Grey */
+  transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
-.nav-link:hover {
-  color: rgb(98, 97, 97);
+/* Hover effect - Dark blue when hovered */
+.nav-item .nav-link:hover {
+  color: rgba(22, 5, 111, 1);
 }
 
-.nav-link.active {
-  background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+/* Active state - Blue teal gradient for the active link */
+.nav-item .nav-link.active {
+  color: rgba(22, 5, 111, 1);
 }
 
 .social-icons {
@@ -391,3 +388,45 @@ li {
     transition: background-color 0.3s ease;
   }
   
+
+  .footer-section {
+    margin-top: -80px; /* Remove any top margin */
+  }
+  
+  
+  .footer-section .col-lg-3:nth-child(1) {
+    width: 34%;
+    line-height: 2;
+  }
+  
+  /* Move the Categories section */
+  .footer-section .col-lg-3:nth-child(2) {
+    margin-left: 100px; /* Add top margin to Categories */
+    line-height: 2.5;
+  }
+  
+  /* Move the Services section */
+  .footer-section .col-lg-3:nth-child(3) {
+    margin-left: -40px; /* Add top margin to Services */
+    line-height: 2.6;
+  }
+  
+  /* Move the Follow Us section */
+  .footer-section .col-lg-3:nth-child(4) {
+    margin-left: -190px; /* Add top margin to Follow Us */
+    line-height: 2.5;
+  }
+  
+  /* Style the links to look like normal text */
+  ul.list-unstyled a.btn-link {
+    text-decoration: none; /* Remove underline */
+    color: white;
+    font-weight: normal; /* Normal weight for text */
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove any border radius */
+  }
+  
+  /* For the Follow Us section */
+  .col-lg-3 ul.list-unstyled li {
+    color: white; /* Set text color to white */
+  }

@@ -25,17 +25,27 @@
           <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
           <ul class="nav">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
             <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
             <li class="nav-item"><a href="career.html" class="nav-link">Career</a></li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a href="process.html" class="nav-link">Our Process</a>
-            </li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="process.html" class="nav-link">Our Process</a></li>
           </ul>
         </div>
+        <script>
+          // JavaScript to toggle the active class on clicked link
+          const links = document.querySelectorAll('.nav-link');
+        
+          links.forEach(link => {
+            link.addEventListener('click', function() {
+              // Remove active class from all links
+              links.forEach(link => link.classList.remove('active'));
+        
+              // Add active class to the clicked link
+              this.classList.add('active');
+            });
+          });
+        </script>
         <div class="social-icons">
           <a href="#" class="me-2"
             ><i class="bi bi-facebook" style="color: #1877f2"></i
@@ -106,122 +116,94 @@
     </div>
   </section>
  
+
+
+  <div class="contact-section">
+    <div class="content">
+    <h2 class="main-text">Let&apos;s Discuss Your Project</h2>
+    <p class="sub-text">Get a free consultation and lust us know your project idea to turn<br>into a digital product.</p>
+    <a href="contact.html">
+      <button class="contact-btn">Talk To Our Experts</button>
+    </a>
+    </div>
+  </div>
+
+
   <!-- Footer Section -->
-  <footer class="footer-section bg-black text-white py-5">
-    <div class="container">
-      <h2
-        class="text-center mb-4"
-        style="
-          background: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-weight: 700;
-          font-size: 45px;
-        "
-      >
-        Let&apos;s Discuss Your Project
-      </h2>
- 
-      <hr class="bg-white opacity-50" style="height: 2px" />
- 
-      <div class="row mt-4">
-        <!-- Company Logo & Description -->
-        <div class="col-lg-3 mb-4">
-          <div class="rectangle-container" style="position: relative; display: inline-block;">
-            <!-- Rectangle image -->
-            <img
-              src="assets/Rectangle 25.png"
-              alt="Rectangle"
-              height="100"
-              class="mb-3"
-            />
-          
-            <!-- Group image positioned inside the rectangle -->
-            <img
-              src="img/companylogo.png"
-              alt="Group Logo"
-              height="60"
-              class="mb-3"
-              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"
-            />
-          </div>
-          
-          <p>
-            <span class="highlight-teal">SummitPeak Software Pvt. Ltd</span>. is a leading technology solutions provider, dedicated to delivering innovative and scalable software services. With a focus on excellence, we empower businesses worldwide through cutting- edge solutions, reliable support, and a commitment to client success.
-          </p>
-          
-        </div>
- 
-        <!-- Categories -->
-        <div class="col-lg-3 mb-4">
-          <h4 class="text-proper mb-3" style="font-weight: 600;">Categories</h4>
-          <ul class="list-unstyled">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Career</li>
-            <li>Contact Us</li>
-            <li>Our Process</li>
-          </ul>
-        </div>
-     
- 
-        <!-- Services -->
-        <div class="col-lg-3 mb-4">
-          <h4 class="text-proper mb-3" style="font-weight: 600;">Services</h4>
-          <ul class="list-unstyled">
-            <li>Build An Application</li>
-            <li>Cloud Adoption</li>
-            <li>Web Presence Solutions</li>
-            <li>Trending Technology</li>
-          </ul>
-        </div>
- 
-        <!-- Follow Us -->
-        <div class="col-lg-3 mb-4">
-          <h4 class="text-proper mb-3" style="font-weight: 600;">Follow Us</h4>
-          <ul class="list-unstyled">
-            <li class="mb-2" style="display: flex; align-items: center;">
-              <div class="icon" style="width: 16px; height: 16px; border-radius: 50%; background-color: #fff; opacity: 1; margin-right: 8px; display: flex; justify-content: center; align-items: center;">
-                <img src="img/footer/facebook Vector (1).svg" alt="Facebook" style="width: 10px; height: 10px;">
-              </div>
-              Facebook
-            </li>
-            <li class="mb-2" style="display: flex; align-items: center;">
-              <div class="icon" style="width: 16px; height: 16px; border-radius: 50%; background-color: #fff; opacity: 1; margin-right: 8px; display: flex; justify-content: center; align-items: center;">
-                <img src="img/footer/Vector (2).svg" alt="Twitter" style="width: 10px; height: 10px;">
-              </div>
-              Twitter
-            </li>
-            <li class="mb-2" style="display: flex; align-items: center;">
-              <img src="img/footer/Vector (5).svg" alt="Instagram" style="width: 15px; height: 20px; margin-right: 8px;">
-              Instagram
-            </li>
-            
-            
-            <li style="display: flex; align-items: center;">
-              <img src="img/footer/Vector (4).svg" alt="LinkedIn" style="width: 15px; height: 20px; margin-right: 8px;">
-              LinkedIn
-            </li>
-            
-          </ul>
-        </div>
-        
-        
-        
- 
-      <hr class="bg-white opacity-50" style="height: 2px" />
- 
-      <!-- Bottom Section -->
-      <div class="d-flex justify-content-between align-items-center mt-3">
-        <p class="mb-0">
-          Copyright &copy; 2025 SummitPeak. All rights reserved.
+<footer class="footer-section bg-black text-white py-5">
+  <div class="container">
+
+    <hr class="bg-white opacity-50" style="height: 2px"/>
+
+    <div class="row mt-4">
+      <!-- Company Logo & Description -->
+      <div class="col-lg-3 mb-4">
+        <img
+          src="img/companylogo.png"
+          alt="Logo"
+          height="70"
+          class="mb-3"
+        />
+        <p>
+          SummitPeak Software Pvt. Ltd. is a leading technology solutions provider, dedicated to delivering innovative and scalable software services. With a focus on excellence, we empower businesses worldwide through cutting- edge solutions, reliable support, and a commitment to client success.
         </p>
-        <div>
-          <a href="#" class="text-white me-3" style="text-decoration: none;">Terms & Conditions</a>
-          <a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a>
-        </div>
-        
+      </div>
+
+  <!-- Categories -->
+  <div class="col-lg-3 mb-4">
+  <h4 class="text mb-3">Categories</h4>
+  <ul class="list-unstyled">
+      <li><a href="../index.html" class="btn btn-link">Home</a></li>
+      <li><a href="../about.html" class="btn btn-link">About Us</a></li>
+      <li><a href="../services.html" class="btn btn-link">Services</a></li>
+      <li><a href="../career.html" class="btn btn-link">Career</a></li>
+      <li><a href="../contact.html" class="btn btn-link">Contact Us</a></li>
+      <li><a href="../process.html" class="btn btn-link">Our Process</a></li>
+    </ul>      
+  </div>
+
+
+<!-- Services -->
+<div class="col-lg-3 mb-4">
+  <h4 class="text mb-3">Services</h4>
+  <ul class="list-unstyled">
+    <li><a href="../index.html#build-an-app" class="btn btn-link">Build An Application</a></li>
+    <li><a href="../index.html#cloud-adoption" class="btn btn-link">Cloud Adoption</a></li>
+    <li><a href="../index.html#web-presence" class="btn btn-link">Web Presence Solutions</a></li>
+    <li><a href="../index.html#trending-tech" class="btn btn-link">Trending Technology</a></li>
+  </ul>
+</div>
+
+
+      <!-- Follow Us -->
+      <div class="col-lg-3 mb-4 text-end">
+        <h4 class="text mb-3">Follow Us</h4>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-facebook me-2"></i>Facebook</li>
+          <li class="mb-2"><i class="bi bi-twitter me-2"></i>Twitter</li>
+          <li class="mb-2">
+            <i class="bi bi-instagram me-2"></i>Instagram
+          </li>
+          <li><i class="bi bi-linkedin me-2"></i>LinkedIn</li>
+        </ul>
       </div>
     </div>
-  </footer>
+
+    <hr class="bg-white opacity-50" style="height: 2px" />
+
+    <!-- Bottom Section -->
+    <div class="d-flex justify-content-between align-items-center mt-3">
+      <p class="mb-0">
+        &copy; 2025 SummitPeak Software Pvt. Ltd. All rights reserved.
+      </p>
+      <div>
+        <a href="#" class="text-white me-3">Terms & Conditions</a>
+        <a href="#" class="text-white">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer> 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

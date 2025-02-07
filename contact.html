@@ -29,7 +29,7 @@
             <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
             <li class="nav-item"><a href="career.html" class="nav-link">Career</a></li>
             <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact Us</a>
+              <a href="contact.html" class="nav-link active">Contact Us</a>
             </li>
             <li class="nav-item">
               <a href="process.html" class="nav-link">Our Process</a>
@@ -60,8 +60,8 @@
         <br />
  
         <h1>
-          Get in touch with us. We're<br />
-          here to assist you.
+          Get in touch with us. We're here<br>
+          to assist you.
         </h1>
  
         <div class="row">
@@ -69,7 +69,7 @@
           <div class="col-lg-8">
             <div class="p-4 border rounded bg-light h-100">
               <h4 class="mb-5 fw-bold text-black">Business Enquiry</h4>
-              <form>
+              <form id="enquiryForm">
                 <div class="mb-4">
                   <label for="name" class="form-label" style="font-size: 20px"
                     >Name*</label
@@ -95,15 +95,16 @@
                   />
                 </div>
                 <div class="mb-4">
-                  <label for="mobile" class="form-label" style="font-size: 20px"
-                    >Mobile*</label
-                  >
+                  <label for="mobile" class="form-label" style="font-size: 20px">Mobile*</label>
                   <input
                     type="text"
                     class="form-control"
                     id="mobile"
                     placeholder="Enter your mobile number"
                     style="height: 45px"
+                    maxlength="10" 
+                    pattern="^[0-9]{10}$" 
+                    required
                   />
                 </div>
                 <div class="mb-4">
@@ -166,14 +167,16 @@
                   type="submit"
                   class="btn btn-primary"
                   style="
-                    background: linear-gradient(to right, #0e8285, #033036);
-                    color: #fff;
-                    border: none;
-                    padding: 10px 20px;
-                    border-radius: 10px;
+                    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+                    color: white;
                     font-size: 16px;
-                    font-weight: bold;
-                    transition: all 0.3s ease;
+                    font-weight: 500;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    padding: 10px 35px;
+                    margin-top: 25px; 
                   "
                 >
                   Send Enquiry
@@ -181,20 +184,48 @@
               </form>
             </div>
           </div>
+
+          <script>
+            document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+              e.preventDefault(); // Prevent form submission
+          
+              // Get values of inputs
+              const name = document.getElementById("name").value;
+              const email = document.getElementById("email").value;
+              const mobile = document.getElementById("mobile").value;
+              const services = document.querySelectorAll(".badge-checkbox");
+              let serviceSelected = false;
+          
+              // Check if at least one checkbox is selected
+              services.forEach(function (checkbox) {
+                if (checkbox.checked) {
+                  serviceSelected = true;
+                }
+              });
+          
+              // Check if all fields are filled and at least one service is selected
+              if (name && email && mobile && serviceSelected) {
+                alert("Enquiry submitted successfully!");
+                // You can replace the alert with actual form submission logic here
+              } else {
+                alert("Please fill out all fields.");
+              }
+            });
+          </script>
  
           <!-- Right Boxes -->
           <div class="col-lg-4">
             <div class="p-4 border rounded bg-light mb-4">
               <h4 class="fw-bold text-black">For Jobs & Internships</h4>
               <p><i class="bi bi-telephone"></i> (808) 998-34256</p>
-              <p><i class="bi bi-envelope"></i> help@info.com</p>
+              <p><i class="bi bi-envelope"></i> contact@summitpeaksoftware.com</p>
             </div>
             <br />
             <br />
             <div class="p-4 border rounded bg-light mb-4">
               <h4 class="fw-bold text-black">For Sales Enquiries</h4>
               <p><i class="bi bi-telephone"></i> (808) 998-34256</p>
-              <p><i class="bi bi-envelope"></i> help@info.com</p>
+              <p><i class="bi bi-envelope"></i> contact@summitpeaksoftware.com</p>
             </div>
             <br />
             <br />
@@ -205,7 +236,7 @@
                 Bellandur,<br />Bengaluru, Karnataka 560103
               </p>
               <p><i class="bi bi-telephone"></i> (808) 998-34256</p>
-              <p><i class="bi bi-envelope"></i> help@info.com</p>
+              <p><i class="bi bi-envelope"></i> contact@summitpeaksoftware.com</p>
             </div>
           </div>
         </div>
@@ -231,94 +262,89 @@
       </div>
     </section>
  
-    <!-- Footer Section -->
-    <footer class="footer-section bg-black text-white py-5">
-      <div class="container">
-        <h2
-          class="text-center mb-4"
-          style="
-            background: linear-gradient(to right, #389ea2, #09252a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-            font-size: 45px;
-          "
-        >
-          We are always happy to <br />
-          assist you
-        </h2>
- 
-        <hr class="bg-white opacity-50" style="height: 2px" />
- 
-        <div class="row mt-4">
-          <!-- Company Logo & Description -->
-          <div class="col-lg-3 mb-4">
-            <img
-              src="img/companylogo.png"
-              alt="Logo"
-              height="60"
-              class="mb-3"
-            />
-            <p>
-              SummitPeak Software Pvt. Ltd. is a leading technology solutions
-              provider, dedicated to delivering innovative and scalable software
-              services.
-            </p>
-          </div>
- 
-          <!-- Categories -->
-          <div class="col-lg-3 mb-4">
-            <h4 class="text-uppercase mb-3">Categories</h4>
-            <ul class="list-unstyled">
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Services</li>
-              <li>Career</li>
-              <li>Contact Us</li>
-              <li>Our Process</li>
-            </ul>
-          </div>
- 
-          <!-- Services -->
-          <div class="col-lg-3 mb-4">
-            <h4 class="text-uppercase mb-3">Services</h4>
-            <ul class="list-unstyled">
-              <li>Build An Application</li>
-              <li>Cloud Adoption</li>
-              <li>Web Presence Solutions</li>
-              <li>Trending Technology</li>
-            </ul>
-          </div>
- 
-          <!-- Follow Us -->
-          <div class="col-lg-3 mb-4 text-end">
-            <h4 class="text-uppercase mb-3">Follow Us</h4>
-            <ul class="list-unstyled">
-              <li class="mb-2"><i class="bi bi-facebook me-2"></i>Facebook</li>
-              <li class="mb-2"><i class="bi bi-envelope me-2"></i>Email</li>
-              <li class="mb-2">
-                <i class="bi bi-instagram me-2"></i>Instagram
-              </li>
-              <li><i class="bi bi-linkedin me-2"></i>LinkedIn</li>
-            </ul>
-          </div>
-        </div>
- 
-        <hr class="bg-white opacity-50" style="height: 2px" />
- 
-        <!-- Bottom Section -->
-        <div class="d-flex justify-content-between align-items-center mt-3">
-          <p class="mb-0">
-            &copy; 2025 SummitPeak Software Pvt. Ltd. All rights reserved.
-          </p>
-          <div>
-            <a href="#" class="text-white me-3">Terms & Conditions</a>
-            <a href="#" class="text-white">Privacy Policy</a>
-          </div>
-        </div>
+
+
+    <div class="contact-section1">
+      <div class="content">
+      <h2 class="main-text">We&apos;re always happy to assist you</h2>
       </div>
-    </footer>
- 
+    </div>
+
+
+   <!-- Footer Section -->
+<footer class="footer-section bg-black text-white py-5">
+  <div class="container">
+
+    <hr class="bg-white opacity-50" style="height: 2px" />
+
+    <div class="row mt-4">
+      <!-- Company Logo & Description -->
+      <div class="col-lg-3 mb-4">
+        <img
+          src="img/companylogo.png"
+          alt="Logo"
+          height="70"
+          class="mb-3"
+        />
+        <p>
+          SummitPeak Software Pvt. Ltd. is a leading technology solutions provider, dedicated to delivering innovative and scalable software services. With a focus on excellence, we empower businesses worldwide through cutting- edge solutions, reliable support, and a commitment to client success.
+        </p>
+      </div>
+
+  <!-- Categories -->
+  <div class="col-lg-3 mb-4">
+  <h4 class="text mb-3">Categories</h4>
+  <ul class="list-unstyled">
+      <li><a href="../index.html" class="btn btn-link">Home</a></li>
+      <li><a href="../about.html" class="btn btn-link">About Us</a></li>
+      <li><a href="../services.html" class="btn btn-link">Services</a></li>
+      <li><a href="../career.html" class="btn btn-link">Career</a></li>
+      <li><a href="../contact.html" class="btn btn-link">Contact Us</a></li>
+      <li><a href="../process.html" class="btn btn-link">Our Process</a></li>
+    </ul>      
+  </div>
+
+
+<!-- Services -->
+<div class="col-lg-3 mb-4">
+  <h4 class="text mb-3">Services</h4>
+  <ul class="list-unstyled">
+    <li><a href="../index.html#build-an-app" class="btn btn-link">Build An Application</a></li>
+    <li><a href="../index.html#cloud-adoption" class="btn btn-link">Cloud Adoption</a></li>
+    <li><a href="../index.html#web-presence" class="btn btn-link">Web Presence Solutions</a></li>
+    <li><a href="../index.html#trending-tech" class="btn btn-link">Trending Technology</a></li>
+  </ul>
+</div>
+
+
+      <!-- Follow Us -->
+      <div class="col-lg-3 mb-4 text-end">
+        <h4 class="text mb-3">Follow Us</h4>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-facebook me-2"></i>Facebook</li>
+          <li class="mb-2"><i class="bi bi-twitter me-2"></i>Twitter</li>
+          <li class="mb-2">
+            <i class="bi bi-instagram me-2"></i>Instagram
+          </li>
+          <li><i class="bi bi-linkedin me-2"></i>LinkedIn</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="bg-white opacity-50" style="height: 2px" />
+
+    <!-- Bottom Section -->
+    <div class="d-flex justify-content-between align-items-center mt-3">
+      <p class="mb-0">
+        &copy; 2025 SummitPeak Software Pvt. Ltd. All rights reserved.
+      </p>
+      <div>
+        <a href="#" class="text-white me-3">Terms & Conditions</a>
+        <a href="#" class="text-white">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer> 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>

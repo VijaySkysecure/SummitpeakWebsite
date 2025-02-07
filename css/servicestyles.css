@@ -9,19 +9,22 @@
 }
     
   
-  .nav-link {
-    color: rgb(98, 97, 97);
+  /* Default styles for the navigation items */
+  .nav-item .nav-link {
+  font-size: 14px;
+  font-weight: 450;
+  color: rgba(112, 112, 112, 1); /* Inactive state - Grey */
+  transition: color 0.3s ease; /* Smooth transition for color change */
   }
-  
-  .nav-link:hover {
-    color: rgb(98, 97, 97);
+
+  /* Hover effect - Dark blue when hovered */
+  .nav-item .nav-link:hover {
+  color: rgba(22, 5, 111, 1);
   }
-  
-  .nav-link.active {
-    color: transparent;
-    background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-    -webkit-background-clip: text;
-    background-clip: text;
+
+  /* Active state - Blue teal gradient for the active link */
+  .nav-item .nav-link.active {
+  color: rgba(22, 5, 111, 1);
   }
   
   .social-icons {
@@ -32,6 +35,11 @@
   
   .social-icons a {
     font-size: 1.5rem; /* Increase icon size */
+  }
+
+
+  a {
+    text-decoration: none; /* Remove underline from all links */
   }
 
   .about-section {
@@ -61,7 +69,7 @@
   .highlight-text {
     font-family: 'Poppins', sans-serif; /* Added font-family */
     font-size: 60px; /* Updated font size */
-    font-weight: 750; /* Font weight */
+    font-weight: 700; /* Font weight */
     line-height: 90px; /* Line height */
     text-align: left; /* Text alignment */
     background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
@@ -108,97 +116,141 @@
     margin-top: 20px;  /* Adjust this value to control the vertical distance */
 }
   
-.services-wrapper {
-  margin-left: 100px;
-}
-
 .our-services {
   text-align: left;
-  margin-top: 60px; /* Adjust other margins as needed */
+  margin-left: 120px;
+  margin-top: 100px;
 }
 
 .our-services h2 {
-    font-family: 'Poppins', sans-serif; /* Font family */
-    font-size: 40px; /* Font size */
-    font-weight: 600; /* Font weight */
-    line-height: 60px; /* Line height */
-    text-align: left; /* Text alignment */
-    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin: 20px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 60px;
+  text-align: left;
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 20px 0;
 }
-  
+
 .our-services p {
-    font-size: 1rem;
-    margin-top: 10px;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 1rem;
+  margin-top:10px;
+  color: #333;
+  margin-bottom: 40px;
 }
-  
-.centered-tab-container {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the content horizontally */
-    gap: 30px; /* Spacing between buttons */
-    padding: 10px 20px;
-    border: 2px solid #161414;
-    border-radius: 30px;
-    margin: 0 auto 30px; /* Center horizontally */
-    background-color: #f9f9f9;
-    width: fit-content; /* Make the container width fit the content */
+
+.centered-tab-container1 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 20px;
+  border: 2px white;
+  border-radius: 10px;
+  margin: 0px auto 30px;
+  background-color: white;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  margin-left: 175px;
 }
-  
-.tab-button {
-    background: none;
-    border: none;
-    color: gray;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    color: #333;
+
+.our-services-tab {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: #333;
 }
-  
-.tab-button.active {
-    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    border-radius: 20px;
+
+.our-services-tab.active {
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-radius: 20px;
 }
-  
-.tab-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative; /* For smooth animations */
+
+.our-services-image {
+  display: none;
+  width: 100%;
+  margin: 0 auto 30px;
+  max-height: 300px;
+  object-fit: contain;
 }
-  
-.service-image-wrapper {
-    position: relative; /* Ensure individual control for animations */
-    transform: translateY(0); /* Default position */
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
-    opacity: 1; /* Fully visible by default */
+
+.our-services-image.active {
+  display: block;
+  margin-left: -60px;
 }
-  
-/* Removed unnecessary position change unless intended for animations */
-.service-image-wrapper img {
-    max-width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+.explore-more-btn {
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: 665px;
+  margin-bottom: 150px;
+  padding: 10px 35px;
+  background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  color: white;
+  font-size: 16px;
+  font-weight: 550;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-items: center;
 }
-  
-/* Transition Effect: Images moving down */
-.service-image-wrapper.moving {
-    transform: translateY(100%); /* Move down during the animation */
-    opacity: 0; /* Fade out effect */
+
+.our-services-image-container {
+  position: relative;
 }
-  
-/* First child remains fully visible */
-.service-image-wrapper:first-child {
-    opacity: 1;
-    transform: translateY(0);
+
+.clickable-areas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.clickable-area {
+  position: absolute;
+  /* background-color: red; Transparent background */
+  display: block;
+  cursor: pointer;
+  z-index: 10; /* Ensure the clickable areas are above the image */
+}
+
+.webapparea {
+  top: 50%; /* Adjust based on where you want the clickable area */
+  left: 6.5%;
+  width: 16%;
+  height: 42%;
+}
+
+.mobapparea {
+  top: 50%;
+  left: 27%;
+  width: 18%;
+  height: 44%;
+}
+
+.desthinkarea {
+  top: 50%;
+  left: 50%;
+  width: 14%;
+  height: 42%;
+}
+
+.hireadevarea {
+  top: 50%;
+  left: 70%;
+  width: 16%;
+  height: 43%;
 }
   
 
@@ -256,6 +308,7 @@
   background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
   color: white;
   font-size: 1rem;
+  font-weight: 600;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -263,47 +316,146 @@
 }
 
 
-.centered-tab-container {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the content horizontally */
-    gap: 30px; /* Spacing between buttons */
-    padding: 10px 20px;
-    border: 2px solid #161414;
-    border-radius: 30px;
-    margin: 0 auto 30px; /* Center horizontally */
-    background-color: #f9f9f9;
-    width: fit-content; /* Make the container width fit the content */
+/* Specific to Technology Stack Section */
+.our-services-tech-stack h2.highlight-text-tech {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 60px;
+  text-align: left;
+  background-image: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-top: 80px;
+  margin-left: 120px;
 }
-  
-.tab-button {
-    background: none;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    color: #333;
+
+.our-services-tech-stack p.services-description-tech {
+  font-size: 1rem;
+  margin-top:10px;
+  color: rgba(18, 18, 18, 1);
+  margin-bottom: 40px;
+  margin-left: 120px;
 }
-  
-.tab-button.active {
-    color: white;
-    color: #009688;
-    border-radius: 20px;
+
+.centered-tab-container-tech {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the content horizontally */
+  gap: 30px; /* Spacing between buttons */
+  padding: 10px 20px;
+  border: 2px white;
+  border-radius: 10px;
+  margin: 0 auto 0px; /* Center horizontally */
+  background-color: white;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1); /* Add a shadow to the container */
+  width: fit-content; /* Make the container width fit the content */
+  margin-left: 400px;
 }
-  
-.tech-image {
-    display: none;
-    width: 80%;
-    margin: 0 auto 30px;
-    max-height: 300px;
-    object-fit: contain;
+
+.tab-button-tech {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: #333;
 }
-  
-.tech-image.active {
-    display: block;
+
+.tab-button-tech.active {
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-radius: 20px;
+}
+
+.tech-image-tech {
+  display: none;
+  width: 80%;
+  margin: 0 auto 30px;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.tech-image-tech.active {
+  display: block;
+  margin-left: 150px;
+}
+
+.clickable-areas-container-tech {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Clickable areas on the frontend image */
+.clickable-area-tech {
+  position: absolute;
+  /* background-color: red; Red for visibility, can be commented out later */
+  display: block;
+  cursor: pointer;
+  z-index: 10; /* Ensure the clickable areas are above the image */
 }
 
 
+.tech-image-container {
+  position: relative;
+}
+
+.clickable-areas-row {
+  display: flex;
+  justify-content: space-between; /* Distribute the clickable areas evenly */
+  gap: 10px; /* Adjust space between clickable areas */
+  margin-top: 20px; /* Add some space between the image and clickable areas */
+}
+
+
+
+.frontendarea1 {
+  top: 32%;
+  left: 10%;
+  width: 10%;
+  height: 50%;
+}
+
+.frontendarea2 {
+  top: 25.5%;
+  left: 25%;
+  width: 9%;
+  height: 55%;
+}
+
+.frontendarea3 {
+  top: 27%;
+  left: 38%;
+  width: 9%;
+  height: 54%;
+}
+
+.frontendarea4 {
+  top: 27%;
+  left: 52%;
+  width: 10%;
+  height: 50%;
+}
+
+.frontendarea5 {
+  top: 27%;
+  left: 66%;
+  width: 9%;
+  height: 51.5%;
+}
+
+.frontendarea6 {
+  top: 27%;
+  left: 80%;
+  width: 9%;
+  height: 47%;
+}
 
 
 
@@ -314,13 +466,17 @@
   gap: 40px; /* Increased space between cards and text */
   padding: 30px;
   justify-content: center; /* Center the whole row */
+  background-color: rgba(245, 245, 245, 1);
+  border-radius: 12px;
+  width: 90%;
+  margin-left: 60px;
 }
  
 /* Grid container for cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
-  gap: 30px; /* Increased space between cards */
+  gap: 20px; /* Increased space between cards */
   justify-content: center; /* Center the grid */
   align-items: center; /* Vertically align items */
 }
@@ -333,28 +489,30 @@
   padding: 20px; /* Increased padding for larger cards */
   background-color: white;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 300px; /* Increased max-width for larger cards */
-  max-height: 300px; /* Increased max-height for larger cards */
+  width: 180px; /* Increased max-width for larger cards */
+  height: 180px; /* Increased max-height for larger cards */
   overflow: hidden; /* Prevent overflow if SVGs are too large */
 }
  
 /* SVG images inside cards */
 .card img {
   width: 100%; /* Make the SVG fit the card's width */
-  height: auto; /* Maintain the aspect ratio of the SVG */
-  object-fit: contain; /* Ensure SVGs are fully visible within the card */
+  height: 100%; /* Maintain the aspect ratio of the SVG */
+  object-fit: cover; /* Ensure SVGs are fully visible within the card */
 }
  
 .description {
   text-align: left;
   font-size: 1.2rem; /* Increased font size for better readability */
+  
 }
  
 .description h3 {
   margin-bottom: 15px; /* Increased margin for better spacing */
   font-size: 1.5rem; /* Larger header text */
+  font-weight: 600;
 }
  
 .description p {
@@ -364,29 +522,34 @@
 }
  
 .explore-btn {
-  background: linear-gradient(to right, teal, navy);
-  color: white;
+  background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+  color: white; /* White text */
+  font-family: 'Poppins', sans-serif; /* Set the font family */
+  font-size: 16px;
+  font-size: 16px; /* Set the font size */
+  font-weight: 550;
   border: none;
-  padding: 15px 30px; /* Increased padding for larger button */
+  padding: 10px 20px; /* Increased padding for larger button */
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.2rem; /* Larger button text */
+  font-size: 16px; /* Larger button text */
   transition: background 0.3s;
 }
- 
-.explore-btn:hover {
-  background: teal;
-}
- 
+
+
+
+
 .industries-section {
-  padding: 60px; /* Increased padding for more space */
+  margin-top: 20px;
+  margin-left: 120px;
   text-align: center;
 }
 
 
-.tab-content1 {
+.tab-content {
   display: none;
 }
+
 
 .tab-content.active {
   display: flex; /* Ensures content is visible */
@@ -412,7 +575,8 @@
 .tab {
   border: none;
   background: none;
-  font-size: 1.2rem; /* Increased font size for tabs */
+  font-size: 20px; /* Increased font size for tabs */
+  font-weight: 400;
   cursor: pointer;
   padding: 15px 25px; /* Increased padding for larger tabs */
   border-bottom: 2px solid transparent;
@@ -420,8 +584,12 @@
 }
  
 .tab.active {
-  color: teal;
-  border-bottom-color: teal;
+  font-weight: 580;
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-bottom-color: rgba(22, 5, 111, 1);
 }
 
 
@@ -434,31 +602,23 @@
   margin-top: 100px;
   border-radius: 10px;
   margin-left: 150px;
-  align-items: center;
+  align-items: left;
 }
- 
-/* .section-header {
-  text-align: center;
-  margin-bottom: 3rem;
-} */
  
 .section-header {
   position: relative;
   padding: 20px;
+  
 }
 .section-title {
-  font-size: 2.5rem;
-  color: #0d9488;
+  font-size: 35px;
+  font-weight: 600;
+  background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   margin-bottom: 1rem;
   text-align: left; /* Explicitly set left alignment */
-}
- 
-.section-description {
-  color: #4b5563;
-  max-width: 600px;
-  line-height: 1.6;
-  position: relative;
-  left: 1;
 }
  
 .projects-grid {
@@ -514,22 +674,27 @@
 }
  
 .section-description {
-  max-width: 600px;
-  margin: 0 auto;
+  color: rgba(18, 18, 18, 1);
+  max-width: 900px;
+  margin-left: 0px;
   line-height: 1.6;
 }
- 
-/* Explore button styling */
+
 .explore-button {
-  display: block;
-  margin: 40px auto 20px;
-  padding: 12px 30px;
-  background: linear-gradient(to right, teal, navy);
-  transition: background 0.3s;
-  color: white;
+  background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+  color: white; /* White text */
+  font-family: 'Poppins', sans-serif; /* Set the font family */
+  font-size: 16px;
+  font-size: 16px; /* Set the font size */
+  font-weight: 550;
   border: none;
-  border-radius: 25px;
+  padding: 8px 35px; /* Increased padding for larger button */
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 16px; /* Larger button text */
+  transition: background 0.3s;
+  display: block;
+  margin: 40px auto 0;
 }
 
 
@@ -540,6 +705,7 @@
   align-items: flex-start;
   justify-content: space-between;
   max-width: 1200px;
+  height: 400px;
   margin: 50px auto;
   padding: 20px;
   background: #ffffff;
@@ -687,3 +853,48 @@
     margin-left: 0; /* Remove left margin on small screens */
   }
 }
+
+
+.footer-section {
+  margin-top: 0px; /* Remove any top margin */
+}
+
+
+.footer-section .col-lg-3:nth-child(1) {
+  width: 34%;
+  line-height: 2;
+}
+
+/* Move the Categories section */
+.footer-section .col-lg-3:nth-child(2) {
+  margin-left: 100px; /* Add top margin to Categories */
+  line-height: 2.5;
+}
+
+/* Move the Services section */
+.footer-section .col-lg-3:nth-child(3) {
+  margin-left: -40px; /* Add top margin to Services */
+  line-height: 2.6;
+}
+
+/* Move the Follow Us section */
+.footer-section .col-lg-3:nth-child(4) {
+  margin-left: -190px; /* Add top margin to Follow Us */
+  line-height: 2.5;
+}
+
+/* Style the links to look like normal text */
+ul.list-unstyled a.btn-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the color from the parent */
+  font-weight: normal; /* Normal weight for text */
+  padding: 0; /* Remove padding */
+  border-radius: 0; /* Remove any border radius */
+}
+
+ul.list-unstyled a.btn-link:hover {
+  color: inherit; /* Keep the color unchanged on hover */
+  background-color: transparent; /* No background color on hover */
+}
+
+

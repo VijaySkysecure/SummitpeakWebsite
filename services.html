@@ -26,7 +26,7 @@
           <ul class="nav">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
             <li class="nav-item"><a href="career.html" class="nav-link">Career</a></li>
             <li class="nav-item">
               <a href="contact.html" class="nav-link">Contact Us</a>
@@ -72,83 +72,92 @@
 
 
 
-<!-- Our Services Section -->
-<div class="services-wrapper">
-  <section class="our-services">
-    <h2>Our Services</h2>
-    <p class="services-description">
-        From innovative software development to seamless IT solutions, SummitPeak Software offers a range of services designed to meet your
-        unique business needs.<br>We specialize in delivering cutting-edge technologies, ensuring efficiency, scalability and success for clients worldwide.
-    </p>
-
-    <div class="centered-tab-container">
-        <button class="tab-button active" data-target="build-an-app">Build An Application</button>
-        <button class="tab-button" data-target="cloud-adoption">Cloud Adoption</button>
-        <button class="tab-button" data-target="web-presence">Web Presence Solutions</button>
-        <button class="tab-button" data-target="trending-tech">Trending Technology</button>
+<!--Our Services Section-->
+<section class="our-services">
+  <h1>Our Services</h1>
+  <h2 class="highlight-text">
+    Solutions That Elevate Your Business
+  </h2>
+  <p class="services-description">
+    From innovative software development to seamless IT solutions, SummitPeak Software offers a range of services designed to meet your
+    unique business needs.<br>We specialize in delivering cutting-edge technologies, ensuring efficiency, scalability and success for clients worldwide.
+  </p>
+  
+  <div class="centered-tab-container1">
+    <button class="our-services-tab active" data-target="build-an-app" id="build-an-app-tab">Build An Application</button>
+    <button class="our-services-tab" data-target="cloud-adoption" id="cloud-adoption-tab">Cloud Adoption</button>
+    <button class="our-services-tab" data-target="web-presence" id="web-presence-tab">Web Presence Solutions</button>
+    <button class="our-services-tab" data-target="trending-tech" id="trending-tech-tab">Trending Technology</button>
+  </div>
+  
+  <div class="our-services-tab-content">
+    <div class="our-services-image-container">
+      <img id="build-an-app" class="our-services-image active" src="img/home/buildanapp.png" alt="Build An Application">
+      <div class="clickable-areas-container">
+        <a href="webappdev.html" class="clickable-area webapparea"></a>
+        <a href="mobileappdev.html" class="clickable-area mobapparea"></a>
+        <a href="designthinking.html" class="clickable-area desthinkarea"></a>
+        <a href="hireadev.html" class="clickable-area hireadevarea"></a>
+      </div>
     </div>
 
-    <div class="tab-content">
-        <div id="build-an-app" class="service-image-wrapper">
-            <img src="img/home/buildanapp.png" alt="Build An Application">
-        </div>
-        <div id="cloud-adoption" class="service-image-wrapper">
-            <img src="img/home/cloudadoption.png" alt="Cloud Adoption">
-        </div>
-        <div id="web-presence" class="service-image-wrapper">
-            <img src="img/home/webprescence.png" alt="Web Presence Solutions">
-        </div>
-        <div id="trending-tech" class="service-image-wrapper">
-            <img src="img/home/trendingtech.png" alt="Trending Technology">
-        </div>
+  <div class="our-services-tab-content">
+    <div class="our-services-image-container">
+      <img id="cloud-adoption" class="our-services-image" src="img/home/cloudadoption.png" alt="Cloud Adoption">
+      <div class="clickable-areas-container">
+        <a href="itservices.html" class="clickable-area webapparea"></a>
+        <a href="awsservices.html" class="clickable-area mobapparea"></a>
+        <a href="cloudconsulting.html" class="clickable-area desthinkarea"></a>
+        <a href="devops.html" class="clickable-area hireadevarea"></a>
+      </div>
     </div>
-</div>
 
-    <script>
-        const tabButtons = document.querySelectorAll(".tab-button");
-    const tabContent = document.querySelector(".tab-content");
-    const serviceWrappers = Array.from(document.querySelectorAll(".service-image-wrapper"));
+<div class="our-services-tab-content">
+  <div class="our-services-image-container">
+    <img id="web-presence" class="our-services-image" src="img/home/webprescence.png" alt="Web Presence Solutions">
+    <div class="clickable-areas-container">
+      <a href="websitedesign.html" class="clickable-area webapparea"></a>
+      <a href="seo.html" class="clickable-area mobapparea"></a>
+      <a href="intmkt.html" class="clickable-area desthinkarea"></a>
+      <a href="mktauto.html" class="clickable-area hireadevarea"></a>
+    </div>
+  </div>
 
-// Add click event listeners to each button
-tabButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        // Remove active class from all buttons
-        tabButtons.forEach((btn) => btn.classList.remove("active"));
-        // Add active class to the clicked button
-        button.classList.add("active");
+  <div class="our-services-tab-content">
+    <div class="our-services-image-container">
+    <img id="trending-tech" class="our-services-image" src="img/home/trendingtech.png" alt="Trending Technology">
+    <div class="clickable-areas-container">
+      <a href="aiservices.html" class="clickable-area webapparea"></a>
+      <a href="mldev.html" class="clickable-area mobapparea"></a>
+      <a href="arappdev.html" class="clickable-area desthinkarea"></a>
+      <a href="vrappdev.html" class="clickable-area hireadevarea"></a>
+    </div>
+  </div>
+  </div>
+  
+  <a href="services.html">
+    <button class="explore-more-btn">Explore More</button>
+  </a>
+</section>
 
-        // Get the target ID
-        const targetId = button.getAttribute("data-target");
+<script>
+  const tabButtons = document.querySelectorAll(".our-services-tab");
+  const serviceImages = document.querySelectorAll(".our-services-image");
 
-        // Find the index of the clicked image wrapper
-        const targetIndex = serviceWrappers.findIndex(
-            (wrapper) => wrapper.id === targetId
-        );
+  // Add click event listeners to each button
+  tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+          // Remove active class from all buttons and images
+          tabButtons.forEach(btn => btn.classList.remove("active"));
+          serviceImages.forEach(image => image.classList.remove("active"));
 
-        // Rotate the wrappers array
-        const rotatedWrappers = [
-            ...serviceWrappers.slice(targetIndex),
-            ...serviceWrappers.slice(0, targetIndex),
-        ];
-
-        // Apply transition effect
-        serviceWrappers.forEach((wrapper, index) => {
-            wrapper.classList.add("moving");
-            setTimeout(() => {
-                wrapper.classList.remove("moving");
-                // Update the DOM order once transition completes
-                if (index === serviceWrappers.length - 1) {
-                    tabContent.innerHTML = "";
-                    rotatedWrappers.forEach((rotatedWrapper) =>
-                        tabContent.appendChild(rotatedWrapper)
-                    );
-                }
-            }, 500); // Match the duration of the CSS transition
-        });
-    });
-});
-
-    </script>
+          // Add active class to the clicked button and its corresponding image
+          button.classList.add("active");
+          const targetId = button.getAttribute("data-target");
+          document.getElementById(targetId).classList.add("active");
+      });
+  });
+</script>
 
 
 
@@ -157,217 +166,320 @@ tabButtons.forEach((button) => {
   <h2 class="main-text">Which custom development service are you<br>looking for?</h2>
   <p class="sub-text">Share your requirements with our industry leading team of experts and leverage best-in-class software<br>
   development teams to launch applications that represent your business.</p>
-  <button class="contact-btn">Contact Us</button>
+  <a href="contact.html">
+    <button class="contact-btn">Contact Us</button>
+  </a>
   </div>
 </div>
+
+
+
 
 <!--Technology Stack Section-->
-<div class="services-wrapper">
-  <section class="our-services">
-  <h2 class="highlight-text">
+<section class="our-services-tech-stack">
+  <h2 class="highlight-text-tech">
       Technology Stack
-    </h2>
-  <p class="services-description">
-    We specialize in leveraging advanced technology stacks to deliver innovative solutions tailored to your brand.
+  </h2>
+  <p class="services-description-tech">
+      We specialize in leveraging advanced technology stacks to deliver innovative solutions tailored to your brand.
+  </p>
 
-  <div class="centered-tab-container">
-    <button class="tab-button active" data-target="frontend">Frontend</button>
-    <button class="tab-button" data-target="backend">Backend</button>
-    <button class="tab-button" data-target="mobileapp">Mobile App</button>
-    <button class="tab-button" data-target="cloud">Cloud</button>
-    <button class="tab-button" data-target="databases">Databases</button>
+  <div class="centered-tab-container-tech">
+      <button class="tab-button-tech active" data-target="frontend-tech">Frontend</button>
+      <button class="tab-button-tech" data-target="backend-tech">Backend</button>
+      <button class="tab-button-tech" data-target="mobileapp-tech">Mobile App</button>
+      <button class="tab-button-tech" data-target="cloud-tech">Cloud</button>
+      <button class="tab-button-tech" data-target="databases-tech">Databases</button>
   </div>
 
-  <div class="tab-content">
-    <img id="frontend" class="tech-image active" src="img/home/frontend.png" alt="Frontend">
-    <img id="backend" class="tech-image" src="img/home/backend.png" alt="Backend">
-    <img id="mobileapp" class="tech-image" src="img/home/mobileapp.png" alt="Mobile App">
-    <img id="cloud" class="tech-image" src="img/home/cloud.png" alt="Cloud">
-    <img id="databases" class="tech-image" src="img/home/databases.png" alt="Databases">
+  <div class="tab-content-tech">
+      <div class="tech-image-container">
+          <img id="frontend-tech" class="tech-image-tech active" src="img/home/frontend.png" alt="Frontend">
+          <div class="clickable-areas-row">
+              <a href="hiringpages/angularjs.html" class="clickable-area-tech frontendarea1"></a>
+              <a href="hiringpages/htmldeveloper.html" class="clickable-area-tech frontendarea2"></a>
+              <a href="hiringpages/jsdev.html" class="clickable-area-tech frontendarea3"></a>
+              <a href="hiringpages/bootstrap.html" class="clickable-area-tech frontendarea4"></a>
+              <a href="hiringpages/cssdeveloper.html" class="clickable-area-tech frontendarea5"></a>
+              <a href="hiringpages/jquery.html" class="clickable-area-tech frontendarea6"></a>
+          </div>
+      </div>
+      <div class="tab-content-tech">
+        <div class="tech-image-container">
+      <img id="backend-tech" class="tech-image-tech" src="img/home/backend.png" alt="Backend">
+      <div class="clickable-areas-row">
+        <a href="hiringpages/django.html" class="clickable-area-tech frontendarea1"></a>
+        <a href="hiringpages/nodejs.html" class="clickable-area-tech frontendarea2"></a>
+        <a href="hiringpages/mysql.html" class="clickable-area-tech frontendarea3"></a>
+        <a href="hiringpages/ror.html" class="clickable-area-tech frontendarea4"></a>
+        <a href="hiringpages/php.html" class="clickable-area-tech frontendarea5"></a>
+        <a href="hiringpages/mongodb.html" class="clickable-area-tech frontendarea6"></a>
+    </div>
+    <div class="tab-content-tech">
+      <div class="tech-image-container">
+      <img id="mobileapp-tech" class="tech-image-tech" src="img/home/mobileapp.png" alt="Mobile App">
+      <div class="clickable-areas-row">
+        <a href="hiringpages/androidstudio.html" class="clickable-area-tech frontendarea1"></a>
+        <a href="hiringpages/ionic.html" class="clickable-area-tech frontendarea2"></a>
+        <a href="hiringpages/flutter.html" class="clickable-area-tech frontendarea3"></a>
+        <a href="hiringpages/iosdev.html" class="clickable-area-tech frontendarea4"></a>
+        <a href="hiringpages/titanium.html" class="clickable-area-tech frontendarea5"></a>
+        <a href="hiringpages/appcode.html" class="clickable-area-tech frontendarea6"></a>
+    </div>
+    <div class="tab-content-tech">
+      <div class="tech-image-container">
+      <img id="cloud-tech" class="tech-image-tech" src="img/home/cloud.png" alt="Cloud">
+      <div class="clickable-areas-row">
+        <a href="hiringpages/awsdev.html" class="clickable-area-tech frontendarea1"></a>
+        <a href="hiringpages/azuredev.html" class="clickable-area-tech frontendarea2"></a>
+        <a href="hiringpages/terraform.html" class="clickable-area-tech frontendarea3"></a>
+        <a href="hiringpages/ansible.html" class="clickable-area-tech frontendarea4"></a>
+        <a href="hiringpages/ibmcloud.html" class="clickable-area-tech frontendarea5"></a>
+        <a href="hiringpages/gcloud.html" class="clickable-area-tech frontendarea6"></a>
+    </div>
+    <div class="tab-content-tech">
+      <div class="tech-image-container">
+      <img id="databases-tech" class="tech-image-tech" src="img/home/databases.png" alt="Databases">
+      <div class="clickable-areas-row">
+        <a href="hiringpages/mssql.html" class="clickable-area-tech frontendarea1"></a>
+        <a href="hiringpages/oracle.html" class="clickable-area-tech frontendarea2"></a>
+        <a href="hiringpages/mysql.html" class="clickable-area-tech frontendarea3"></a>
+        <a href="hiringpages/ibmdb2.html" class="clickable-area-tech frontendarea4"></a>
+        <a href="hiringpages/postgres.html" class="clickable-area-tech frontendarea5"></a>
+        <a href="hiringpages/postgres.html" class="clickable-area-tech frontendarea6"></a>
+    </div>
   </div>
-</div>
 
   <script>
-    const techTabButtons = document.querySelectorAll(".tab-button");
-    const techImages = document.querySelectorAll(".tech-image");
+      const techTabButtons = document.querySelectorAll(".tab-button-tech");
+      const techImages = document.querySelectorAll(".tech-image-tech");
 
-    // Add click event listeners to each button
-    techTabButtons.forEach(button => {
-        button.addEventListener("click", () => {
-        // Remove active class from all buttons and images
-            techTabButtons.forEach(btn => btn.classList.remove("active"));
-            techImages.forEach(image => image.classList.remove("active"));
+      // Add click event listeners to each button
+      techTabButtons.forEach(button => {
+          button.addEventListener("click", () => {
+              // Remove active class from all buttons and images
+              techTabButtons.forEach(btn => btn.classList.remove("active"));
+              techImages.forEach(image => image.classList.remove("active"));
 
-            // Add active class to the clicked button and its corresponding image
-            button.classList.add("active");
-             const targetId = button.getAttribute("data-target");
-            document.getElementById(targetId).classList.add("active");
-        });
-    });
-</script>
-
-
+              // Add active class to the clicked button and its corresponding image
+              button.classList.add("active");
+              const targetId = button.getAttribute("data-target");
+              document.getElementById(targetId).classList.add("active");
+          });
+      });
+  </script>
+</section>
 
 
 
 
 <div class="industries-section">
-<h2 class="section-title">Industries <span class="highlight">We Cater</span></h2>
-<div class="tabs">
-<button class="tab active" data-content="education">Education</button>
-<button class="tab" data-content="healthcare">Health Care</button>
-<button class="tab" data-content="bfsi">BFSI</button>
-<button class="tab" data-content="hosting">Hosting</button>
-<button class="tab" data-content="media">Media</button>
-<button class="tab" data-content="startup">Start Up</button>
-<button class="tab" data-content="ecommerce">E-commerce</button>
-</div>
-<div class="content-container">
-<!-- Education -->
-<div id="education" class="tab-content.active">
-<div class="content-row">
-  <!-- Left Side: Grid for Cards -->
-  <div class="grid">
-    <div class="card"><img src="img/home/education/image.png" alt="Education Image 1"></div>
-    <div class="card"><img src="img/home/education/image-1.png" alt="Education Image 2"></div>
-    <div class="card"><img src="img/home/education/image-2.png" alt="Education Image 3"></div>
-    <div class="card"><img src="img/home/education/image-3.png" alt="Education Image 4"></div>
+  <h2 class="section-title">Industries We Cater</span></h2>
+  <div class="tabs">
+    <button class="tab active" data-content="education">Education</button>
+    <button class="tab" data-content="healthcare">Health Care</button>
+    <button class="tab" data-content="bfsi">BFSI</button>
+    <button class="tab" data-content="hosting">Hosting</button>
+    <button class="tab" data-content="media">Media</button>
+    <button class="tab" data-content="startup">Start Up</button>
+    <button class="tab" data-content="ecommerce">E-commerce</button>
   </div>
+  <div class="content-container">
+    <!-- Education -->
+    <div id="education" class="tab-content">
+      <div class="content-row">
+        <!-- Left Side: Grid for Cards -->
+        <div class="grid">
+          <div class="card"><img src="img/home/education/image.png" alt="Education Image 1"></div>
+          <div class="card"><img src="img/home/education/image-1.png" alt="Education Image 2"></div>
+          <div class="card"><img src="img/home/education/image-2.png" alt="Education Image 3"></div>
+          <div class="card"><img src="img/home/education/image-3.png" alt="Education Image 4"></div>
+        </div>
+    
+        <!-- Right Side: Text Content -->
+        <div class="description">
+          <h3>Education</h3>
+          <p>
+            Implement innovative eLearning solutions that benefit both teachers and learners. Provide personalized learning experiences while empowering your management team to streamline operations effectively.
+          </p>
+          <a href="education.html">
+            <button class="explore-btn">Explore more</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    
 
-  <!-- Right Side: Text Content -->
-  <div class="description">
-    <h3>Education</h3>
-    <p>
-      Implement innovative eLearning solutions that benefit both teachers and learners. Provide personalized learning
-      experiences while empowering your management team to streamline operations effectively.
+    <!-- Health Care -->
+    <div id="healthcare" class="tab-content">
+      <div class="content-row">
+        <!-- Left Side: Grid for Cards -->
+        <div class="grid">
+          <div class="card"><img src="img/home/healthcare/image.png" alt="Health Care Image 1"></div>
+          <div class="card"><img src="img/home/education/image-1.png" alt="Health Care Image 2"></div>
+          <div class="card"><img src="img/home/healthcare/image-2.png" alt="Health Care Image 3"></div>
+          <div class="card"><img src="img/home/healthcare/image-3.png" alt="Health Care Image 4"></div>
+        </div>
+    
+        <!-- Right Side: Description -->
+        <div class="description">
+          <h3>Health Care</h3>
+          <p>
+            Elevate patient care to new heights! Transform your healthcare organization and empower your administrative team to ensure seamless operations with state-of-the-art healthcare solutions.
+          </p>
+          <a href="healthcare.html">
+            <button class="explore-btn">Explore more</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional sections (e.g., BFSI, Hosting, etc.) -->
+    <!-- Repeat the same structure for other tabs -->
+    <div id="bfsi" class="tab-content">
+      <div class="content-row">
+        <div class="grid">
+          <div class="card"><img src="img/home/bfsiandrest/image.png" alt="BFSI Image 1"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-1.png" alt="BFSI Image 2"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-2.png" alt="BFSI Image 3"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-3.png" alt="BFSI Image 4"></div>
+        </div>
+        <div class="description">
+          <h3>BFSI</h3>
+          <p>
+            Provide your customers with secure and seamless transaction experiences while empowering your banking teams to excel with next-generation banking and finance solutions.
+          </p>
+          <a href="fintech.html">
+            <button class="explore-btn">Explore more</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Hosting -->
+    <div id="hosting" class="tab-content">
+      <div class="content-row">
+        <div class="grid">
+          <div class="card"><img src="img/home/bfsiandrest/image-4.png" alt="Hosting Image 1"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-5.png" alt="Hosting Image 2"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-6.png" alt="Hosting Image 3"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-7.png" alt="Hosting Image 4"></div>
+        </div>
+        <div class="description">
+          <h3>Hosting</h3>
+          <p>
+            Focus on your core business while our team takes care of all your hosting needs. Reach out to us for a detailed consultation.
+          </p>
+          <a href="hosting.html">
+            <button class="explore-btn">Explore more</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Media -->
+    <div id="media" class="tab-content">
+      <div class="content-row">
+        <div class="grid">
+          <div class="card"><img src="img/home/bfsiandrest/image-8.png" alt="Media Image 1"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-9.png" alt="Media Image 2"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-10.png" alt="Media Image 3"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-11.png" alt="Media Image 4"></div>
+        </div>
+        <div class="description">
+          <h3>Media</h3>
+          <p>
+            Create an entertainment experience that boosts your brand’s popularity. Develop media and entertainment applications that cater to the evolving needs of your customers.
+          </p>
+          <a href="media.html">
+            <button class="explore-btn">Explore more</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Start Up -->
+    <div id="startup" class="tab-content">
+      <div class="content-row">
+        <div class="grid">
+          <div class="card"><img src="img/home/bfsiandrest/image-12.png" alt="Start-Up Image 1"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-13.png" alt="Start-Up Image 2"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-14.png" alt="Start-Up Image 3"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-15.png" alt="Start-Up Image 4"></div>
+        </div>
+        <div class="description">
+          <h3>Start Up</h3>
+          <p>
+            A successful app strategy is driven by market needs. Our agile development teams prioritize continuous value delivery to ensure your app’s success.
+          </p>
+          <button class="explore-btn">Explore more</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- E-commerce -->
+    <div id="ecommerce" class="tab-content">
+      <div class="content-row">
+        <div class="grid">
+          <div class="card"><img src="img/home/bfsiandrest/image-16.png" alt="E-commerce Image 1"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-17.png" alt="E-commerce Image 2"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-18.png" alt="E-commerce Image 3"></div>
+          <div class="card"><img src="img/home/bfsiandrest/image-19.png" alt="E-commerce Image 4"></div>
+        </div>
+        <div class="description">
+          <h3>E-commerce</h3>
+          <p>
+            Craft digital shopping experiences that keep you ahead of the competition. Streamline your business operations, strategize for increased revenue, and provide your customers with exceptional service.
+          </p>
+          <a href="retail.html">
+            <button class="explore-btn">Explore more</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </div>
     </p>
-    <button class="explore-btn">Explore more</button>
-  </div>
-</div>
-</div>
+
+    <script>
+// Get all the tab buttons and tab content sections
+const tabs = document.querySelectorAll('.tab');
+const tabContents = document.querySelectorAll('.tab-content');
+
+// Add click event listener to each tab button
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Remove 'active' class from all tabs and tab content sections
+    tabs.forEach(t => t.classList.remove('active'));
+    tabContents.forEach(content => content.classList.remove('active'));
+
+    // Add 'active' class to the clicked tab
+    tab.classList.add('active');
+
+    // Get the content to show based on the 'data-content' attribute of the tab
+    const contentId = tab.getAttribute('data-content');
+    const activeContent = document.getElementById(contentId);
+    
+    // Show the corresponding content
+    if (activeContent) {
+      activeContent.classList.add('active');
+    }
+  });
+});
+
+// Make sure the "Education" tab and content are active by default on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const defaultTab = document.querySelector('.tab[data-content="education"]');
+  defaultTab.classList.add('active'); // Set Education tab as active by default
+  
+  const defaultContent = document.getElementById('education');
+  defaultContent.classList.add('active'); // Set Education content as active by default
+});
+    </script>
+    </section>
 
 
-<!-- Health Care -->
-<div id="healthcare" class="tab-content1">
-<div class="content-row">
-  <!-- Left Side: Grid for Cards -->
-  <div class="grid">
-    <div class="card"><img src="assets/IndustriesWeCater/health1.svg" alt="Health Care Image 1"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/health2.svg" alt="Health Care Image 2"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/health3.svg" alt="Health Care Image 3"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/health4.svg" alt="Health Care Image 4"></div>
-  </div>
-
-  <!-- Right Side: Description -->
-  <div class="description">
-    <h3>Health Care</h3>
-    <p>
-      Deliver cutting-edge health care solutions to improve patient outcomes and operational efficiency.
-    </p>
-    <button class="explore-btn">Explore more</button>
-  </div>
-</div>
-</div>
-
-<!-- Additional sections (e.g., BFSI, Hosting, etc.) -->
-<!-- Repeat the same structure for other tabs -->
-<div id="bfsi" class="tab-content1">
-<div class="content-row">
-  <div class="grid">
-    <div class="card"><img src="assets/IndustriesWeCater/bfsi1.svg" alt="BFSI Image 1"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/bfsi2.svg" alt="BFSI Image 2"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/bfsi3.svg" alt="BFSI Image 3"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/bfsi4.svg" alt="BFSI Image 4"></div>
-  </div>
-  <div class="description">
-    <h3>BFSI</h3>
-    <p>
-      Empower financial institutions with scalable solutions tailored to their dynamic needs.
-    </p>
-    <button class="explore-btn">Explore more</button>
-  </div>
-</div>
-</div>
-
-<!-- Hosting -->
-<div id="hosting" class="tab-content1">
-<div class="content-row">
-  <div class="grid">
-    <div class="card"><img src="assets/IndustriesWeCater/hosting1.svg" alt="Hosting Image 1"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/hosting2.svg" alt="Hosting Image 2"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/hosting3.svg" alt="Hosting Image 3"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/hosting4.svg" alt="Hosting Image 4"></div>
-  </div>
-  <div class="description">
-    <h3>Hosting</h3>
-    <p>
-      Ensure reliable and efficient hosting solutions that meet your business needs.
-    </p>
-    <button class="explore-btn">Explore more</button>
-  </div>
-</div>
-</div>
-
-<!-- Media -->
-<div id="media" class="tab-content1">
-<div class="content-row">
-  <div class="grid">
-    <div class="card"><img src="assets/IndustriesWeCater/media1.svg" alt="Media Image 1"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/media2.svg" alt="Media Image 2"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/media3.svg" alt="Media Image 3"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/media4.svg" alt="Media Image 4"></div>
-  </div>
-  <div class="description">
-    <h3>Media</h3>
-    <p>
-      Transform your media and entertainment services with innovative digital solutions.
-    </p>
-    <button class="explore-btn">Explore more</button>
-  </div>
-</div>
-</div>
-
-<!-- Start Up -->
-<div id="startup" class="tab-content1">
-<div class="content-row">
-  <div class="grid">
-    <div class="card"><img src="assets/IndustriesWeCater/startup1.svg" alt="Start-Up Image 1"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/startup2.svg" alt="Start-Up Image 2"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/startup3.svg" alt="Start-Up Image 3"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/startup4.svg" alt="Start-Up Image 4"></div>
-  </div>
-  <div class="description">
-    <h3>Start Up</h3>
-    <p>
-      Scale your start-up with cutting-edge technology and strategic support.
-    </p>
-    <button class="explore-btn">Explore more</button>
-  </div>
-</div>
-</div>
-<!-- E-commerce -->
-<div id="ecommerce" class="tab-content1">
-<div class="content-row">
-  <div class="grid">
-    <div class="card"><img src="assets/IndustriesWeCater/ecommerce1.svg" alt="E-commerce Image 1"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/ecommerce2.svg" alt="E-commerce Image 2"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/ecommerce3.svg" alt="E-commerce Image 3"></div>
-    <div class="card"><img src="assets/IndustriesWeCater/ecommerce4.svg" alt="E-commerce Image 4"></div>
-  </div>
-  <div class="description">
-    <h3>E-commerce</h3>
-    <p>
-      Revolutionize your e-commerce platform with tailored solutions that drive growth.
-    </p>
-    <button class="explore-btn">Explore more</button>
-  </div>
-</div>
-</div>
-
-</div>
-</div>
-</p>
-</section>
 
 
 <div class="contact-section">
@@ -375,66 +487,67 @@ tabButtons.forEach((button) => {
 <h2 class="main-text">Looking for Something Else?</h2>
 <p class="sub-text">We&apos;re sure our extensive range of services has got you covered. Share your requirementswith us and our<br>
 team shall get back to you shortly.</p>
-<button class="contact-btn">Contact Us</button>
+<a href="contact.html">
+  <button class="contact-btn">Contact Us</button>
+</a>
 </div>
 </div>
-
-
 
 
 
 
 <!--Project Section-->
-
 <section class="projects-section">
-<div class="section-header">
-    <h2 class="section-title">Our Projects</h2>
-  
-    <p class="section-description">
-        Enhance your projects, no matter how complex, with our vast expertise. Just as others have successfully done!
-    </p>
-</div>
-
-<div class="projects-grid">
-    <!-- Project Container 1 -->
-    <div class="project-container">
-        <div class="project-wrapper">
-            <img src="img/home/Our Project Cards.svg" alt="Project 1">
-            <h3 style="font-weight: bold;">Project Name</h3>
-
-        </div>
-    </div>
-
-    <!-- Project Container 2 -->
-    <div class="project-container">
-        <div class="project-wrapper">
-            <img src="img/home/Our Project Cards (1).svg" alt="Project 2">
-            <h3 style="font-weight: bold;">Project Name</h3>
-
-        </div>
-    </div>
-
-    <!-- Project Container 3 -->
-    <div class="project-container">
-        <div class="project-wrapper">
-            <img src="img/home/Our Project Cards (2).svg" alt="Project 3">
-            <h3 style="font-weight: bold;">Project Name</h3>
-
-        </div>
+  <div class="section-header">
+      <h2 class="section-title">Our Projects</h2>
+    
+      <p class="section-description">
+          Enhance your projects, no matter how complex, with our vast expertise. Just as others have successfully done!
+      </p>
   </div>
 
-  <!-- Project Container 4 -->
-  <div class="project-container">
-      <div class="project-wrapper">
-          <img src="img/home/Our Project Cards (3).svg" alt="Project 4">
-          <!-- <h3>Project Name</h3> -->
+  <div class="projects-grid">
+      <!-- Project Container 1 -->
+      <div class="project-container">
+          <div class="project-wrapper">
+              <img src="img/home/Our Project Cards.svg" alt="Project 1">
+              <h3 style="font-weight: bold;">Project Name</h3>
+
+          </div>
       </div>
-  </div>
+
+      <!-- Project Container 2 -->
+      <div class="project-container">
+          <div class="project-wrapper">
+              <img src="img/home/Our Project Cards (1).svg" alt="Project 2">
+              <h3 style="font-weight: bold;">Project Name</h3>
+
+          </div>
+      </div>
+
+      <!-- Project Container 3 -->
+      <div class="project-container">
+          <div class="project-wrapper">
+              <img src="img/home/Our Project Cards (2).svg" alt="Project 3">
+              <h3 style="font-weight: bold;">Project Name</h3>
+
+          </div>
+    </div>
+
+    <!-- Project Container 4 -->
+    <div class="project-container">
+        <div class="project-wrapper">
+            <img src="img/home/Our Project Cards (3).svg" alt="Project 4">
+            <!-- <h3>Project Name</h3> -->
+        </div>
+    </div>
 </div>
 
 
 <button class="explore-button">Explore More</button>
 </section>
+
+
 
 <!--Testimonials-->
 
@@ -574,84 +687,65 @@ document.getElementById(tab.dataset.content).classList.add("active");
 
 
 
-<!-- Footer Section -->
-<footer class="footer-section bg-black text-white py-5">
+ <!-- Footer Section -->
+ <footer class="footer-section bg-black text-white py-5">
   <div class="container">
-    <h2
-      class="text-center mb-4"
-      style="
-            background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-bottom: 90px;
-        font-weight: 700;
-        font-size: 45px;
-      "
-    >
-      We are always happy to assist you
-    </h2>
 
-    <hr class="bg-white opacity-50" style="height: 2px" />
+    <!-- <hr class="bg-white opacity-50" style="height: 2px"/> -->
 
     <div class="row mt-4">
-
-
-  <!-- Container for the sections -->
-<div class="row d-flex justify-content-between flex-wrap">
-  <!-- Logo -->
-  <div class="col-lg-3 mb-4 custom-margin-left">
-    <img
-      src="img/companylogo.png"
-      alt="Logo"
-      height="60"
-      class="mb-3"
-    />
-    <p>
-      SummitPeak Software Pvt. Ltd. is a leading technology solutions
-      provider, dedicated to delivering innovative and scalable software
-      services.
-    </p>
-  </div>
+      <!-- Company Logo & Description -->
+      <div class="col-lg-3 mb-4">
+        <img
+          src="img/companylogo.png"
+          alt="Logo"
+          height="70"
+          class="mb-3"
+        />
+        <p>
+          SummitPeak Software Pvt. Ltd. is a leading technology solutions provider, dedicated to delivering innovative and scalable software services. With a focus on excellence, we empower businesses worldwide through cutting- edge solutions, reliable support, and a commitment to client success.
+        </p>
+      </div>
 
   <!-- Categories -->
-  <div class="col-lg-3 mb-4 custom-margin-left1">
-    <h4 class="text-uppercase mb-3">Categories</h4>
-    <ul class="list-unstyled">
-      <li>Home</li>
-      <li>About Us</li>
-      <li>Services</li>
-      <li>Career</li>
-      <li>Contact Us</li>
-      <li>Our Process</li>
-    </ul>
+  <div class="col-lg-3 mb-4">
+  <h4 class="text mb-3">Categories</h4>
+  <ul class="list-unstyled">
+      <li><a href="../index.html" class="btn btn-link">Home</a></li>
+      <li><a href="../about.html" class="btn btn-link">About Us</a></li>
+      <li><a href="../services.html" class="btn btn-link">Services</a></li>
+      <li><a href="../career.html" class="btn btn-link">Career</a></li>
+      <li><a href="../contact.html" class="btn btn-link">Contact Us</a></li>
+      <li><a href="../process.html" class="btn btn-link">Our Process</a></li>
+    </ul>      
   </div>
 
-  <!-- Services -->
-  <div class="col-lg-3 mb-4 custom-margin-left">
-    <h4 class="text-uppercase mb-3">Services</h4>
-    <ul class="list-unstyled">
-      <li>Build An Application</li>
-      <li>Cloud Adoption</li>
-      <li>Web Presence Solutions</li>
-      <li>Trending Technology</li>
-    </ul>
-  </div>
 
-  <!-- Follow Us -->
-  <div class="col-lg-3 mb-4 custom-margin-left">
-    <h4 class="text-uppercase mb-3">Follow Us</h4>
-    <ul class="list-unstyled">
-      <li class="mb-2"><i class="bi bi-facebook me-2"></i>Facebook</li>
-      <li class="mb-2"><i class="bi bi-envelope me-2"></i>Email</li>
-      <li class="mb-2"><i class="bi bi-instagram me-2"></i>Instagram</li>
-      <li><i class="bi bi-linkedin me-2"></i>LinkedIn</li>
-    </ul>
-  </div>
+<!-- Services -->
+<div class="col-lg-3 mb-4">
+  <h4 class="text mb-3">Services</h4>
+  <ul class="list-unstyled">
+    <li><a href="../index.html#build-an-app" class="btn btn-link">Build An Application</a></li>
+    <li><a href="../index.html#cloud-adoption" class="btn btn-link">Cloud Adoption</a></li>
+    <li><a href="../index.html#web-presence" class="btn btn-link">Web Presence Solutions</a></li>
+    <li><a href="../index.html#trending-tech" class="btn btn-link">Trending Technology</a></li>
+  </ul>
 </div>
 
+
+      <!-- Follow Us -->
+      <div class="col-lg-3 mb-4 text-end">
+        <h4 class="text mb-3">Follow Us</h4>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-facebook me-2"></i>Facebook</li>
+          <li class="mb-2"><i class="bi bi-twitter me-2"></i>Twitter</li>
+          <li class="mb-2">
+            <i class="bi bi-instagram me-2"></i>Instagram
+          </li>
+          <li><i class="bi bi-linkedin me-2"></i>LinkedIn</li>
+        </ul>
       </div>
-      
+    </div>
 
     <hr class="bg-white opacity-50" style="height: 2px" />
 
@@ -666,8 +760,11 @@ document.getElementById(tab.dataset.content).classList.add("active");
       </div>
     </div>
   </div>
-</footer>
-
+</footer> 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
 
 
 

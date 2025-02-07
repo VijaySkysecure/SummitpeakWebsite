@@ -26,20 +26,23 @@ header {
     margin-right: 10px;
 }
   
-.nav-link {
-    color: rgb(98, 97, 97);
-}
+/* Default styles for the navigation items */
+.nav-item .nav-link {
+    font-size: 14px;
+    font-weight: 450;
+    color: rgba(112, 112, 112, 1); /* Inactive state - Grey */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
   
-.nav-link:hover {
-    color: rgb(98, 97, 97);
-}
+  /* Hover effect - Dark blue when hovered */
+  .nav-item .nav-link:hover {
+    color: rgba(22, 5, 111, 1);
+  }
   
-.nav-link.active {
-    background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
+  /* Active state - Blue teal gradient for the active link */
+  .nav-item .nav-link.active {
+    color: rgba(22, 5, 111, 1);
+  }
   
 .social-icons {
     display: flex; /* Use flexbox for horizontal alignment */
@@ -212,7 +215,7 @@ header {
 .container {
     display: flex;
     width: 80%;
-    background: white;
+
     border-radius: 8px;
     overflow: hidden;
     /* border-left: 2px solid #e0e0e0; Adds the vertical line */
@@ -256,7 +259,7 @@ header {
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
     position: relative;
-    background: #ffff; /* Light gray background */
+
     border-left: 5px solid transparent; /* Default: No highlight */
 }
  
@@ -288,7 +291,7 @@ header {
 }
  
 .job {
-    background: #fff;
+
     margin: 10px 0;
     padding: 12px;
     border-radius: 6px;
@@ -323,26 +326,20 @@ header {
     margin: 0;
 }
  
-/* Hover effect for job */
-.job:hover {
-    background: #f1f5f9;
-}
- 
- 
- 
+
 .arrow {
     display: inline-block;
     cursor: pointer;
     width: 20px;  /* Adjust the width as needed */
     height: 20px; /* Adjust the height as needed */
     transition: transform 0.3s ease-in-out;
-  }
+}
   
-  .arrow img {
+.arrow img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-  }
+}
   
  
 .job-description {
@@ -355,7 +352,127 @@ header {
     margin-top: 5px;
 }
 
-.hear-it {
+
+
+.custom-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.custom-title {
+    text-align: left;
+    font-size: 36px;
+    font-weight: 600;
+    background-image: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-left: 100px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+.custom-image-wrapper {
     text-align: center;
+    margin-top: 20px;
+}
+.custom-image-wrapper img {
+    width: 80%;
+    height: auto;
+}
+
+
+
+.grey-section {
+    background-color: rgba(245, 245, 245, 1); /* Grey background */
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+.image-left {
+    width: 40%;
+    scale: 0.4;
+    margin-top: -190px;
+    margin-left: -100px;
+}
+
+.image-right {
+    width: 40%;
+    scale: 0.9;
+    margin-bottom: -80px;
+    margin-right: -1165px;
+}
+
+.text-center {
+    width: 80%;
+    font-size: 24px;
+    text-align: left;
+    margin-right: 390px;
+    margin-top: 120px;
+}
+.text-left {
+    text-align: left;
+    width: 100%;
+    margin-top: -20px;
+    margin-left: 420px;
+}
+
+
+.name {
+    margin: 5px 0;
+    background-image: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.role{
+    font-size: 18px;
+}
+
+
+.footer-section {
+    margin-top: 60px; /* Remove any top margin */
+}
+
+
+.footer-section .col-lg-3:nth-child(1) {
+    width: 34%;
+    line-height: 2;
+}
+
+/* Move the Categories section */
+.footer-section .col-lg-3:nth-child(2) {
+    margin-left: 100px; /* Add top margin to Categories */
+    line-height: 2.5;
 }
   
+/* Move the Services section */
+.footer-section .col-lg-3:nth-child(3) {
+    margin-left: -40px; /* Add top margin to Services */
+    line-height: 2.6;
+}
+  
+  /* Move the Follow Us section */
+  .footer-section .col-lg-3:nth-child(4) {
+    margin-left: -190px; /* Add top margin to Follow Us */
+    line-height: 2.5;
+}
+
+/* Style the links to look like normal text */
+ul.list-unstyled a.btn-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent */
+    font-weight: normal; /* Normal weight for text */
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove any border radius */
+}
+  
+ul.list-unstyled a.btn-link:hover {
+    color: inherit; /* Keep the color unchanged on hover */
+    background-color: transparent; /* No background color on hover */
+}
+

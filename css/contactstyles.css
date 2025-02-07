@@ -12,19 +12,22 @@
     border-bottom: 1px solid #e0e0e0;
   }
    
-  .nav-link {
-    color: rgb(98, 97, 97);
+  /* Default styles for the navigation items */
+  .nav-item .nav-link {
+  font-size: 14px;
+  font-weight: 450;
+  color: rgba(112, 112, 112, 1); /* Inactive state - Grey */
+  transition: color 0.3s ease; /* Smooth transition for color change */
   }
-  
-  .nav-link:hover {
-    color: rgb(98, 97, 97);
+
+  /* Hover effect - Dark blue when hovered */
+  .nav-item .nav-link:hover {
+  color: rgba(22, 5, 111, 1);
   }
-  
-  .nav-link.active {
-    background-image: linear-gradient(0deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+
+  /* Active state - Blue teal gradient for the active link */
+  .nav-item .nav-link.active {
+  color: rgba(22, 5, 111, 1);
   }
 
   .social-icons {
@@ -40,10 +43,10 @@
   .contact-section h1 {
     font-family: 'Poppins', sans-serif; /* Added font-family */
     font-size: 40px; /* Updated font size */
-    font-weight: 600; /* Font weight */
+    font-weight: 700; /* Font weight */
     line-height: 60px; /* Line height */
     text-align: left; /* Text alignment */
-    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    background-image: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -52,26 +55,16 @@
    
   .contact-section .badge {
     transition: transform 0.2s ease-in-out;
+    background-color: white;
   }
    
-  .contact-section .badge:hover {
-    transform: scale(1.1);
-    background-color: #e0f7fa;
-  }
+
    
-  .btn-gradient {
-    background: linear-gradient(to right, teal, blue);
-    color: white;
-    border: none;
-    padding: 1rem 2rem; /* Add padding for better button appearance */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    transition: background 0.3s ease-in-out;
-  }
    
   .badge-container {
       display: flex;
       flex-wrap: wrap; /* Allows badges to wrap onto the next line */
-      gap: 10px; /* Space between badges */
+      gap: 30px; /* Space between badges */
     }
    
     .badge-wrapper {
@@ -91,27 +84,110 @@
       border: 1px solid #ddd;
       cursor: pointer;
       transition: all 0.3s;
-      font-size: 1.1rem;
-      padding: 10px 20px; /* Adjust padding for better appearance */
+      font-size: 16px;
+      font-weight: 450;
+      padding: 8px 35px; /* Adjust padding for better appearance */
     }
    
     .badge-checkbox:checked + .badge {
-      background-color: #0e8285; /* Change to your desired active color */
+      background-color: rgb(35, 35, 35); /* Change to your desired active color */
       color: white;
-      border-color: #0e8285;
+      border-color: rgb(255,255,255,1);
     }
    
-    .badge-checkbox:not(:checked) + .badge:hover {
+    .badge-checkbox:not(:checked) {
       background-color: #e0f7fa; /* Optional hover color for unselected badges */
       color: black;
     }
    
-  .btn-gradient:hover {
-    background: linear-gradient(to right, blue, teal);
-  }
+
    
   .map-section h2 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: teal;
+    font-family: 'Poppins', sans-serif; /* Added font-family */
+    font-size: 40px; /* Updated font size */
+    font-weight: 700; /* Font weight */
+    line-height: 60px; /* Line height */
+    text-align: left; /* Text alignment */
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
+
+
+/* Wrapper for the entire section */
+.contact-section1 {
+  background-color: black; /* Black background */
+  padding: 40px 0; /* 40px padding on top and bottom */
+  margin-top: 120px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner content container */
+.content {
+  text-align: center;
+  color: white; /* Default text color */
+}
+
+/* Main text style */
+.main-text {
+  background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(80, 63, 166, 1)); /* Gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* Clip the background to the text */
+  color: transparent; /* Make text transparent to show the gradient */
+  font-size: 50px; /* Set font size */
+  font-weight: 600; /* Set font weight */
+  line-height: 65px; /* Set line height */
+  text-align: center; /* Center align the text */
+  text-underline-position: from-font; /* Text underline position */
+  text-decoration-skip-ink: none; /* Text decoration skip */
+  margin-bottom: 30px; /* Spacing between the elements */
+}
+
+
+.footer-section {
+    margin-top: -100px; /* Remove any top margin */
+}
+
+
+.footer-section .col-lg-3:nth-child(1) {
+    width: 34%;
+    line-height: 2;
+  }
+
+/* Move the Categories section */
+.footer-section .col-lg-3:nth-child(2) {
+    margin-left: 100px; /* Add top margin to Categories */
+    line-height: 2.5;
+  }
+  
+  /* Move the Services section */
+  .footer-section .col-lg-3:nth-child(3) {
+    margin-left: -40px; /* Add top margin to Services */
+    line-height: 2.6;
+  }
+  
+  /* Move the Follow Us section */
+  .footer-section .col-lg-3:nth-child(4) {
+    margin-left: -190px; /* Add top margin to Follow Us */
+    line-height: 2.5;
+}
+
+/* Style the links to look like normal text */
+ul.list-unstyled a.btn-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent */
+    font-weight: normal; /* Normal weight for text */
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove any border radius */
+  }
+  
+  ul.list-unstyled a.btn-link:hover {
+    color: inherit; /* Keep the color unchanged on hover */
+    background-color: transparent; /* No background color on hover */
+  }
+  
+  
