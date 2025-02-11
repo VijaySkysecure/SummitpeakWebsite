@@ -826,7 +826,6 @@ p {
   color: white; /* White text */
   font-family: 'Poppins', sans-serif; /* Set the font family */
   font-size: 16px;
-  font-size: 16px; /* Set the font size */
   font-weight: 550;
   border: none;
   padding: 8px 35px; /* Increased padding for larger button */
@@ -957,6 +956,107 @@ p {
 .img {
   width: 100%;
   border-radius: 12px;
+}
+
+
+/* Popup container */
+.popup {
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+  width: 340px;
+  height: 270px;
+  background-color: black;
+  display: none;
+  color: white;
+  padding-left: 20px;
+  padding-right: 2px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 20px; 
+  border-bottom-left-radius: 20px;
+  display: none;
+}
+
+
+/* Popup content */
+.popup-content {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  overflow: hidden;
+}
+ 
+/* Close button */
+.close-btn {
+  font-size: 30px;
+  font-weight: 400;
+  position: absolute;
+  top: -6px;
+  right: 14px;
+  cursor: pointer;
+}
+ 
+/* Text content container */
+.text-container {
+  flex-grow: 1; /* Make text-container take available space */
+  padding-right: 20px; /* Add some space between the text and image */
+  display: flex;
+  flex-direction: column;
+}
+ 
+/* Heading (h1) style */
+.popup h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: 100%;
+  flex-grow: 1;
+}
+ 
+/* Paragraph style */
+.popup p {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+ 
+/* Join Now button style */
+.join-btn {
+  padding: 8px 22px;
+  background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+  color: white; /* White text */
+  font-family: 'Poppins', sans-serif; /* Set the font family */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  align-self: flex-start;
+  border-radius: 5px;
+  margin-top: 35px;
+}
+ 
+ 
+.popup-image {
+  position: absolute;
+  bottom: 0;  /* Align to the bottom of the popup */
+  right: 0;   /* Align to the right of the popup */
+  width: 50%;  /* Image occupies the bottom right half */
+  height: 78%; /* Height adjusts accordingly */
+  object-fit: cover; /* Image scaling */
 }
 
 
