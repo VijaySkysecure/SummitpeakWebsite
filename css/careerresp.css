@@ -108,15 +108,15 @@ header {
   
 .about-image {
     position: absolute; /* Use absolute positioning to move it to the right */
-    top: 11px; /* Adjust the vertical position, or change this value based on your needs */
+    top: 24px; /* Adjust the vertical position, or change this value based on your needs */
     right: 0; /* Aligns the container to the right edge of the screen */
-    margin-bottom: 120px; /* Maintain bottom margin if needed */
+    margin-bottom: 70px; /* Maintain bottom margin if needed */
     margin-right: 0; /* Ensure no additional right margin */
 }
   
 .about-image img {
-    width: 100%; /* Make the image fill its container */
-    max-width: 800px; /* Optional: Limit the maximum width of the image */
+    width: 95%; /* Make the image fill its container */
+    max-width: 680px; /* Optional: Limit the maximum width of the image */
     height: auto; /* Maintain the aspect ratio of the image */
     display: block; /* Remove extra space below the image */
 }
@@ -215,7 +215,6 @@ header {
 .container {
     display: flex;
     width: 80%;
-
     border-radius: 8px;
     overflow: hidden;
     /* border-left: 2px solid #e0e0e0; Adds the vertical line */
@@ -259,7 +258,6 @@ header {
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
     position: relative;
-
     border-left: 5px solid transparent; /* Default: No highlight */
 }
  
@@ -289,6 +287,41 @@ header {
     padding: 20px;
     margin-top: 200px;
 }
+
+
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #131313; /* Gray color */
+    text-transform: uppercase;
+}
+  
+  /* Style for job location value */
+  .job-location {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #003366;
+    max-width: 150px; /* Limit the width of the job title */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ... when the text overflows */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin-bottom: 10px; /* Blue for location */
+}
+  
+  /* Style for job experience value */
+  .job-experience {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #003366;
+    max-width: 150px; /* Limit the width of the job title */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ... when the text overflows */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin-bottom: 10px; /* Red for experience */
+}
+
  
 .job {
 
@@ -475,4 +508,274 @@ ul.list-unstyled a.btn-link:hover {
     color: inherit; /* Keep the color unchanged on hover */
     background-color: transparent; /* No background color on hover */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 430px) {
+    * {
+        font-size: 12px; /* Reduce font size for better mobile readability */
+    }
+
+    body, html {
+        overflow-x: hidden; /* Hide any horizontal overflow */
+    }
+
+    /* Header */
+    header {
+        padding: 15px 20px; /* Reduce padding for header */
+        flex-direction: column; /* Stack logo and nav items vertically */
+        align-items: flex-start; /* Align header content to the left */
+    }
+
+    /* Align logo and social icons in one row */
+    .logo-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%; /* Ensure container takes full width */
+        align-items: center; /* Align both items vertically */
+    }
+
+    .logo {
+        width: 20px; /* Reduce logo size */
+    }
+
+    .social-icons {
+        gap: 15px; /* Reduce gap between social icons */
+    }
+
+    /* Adjust nav links */
+    .nav-item {
+        display: inline-block; /* Align items horizontally */
+        margin-right: 20px; /* Space between nav items */
+    }
+
+    .nav-item .nav-link {
+        font-size: 12px; /* Reduce font size for nav links */
+        text-align: center; /* Center align the nav links */
+    }
+}
+
+
+    /* About Section */
+    .about-section {
+        flex-direction: column; /* Stack content vertically */
+        padding: 20px;
+    }
+
+    .about-content h1 {
+        font-size: 24px; /* Decrease font size */
+        margin-top: 20px;
+    }
+
+    .highlight-text {
+        font-size: 30px; /* Reduce size of highlighted text */
+        line-height: 40px;
+    }
+
+    .about-content p {
+        font-size: 16px; /* Reduce font size for paragraph text */
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .about-image {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 30px;
+    }
+
+    .about-image img {
+        width: 90%; /* Reduce image size */
+    }
+
+    /* Button */
+    .openings-btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: -40px;
+        margin-bottom: 73px;
+    }
+
+    /* Stats Section */
+    .stats-section {
+        flex-direction: column; /* Stack stats vertically */
+        padding: 20px;
+    }
+
+    .stat-number {
+        font-size: 40px; /* Reduce stat number size */
+        line-height: 50px;
+    }
+
+    .stat-title {
+        font-size: 20px; /* Reduce stat title size */
+    }
+
+    .stat-item {
+        margin-bottom: 20px;
+    }
+
+    .highlight-text1 {
+        font-size: 24px; /* Reduce font size for highlight text */
+        margin-left: 0;
+    }
+
+    /* Custom Image */
+    .custom-image {
+        width: 90%; /* Make image responsive */
+        margin: 20px auto;
+    }
+
+    /* Container */
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%; /* Make sidebar take full width */
+        margin-top: 20px;
+    }
+
+    .content {
+        width: 100%; /* Make content full width */
+        margin-top: 20px;
+    }
+
+    .sidebar h2 {
+        font-size: 20px; /* Reduce font size */
+        margin-bottom: 20px;
+    }
+
+    .category {
+        font-size: 16px; /* Reduce font size */
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .category.active {
+        font-weight: bold;
+    }
+
+    /* Content Section */
+    .content {
+        width: 100%; /* Take full width on mobile */
+        padding: 10px;
+    }
+
+    .label {
+        font-size: 12px; /* Reduce font size */
+    }
+
+    .job-location,
+    .job-experience {
+        font-size: 14px; /* Decrease font size */
+        max-width: none; /* Allow the text to wrap */
+    }
+
+    .job {
+        flex-direction: column; /* Stack job details vertically */
+        padding: 15px;
+    }
+
+    .job-details {
+        display: flex;
+        justify-content: space-between; /* Horizontally align role, location, and experience */
+        font-size: 16px; /* Slightly smaller font size for mobile */
+        gap: 20px; /* Space between the items */
+        text-align: left;
+    }
+
+    .arrow {
+        width: 15px; /* Reduce arrow size */
+        height: 15px;
+    }
+
+    .job-description {
+        font-size: 12px; /* Decrease font size for job descriptions */
+        padding: 8px;
+    }
+
+    /* Custom Container */
+    .custom-container {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .custom-title {
+        font-size: 24px; /* Reduce font size */
+        margin-left: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .custom-image-wrapper img {
+        width: 90%; /* Make image responsive */
+    }
+
+    /* Grey Section */
+    .grey-section {
+        background-color: rgba(245, 245, 245, 1);
+        padding: 0px;
+        display: flex;
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center the content horizontally */
+        width: 100%; /* Take up full width */
+        box-sizing: border-box;
+    }
+    
+    .image-left, .image-right {
+        width: 80%; /* Adjust to fit within mobile view */
+        margin-top: 20px;
+        scale: 0.7; /* Reduce scale to fit within screen */
+    }
+
+    .text-center {
+        font-size: 18px; /* Reduce font size */
+        margin-right: 0;
+    }
+
+    .text-left {
+        font-size: 18px; /* Reduce font size */
+        margin-left: 0;
+    }
+
+    /* Name and Role */
+    .name {
+        font-size: 24px; /* Reduce name font size */
+    }
+
+    .role {
+        font-size: 16px; /* Reduce role font size */
+    }
+
+    /* Footer Section */
+    .footer-section {
+        display: flex;
+        flex-direction: column; /* Stack footer columns vertically for mobile */
+        margin-top: 60px;
+        align-items: center; /* Center the footer content */
+    }
+    
+    .footer-section .col-lg-3 {
+        width: 100%; /* Ensure each footer column takes full width on mobile */
+        margin-bottom: 20px; /* Space out footer sections */
+        line-height: 1.5;
+    }
+    
+    /* Footer links adjustment for mobile */
+    ul.list-unstyled a.btn-link {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
 

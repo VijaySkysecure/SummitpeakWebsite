@@ -67,13 +67,13 @@
     <div class="about-content">
       <h1>Career</h1>
       <h2 class="highlight-text">
-        Unlock Your<br>Potential, Build The<br>Future With Us
+        Unlock Your Potential,<br>Build The Future<br>With Us
       </h2>
       <p>
-        At SummitPeak Software, we believe in fostering talent,<br>
-        encouraging growth, and creating opportunities for those<br>
-        who are passionate about technology and innovation. Join<br>
-        us and be a part of a dynamic team that's shaping the<br>future of software solutions.
+        At SummitPeak Software, we believe in fostering talent,
+        encouraging<br>growth, and creating opportunities for those
+        who are passionate about<br>technology and innovation. Join
+        us and be a part of a dynamic team<br>that's shaping the future of software solutions.
       </p>
     </div>
     <div class="about-image">
@@ -81,7 +81,27 @@
     </div>
   </section>
 
+
+  
   <button class="openings-btn">See Current Openings</button>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Select the button and the target section
+      const openingsButton = document.querySelector('.openings-btn');
+      const targetSection = document.querySelector('#available-opportunities');
+    
+      // Add event listener to the button
+      openingsButton.addEventListener('click', () => {
+        // Scroll to the section with smooth behavior
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+  </script>
+  
+  
 
   <section class="stats-section">
     <div class="stat-item">
@@ -106,7 +126,7 @@
 
 
 
-   <section>
+   <section id="available-opportunities">
       <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
@@ -212,22 +232,26 @@
               const jobElement = document.createElement("div");
               jobElement.classList.add("job");
               jobElement.innerHTML = `
-    <div>
-      <h3>${job.title}</h3>
-    </div>
-    <div class="job-details">
-      <p>Location<br>
-        ${job.location}</p>
-      <p>Experience<br>
-        ${job.experience}</p>
-    </div>
-    <div class="arrow">
-      <img src="img/career/downarrow.png" alt="Arrow" />
-    </div>
-  `;
+        <div>
+          <h4 class="label">Role</h4> 
+          <h3 class="job-title">${job.title}</h3>
+        </div>
+        <div class="job-details">
+          <p>
+            <span class="label">Location</span><br>
+            <span class="job-location">${job.location}</span>
+          </p>
+          <p>
+            <span class="label">Experience</span><br>
+            <span class="job-experience">${job.experience}</span>
+          </p>
+        </div>
+        <div class="arrow">
+          <img src="img/career/arrow.svg" alt="Arrow" />
+        </div>
+      `;
    
-   
-   
+
 
               const jobDescription = document.createElement("div");
               jobDescription.classList.add("job-description");
