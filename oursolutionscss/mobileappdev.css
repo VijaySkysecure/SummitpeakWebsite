@@ -13,6 +13,48 @@ body, html {
   overflow-x: hidden;
 }
 
+/* Hide the hamburger icon in desktop view */
+.navbar-toggler {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) { 
+  /* Show hamburger menu in the top-right corner */
+  .navbar-toggler {
+      display: block; /* Show only on mobile */
+      position: absolute;
+      top: 25px;  /* Adjust distance from top */
+      right: 25px; /* Adjust distance from right */
+      z-index: 1100; /* Ensure it's above other elements */
+  }
+
+  /* Hide navigation links initially */
+  .nav {
+      display: none;
+      flex-direction: column;
+      background: white;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      text-align: center;
+      padding: 10px 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  }
+
+  /* Show nav when toggled */
+  .nav.show {
+      display: flex;
+  }
+
+  /* Completely remove social icons on mobile */
+  .social-icons {
+      display: none !important;
+  }
+}
+
 /* Default styles for the navigation items */
 .nav-item .nav-link {
   font-size: 14px;
@@ -244,16 +286,7 @@ a {
 }
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-        text-align: center;
-    }
-    .text, .image {
-        width: 100%;
-    }
-}
+
 
 
 .hiremobapp-btn {
@@ -300,6 +333,7 @@ a {
     margin-left: 40px;
     margin-bottom: 40px;
     text-align: left;
+    width: 60%;
 }
 
 .section-description2 {
@@ -566,5 +600,264 @@ li {
   .col-lg-3 ul.list-unstyled li {
     color: white; /* Set text color to white */
   }
+
+
+
+
+
+
+/* Mobile Styling */
+
+@media (max-width: 430px) {
+
+  /* General Styling for all text */
+  * {
+    font-size: 14px; /* Set a base font size for mobile */
+  }
+
+  body, html {
+    overflow-x: hidden; /* Hide any horizontal overflow */
+  }
+
+  /* About Section */
+  .webapp-section {
+    flex-direction: column;  /* Stack content vertically */
+    padding: 20px;
+    align-items: center; /* Center content */
+  }
+
+  .webapp-content {
+    margin-left: 0;
+    text-align: center;  /* Center text for mobile */
+  }
+
+  .webapp-content h1 {
+    font-size: 8px; /* Adjust font size for smaller screens */
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .highlight-text {
+    font-size: 30px; /* Scale down font size for mobile */
+    line-height: 40px;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .webapp-content p {
+    font-size: 14px;  /* Adjust font size for readability */
+    margin: 10px 0;
+    margin-left: 20px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .webapp-image {
+    display: none; /* Set the parent container to flexbox */
+  }
+  .freequote-btn{
+    font-size: 12px;
+    padding: 6px 20px;
+    margin-top: 14px;
+  }
+
+
+  /* Footer section */
+  /* Targeting image inside the footer section */
+  .footer-section .col-lg-3 img {
+    display: none;
+  }
+
+  .footer-section .col-lg-3 {
+    width: 100% !important;
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  /* Target the Follow Us section */
+  .col-lg-3.text-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center-align text inside the section */
+  }
+
+  .col-lg-3.text-end ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+  }
+
+  .col-lg-3.text-end ul li {
+    margin-bottom: 10px; /* Space between each list item */
+    display: flex;
+    justify-content: center; /* Align the list items in the center horizontally */
+    align-items: center; /* Align icon and text vertically */
+  }
+
+  .col-lg-3.text-end ul li i {
+    margin-right: 8px; /* Space between the icon and the text */
+  }
+
+
+  .footer-section .d-flex p.mb-0 {
+    text-align: center;
+    font-size: 14px;
+    width: 75vw;
+    margin-left: 40px;
+  }
+
+  .footer-section .d-flex a.text-white {
+    display: none;
+  }
+
+  .mobappdesc{
+    margin-left: 10px;
+    text-align: left;
+  }
+  .mobappdesc h2 {
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .mobappdesc p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .app-services {
+    color: rgba(18, 18, 18, 1); /* Adjust the text color */
+    line-height: 1; /* Increase line height for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    text-align: left;
+  }
+  
+  /* Target each individual service item */
+  .app-services div {
+    display: flex; /* Align items in a row */
+    font-size: 12px;
+    align-items: left; /* Vertically center the content */
+    margin-bottom: 3px; /* Space between items */
+  }
+  .app-services .middot {
+    margin-right: 8px; /* Space between the bullet and text */
+    font-size: 24px; /* Adjust size of the bullet */
+  }
+
+  .custommobapp {
+    padding: 20px 0;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+  }
+
+  .row {
+    display: block; /* Stack rows vertically */
+    align-items: flex-start; /* Align content to the left */
+    justify-content: flex-start;
+    margin-bottom: 20px; /* Reduced spacing between rows */
+  }
+
+  .text {
+    width: 100%; /* Make text section full width */
+    margin-bottom: 15px; /* Space between text and image */
+  }
+
+  .text h2 {
+    font-size: 14px; /* Adjust text size for better readability */
+    line-height: 1.4; /* Adjust line height */
+  }
+
+  .text p {
+    font-size: 12px; /* Smaller text for mobile */
+    line-height: 1.6; /* Increase line-height for readability */
+  }
+
+  .image {
+    display: none;
+  }
+
+
+  /* Specific adjustments for certain rows if needed */
+  .row:nth-of-type(3),
+  .row:nth-of-type(4) {
+    margin-bottom: 50px; /* Reduce the bottom margin */
+  }
+
+  .codeqa-section {
+    padding: 10px 0px; /* Reduced padding for mobile view */
+    margin-left: 20px;
+    width: 90vw;
+    margin-top: 40px;
+  }
+
+  .image-content2 {
+    display: none; /* Hide image for mobile view */
+  }
+
+  .section-header2 {
+    text-align: left; /* Left align the header text */
+  }
+
+  .section-title2 {
+    font-size: 18px; /* Slightly larger font for the title */
+    line-height: 1.4; /* Adjust line-height for better readability */
+    margin-left: 0px;
+    width: 80vw;
+  }
+
+  .section-description2 {
+    font-size: 14px; /* Smaller font for description */
+    line-height: 1.6; /* Increase line-height for readability */
+    text-align: left; /* Ensure description is left-aligned */
+    margin-left: 0px;
+  }
+
+  .points2 .text-content2 ul li {
+    font-size: 12px; /* Smaller font size for list items */
+    margin-bottom: 8px; /* Reduced space between items */
+  }
+
+  .points2 .text-content2 ul li::before {
+    font-size: 4px; /* Smaller bullet point size for mobile */
+  }
+
+  .points2 .content-wrapper2 {
+    margin: 0; /* Remove unnecessary margin */
+    padding: 0; /* Remove unnecessary padding */
+  }
+
+  /* Projects section */
+  .projects-section {
+    margin-left: 20px;
+    width: calc(100% - 40px);
+    margin-bottom: 80px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-section .main-text {
+    font-size: 26px;
+  }
+  .contact-section .sub-text {
+    font-size: 16px;
+  }
+  .contact-section .contact-btn {
+    font-size: 14px;
+    margin-top: 55px;
+  }
+  
+
+}
   
   

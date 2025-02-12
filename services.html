@@ -23,6 +23,10 @@
       <div class="container d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center">
           <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
+          <!-- Hamburger Menu (Only Visible on Mobile) -->
+          <button class="navbar-toggler border-0 bg-transparent" type="button" id="menuToggle">
+            <i class="bi bi-list fs-2"></i>
+          </button>
           <ul class="nav">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
@@ -36,6 +40,16 @@
             </li>
           </ul>
         </div>
+        <script>
+          // JavaScript to toggle the visibility of the navigation menu
+          const menuToggle = document.getElementById('menuToggle'); // Hamburger button
+          const nav = document.querySelector('.nav'); // Navigation menu
+
+          // Toggle the 'show' class on the navigation when the hamburger button is clicked
+          menuToggle.addEventListener('click', () => {
+          nav.classList.toggle('show');
+          });
+        </script>
         <div class="social-icons">
           <a href="#" class="me-2"
             ><i class="bi bi-facebook" style="color: #1877f2"></i
@@ -58,8 +72,8 @@
           Innovative Solutions,<br>Tailored to Your<br>Business
         </h2>
         <p>
-          At SummitPeak Software, we offer a range of customized<br>software solutions designed to drive your business forward.<br>
-          From strategic consulting to cutting-edge development,<br>our services are crafted to meet your unique challenges<br>and fuel your success.
+          At SummitPeak Software, we offer a range of customized software solutions designed to drive your business forward.
+          From strategic consulting to cutting-edge development, our services are crafted to meet your unique challenges and fuel your success.
         </p>
       </div>
       <div class="about-image">
@@ -67,8 +81,15 @@
       </div>
     </section>
 
+
+
      <!-- Partner Logos -->
-     <img src="img/partner-logos.png" alt="Partner Logos" class="centered-image">
+<div class="carousel-container1">
+  <div class="carousel-wrapper1">
+    <img src="img/partner-logos.png" alt="Partner Logos" class="carousel-image1">
+    <img src="img/partner-logos.png" alt="Partner Logos" class="carousel-image1">
+  </div>
+</div>
 
 
 
@@ -80,7 +101,7 @@
   </h2>
   <p class="services-description">
     From innovative software development to seamless IT solutions, SummitPeak Software offers a range of services designed to meet your
-    unique business needs.<br>We specialize in delivering cutting-edge technologies, ensuring efficiency, scalability and success for clients worldwide.
+    unique business needs. We specialize in delivering cutting-edge technologies, ensuring efficiency, scalability and success for clients worldwide.
   </p>
   
   <div class="centered-tab-container1">
@@ -163,7 +184,7 @@
 
 <div class="contact-section">
   <div class="content">
-  <h2 class="main-text">Which custom development service are you<br>looking for?</h2>
+  <h2 class="main-text">Which custom development service are you looking for?</h2>
   <p class="sub-text">Share your requirements with our industry leading team of experts and leverage best-in-class software<br>
   development teams to launch applications that represent your business.</p>
   <a href="contact.html">

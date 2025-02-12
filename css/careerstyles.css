@@ -25,6 +25,60 @@ header {
     width: 50px;
     margin-right: 10px;
 }
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+}
+  
+  
+/* Hide the hamburger icon in desktop view */
+.navbar-toggler {
+    display: none;
+}
+  
+/* Responsive styles */
+@media (max-width: 991px) { 
+    /* Show hamburger menu in the top-right corner */
+    .navbar-toggler {
+        display: block; /* Show only on mobile */
+        position: absolute;
+        top: 25px;  /* Adjust distance from top */
+        right: 25px; /* Adjust distance from right */
+        z-index: 1100; /* Ensure it's above other elements */
+    }
+  
+    /* Hide navigation links initially */
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 10px 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+  
+    /* Show nav when toggled */
+    .nav.show {
+        display: flex;
+    }
+  
+    /* Completely remove social icons on mobile */
+    .social-icons {
+        display: none !important;
+    }
+
+    header .container img {
+        margin-left: 18px; /* Remove any left margin if you want it to align exactly */
+    }
+    
+}
+
   
 /* Default styles for the navigation items */
 .nav-item .nav-link {
@@ -59,6 +113,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0px 40px;
+    margin-top: -10px;
 }
   
 .about-content {
@@ -75,7 +130,7 @@ header {
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    margin-top: 40px;
+    margin-top: -140px;
   
 }
   
@@ -103,15 +158,14 @@ header {
     color: rgba(18, 18, 18, 1);
     margin-top: 30px;
     margin-bottom: 50px;
-  
+    width: 90%;
 }
   
 .about-image {
-    position: absolute; /* Use absolute positioning to move it to the right */
-    top: 24px; /* Adjust the vertical position, or change this value based on your needs */
+    position: relative; /* Use absolute positioning to move it to the right */
+    top: -40px; /* Adjust the vertical position, or change this value based on your needs */
     right: 0; /* Aligns the container to the right edge of the screen */
-    margin-bottom: 70px; /* Maintain bottom margin if needed */
-    margin-right: 0; /* Ensure no additional right margin */
+    margin-right: -70px; /* Ensure no additional right margin */
 }
   
 .about-image img {
@@ -133,8 +187,7 @@ header {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
-    margin-left: 72px;
-    margin-top: -40px;
+    margin-left: -786px;
     margin-bottom: 73px;
  
 }
@@ -211,7 +264,7 @@ header {
     border-radius: 5px; /* Optional for rounded corners */
 }
 
-/* Add this to your container class */
+
 .container {
     display: flex;
     width: 80%;
@@ -507,4 +560,231 @@ ul.list-unstyled a.btn-link {
 ul.list-unstyled a.btn-link:hover {
     color: inherit; /* Keep the color unchanged on hover */
     background-color: transparent; /* No background color on hover */
+}
+
+
+
+
+
+/* Mobile Styling */
+
+@media (max-width: 430px) {
+
+    /* General Styling for all text */
+    * {
+      font-size: 14px; /* Set a base font size for mobile */
+    }
+  
+    body, html {
+      overflow-x: hidden; /* Hide any horizontal overflow */
+    }
+  
+    /* About Section */
+    .about-section {
+      flex-direction: column;  /* Stack content vertically */
+      padding: 20px;
+      align-items: center; /* Center content */
+      margin-top: 180px;
+    }
+  
+    .about-content {
+      margin-left: 0;
+      text-align: center;  /* Center text for mobile */
+      margin-top: -40px;
+    }
+  
+    .about-content h1 {
+      font-size: 1.6rem; /* Adjust font size for smaller screens */
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  
+    .highlight-text {
+      font-size: 30px; /* Scale down font size for mobile */
+      line-height: 40px;
+      background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 15px 0;
+      text-align: center;
+    }
+  
+    .about-content p {
+      font-size: 14px;  /* Adjust font size for readability */
+      margin: 10px 0;
+      margin-left: 20px;
+      line-height: 22px;
+      text-align: center;
+    }
+    .about-image {
+        display: none; /* Set the parent container to flexbox */
+    }
+
+
+      /* Stats Section */
+  .stats-section {
+    padding: 20px;
+    flex-direction: column;  /* Stack stats vertically */
+    text-align: center;  /* Center the content */
+  }
+
+  .stat-item {
+    margin-bottom: 20px; /* Add margin between each stat item */
+  }
+
+  .stat-number {
+    font-size: 40px; /* Adjust font size for stats */
+    line-height: 50px;
+  }
+
+  .stat-title {
+    font-size: 22px;  /* Reduce font size */
+    line-height: 30px;
+  }
+
+  .stat-description {
+    font-size: 14px;  /* Smaller font for descriptions */
+  }
+
+  /* Container */
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+}
+
+    .sidebar {
+        width: 100%; /* Make sidebar take full width */
+        margin-top: 20px;
+    }
+
+    .content {
+        width: 100%; /* Make content full width */
+        margin-top: 20px;
+    }
+
+    .sidebar h2 {
+        font-size: 20px; /* Reduce font size */
+        margin-bottom: 20px;
+    }
+
+    .category {
+        font-size: 16px; /* Reduce font size */
+        padding: 10px;
+        margin-bottom: 20px;    
+    }
+
+    .category.active {
+        font-weight: bold;
+    }
+
+    /* Content Section */
+    .content {
+        width: 100%; /* Take full width on mobile */
+        padding: 10px;
+    }
+
+    .label {
+        font-size: 12px; /* Reduce font size */
+    }
+
+    .job-location,
+    .job-experience {
+        font-size: 14px; /* Decrease font size */
+        max-width: none; /* Allow the text to wrap */
+    }
+
+    .job {
+        flex-direction: column; /* Stack job details vertically */
+        padding: 15px;
+    }
+
+    .job-details {
+        display: flex;
+        justify-content: space-between; /* Horizontally align role, location, and experience */
+        font-size: 16px; /* Slightly smaller font size for mobile */
+        gap: 20px; /* Space between the items */
+        text-align: left;
+    }
+
+    .arrow {
+        width: 15px; /* Reduce arrow size */
+        height: 15px;
+    }
+
+    .job-description {
+        font-size: 12px; /* Decrease font size for job descriptions */
+        padding: 8px;
+    }
+
+    /* Custom Container */
+    .custom-container {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .custom-title {
+        font-size: 24px; /* Reduce font size */
+        margin-left: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .custom-image-wrapper img {
+        width: 90%; /* Make image responsive */
+    }
+
+    /* Grey Section */
+    .grey-section {
+        display: none;
+    }
+
+    /* Footer section */
+    /* Targeting image inside the footer section */
+    .footer-section .col-lg-3 img {
+        display: none;
+    }
+
+    .footer-section .col-lg-3 {
+        width: 100% !important;
+        margin-left: 0 !important;
+        text-align: center;
+    }
+
+    /* Target the Follow Us section */
+    .col-lg-3.text-end {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Center-align text inside the section */
+    }
+
+    .col-lg-3.text-end ul {
+        list-style-type: none; /* Remove default list styling */
+        padding: 0;
+    }
+
+    .col-lg-3.text-end ul li {
+        margin-bottom: 10px; /* Space between each list item */
+        display: flex;
+        justify-content: center; /* Align the list items in the center horizontally */
+        align-items: center; /* Align icon and text vertically */
+    }
+
+    .col-lg-3.text-end ul li i {
+        margin-right: 8px; /* Space between the icon and the text */
+    }
+
+
+    .footer-section .d-flex p.mb-0 {
+        text-align: center;
+        font-size: 14px;
+        width: 75vw;
+        margin-left: 40px;
+    }
+
+    .footer-section .d-flex a.text-white {
+        display: none;
+    }
+
 }

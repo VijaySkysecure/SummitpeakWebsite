@@ -10,7 +10,52 @@
 
 body, html {
   height: 100%;
+  overflow-x: hidden;
 }
+
+
+/* Hide the hamburger icon in desktop view */
+.navbar-toggler {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) { 
+  /* Show hamburger menu in the top-right corner */
+  .navbar-toggler {
+      display: block; /* Show only on mobile */
+      position: absolute;
+      top: 25px;  /* Adjust distance from top */
+      right: 25px; /* Adjust distance from right */
+      z-index: 1100; /* Ensure it's above other elements */
+  }
+
+  /* Hide navigation links initially */
+  .nav {
+      display: none;
+      flex-direction: column;
+      background: white;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      text-align: center;
+      padding: 10px 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  }
+
+  /* Show nav when toggled */
+  .nav.show {
+      display: flex;
+  }
+
+  /* Completely remove social icons on mobile */
+  .social-icons {
+      display: none !important;
+  }
+}
+
 
 /* Default styles for the navigation items */
 .nav-item .nav-link {
@@ -193,5 +238,143 @@ ul.list-unstyled a.btn-link:hover {
   color: inherit; /* Keep the color unchanged on hover */
   background-color: transparent; /* No background color on hover */
 }
+
+
+
+
+
+/* Mobile Responsive Styling */
+@media screen and (max-width: 430px) {
+
+  body, html {
+    overflow-x: hidden; /* Hide any horizontal overflow */
+}
+
+  .about-section {
+      display: block; /* Stack content vertically */
+      padding: 20px;
+      text-align: center; /* Center align text */
+  }
+
+  .about-content {
+      margin-left: 0; /* Remove left margin */
+      margin-top: 20px;
+  }
+
+  .about-content h1 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+      line-height: 40px;
+      text-align: center; /* Center align the heading */
+  }
+
+  .highlight-text {
+      font-size: 30px; /* Decrease font size */
+      line-height: 45px; /* Adjust line height */
+      margin-top: 10px;
+      text-align: center; /* Center align the highlighted text */
+  }
+
+  /* Centered Image */
+  .centered-image {
+      width: 90%; /* Make image container take 90% of the screen width */
+      margin: 0 auto; /* Center the image */
+      margin-top: -10px;
+      margin-bottom: 70px;
+  }
+
+  /* Our Team Section */
+  .ourteam h2 {
+      font-size: 1.5rem; /* Adjust heading font size */
+      margin-left: 0; /* Remove left margin */
+      text-align: center; /* Center align the title */
+      line-height: 1.4;
+      margin-bottom: 15px;
+  }
+
+  .ourteam p {
+      font-size: 16px; /* Adjust paragraph font size */
+      width: 100%; /* Make text span the full width */
+      margin: 10px 0; /* Adjust spacing */
+      margin-left: 0; /* Remove left margin */
+      text-align: center; /* Center align text */
+      margin-top: -5px;
+  }
+
+  /* Image Box */
+  .image-box {
+      width: 90%; /* Make the box width take 90% of screen width */
+      height: 30%; /* Adjust height to content */
+      margin: 0 auto; /* Center horizontally */
+      position: relative;
+      border: 10px solid rgb(30, 30, 30); /* Thinner border */
+      border-radius: 12px; /* Slightly reduce border-radius */
+      padding: 0;
+      box-sizing: border-box;
+      margin-top: 20px;
+      margin-bottom: 50px;
+  }
+
+  /* Image Styling */
+  .scrollable-image {
+      width: 100%; /* Ensure image takes up full width of the box */
+      height: auto; /* Maintain aspect ratio */
+      object-fit: contain; /* Ensure the image stays in landscape */
+      display: block; /* Remove any inline-block gaps */
+  }
+
+  /* Hide Scrollbar */
+  .image-box::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Footer section */
+  /* Targeting image inside the footer section */
+  .footer-section .col-lg-3 img {
+    display: none;
+  }
+
+  .footer-section .col-lg-3 {
+    width: 100% !important;
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  /* Target the Follow Us section */
+  .col-lg-3.text-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center-align text inside the section */
+  }
+
+  .col-lg-3.text-end ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+  }
+
+  .col-lg-3.text-end ul li {
+    margin-bottom: 10px; /* Space between each list item */
+    display: flex;
+    justify-content: center; /* Align the list items in the center horizontally */
+    align-items: center; /* Align icon and text vertically */
+  }
+
+  .col-lg-3.text-end ul li i {
+    margin-right: 8px; /* Space between the icon and the text */
+  }
+
+
+  .footer-section .d-flex p.mb-0 {
+    text-align: center;
+    font-size: 14px;
+    width: 75vw;
+    margin-left: 40px;
+  }
+
+  .footer-section .d-flex a.text-white {
+    display: none;
+  }
+}
+
 
 

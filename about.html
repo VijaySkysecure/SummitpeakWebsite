@@ -23,6 +23,10 @@
       <div class="container d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center">
           <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
+              <!-- Hamburger Menu (Only Visible on Mobile) -->
+                <button class="navbar-toggler border-0 bg-transparent" type="button" id="menuToggle">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
           <ul class="nav">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
@@ -33,18 +37,15 @@
           </ul>
         </div>
         <script>
-          // JavaScript to toggle the active class on clicked link
-          const links = document.querySelectorAll('.nav-link');
-        
-          links.forEach(link => {
-            link.addEventListener('click', function() {
-              // Remove active class from all links
-              links.forEach(link => link.classList.remove('active'));
-        
-              // Add active class to the clicked link
-              this.classList.add('active');
-            });
+          // JavaScript to toggle the visibility of the navigation menu
+          const menuToggle = document.getElementById('menuToggle'); // Hamburger button
+          const nav = document.querySelector('.nav'); // Navigation menu
+
+          // Toggle the 'show' class on the navigation when the hamburger button is clicked
+          menuToggle.addEventListener('click', () => {
+          nav.classList.toggle('show');
           });
+        </script>
         </script>
         <div class="social-icons">
           <a href="#" class="me-2"
@@ -68,8 +69,8 @@
         Trusted For Driving Innovation And<br>Unlocking New <br>Possibilities
       </h2>
       <p>
-        At SummitPeak Software, we excel in providing innovative<br>technology solutions designed to empower businesses.<br>
-        With a client-centric focus and a commitment to<br>innovation, we ensure each project achieves its highest<br>potential.
+        At SummitPeak Software, we excel in providing innovative technology solutions designed to empower businesses.
+        With a client-centric focus and a commitment toinnovation, we ensure each project achieves its highest potential.
       </p>
     </div>
     <div class="about-image">
@@ -127,7 +128,7 @@
   <div class="contact-section">
     <div class="content">
     <h2 class="main-text">Let&apos;s Discuss Your Project</h2>
-    <p class="sub-text">Get a free consultation and lust us know your project idea to turn<br>into a digital product.</p>
+    <p class="sub-text">Get a free consultation and let us know your project idea to turn<br>into a digital product.</p>
     <a href="contact.html">
       <button class="contact-btn">Talk To Our Experts</button>
     </a>

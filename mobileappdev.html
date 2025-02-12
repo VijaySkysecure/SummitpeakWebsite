@@ -23,6 +23,10 @@
       <div class="container d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center">
           <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
+          <!-- Hamburger Menu (Only Visible on Mobile) -->
+          <button class="navbar-toggler border-0 bg-transparent" type="button" id="menuToggle">
+            <i class="bi bi-list fs-2"></i>
+          </button>
           <ul class="nav">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
@@ -36,6 +40,16 @@
             </li>
           </ul>
         </div>
+        <script>
+          // JavaScript to toggle the visibility of the navigation menu
+          const menuToggle = document.getElementById('menuToggle'); // Hamburger button
+          const nav = document.querySelector('.nav'); // Navigation menu
+
+          // Toggle the 'show' class on the navigation when the hamburger button is clicked
+          menuToggle.addEventListener('click', () => {
+          nav.classList.toggle('show');
+          });
+        </script>
         <div class="social-icons">
           <a href="#" class="me-2"
             ><i class="bi bi-facebook" style="color: #1877f2"></i
@@ -58,7 +72,7 @@
         Custom Mobile App<br>Development Services
       </h2>
       <p>
-        Reach your customers on their most preferred platforms.<br>Hire us as your custom mobile app development company,<br>
+        Reach your customers on their most preferred platforms. Hire us as your custom mobile app development company,
         and accelerate your business growth by manifolds.
       </p>
       <a href="contact.html">
@@ -192,7 +206,7 @@
                 <img src="img/home/ourservices/wondering.png" alt="CMS">
               </div>
             <div class="section-header2">
-                <h2 class="section-title2">WHY CHOOSE SUMMITPEAK FOR YOUR<br>MOBILE APP DEVELOPMENT?</h2>
+                <h2 class="section-title2">WHY CHOOSE SUMMITPEAK FOR YOUR MOBILE APP DEVELOPMENT?</h2>
                 <h3 class="section-description2">Summitpeak is an Award-winning app development company with a strong presence in the USA and the Middle East. Our team of proficient mobile app developers holds profound exposure and experience gained through continuously working and delivering diverse mobile applications catering to the varied needs of different industries and markets. As a professional organization, we make it a point to consistently meet the industry benchmarks of quality by following the coding standards and the industry-defined protocols. Our rich UI/UX imparts seamless experiences to the end-users.</h3>
                   <div class="points2">
                     <div class="content-wrapper2">

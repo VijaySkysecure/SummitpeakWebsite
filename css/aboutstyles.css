@@ -8,6 +8,52 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Hide the hamburger icon in desktop view */
+.navbar-toggler {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) { 
+  /* Show hamburger menu in the top-right corner */
+  .navbar-toggler {
+      display: block; /* Show only on mobile */
+      position: absolute;
+      top: 25px;  /* Adjust distance from top */
+      right: 25px; /* Adjust distance from right */
+      z-index: 1100; /* Ensure it's above other elements */
+  }
+
+  header .container img {
+    margin-left: -40px; /* Remove any left margin if you want it to align exactly */
+  }
+
+
+  /* Hide navigation links initially */
+  .nav {
+      display: none;
+      flex-direction: column;
+      background: white;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      text-align: center;
+      padding: 10px 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  }
+
+  /* Show nav when toggled */
+  .nav.show {
+      display: flex;
+  }
+
+  /* Completely remove social icons on mobile */
+  .social-icons {
+      display: none !important;
+  }
+}
 
 header {
   display: flex;
@@ -101,7 +147,7 @@ header {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: rgba(18, 18, 18, 1);
-
+  width: 90%;
 }
 
 .about-image {
@@ -125,6 +171,7 @@ header {
   padding: 40px 20px;
   display: flex;
   justify-content: space-around;
+  margin-top: 40px;
 }
 
 .stat-item {
@@ -358,5 +405,249 @@ ul.list-unstyled a.btn-link {
 ul.list-unstyled a.btn-link:hover {
   color: inherit; /* Keep the color unchanged on hover */
   background-color: transparent; /* No background color on hover */
+}
+
+
+
+
+
+
+
+
+
+/* Mobile Styling */
+
+@media (max-width: 430px) {
+
+  /* General Styling for all text */
+  * {
+    font-size: 14px; /* Set a base font size for mobile */
+  }
+
+  body, html {
+    overflow-x: hidden; /* Hide any horizontal overflow */
+  }
+
+  /* About Section */
+  .about-section {
+    flex-direction: column;  /* Stack content vertically */
+    padding: 20px;
+    align-items: center; /* Center content */
+  }
+
+  .about-content {
+    margin-left: 0;
+    text-align: center;  /* Center text for mobile */
+  }
+
+  .about-content h1 {
+    font-size: 1.6rem; /* Adjust font size for smaller screens */
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .highlight-text {
+    font-size: 30px; /* Scale down font size for mobile */
+    line-height: 40px;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .about-content p {
+    font-size: 14px;  /* Adjust font size for readability */
+    margin: 10px 0;
+    margin-left: 20px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .about-image {
+    display: flex; /* Set the parent container to flexbox */
+    justify-content: center; /* Aligns child (image) horizontally to the center */
+    align-items: center; /* Aligns child (image) vertically to the center */
+    width: 100%; /* Make the container take full width */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .about-image img {
+    width: 90%; /* Ensure image takes up full container width */
+    height: auto;
+    border-radius: 10px; /* Slightly reduce border-radius */
+  }
+  
+
+  /* Stats Section */
+  .stats-section {
+    padding: 20px;
+    flex-direction: column;  /* Stack stats vertically */
+    text-align: center;  /* Center the content */
+  }
+
+  .stat-item {
+    margin-bottom: 20px; /* Add margin between each stat item */
+  }
+
+  .stat-number {
+    font-size: 40px; /* Adjust font size for stats */
+    line-height: 50px;
+  }
+
+  .stat-title {
+    font-size: 22px;  /* Reduce font size */
+    line-height: 30px;
+  }
+
+  .stat-description {
+    font-size: 14px;  /* Smaller font for descriptions */
+  }
+
+  /* Our Team Section */
+  .ourteam {
+    padding: 40px 15px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+
+  .ourteam h1 {
+    font-size: 24px;  /* Smaller title font size */
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .ourteam h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .ourteam p {
+    font-size: 14px;  /* Smaller paragraph font size */
+    width: 100%;  /* Allow full width on mobile */
+    text-align: center; /* Center text */
+    margin: 10px 0;
+  }
+
+  /* Team Member Section */
+  .team-members {
+    flex-direction: column;  /* Stack members vertically */
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .team-member {
+    margin-bottom: 30px;  /* Provide space between team members */
+    text-align: center;
+  }
+
+  .team-member img {
+    width: 150px;  /* Reduced size for mobile */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  .team-member h3 {
+    font-size: 18px;  /* Smaller team member names */
+  }
+
+  .team-member p {
+    font-size: 14px;  /* Smaller role/position text */
+  }
+
+  /* Contact Section */
+  .contact-section {
+    padding: 20px 10px;
+    background-color: black; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+
+  .main-text {
+    font-size: 24px;  /* Adjust font size for main text */
+    line-height: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .sub-text {
+    font-size: 16px;  /* Adjust sub-text size */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .contact-btn {
+    padding: 10px 25px;
+    font-size: 14px;  /* Smaller font size for the button */
+    margin-top: 20px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Additional Mobile Adjustments for Links */
+  a {
+    text-decoration: none; /* Remove underline from all links */
+  }
+
+  /* Footer section */
+  /* Targeting image inside the footer section */
+  .footer-section .col-lg-3 img {
+    display: none;
+  }
+
+  .footer-section .col-lg-3 {
+    width: 100% !important;
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  /* Target the Follow Us section */
+  .col-lg-3.text-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center-align text inside the section */
+  }
+
+  .col-lg-3.text-end ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+  }
+
+  .col-lg-3.text-end ul li {
+    margin-bottom: 10px; /* Space between each list item */
+    display: flex;
+    justify-content: center; /* Align the list items in the center horizontally */
+    align-items: center; /* Align icon and text vertically */
+  }
+
+  .col-lg-3.text-end ul li i {
+    margin-right: 8px; /* Space between the icon and the text */
+  }
+
+
+  .footer-section .d-flex p.mb-0 {
+    text-align: center;
+    font-size: 14px;
+    width: 75vw;
+    margin-left: 40px;
+  }
+
+  .footer-section .d-flex a.text-white {
+    display: none;
+  }
 }
 

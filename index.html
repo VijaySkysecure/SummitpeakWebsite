@@ -23,6 +23,10 @@
       <div class="container d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center">
           <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
+          <!-- Hamburger Menu (Only Visible on Mobile) -->
+          <button class="navbar-toggler border-0 bg-transparent" type="button" id="menuToggle">
+            <i class="bi bi-list fs-2"></i>
+          </button>
           <ul class="nav">
             <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
@@ -33,17 +37,13 @@
           </ul>
         </div>
         <script>
-          // JavaScript to toggle the active class on clicked link
-          const links = document.querySelectorAll('.nav-link');
-        
-          links.forEach(link => {
-            link.addEventListener('click', function() {
-              // Remove active class from all links
-              links.forEach(link => link.classList.remove('active'));
-        
-              // Add active class to the clicked link
-              this.classList.add('active');
-            });
+          // JavaScript to toggle the visibility of the navigation menu
+          const menuToggle = document.getElementById('menuToggle'); // Hamburger button
+          const nav = document.querySelector('.nav'); // Navigation menu
+
+          // Toggle the 'show' class on the navigation when the hamburger button is clicked
+          menuToggle.addEventListener('click', () => {
+          nav.classList.toggle('show');
           });
         </script>
         
@@ -773,12 +773,6 @@ document.getElementById(tab.dataset.content).classList.add("active");
     <div class="row mt-4">
       <!-- Company Logo & Description -->
       <div class="col-lg-3 mb-4">
-        <img
-          src="img/companylogo.png"
-          alt="Logo"
-          height="70"
-          class="mb-3"
-        />
         <p>
           SummitPeak Software Pvt. Ltd. is a leading technology solutions provider, dedicated to delivering innovative and scalable software services. With a focus on excellence, we empower businesses worldwide through cutting- edge solutions, reliable support, and a commitment to client success.
         </p>
