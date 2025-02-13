@@ -19,23 +19,37 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="bg-white shadow-sm py-3">
-      <div class="container d-flex align-items-center justify-content-between">
-        <div class="d-flex align-items-center" style="margin-left: 80px;">
-          <img src="images/companylogo.png" alt="Logo" height="40" class="me-4" />
-          <ul class="nav">
-            <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="../about.html" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="../services.html" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="../career.html" class="nav-link">Career</a></li>
-            <li class="nav-item">
-              <a href="../contact.html" class="nav-link">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a href="../process.html" class="nav-link">Our Process</a>
-            </li>
-          </ul>
-        </div>
+   <header class="bg-white shadow-sm py-3">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <img src="images/companylogo.png" alt="Logo" height="40" class="me-4" />
+        <!-- Hamburger Menu (Only Visible on Mobile) -->
+        <button class="navbar-toggler border-0 bg-transparent" type="button" id="menuToggle">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+        <ul class="nav">
+          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="../about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="../services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="../career.html" class="nav-link">Career</a></li>
+          <li class="nav-item">
+            <a href="../contact.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="../process.html" class="nav-link">Our Process</a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        // JavaScript to toggle the visibility of the navigation menu
+        const menuToggle = document.getElementById('menuToggle'); // Hamburger button
+        const nav = document.querySelector('.nav'); // Navigation menu
+
+        // Toggle the 'show' class on the navigation when the hamburger button is clicked
+        menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('show');
+        });
+      </script>
         <div class="social-icons">
           <a href="#" class="me-2"
             ><i class="bi bi-facebook" style="color: #1877f2"></i
@@ -144,7 +158,7 @@
 <section>
     <div class="advantage-section">
       <h2 class="advantage-title">Advantage of Hiring jQuery Developers from Summitpeak</h2>
-      <p class="advantage-description">Hiring jQuery developers from Summitpeak ensures access to highly skilled experts who deliver fast, scalable<br>and dynamic web solutions tailored to your business needs.</p>
+      <p class="advantage-description">Hiring jQuery developers from Summitpeak ensures access to highly skilled experts who deliver fast, scalable and dynamic web solutions tailored to your business needs.</p>
       
       <div class="image-container">
         <div class="image-item">

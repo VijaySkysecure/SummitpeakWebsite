@@ -22,7 +22,11 @@
     <header class="bg-white shadow-sm py-3">
       <div class="container d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center">
-          <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
+          <img src="img/companylogo.png" alt="Logo" height="40" class="me-4"/>
+          <!-- Hamburger Menu (Only Visible on Mobile) -->
+          <button class="navbar-toggler border-0 bg-transparent" type="button" id="menuToggle">
+            <i class="bi bi-list fs-2"></i>
+          </button>
           <ul class="nav">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
@@ -36,7 +40,17 @@
             </li>
           </ul>
         </div>
-        <div class="social-icons">
+        <script>
+          // JavaScript to toggle the visibility of the navigation menu
+          const menuToggle = document.getElementById('menuToggle'); // Hamburger button
+          const nav = document.querySelector('.nav'); // Navigation menu
+
+          // Toggle the 'show' class on the navigation when the hamburger button is clicked
+          menuToggle.addEventListener('click', () => {
+          nav.classList.toggle('show');
+          });
+        </script>
+        <div class="social-icons" style="margin-right: 150px;">
           <a href="#" class="me-2"
             ><i class="bi bi-facebook" style="color: #1877f2"></i
           ></a>
@@ -58,8 +72,8 @@
         Hire a<br>Developer
       </h2>
       <p>
-        Assemble a skilled development team by hiring dedicated<br>developers from Summitpeak in India. Whatever your<br>custom
-        software development needs, we have the<br>expertise to meet all your requirements.
+        Assemble a skilled development team by hiring dedicated developers from Summitpeak in India. Whatever your custom
+        software development needs, we have the expertise to meet all your requirements.
       </p>
       <a href="contact.html">
         <button class="freequote-btn">Get in Touch</button>
@@ -270,7 +284,7 @@
     <section>
       <div class="advantage-section">
         <h2 class="advantage-title">Advantage of Hiring Developers from Summitpeak</h2>
-        <p class="advantage-description">Our Hire Developers offering does not only include experienced AngularJS<br>developers but also encompass:</p>
+        <p class="advantage-description">Our Hire Developers offering does not only include experienced AngularJS developers but also encompass:</p>
         
         <div class="image-container">
           <div class="image-item">

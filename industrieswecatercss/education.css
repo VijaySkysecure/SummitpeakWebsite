@@ -14,6 +14,49 @@ body, html {
 }
 
 
+/* Hide the hamburger icon in desktop view */
+.navbar-toggler {
+    display: none;
+  }
+  
+/* Responsive styles */
+@media (max-width: 991px) { 
+    /* Show hamburger menu in the top-right corner */
+    .navbar-toggler {
+        display: block; /* Show only on mobile */
+        position: absolute;
+        top: 25px;  /* Adjust distance from top */
+        right: 25px; /* Adjust distance from right */
+        z-index: 1100; /* Ensure it's above other elements */
+    }
+  
+    /* Hide navigation links initially */
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 10px 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+  
+    /* Show nav when toggled */
+    .nav.show {
+        display: flex;
+    }
+  
+    /* Completely remove social icons on mobile */
+    .social-icons {
+        display: none !important;
+    }
+}
+
+
 /* Default styles for the navigation items */
 .nav-item .nav-link {
     font-size: 14px;
@@ -119,7 +162,7 @@ a {
     text-decoration: none; /* Remove underline from all links */
 }
 
-.hireadevdesc1 {
+.hireadevdesc4 {
     margin-top: 80px;
     margin-left: 10px;
     width: 100%;
@@ -563,6 +606,277 @@ a {
     margin-left: 50px;
     margin-right: 80px;
     margin-bottom: 20px;
+}
+
+
+.footer-section {
+    margin-top: -80px; /* Remove any top margin */
+}
+  
+  
+.footer-section .col-lg-3:nth-child(1) {
+    width: 34%;
+    line-height: 2;
+}
+  
+/* Move the Categories section */
+.footer-section .col-lg-3:nth-child(2) {
+    margin-left: 100px; /* Add top margin to Categories */
+    line-height: 2.5;
+}
+  
+/* Move the Services section */
+.footer-section .col-lg-3:nth-child(3) {
+    margin-left: -40px; /* Add top margin to Services */
+    line-height: 2.6;
+    margin-top: -70px;
+}
+  
+/* Move the Follow Us section */
+.footer-section .col-lg-3:nth-child(4) {
+    margin-left: -190px; /* Add top margin to Follow Us */
+    line-height: 2.5;
+    margin-top: -60px;
+}
+
+.row .col-lg-3:nth-of-type(4) .text {
+    margin-left: 180px;
+}
+  
+/* Style the links to look like normal text */
+ul.list-unstyled a.btn-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent */
+    font-weight: normal; /* Normal weight for text */
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove any border radius */
+}
+  
+ul.list-unstyled a.btn-link:hover {
+    color: inherit; /* Keep the color unchanged on hover */
+    background-color: transparent; /* No background color on hover */
+}
+
+
+
+
+
+/* Mobile Styling */
+
+@media (max-width: 430px) {
+
+    /* General Styling for all text */
+    * {
+      font-size: 14px; /* Set a base font size for mobile */
+    }
+  
+    body, html {
+      overflow-x: hidden; /* Hide any horizontal overflow */
+    }
+
+    header .container img {
+        height: 40px; /* Keep the same height for the image */
+        margin-left: 25px; /* Adjust the left margin to position the image */
+        margin-top: 5px; /* Adjust the top margin for vertical positioning */
+    }
+
+    /* About Section */
+    .itmgmt-section {
+        flex-direction: column;  /* Stack content vertically */
+        padding: 20px;
+        align-items: center; /* Center content */
+        margin-right: 40px;
+    }
+
+    .itmgmt-content {
+        margin-left: 0;
+        text-align: center;  /* Center text for mobile */
+    }
+
+    .itmgmt-content h1 {
+        font-size: 8px; /* Adjust font size for smaller screens */
+        margin-bottom: 15px;
+        text-align: left;
+        align-items: left;
+    }
+
+    .highlight-text {
+        font-size: 30px; /* Scale down font size for mobile */
+        line-height: 40px;
+        background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .itmgmt-content p {
+        font-size: 14px;  /* Adjust font size for readability */
+        margin: 10px 0;
+        margin-left: 20px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .itmgmt-image {
+        display: none; /* Set the parent container to flexbox */
+    }
+    .freequote-btn{
+        font-size: 12px;
+        padding: 6px 20px;
+        margin-top: 14px;
+    }
+
+
+  /* Footer section */
+  /* Targeting image inside the footer section */
+    .footer-section {
+        display: none;
+    }
+
+    
+    .hireadevdesc4 h2 {
+        font-size: 22px; /* Adjust font size for mobile screens */
+        margin-bottom: 25px; /* Reduce space below the heading */
+        text-align: left;
+        margin-left: 0px;
+    }
+
+    .hireadevdesc4 p{
+        font-size: 14px;
+        width: 80vw;
+    }
+
+    .process-container {
+        display: block;  /* Stack all the process boxes vertically */
+    }
+
+    .process-section .process-title{
+        font-size: 22px;
+        width: 90vw;
+        margin-left: -24px;
+    }
+    
+    .process-box {
+        text-align: left;  /* Center the text for better presentation */
+        margin-bottom: 40px;  /* Add some spacing between the boxes */
+        padding: 20px;
+        margin-left: -50px;
+        height: 48vh;
+        width: 80vw;
+        margin-left: -10px;
+    }
+
+    .contact-section .main-text {
+        font-size: 26px;
+        line-height: 1.4;
+    }
+    .contact-section .sub-text {
+        font-size: 14px;
+    }
+    .contact-section .contact-btn {
+        font-size: 14px;
+        margin-top: 55px;
+    }
+
+    .hireadevdesc1 .row, .hireadevdesc1 .rowreverse {
+        display: flex;
+        flex-direction: column; /* Stack the content vertically on mobile */
+        align-items: flex-start; /* Ensure content is aligned to the left */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Adjust margins for the specific sections to ensure proper spacing */
+    .hireadevdesc1 .row {
+        display: none;
+    }
+
+    /* Adjust margins for individual row content */
+    .hireadevdesc1 .rowreverse:first-of-type {
+        margin-top: 0px; /* Margin top for the first section */
+        margin-bottom: -40px;
+    }
+
+    .hireadevdesc1 .rowreverse {
+        margin-bottom: 40px;
+    }
+
+    
+
+
+    /* Set font sizes for mobile view */
+    .hireadevdesc1 h2 {
+        font-size: 16px; /* Adjust h2 font size */
+        width: 90vw;
+        margin-left: -30px;
+    }
+
+    .rowreverse .text {
+        margin-left: 10px;
+    }
+
+    .hireadevdesc1 p {
+        font-size: 12px; /* Adjust paragraph font size */
+        width: 80vw;
+    }
+
+    .middot-list li {
+        font-size: 12px; /* Adjust font size for the list items */
+        width: 70vw;
+    }
+
+    .middot {
+        font-size: 12px; /* Adjust the bullet size */
+    }
+
+
+        /* FAQ Title */
+        .faq-title {
+            font-size: 30px; /* Adjusted font size for mobile */
+            text-align: left;
+            margin-left: -100px;
+        }
+    
+        /* FAQ Lines */
+        .line-1 { width: 120px; } /* Adjusted line width for mobile */
+    
+        /* FAQ Container */
+        .faq-container {
+            gap: 15px; /* Adjusted gap for better spacing on mobile */
+            align-items: center; /* Centered FAQ boxes */
+        }
+    
+        .faq-box {
+            width: 80vw;
+            margin-left: -40px;
+        }
+    
+        /* FAQ Question */
+        .faq-question {
+            font-size: 18px; /* Adjusted font size for mobile */
+            text-align: left;
+            margin-left: 0px;
+            width: 80vw;
+        }
+    
+        /* FAQ Arrow */
+        .faq-arrow {
+            font-size: 16px; /* Adjusted font size */
+        }
+    
+        /* FAQ Answer */
+        .faq-answer {
+            font-size: 14px; /* Adjusted font size for mobile */
+            margin-left: 20px; /* Adjusted margin for mobile */
+            margin-right: 20px; /* Adjusted margin for mobile */
+        }
+
+        .middot-list3 li {
+            font-size: 14px; /* Adjust font size for the list items */
+            width: 60vw;
+        }
 }
   
 
