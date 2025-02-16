@@ -13,6 +13,48 @@ body, html {
   overflow-x: hidden;
 }
 
+/* Hide the hamburger icon in desktop view */
+.navbar-toggler {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) { 
+  /* Show hamburger menu in the top-right corner */
+  .navbar-toggler {
+      display: block; /* Show only on mobile */
+      position: absolute;
+      top: 25px;  /* Adjust distance from top */
+      right: 25px; /* Adjust distance from right */
+      z-index: 1100; /* Ensure it's above other elements */
+  }
+
+  /* Hide navigation links initially */
+  .nav {
+      display: none;
+      flex-direction: column;
+      background: white;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      text-align: center;
+      padding: 10px 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  }
+
+  /* Show nav when toggled */
+  .nav.show {
+      display: flex;
+  }
+
+  /* Completely remove social icons on mobile */
+  .social-icons {
+      display: none !important;
+  }
+}
+
 /* Default styles for the navigation items */
 .nav-item .nav-link {
   font-size: 14px;
@@ -412,43 +454,223 @@ a {
 
 .footer-section {
     margin-top: -80px; /* Remove any top margin */
-  }
+}
   
   
-  .footer-section .col-lg-3:nth-child(1) {
+.footer-section .col-lg-3:nth-child(1) {
     width: 34%;
     line-height: 2;
-  }
+}
   
-  /* Move the Categories section */
-  .footer-section .col-lg-3:nth-child(2) {
+/* Move the Categories section */
+.footer-section .col-lg-3:nth-child(2) {
     margin-left: 100px; /* Add top margin to Categories */
     line-height: 2.5;
-  }
+}
   
-  /* Move the Services section */
-  .footer-section .col-lg-3:nth-child(3) {
+/* Move the Services section */
+.footer-section .col-lg-3:nth-child(3) {
     margin-left: -40px; /* Add top margin to Services */
     line-height: 2.6;
-  }
+}
   
-  /* Move the Follow Us section */
-  .footer-section .col-lg-3:nth-child(4) {
+/* Move the Follow Us section */
+.footer-section .col-lg-3:nth-child(4) {
     margin-left: -190px; /* Add top margin to Follow Us */
     line-height: 2.5;
-  }
+}
   
-  /* Style the links to look like normal text */
-  ul.list-unstyled a.btn-link {
+/* Style the links to look like normal text */
+ul.list-unstyled a.btn-link {
     text-decoration: none; /* Remove underline */
     color: white;
     font-weight: normal; /* Normal weight for text */
     padding: 0; /* Remove padding */
     border-radius: 0; /* Remove any border radius */
-  }
+}
   
-  /* For the Follow Us section */
-  .col-lg-3 ul.list-unstyled li {
+/* For the Follow Us section */
+.col-lg-3 ul.list-unstyled li {
     color: white; /* Set text color to white */
+}
+
+
+
+
+
+
+/* Mobile Styling */
+
+@media (max-width: 430px) {
+
+  /* General Styling for all text */
+  * {
+    font-size: 14px; /* Set a base font size for mobile */
   }
+
+  body, html {
+    overflow-x: hidden; /* Hide any horizontal overflow */
+  }
+
+  header .container img {
+      height: 40px; /* Keep the same height for the image */
+      margin-left: 25px; /* Adjust the left margin to position the image */
+      margin-top: 5px; /* Adjust the top margin for vertical positioning */
+  }
+
+  /* About Section */
+  .itmgmt-section {
+      flex-direction: column;  /* Stack content vertically */
+      padding: 20px;
+      align-items: center; /* Center content */
+      margin-right: 40px;
+  }
+
+  .itmgmt-content {
+      margin-left: 0;
+      text-align: center;  /* Center text for mobile */
+  }
+
+  .itmgmt-content h1 {
+      font-size: 8px; /* Adjust font size for smaller screens */
+      margin-bottom: 15px;
+      text-align: left;
+      align-items: left;
+      margin-left: -30px;
+  }
+
+  .highlight-text {
+      font-size: 30px; /* Scale down font size for mobile */
+      line-height: 40px;
+      background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 15px 0;
+      text-align: center;
+  }
+
+  .itmgmt-content p {
+      font-size: 14px;  /* Adjust font size for readability */
+      margin: 10px 0;
+      margin-left: 20px;
+      line-height: 22px;
+      text-align: center;
+  }
+
+  .itmgmt-image {
+      display: none; /* Set the parent container to flexbox */
+  }
+
+  .freequote-btn{
+      font-size: 12px;
+      padding: 6px 20px;
+      margin-top: 14px;
+  }
+
+  /* Footer section */
+  /* Targeting image inside the footer section */
+ .footer-section .col-lg-3 img {
+      display: none;
+  }
+
+  .footer-section .col-lg-3 {
+      width: 100% !important;
+      margin-left: 0 !important;
+      text-align: center;
+  }
+
+  /* Target the Follow Us section */
+  .col-lg-3.text-end {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center; /* Center-align text inside the section */
+  }
+
+  .col-lg-3.text-end ul {
+      list-style-type: none; /* Remove default list styling */
+      padding: 0;
+  }
+
+  .col-lg-3.text-end ul li {
+      margin-bottom: 10px; /* Space between each list item */
+      display: flex;
+      justify-content: center; /* Align the list items in the center horizontally */
+      align-items: center; /* Align icon and text vertically */
+  }
+
+  .col-lg-3.text-end ul li i {
+      margin-right: 8px; /* Space between the icon and the text */
+  }
+
+
+  .footer-section .d-flex p.mb-0 {
+      text-align: center;
+      font-size: 14px;
+      width: 75vw;
+      margin-left: 40px;
+  }
+
+  .footer-section .d-flex a.text-white {
+      display: none;
+  }
+
+  .customitmgmtdesc h2 {
+    font-size: 22px; /* Adjust font size for mobile screens */
+    margin-bottom: 25px; /* Reduce space below the heading */
+    text-align: left;
+    margin-left: 10px;
+    margin-top: -40px;
+  } 
+
+  .customitmgmtdesc p{
+    font-size: 14px;
+    width: 80vw;
+    margin-left: 10px;
+  }
+
+  .circleimgcontainer {
+    display: none;
+  }
+
+  .process-container {
+    display: block;  /* Stack all the process boxes vertically */
+    margin-bottom: -200px;
+  }
+
+  .process-section .process-title{
+        font-size: 22px;
+        width: 90vw;
+        margin-left: -24px;
+  }
+
+  .process-section .section-description1 {
+        font-size: 16px;
+        width: 90vw;
+        margin-left: -70px;
+  }
+    
+  .process-box {
+        text-align: left;  /* Center the text for better presentation */
+        margin-bottom: 40px;  /* Add some spacing between the boxes */
+        padding: 20px;
+        margin-left: -50px;
+        height: 36vh;
+        width: 80vw;
+        margin-left: -10px;
+  }
+
+  .contact-section .main-text {
+        font-size: 26px;
+        line-height: 1.4;
+  }
+  .contact-section .sub-text {
+        font-size: 14px;
+  }
+  .contact-section .contact-btn {
+        font-size: 14px;
+        margin-top: 55px;
+  }
+}
   

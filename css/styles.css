@@ -580,7 +580,7 @@ p {
   cursor: pointer;
   font-size: 16px;
   transition: all 0.3s ease;
-  color: #333;
+  color: rgba(18, 18, 18, 1);
 }
 
 .tab-button-tech.active {
@@ -601,14 +601,14 @@ p {
 
 .tech-image-tech.active {
   display: block;
-  margin-left: 150px;
+  margin-left: 100px;
 }
 
 
 /* Clickable areas on the frontend image */
 .clickable-area-tech {
   position: absolute;
-  /* background-color: red; Red for visibility, can be commented out later */
+  /*background-color: red; Red for visibility, can be commented out later*/
   display: block;
   cursor: pointer;
   z-index: 10; /* Ensure the clickable areas are above the image */
@@ -630,42 +630,42 @@ p {
 
 .frontendarea1 {
   top: 32%;
-  left: 10%;
+  left: 8%;
   width: 10%;
   height: 50%;
 }
 
 .frontendarea2 {
   top: 25.5%;
-  left: 25%;
+  left: 24%;
   width: 9%;
   height: 55%;
 }
 
 .frontendarea3 {
   top: 27%;
-  left: 38%;
+  left: 39%;
   width: 9%;
   height: 54%;
 }
 
 .frontendarea4 {
   top: 27%;
-  left: 52%;
+  left: 54%;
   width: 10%;
   height: 50%;
 }
 
 .frontendarea5 {
   top: 27%;
-  left: 66%;
+  left: 70%;
   width: 9%;
   height: 51.5%;
 }
 
 .frontendarea6 {
   top: 27%;
-  left: 80%;
+  left: 86%;
   width: 9%;
   height: 47%;
 }
@@ -1215,6 +1215,9 @@ p {
 
 .footer-section .col-lg-3:nth-child(1) {
   width: 34%;
+}
+
+.footer-section .col-lg-3:nth-child(1) p {
   line-height: 2;
 }
 

@@ -20,22 +20,38 @@
   <body>
     <!-- Header -->
     <header class="bg-white shadow-sm py-3">
-      <div class="container d-flex align-items-center justify-content-between">
-        <div class="d-flex align-items-center">
-          <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
-          <ul class="nav">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="career.html" class="nav-link">Career</a></li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a href="process.html" class="nav-link">Our Process</a>
-            </li>
-          </ul>
-        </div>
+        <div class="container d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <a href="index.html">
+              <img src="img/companylogo.png" alt="Logo" height="40" class="me-4" />
+            </a>
+            <!-- Hamburger Menu (Only Visible on Mobile) -->
+            <button class="navbar-toggler border-0 bg-transparent" type="button" id="menuToggle">
+              <i class="bi bi-list fs-2"></i>
+            </button>
+            <ul class="nav">
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+              <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+              <li class="nav-item"><a href="career.html" class="nav-link">Career</a></li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="process.html" class="nav-link">Our Process</a>
+              </li>
+            </ul>
+          </div>
+          <script>
+            // JavaScript to toggle the visibility of the navigation menu
+            const menuToggle = document.getElementById('menuToggle'); // Hamburger button
+            const nav = document.querySelector('.nav'); // Navigation menu
+  
+            // Toggle the 'show' class on the navigation when the hamburger button is clicked
+            menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('show');
+            });
+          </script>
         <div class="social-icons">
           <a href="#" class="me-2"
             ><i class="bi bi-facebook" style="color: #1877f2"></i
@@ -235,3 +251,78 @@
     </a>
     </div>
 </div>
+
+
+
+<!-- Footer Section -->
+<footer class="footer-section bg-black text-white py-5">
+    <div class="container">
+  
+      <hr class="bg-white opacity-50" style="height: 2px" />
+  
+      <div class="row mt-4">
+        <!-- Company Logo & Description -->
+        <div class="col-lg-3 mb-4">
+          <img
+            src="img/companylogo.png"
+            alt="Logo"
+            height="70"
+            class="mb-3"
+          />
+          <p>
+            SummitPeak Software Pvt. Ltd. is a leading technology solutions provider, dedicated to delivering innovative and scalable software services. With a focus on excellence, we empower businesses worldwide through cutting- edge solutions, reliable support, and a commitment to client success.
+          </p>
+        </div>
+  
+    <!-- Categories -->
+    <div class="col-lg-3 mb-4">
+    <h4 class="text mb-3">Categories</h4>
+    <ul class="list-unstyled">
+        <li><a href="../index.html" class="btn btn-link">Home</a></li>
+        <li><a href="../about.html" class="btn btn-link">About Us</a></li>
+        <li><a href="../services.html" class="btn btn-link">Services</a></li>
+        <li><a href="../career.html" class="btn btn-link">Career</a></li>
+        <li><a href="../contact.html" class="btn btn-link">Contact Us</a></li>
+        <li><a href="../process.html" class="btn btn-link">Our Process</a></li>
+      </ul>      
+    </div>
+  
+  
+  <!-- Services -->
+  <div class="col-lg-3 mb-4">
+    <h4 class="text mb-3">Services</h4>
+    <ul class="list-unstyled">
+      <li><a href="../index.html#build-an-app" class="btn btn-link">Build An Application</a></li>
+      <li><a href="../index.html#cloud-adoption" class="btn btn-link">Cloud Adoption</a></li>
+      <li><a href="../index.html#web-presence" class="btn btn-link">Web Presence Solutions</a></li>
+      <li><a href="../index.html#trending-tech" class="btn btn-link">Trending Technology</a></li>
+    </ul>
+  </div>
+  
+  
+        <!-- Follow Us -->
+        <div class="col-lg-3 mb-4 text-end">
+          <h4 class="text mb-3">Follow Us</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-facebook me-2"></i>Facebook</li>
+            <li class="mb-2"><i class="bi bi-twitter me-2"></i>Twitter</li>
+            <li class="mb-2"><i class="bi bi-instagram me-2"></i>Instagram</li>
+            <li><i class="bi bi-linkedin me-2"></i>LinkedIn</li>
+          </ul>
+        </div>
+      </div>
+  
+      <hr class="bg-white opacity-50" style="height: 2px" />
+  
+      <!-- Bottom Section -->
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <p class="mb-0">
+          &copy; 2025 SummitPeak Software Pvt. Ltd. All rights reserved.
+        </p>
+        <div>
+          <a href="#" class="text-white me-3">Terms & Conditions</a>
+          <a href="#" class="text-white">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>

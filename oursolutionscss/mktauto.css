@@ -13,6 +13,49 @@ body, html {
   overflow-x: hidden;
 }
 
+
+/* Hide the hamburger icon in desktop view */
+.navbar-toggler {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) { 
+  /* Show hamburger menu in the top-right corner */
+  .navbar-toggler {
+      display: block; /* Show only on mobile */
+      position: absolute;
+      top: 25px;  /* Adjust distance from top */
+      right: 25px; /* Adjust distance from right */
+      z-index: 1100; /* Ensure it's above other elements */
+  }
+
+  /* Hide navigation links initially */
+  .nav {
+      display: none;
+      flex-direction: column;
+      background: white;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      text-align: center;
+      padding: 10px 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  }
+
+  /* Show nav when toggled */
+  .nav.show {
+      display: flex;
+  }
+
+  /* Completely remove social icons on mobile */
+  .social-icons {
+      display: none !important;
+  }
+}
+
 /* Default styles for the navigation items */
 .nav-item .nav-link {
   font-size: 14px;
@@ -383,6 +426,212 @@ a {
   /* For the Follow Us section */
   .col-lg-3 ul.list-unstyled li {
     color: white; /* Set text color to white */
+}
+
+
+
+
+
+/* Mobile Styling */
+
+@media (max-width: 430px) {
+
+  /* General Styling for all text */
+  * {
+    font-size: 14px; /* Set a base font size for mobile */
   }
+
+  body, html {
+    overflow-x: hidden; /* Hide any horizontal overflow */
+  }
+
+  header .container img {
+      height: 40px; /* Keep the same height for the image */
+      margin-left: 25px; /* Adjust the left margin to position the image */
+      margin-top: 5px; /* Adjust the top margin for vertical positioning */
+  }
+
+  /* About Section */
+  .itmgmt-section {
+      flex-direction: column;  /* Stack content vertically */
+      padding: 20px;
+      align-items: center; /* Center content */
+      margin-right: 40px;
+  }
+
+  .itmgmt-content {
+      margin-left: 0;
+      text-align: center;  /* Center text for mobile */
+  }
+
+  .itmgmt-content h1 {
+      font-size: 8px; /* Adjust font size for smaller screens */
+      margin-bottom: 15px;
+      text-align: left;
+      align-items: left;
+      margin-left: -30px;
+  }
+
+  .highlight-text {
+      font-size: 30px; /* Scale down font size for mobile */
+      line-height: 40px;
+      background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 15px 0;
+      text-align: center;
+  }
+
+  .itmgmt-content p {
+      font-size: 14px;  /* Adjust font size for readability */
+      margin: 10px 0;
+      margin-left: 20px;
+      line-height: 22px;
+      text-align: center;
+  }
+
+  .itmgmt-image {
+      display: none; /* Set the parent container to flexbox */
+  }
+
+  .freequote-btn{
+      font-size: 12px;
+      padding: 6px 20px;
+      margin-top: 14px;
+  }
+
+  /* Footer section */
+  /* Targeting image inside the footer section */
+ .footer-section .col-lg-3 img {
+      display: none;
+  }
+
+  .footer-section .col-lg-3 {
+      width: 100% !important;
+      margin-left: 0 !important;
+      text-align: center;
+  }
+
+  /* Target the Follow Us section */
+  .col-lg-3.text-end {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center; /* Center-align text inside the section */
+  }
+
+  .col-lg-3.text-end ul {
+      list-style-type: none; /* Remove default list styling */
+      padding: 0;
+  }
+
+  .col-lg-3.text-end ul li {
+      margin-bottom: 10px; /* Space between each list item */
+      display: flex;
+      justify-content: center; /* Align the list items in the center horizontally */
+      align-items: center; /* Align icon and text vertically */
+  }
+
+  .col-lg-3.text-end ul li i {
+      margin-right: 8px; /* Space between the icon and the text */
+  }
+
+
+  .footer-section .d-flex p.mb-0 {
+      text-align: center;
+      font-size: 14px;
+      width: 75vw;
+      margin-left: 40px;
+  }
+
+  .footer-section .d-flex a.text-white {
+      display: none;
+  }
+
+
+  .customitmgmtdesc h2 {
+      font-size: 22px; /* Adjust font size for mobile screens */
+      margin-bottom: 25px; /* Reduce space below the heading */
+      text-align: left;
+      margin-left: 10px;
+      margin-top: 40px;
+  } 
+  
+  .customitmgmtdesc p{
+      font-size: 14px;
+      width: 80vw;
+      margin-left: 10px;
+  }
+
+  .customitmgmtdesc .middot-list li {
+    font-size: 14px;
+    margin-left: -15px;
+  }
+
+    .industries-support {
+        padding: 15px; /* Add padding for spacing */
+    }
+    
+    .container {
+        width: 100%; /* Ensure the container takes full width */
+    }
+    
+    .section-title {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    
+    .section-description p {
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: 14px;
+    }
+    
+    .industries-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+        gap: 15px; /* Space between the boxes */
+        margin-bottom: 20px;
+    }
+    
+    .industry-box {
+        background-color: #f4f4f4; /* Light background for each box */
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        height: 28vh;
+        background-color: white;
+    }
+    
+    .industry-box h3 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    .box-image {
+        width: 100%;
+        max-width: 120px; /* Make sure images are responsive */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+
+    .contact-section .main-text {
+        font-size: 26px;
+    }
+    .contact-section .sub-text {
+        font-size: 16px;
+    }
+    .contact-section .contact-btn {
+        font-size: 14px;
+        margin-top: 55px;
+    }
+}
   
 

@@ -13,6 +13,49 @@ body, html {
   overflow-x: hidden;
 }
 
+
+/* Hide the hamburger icon in desktop view */
+.navbar-toggler {
+    display: none;
+}
+  
+/* Responsive styles */
+@media (max-width: 991px) { 
+    /* Show hamburger menu in the top-right corner */
+    .navbar-toggler {
+        display: block; /* Show only on mobile */
+        position: absolute;
+        top: 25px;  /* Adjust distance from top */
+        right: 25px; /* Adjust distance from right */
+        z-index: 1100; /* Ensure it's above other elements */
+    }
+  
+    /* Hide navigation links initially */
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 10px 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+  
+    /* Show nav when toggled */
+    .nav.show {
+        display: flex;
+    }
+  
+    /* Completely remove social icons on mobile */
+    .social-icons {
+        display: none !important;
+    }
+}
+
 /* Default styles for the navigation items */
 .nav-item .nav-link {
     font-size: 14px;
@@ -564,7 +607,7 @@ a {
 
 /* First box height is 270px (open by default), others start at 100px */
 .faq-box.open {
-    height: 160px;
+    height: auto;
 }
 
 .faq-box:not(.open) {
@@ -652,4 +695,388 @@ a {
   /* For the Follow Us section */
   .col-lg-3 ul.list-unstyled li {
     color: white; /* Set text color to white */
-  }
+}
+
+
+
+
+
+
+/* Mobile Styling */
+
+@media (max-width: 430px) {
+
+    /* General Styling for all text */
+    * {
+      font-size: 14px; /* Set a base font size for mobile */
+    }
+  
+    body, html {
+      overflow-x: hidden; /* Hide any horizontal overflow */
+    }
+  
+    header .container img {
+        height: 40px; /* Keep the same height for the image */
+        margin-left: 25px; /* Adjust the left margin to position the image */
+        margin-top: 5px; /* Adjust the top margin for vertical positioning */
+    }
+  
+    /* About Section */
+    .itmgmt-section {
+        flex-direction: column;  /* Stack content vertically */
+        padding: 20px;
+        align-items: center; /* Center content */
+        margin-right: 40px;
+    }
+  
+    .itmgmt-content {
+        margin-left: 0;
+        text-align: center;  /* Center text for mobile */
+    }
+  
+    .itmgmt-content h1 {
+        font-size: 8px; /* Adjust font size for smaller screens */
+        margin-bottom: 15px;
+        text-align: left;
+        align-items: left;
+        margin-left: -10px;
+    }
+  
+    .highlight-text {
+        font-size: 30px; /* Scale down font size for mobile */
+        line-height: 40px;
+        background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: 15px 0;
+        text-align: center;
+    }
+  
+    .itmgmt-content p {
+        font-size: 14px;  /* Adjust font size for readability */
+        margin: 10px 0;
+        margin-left: 20px;
+        line-height: 22px;
+        text-align: center;
+    }
+  
+    .itmgmt-image {
+        display: none; /* Set the parent container to flexbox */
+    }
+  
+    .freequote-btn{
+        font-size: 12px;
+        padding: 6px 20px;
+        margin-top: 14px;
+    }
+  
+    /* Footer section */
+    /* Targeting image inside the footer section */
+   .footer-section .col-lg-3 img {
+        display: none;
+    }
+  
+    .footer-section .col-lg-3 {
+        width: 100% !important;
+        margin-left: 0 !important;
+        text-align: center;
+    }
+  
+    /* Target the Follow Us section */
+    .col-lg-3.text-end {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Center-align text inside the section */
+    }
+  
+    .col-lg-3.text-end ul {
+        list-style-type: none; /* Remove default list styling */
+        padding: 0;
+    }
+  
+    .col-lg-3.text-end ul li {
+        margin-bottom: 10px; /* Space between each list item */
+        display: flex;
+        justify-content: center; /* Align the list items in the center horizontally */
+        align-items: center; /* Align icon and text vertically */
+    }
+  
+    .col-lg-3.text-end ul li i {
+        margin-right: 8px; /* Space between the icon and the text */
+    }
+  
+  
+    .footer-section .d-flex p.mb-0 {
+        text-align: center;
+        font-size: 14px;
+        width: 75vw;
+        margin-left: 40px;
+    }
+  
+    .footer-section .d-flex a.text-white {
+        display: none;
+    }
+
+
+    .hireadevdesc1 {
+        margin-top: 40px;
+    }
+
+
+    .hireadevdesc1 .row, .hireadevdesc1 .rowreverse {
+        display: flex;
+        flex-direction: column; /* Stack the content vertically on mobile */
+        align-items: flex-start; /* Ensure content is aligned to the left */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Adjust margins for the specific sections to ensure proper spacing */
+    .hireadevdesc1 .row {
+        display: none;
+    }
+
+    /* Adjust margins for individual row content */
+    .hireadevdesc1 .rowreverse:first-of-type {
+        margin-top: 0px; /* Margin top for the first section */
+        margin-bottom: -40px;
+    }
+
+    .hireadevdesc1 .rowreverse {
+        margin-bottom: 40px;
+    }
+    /* Set font sizes for mobile view */
+    .hireadevdesc1 h2 {
+        font-size: 18px; /* Adjust h2 font size */
+        width: 90vw;
+        margin-left: -30px;
+        margin-bottom: -10px;
+    }
+
+    .rowreverse .text {
+        margin-left: -20px;
+    }
+
+    .hireadevdesc1 p {
+        font-size: 12px; /* Adjust paragraph font size */
+        width: 80vw;
+    }
+
+    .middot-list li {
+        font-size: 12px; /* Adjust font size for the list items */
+        width: 70vw;
+    }
+
+    .middot {
+        font-size: 12px; /* Adjust the bullet size */
+    }
+
+    .process-container {
+        display: block;  /* Stack all the process boxes vertically */
+        margin-top: 0px;
+    }
+
+    .process-section {
+        margin-left: 0px;
+        margin-top: 60px;
+    }
+
+    .process-section .process-title {
+        font-size: 16px;
+        width: 90vw;
+        text-align: left;
+        margin-left: -25px;
+    }
+
+
+    .process-section .section-description1 p {
+        font-size: 12px;
+        width: 90vw;
+        margin-left: -20px;
+        text-align: left;
+    }
+
+    
+    .process-box {
+        text-align: left;  /* Center the text for better presentation */
+        margin-bottom: 40px;  /* Add some spacing between the boxes */
+        padding: 20px;
+        margin-left: -50px;
+        height: 36vh;
+        width: 70vw;
+        margin-left: 20px;
+    }
+
+    .process-title-box {
+        font-size: 16px;
+        width: 44vw;
+    }
+
+    .process-list li {
+        font-size: 13px;
+    }
+
+
+    .process-container1 {
+        display: block;  /* Stack all the process boxes vertically */
+        margin-top: 0px;
+    }
+
+    .process-section1 {
+        margin-left: 0px;
+        margin-top: 60px;
+    }
+
+    .process-section1 .process-title {
+        font-size: 18px;
+        width: 90vw;
+        text-align: left;
+        margin-left: -25px;
+    }
+
+
+    .process-section1 .section-description1 p {
+        font-size: 12px;
+        width: 90vw;
+        margin-left: -20px;
+        text-align: left;
+    }
+
+    
+    .process-box1 {
+        text-align: left;  /* Center the text for better presentation */
+        margin-bottom: 40px;  /* Add some spacing between the boxes */
+        padding: 20px;
+        height: 40vh;
+        width: 75vw;
+        margin-left: 0px;
+    }
+
+
+    .customitmgmtdesc h2 {
+        font-size: 22px; /* Adjust font size for mobile screens */
+        margin-bottom: 25px; /* Reduce space below the heading */
+        text-align: left;
+        margin-left: -60px;
+        margin-top: 40px;
+    } 
+    
+    .customitmgmtdesc p{
+        font-size: 14px;
+        width: 80vw;
+        margin-left: -60px;
+    }
+  
+    .customitmgmtdesc .middot-list li {
+      font-size: 14px;
+      margin-left: -110px;
+      width: 80vw;
+    }
+
+    .industries-support {
+        padding: 15px; /* Add padding for spacing */
+    }
+    
+    .container {
+        width: 100%; /* Ensure the container takes full width */
+    }
+    
+    .section-title {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    
+    .section-description p {
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: 14px;
+    }
+    
+    .industries-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+        gap: 15px; /* Space between the boxes */
+        margin-bottom: 20px;
+    }
+    
+    .industry-box {
+        background-color: #f4f4f4; /* Light background for each box */
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        height: 28vh;
+        background-color: white;
+    }
+    
+    .industry-box h3 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    .box-image {
+        width: 100%;
+        max-width: 120px; /* Make sure images are responsive */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .contact-section .main-text {
+        font-size: 26px;
+        line-height: 1.6;
+    }
+    .contact-section .sub-text {
+        font-size: 14px;
+    }
+    .contact-section .contact-btn {
+        font-size: 14px;
+        margin-top: 55px;
+    }
+
+        /* FAQ Title */
+        .faq-title {
+            font-size: 30px; /* Adjusted font size for mobile */
+            text-align: left;
+            margin-left: -100px;
+        }
+    
+        /* FAQ Lines */
+        .line-1 { width: 120px; } /* Adjusted line width for mobile */
+    
+        /* FAQ Container */
+        .faq-container {
+            gap: 15px; /* Adjusted gap for better spacing on mobile */
+            align-items: center; /* Centered FAQ boxes */
+        }
+    
+        .faq-box {
+            width: 80vw;
+            margin-left: -40px;
+        }
+    
+        /* FAQ Question */
+        .faq-question {
+            font-size: 18px; /* Adjusted font size for mobile */
+            text-align: left;
+            margin-left: 0px;
+            width: 80vw;
+        }
+    
+        /* FAQ Arrow */
+        .faq-arrow {
+            font-size: 16px; /* Adjusted font size */
+        }
+    
+        /* FAQ Answer */
+        .faq-answer {
+            font-size: 14px; /* Adjusted font size for mobile */
+            margin-left: 20px; /* Adjusted margin for mobile */
+            margin-right: 20px; /* Adjusted margin for mobile */
+        }
+}
