@@ -153,7 +153,7 @@ header {
 .about-image {
   flex: 1;
   margin-bottom: 20px; /* Retain the bottom margin as per your requirement */
-  margin-right: -110px;
+  margin-right: -120px;
 }
 
 .about-image img {
