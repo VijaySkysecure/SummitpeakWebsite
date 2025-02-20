@@ -69,7 +69,7 @@
  
   <section class="itmgmt-section">
     <div class="itmgmt-content">
-      <h1>Home / Our Services / Cloud Adoption / IT Management Services</h1>
+      <h1>Home / Our Services / Cloud Adoption /<strong>Management Services</strong></h1>
       <h2 class="highlight-text">
         IT Management<br>Services
       </h2>
@@ -134,6 +134,60 @@
     </section>
 
 
+
+    <div class="industries-section">
+      <div class="tabs">
+        <button class="tab active" data-content="cloud-software">Cloud Software</button>
+        <button class="tab" data-content="virtualization-platforms">Virtualization Platforms</button>
+        <button class="tab" data-content="operating-systems">Operating Systems</button>
+        <button class="tab" data-content="web-servers">Web Servers</button>
+      </div>
+    
+      <div class="images-container5">
+        <img src="img/home/ourservices/hww1.png" alt="Cloud Software" class="industry-image" id="cloud-software" />
+        <img src="img/home/ourservices/hww2.png" alt="Virtualization Platforms" class="industry-image" id="virtualization-platforms" />
+        <img src="img/home/ourservices/hww3.png" alt="Operating Systems" class="industry-image" id="operating-systems" />
+        <img src="img/home/ourservices/hww4.png" alt="Web Servers" class="industry-image" id="web-servers" />
+      </div>
+    </div>
+    <script>
+const tabs = document.querySelectorAll('.tab');
+const images = document.querySelectorAll('.industry-image');
+
+// Initially hide all images
+images.forEach(img => img.style.display = 'none');
+
+// Show the first image by default (Cloud Software)
+const firstImage = document.getElementById('cloud-software');
+if (firstImage) {
+  firstImage.style.display = 'block';
+}
+
+// Add event listeners to each tab
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Remove active class from all tabs
+    tabs.forEach(t => t.classList.remove('active'));
+    // Add active class to the clicked tab
+    tab.classList.add('active');
+
+    // Get the content associated with the clicked tab
+    const content = tab.getAttribute('data-content');
+
+    // Hide all images
+    images.forEach(img => img.style.display = 'none');
+
+    // Show the image that matches the clicked tab
+    const selectedImage = document.getElementById(content);
+    if (selectedImage) {
+      selectedImage.style.display = 'block';
+    }
+  });
+});
+  </script>
+    
+
+
     <section class="industries-support">
         <div class="container">
             <h2 class="section-title">Industries We Support</h2>
@@ -180,6 +234,7 @@
     </section>
 
 
+
     <div class="contact-section">
         <div class="content">
         <h2 class="main-text">Have a Project in Mind?</h2>
@@ -208,7 +263,7 @@
           class="mb-3"
         />
         <p>
-          SummitPeak Software Pvt. Ltd. is a leading technology solutions provider, dedicated to delivering innovative and scalable software services. With a focus on excellence, we empower businesses worldwide through cutting- edge solutions, reliable support, and a commitment to client success.
+          <span style="color: #009788;">SummitPeak Software Pvt. Ltd.</span> is a leading technology solutions provider, dedicated to delivering innovative and scalable software services. With a focus on excellence, we empower businesses worldwide through cutting- edge solutions, reliable support, and a commitment to client success.
         </p>
       </div>
 

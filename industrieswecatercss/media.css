@@ -74,15 +74,83 @@ body, html {
     color: rgba(22, 5, 111, 1);
 }
 
-.social-icons {
-  display: flex; /* Use flexbox for horizontal alignment */
-  align-items: center; /* Align icons vertically */
-  gap: 20px; /* Adds space between each icon */
-  margin-right: 40px;
+.social-icons-container {
+  display: flex;
+  justify-content: center;
 }
 
-.social-icons a {
-  font-size: 1.5rem; /* Increase icon size */
+.social-icons {
+  display: flex;
+  gap: 20px;
+
+}
+
+.social-icon-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  position: absolute;
+  transition: opacity 0.7s ease;
+  margin-top: 10px;
+}
+
+.social-icon.active {
+  opacity: 0;
+}
+
+.social-icon-container:hover .inactive {
+  opacity: 0;
+}
+
+.social-icon-container:hover .active {
+  opacity: 1;
+}
+
+/* Control the Size of Specific Icons */
+.fb-icon {
+  width: 22px;  /* Set width of Facebook icon */
+  height: 22px; /* Set height of Facebook icon */
+  margin-top: 9.5px;
+}
+.fb-icon.active {
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+}
+
+.twitter-icon {
+  width: 20px;  /* Set width of Twitter icon */
+  height: 20px; /* Set height of Twitter icon */
+  margin-top: 10px;
+}
+.twitter-icon.active  {
+  width: 24px;
+  height: 24px;
+  margin-top: 9px;
+}
+
+.ig-icon {
+  width: 24px;  /* Set width of Instagram icon */
+  height: 24px; /* Set height of Instagram icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon {
+  width: 22px;  /* Set width of LinkedIn icon */
+  height: 22px; /* Set height of LinkedIn icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon.active {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
 }
 
 a {
@@ -120,7 +188,7 @@ a {
   
 .itmgmt-content p {
     font-family: Poppins;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 33px;
     text-align: left;
@@ -145,15 +213,15 @@ a {
   
   
 .freequote-btn {
-    padding: 10px 20px;
+    padding: 10px 30px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
-    font-size: 18px; /* Set the font size */
-    font-weight: 700; /* Set the font weight */
+    font-size: 16px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
     line-height: 27px; /* Set the line height */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     margin-top: 40px;
@@ -172,6 +240,15 @@ a {
     width: 100%;
 }
 
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-container {
+    width: 70%; /* Text takes 60% width */
+}
   
 .highlight-text1 {
     font-weight: 600;
@@ -204,6 +281,18 @@ a {
     margin-bottom: 14px; /* Vertical gap between points */
 }
 
+.image-container {
+    width: 30%; /* Image takes 35% width */
+
+}
+
+.image-container img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain image aspect ratio */
+    transform: scale(1.4);
+    margin-left: -20px;
+}
+
 
 
 
@@ -216,10 +305,10 @@ a {
 /* Title Styles */
 .title {
     text-align: center;
-    font-size: 38px;
+    font-size: 34px;
     font-weight: 600;
     margin-top: 100px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
     -webkit-background-clip: text;
     background-clip: text;
@@ -261,7 +350,7 @@ a {
 
 
 .hireadevdesc1 {
-    margin-top: 180px;
+    margin-top: 80px;
     margin-left: 40px;
     width: 100%;
 }
@@ -281,16 +370,16 @@ a {
 
 .row {
     display: flex;
-    align-items: left;
-    justify-content: space-between;
-    width: 95%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 55%;
 }
 
 .rowreverse {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 95%;
+    width: 80%;
 }
 
 .rowreverse .text {
@@ -298,6 +387,13 @@ a {
     align-items: start;
 }
 
+.row .text {
+    text-align: left;
+    align-items: end;
+    margin-top: -260px;
+    margin-bottom: 70px;
+    margin-right: -610px;
+}
 .text h2 {
     font-size: 32px;
     font-weight: 600;
@@ -311,13 +407,36 @@ a {
 .text p {
     font-size: 18px;
     color: rgba(18, 18, 18, 1);
-    width: 55%;
 }
 
 .middot-list li {
     margin-bottom: 10px; /* Adds space between each list item */
     font-size: 18px; /* Adjusts font size */
     color: rgba(18, 18, 18, 1);
+}
+
+
+.image-container-right {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin-left: 30px; /* Space between image and text */
+    margin-top: -20px;
+}
+.image-container-right img {
+    width: 100%; /* Make image responsive */
+    max-width: 700px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-container-left {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin-right: 0px; /* Space between image and text */
+    margin-top: 0px;
+}
+.image-container-left img {
+    width: 100%; /* Make image responsive */
+    max-width: 700px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    transform: scale(1.4);
 }
 
 
@@ -371,7 +490,7 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto; /* Centers the button */
-    padding: 10px 30px;
+    padding: 10px 40px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
     color: white;
     font-size: 16px; /* Set the font size */
@@ -439,37 +558,39 @@ a {
     background-color: white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border: 2px solid;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;
     margin-bottom: 60px;
 }
 
 .box1 {
-    height: 210px; /* Set height for box 1 */
+    height: 200px; /* Set height for box 1 */
 }
   
 .box2 {
-    height: 210px; /* Set height for box 2 */
+    height: 200px; /* Set height for box 2 */
 }
   
 .box3 {
-    height: 210px; /* Set height for box 3 */
+    height: 200px; /* Set height for box 3 */
 }
   
 .box4 {
-    height: 270px; /* Set height for box 1 */
+    height: 240px; /* Set height for box 1 */
 }
   
 .box5 {
-    height: 270px; /* Set height for box 2 */
+    height: 240px; /* Set height for box 2 */
 }
 .box6 {
-    height: 270px; /* Set height for box 2 */
+    height: 240px; /* Set height for box 2 */
 }
 .box7 {
-    height: 280px; /* Set height for box 2 */
+    height: 240px; /* Set height for box 2 */
 }
 .box8 {
-    height: 270px; /* Set height for box 2 */
+    height: 240px; /* Set height for box 2 */
 }
 
 
@@ -486,7 +607,7 @@ a {
     padding: 0;
     line-height: 2;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .process-icon {
@@ -494,7 +615,9 @@ a {
     height: 50px;
     border-radius: 50%;
     background-color: white;
-    border: 2px solid;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;
     position: absolute;
     top: -30px;
     left: 80%;
@@ -525,100 +648,140 @@ a {
 /* Project Section */
    
 .projects-section {
-    padding: 1rem 1rem;
-    max-width: 1200px;
-    background-color: #f5f5f5;
-    margin-top: 100px;
-    border-radius: 10px;
-    margin-left: 150px;
-    align-items: left;
+  padding: 1rem 1rem;
+  max-width: 1200px;
+  background-color: #f5f5f5;
+  margin-top: 100px;
+  border-radius: 10px;
+  margin-left: 150px;
+  align-items: left;
 }
-   
+ 
 .section-header {
-    position: relative;
-    padding: 20px;
-    
-}
+  position: relative;
+  padding: 20px;
   
+}
 .section-title {
-    font-size: 35px;
-    font-weight: 600;
-    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-bottom: 1rem;
-    text-align: left; /* Explicitly set left alignment */
+  font-size: 35px;
+  font-weight: 600;
+  background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+  text-align: left; /* Explicitly set left alignment */
 }
-   
+ 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  padding: 20px;
 }
-   
+ 
 /* Tablet */
 @media (min-width: 768px) {
-    .projects-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-   
+ 
 /* Desktop */
 @media (min-width: 1024px) {
-    .projects-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-   
+ 
 .project-container {
-    width: 100%;
+  width: 100%;
+  position: relative;
 }
-   
+ 
 .project-wrapper {
-    text-align: center;
+  text-align: center;
+  position: relative;
 }
-   
+ 
 .project-wrapper img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-   
-.project-wrapper h3 {
-    font-size: 18px;
-    margin-top: 10px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  transition: transform 0.3s ease; /* Smooth scaling */
 }
 
-   
+ 
+.project-wrapper h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  z-index: 100;
+}
+ 
+ 
 .section-title {
-    font-size: 32px;
-    margin-bottom: 15px;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
-   
+ 
 .section-description {
-    color: rgba(18, 18, 18, 1);
-    max-width: 900px;
-    margin-left: 0px;
-    line-height: 1.6;
+  color: rgba(18, 18, 18, 1);
+  max-width: 900px;
+  margin-left: 0px;
+  line-height: 1.6;
 }
-  
+
 .explore-button {
-    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
-    color: white; /* White text */
-    font-family: 'Poppins', sans-serif; /* Set the font family */
-    font-size: 16px;
-    font-size: 16px; /* Set the font size */
-    font-weight: 550;
-    border: none;
-    padding: 8px 35px; /* Increased padding for larger button */
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px; /* Larger button text */
-    transition: background 0.3s;
-    display: block;
-    margin: 40px auto 0;
+  background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+  color: white; /* White text */
+  font-family: 'Poppins', sans-serif; /* Set the font family */
+  font-size: 16px;
+  font-weight: 550;
+  border: none;
+  padding: 8px 35px; /* Increased padding for larger button */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Larger button text */
+  transition: background 0.3s;
+  display: block;
+  margin: 40px auto 0;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)); /* Corrected background property */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; /* Add opacity transition instead of background */
+  height: 100%;
+  opacity: 0; /* Initially, the overlay is hidden */
+}
+
+.overlay-text {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0; /* Initially, the text is hidden */
+  transition: opacity 0.3s ease;
+}
+
+.project-container:hover .overlay {
+  opacity: 1;
+}
+
+.project-container:hover .overlay-text {
+  opacity: 1; /* Text becomes visible */
+}
+
+.image-container {
+  position: relative;
 }
 
 
@@ -677,9 +840,9 @@ a {
 .faq-box {
     width: 100%;
     max-width: 1500px;
-    border-radius: 10px;
+    border-radius: 18px;
     border: 2px solid; /* Add a transparent base border */
-    border-color: #333;
+    border-color: rgb(5, 76, 124);
     overflow: hidden;
     transition: height 0.3s ease-in-out;
     background: transparent; /* Removed background color */

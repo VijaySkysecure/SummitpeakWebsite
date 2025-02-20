@@ -86,26 +86,96 @@ body, html {
     font-weight: 450;
     color: rgba(112, 112, 112, 1); /* Inactive state - Grey */
     transition: color 0.3s ease; /* Smooth transition for color change */
-  }
-  
-  /* Hover effect - Dark blue when hovered */
-  .nav-item .nav-link:hover {
-    color: rgba(22, 5, 111, 1);
-  }
-  
-  /* Active state - Blue teal gradient for the active link */
-  .nav-item .nav-link.active {
-    color: rgba(22, 5, 111, 1);
-  }
-  
-.social-icons {
-    display: flex; /* Use flexbox for horizontal alignment */
-    align-items: center; /* Align icons vertically */
-    gap: 20px; /* Adds space between each icon */
 }
   
-.social-icons a {
-    font-size: 1.5rem; /* Increase icon size */
+/* Hover effect - Dark blue when hovered */
+.nav-item .nav-link:hover {
+color: rgba(22, 5, 111, 1);
+}
+  
+/* Active state - Blue teal gradient for the active link */
+.nav-item .nav-link.active {
+    color: rgba(22, 5, 111, 1);
+}
+  
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  margin-right: -30px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+
+}
+
+.social-icon-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  position: absolute;
+  transition: opacity 0.7s ease;
+  margin-top: 10px;
+}
+
+.social-icon.active {
+  opacity: 0;
+}
+
+.social-icon-container:hover .inactive {
+  opacity: 0;
+}
+
+.social-icon-container:hover .active {
+  opacity: 1;
+}
+
+/* Control the Size of Specific Icons */
+.fb-icon {
+  width: 22px;  /* Set width of Facebook icon */
+  height: 22px; /* Set height of Facebook icon */
+  margin-top: 9.5px;
+}
+.fb-icon.active {
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+}
+
+.twitter-icon {
+  width: 20px;  /* Set width of Twitter icon */
+  height: 20px; /* Set height of Twitter icon */
+  margin-top: 11px;
+}
+.twitter-icon.active  {
+  width: 24px;
+  height: 24px;
+  margin-top: 9px;
+}
+
+.ig-icon {
+  width: 24px;  /* Set width of Instagram icon */
+  height: 24px; /* Set height of Instagram icon */
+}
+
+.linkedin-icon {
+  width: 22px;  /* Set width of LinkedIn icon */
+  height: 22px; /* Set height of LinkedIn icon */
+  margin-top: 10px;
+}
+
+.linkedin-icon.active {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
 }
 
 .about-section {
@@ -118,7 +188,7 @@ body, html {
   
 .about-content {
     flex: 1;
-    margin-left: 30px;
+    margin-left: 70px;
 }
   
 .about-content h1 {
@@ -157,7 +227,7 @@ body, html {
     text-decoration-skip-ink: none;
     color: rgba(18, 18, 18, 1);
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 90%;
 }
   
@@ -180,16 +250,15 @@ body, html {
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
-    font-size: 18px; /* Set the font size */
-    font-weight: 700; /* Set the font weight */
+    font-size: 16px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
     line-height: 27px; /* Set the line height */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
-    margin-left: -786px;
+    margin-left: -756px;
     margin-bottom: 73px;
- 
 }
 
 .stats-section {

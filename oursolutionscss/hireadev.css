@@ -70,9 +70,9 @@ body, html {
   }
   
   /* Active state - Blue teal gradient for the active link */
-  .nav-item .nav-link.active {
+.nav-item .nav-link.active {
     color: rgba(22, 5, 111, 1);
-  }
+}
 
 .social-icons {
   display: flex; /* Use flexbox for horizontal alignment */
@@ -105,6 +105,10 @@ header .container img {
     width: 100%;
     position: relative;
 }
+
+.webapp-section h1 strong {
+    font-weight: 600; /* Adjust the weight value to your preference (e.g., 400, 600, 700, etc.) */
+}
   
 .webapp-content h1 {
     font-size: 2rem; 
@@ -116,7 +120,7 @@ header .container img {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     margin-bottom: 75px;
-  
+    color: rgb(88, 88, 88);
 }
   
 .highlight-text {
@@ -134,7 +138,7 @@ header .container img {
   
 .webapp-content p {
     font-family: Poppins;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 33px;
     text-align: left;
@@ -160,15 +164,15 @@ header .container img {
   
   
 .freequote-btn {
-    padding: 10px 20px;
+    padding: 10px 35px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
-    font-size: 18px; /* Set the font size */
-    font-weight: 700; /* Set the font weight */
+    font-size: 16px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
     line-height: 27px; /* Set the line height */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     margin-top: 40px;
@@ -185,7 +189,6 @@ a {
     width: 100%;
 }
 
-  
 .highlight-text1 {
     font-weight: 600;
     font-size: 36px;
@@ -310,23 +313,12 @@ a {
     margin: 60px 80px;
     position: relative;
     z-index: 1;
-    border-radius: 10px; /* Rounded corners for the section */
-    border: 2px solid transparent; /* Base border, transparent */
+    border-radius: 10px;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
 }
 
-.process-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px; /* Matching border radius for the section */
-    border: 2px solid transparent; /* Transparent base for the border */
-
-    z-index: -1;
-    padding: 2px; /* Make space for the gradient border */
-}
 
 .process-title {
     font-size: 36px;
@@ -395,9 +387,9 @@ a {
 }
 
 .vertical-line {
-    width: 2px;
+    width: 1.5px;
     height: 42px;
-    background-color: rgb(123, 123, 123);
+    background-color: rgb(165, 164, 164);
     position: absolute;
     left: 50%;
     top: 100%;
@@ -407,7 +399,7 @@ a {
 .horizontal-line {
     width: 1000px;
     height: 1.5px;
-    background-color: rgb(123, 123, 123);
+    background-color: rgb(165, 164, 164);
     position: absolute;
     bottom: 165px; /* Adjusted to touch vertical lines */
     left: 50%;
@@ -433,7 +425,7 @@ a {
 
 .hire-btn {
     margin-top: 120px;
-    padding: 12px 24px;
+    padding: 10px 35px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
@@ -441,7 +433,7 @@ a {
     font-weight: 550; /* Set the font weight */
     line-height: 27px; /* Set the line height */
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     margin-left: 550px;
 }
@@ -536,6 +528,8 @@ a {
     background-color: black;
     padding: 40px 0;
     text-align: center;
+    width: 100vw;
+    margin-left: -10px;
 }
   
 .expertise-title {
@@ -567,14 +561,14 @@ a {
 }
   
 .icon-item img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     margin-bottom: 15px;
 }
   
 .icon-text {
-    font-size: 18px;
+    font-size: 16px;
     color: white;
     margin: 5px 0;
 }
@@ -641,7 +635,7 @@ a {
 }
   
 .tile {
-    width: 390px;
+    width: 350px;
     height: 500px;
     border-radius: 12px;
     padding: 30px;
@@ -681,7 +675,7 @@ a {
 }
   
 .tile-list li {
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -748,101 +742,145 @@ hr {
 /* Project Section */
    
 .projects-section {
-    padding: 1rem 1rem;
-    max-width: 1200px;
-    background-color: #f5f5f5;
-    margin-top: 100px;
-    border-radius: 10px;
-    margin-left: 150px;
-    align-items: left;
+  padding: 1rem 1rem;
+  max-width: 1200px;
+  background-color: #f5f5f5;
+  margin-top: 100px;
+  border-radius: 10px;
+  margin-left: 150px;
+  align-items: left;
 }
-   
+ 
 .section-header {
-    position: relative;
-    padding: 20px;
-    
-}
+  position: relative;
+  padding: 20px;
   
+}
 .section-title {
-    font-size: 35px;
-    font-weight: 600;
-    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-bottom: 1rem;
-    text-align: left; /* Explicitly set left alignment */
+  font-size: 35px;
+  font-weight: 600;
+  background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+  text-align: left; /* Explicitly set left alignment */
+  margin-left: 0px;
 }
-   
+ 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  padding: 20px;
 }
-   
+ 
 /* Tablet */
 @media (min-width: 768px) {
-    .projects-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-   
+ 
 /* Desktop */
 @media (min-width: 1024px) {
-    .projects-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-   
+ 
 .project-container {
-    width: 100%;
+  width: 100%;
+  position: relative;
 }
-   
+ 
 .project-wrapper {
-    text-align: center;
+  text-align: center;
+  position: relative;
 }
-   
+ 
 .project-wrapper img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-   
-.project-wrapper h3 {
-    font-size: 18px;
-    margin-top: 10px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  transition: transform 0.3s ease; /* Smooth scaling */
 }
 
-   
+ 
+.project-wrapper h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  z-index: 100;
+}
+ 
+ 
 .section-title {
-    font-size: 32px;
-    margin-bottom: 15px;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
-   
+ 
 .section-description {
-    color: rgba(18, 18, 18, 1);
-    max-width: 900px;
-    margin-left: 0px;
-    line-height: 1.6;
+  color: rgba(18, 18, 18, 1);
+  max-width: 900px;
+  margin-left: 0px;
+  line-height: 1.6;
 }
-  
+
 .explore-button {
-    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
-    color: white; /* White text */
-    font-family: 'Poppins', sans-serif; /* Set the font family */
-    font-size: 16px;
-    font-size: 16px; /* Set the font size */
-    font-weight: 550;
-    border: none;
-    padding: 8px 35px; /* Increased padding for larger button */
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px; /* Larger button text */
-    transition: background 0.3s;
-    display: block;
-    margin: 40px auto 0;
+  background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+  color: white; /* White text */
+  font-family: 'Poppins', sans-serif; /* Set the font family */
+  font-size: 16px;
+  font-weight: 550;
+  border: none;
+  padding: 8px 35px; /* Increased padding for larger button */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Larger button text */
+  transition: background 0.3s;
+  display: block;
+  margin: 40px auto 0;
 }
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)); /* Corrected background property */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; /* Add opacity transition instead of background */
+  height: 100%;
+  opacity: 0; /* Initially, the overlay is hidden */
+}
+
+.overlay-text {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0; /* Initially, the text is hidden */
+  transition: opacity 0.3s ease;
+}
+
+.project-container:hover .overlay {
+  opacity: 1;
+}
+
+.project-container:hover .overlay-text {
+  opacity: 1; /* Text becomes visible */
+}
+
+.image-container {
+  position: relative;
+}
+
+
+
 
 /* Wrapper for the entire section */
 .contact-section {
@@ -853,6 +891,8 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    margin-left: -10px;
 }
   
 /* Inner content container */
@@ -893,6 +933,7 @@ hr {
     margin-top: 100px;
     margin-left: 80px;
     margin-right: 80px;
+    margin-bottom: 30px;
     padding: 20px;
     text-align: center;
 }
@@ -941,9 +982,9 @@ hr {
 .faq-box {
     width: 100%;
     max-width: 1500px;
-    border-radius: 10px;
+    border-radius: 18px;
     border: 2px solid; /* Add a transparent base border */
-    border-color: #333;
+    border-color: rgb(5, 81, 111);
     overflow: hidden;
     transition: height 0.3s ease-in-out;
     background: transparent; /* Removed background color */
@@ -1000,6 +1041,114 @@ hr {
 }
 
 
+/* Blog Section Styling */
+.blogs {
+  display: flex;
+  background-color: rgba(245, 245, 245, 1);
+  width: 100vw;
+  height: 70vh;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+/* Images Container */
+.images-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.back-image {
+  position: absolute;
+  left: -40px;
+  top: -210px;
+  width: 340px;
+  height: auto;
+}
+
+.front-image {
+  position: absolute;
+  top: -180px;
+  left: 150px; /* Allows for left-right movement */
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Text Styling */
+.text-container {
+  margin-left: 580px;
+  max-width: 500px;
+}
+
+.blogstitle {
+font-weight: 600;
+font-size: 36px;
+margin-top: -70px;
+margin-left: 180px;
+align-self: center;
+background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 30px;
+  color: black;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-weight: 350;
+  font-size: 16px;
+  color: black;
+}
+
+/* Right Arrow Button */
+.right-arrow {
+  margin-left: 80px;
+}
+
+.right-arrow button {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+/* Right Image Container */
+.right-image-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+  
+}
+
+.right-image {
+  width: 30px;
+  height: 400px;
+}
+
+
 /* Button style */
 .contact-btn {
     display: block;
@@ -1020,7 +1169,8 @@ hr {
 
 .footer-section {
     margin-top: -80px; /* Remove any top margin */
-   
+    width: 100vw;
+    margin-left: -10px;
   }
   
   

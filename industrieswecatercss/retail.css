@@ -73,15 +73,83 @@ body, html {
     color: rgba(22, 5, 111, 1);
 }
 
-.social-icons {
-  display: flex; /* Use flexbox for horizontal alignment */
-  align-items: center; /* Align icons vertically */
-  gap: 20px; /* Adds space between each icon */
-  margin-right: 40px;
+.social-icons-container {
+  display: flex;
+  justify-content: center;
 }
 
-.social-icons a {
-  font-size: 1.5rem; /* Increase icon size */
+.social-icons {
+  display: flex;
+  gap: 20px;
+
+}
+
+.social-icon-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  position: absolute;
+  transition: opacity 0.7s ease;
+  margin-top: 10px;
+}
+
+.social-icon.active {
+  opacity: 0;
+}
+
+.social-icon-container:hover .inactive {
+  opacity: 0;
+}
+
+.social-icon-container:hover .active {
+  opacity: 1;
+}
+
+/* Control the Size of Specific Icons */
+.fb-icon {
+  width: 22px;  /* Set width of Facebook icon */
+  height: 22px; /* Set height of Facebook icon */
+  margin-top: 9.5px;
+}
+.fb-icon.active {
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+}
+
+.twitter-icon {
+  width: 20px;  /* Set width of Twitter icon */
+  height: 20px; /* Set height of Twitter icon */
+  margin-top: 10px;
+}
+.twitter-icon.active  {
+  width: 24px;
+  height: 24px;
+  margin-top: 9px;
+}
+
+.ig-icon {
+  width: 24px;  /* Set width of Instagram icon */
+  height: 24px; /* Set height of Instagram icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon {
+  width: 22px;  /* Set width of LinkedIn icon */
+  height: 22px; /* Set height of LinkedIn icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon.active {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
 }
 
 .itmgmt-section {
@@ -374,7 +442,9 @@ a {
     background-color: white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border: 2px solid;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;
     margin-bottom: 60px;
 }
 
@@ -441,7 +511,9 @@ a {
     height: 50px;
     border-radius: 50%;
     background-color: white;
-    border: 2px solid;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;
     position: absolute;
     top: -30px;
     left: 80%;
@@ -524,9 +596,9 @@ a {
 .faq-box {
     width: 100%;
     max-width: 1500px;
-    border-radius: 10px;
+    border-radius: 18px;
     border: 2px solid; /* Add a transparent base border */
-    border-color: #333;
+    border-color: rgb(5, 76, 124);
     overflow: hidden;
     transition: height 0.3s ease-in-out;
     background: transparent; /* Removed background color */

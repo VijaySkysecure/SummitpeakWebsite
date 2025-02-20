@@ -1,0 +1,985 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+/* Hide the hamburger icon in desktop view */
+.navbar-toggler {
+    display: none;
+  }
+  
+/* Responsive styles */
+@media (max-width: 991px) { 
+    /* Show hamburger menu in the top-right corner */
+    .navbar-toggler {
+        display: block; /* Show only on mobile */
+        position: absolute;
+        top: 25px;  /* Adjust distance from top */
+        right: 25px; /* Adjust distance from right */
+        z-index: 1100; /* Ensure it's above other elements */
+    }
+  
+    /* Hide navigation links initially */
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 10px 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+  
+    /* Show nav when toggled */
+    .nav.show {
+        display: flex;
+    }
+  
+    /* Completely remove social icons on mobile */
+    .social-icons {
+        display: none !important;
+    }
+}
+
+
+/* Default styles for the navigation items */
+.nav-item .nav-link {
+    font-size: 14px;
+    font-weight: 450;
+    color: rgba(112, 112, 112, 1); /* Inactive state - Grey */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+  
+/* Hover effect - Dark blue when hovered */
+.nav-item .nav-link:hover {
+    color: rgba(22, 5, 111, 1);
+}
+  
+/* Active state - Blue teal gradient for the active link */
+.nav-item .nav-link.active {
+    color: rgba(22, 5, 111, 1);
+}
+
+
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+
+}
+
+.social-icon-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  position: absolute;
+  transition: opacity 0.7s ease;
+  margin-top: 10px;
+}
+
+.social-icon.active {
+  opacity: 0;
+}
+
+.social-icon-container:hover .inactive {
+  opacity: 0;
+}
+
+.social-icon-container:hover .active {
+  opacity: 1;
+}
+
+/* Control the Size of Specific Icons */
+.fb-icon {
+  width: 22px;  /* Set width of Facebook icon */
+  height: 22px; /* Set height of Facebook icon */
+  margin-top: 9.5px;
+}
+.fb-icon.active {
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+}
+
+.twitter-icon {
+  width: 20px;  /* Set width of Twitter icon */
+  height: 20px; /* Set height of Twitter icon */
+  margin-top: 10px;
+}
+.twitter-icon.active  {
+  width: 24px;
+  height: 24px;
+  margin-top: 9px;
+}
+
+.ig-icon {
+  width: 24px;  /* Set width of Instagram icon */
+  height: 24px; /* Set height of Instagram icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon {
+  width: 22px;  /* Set width of LinkedIn icon */
+  height: 22px; /* Set height of LinkedIn icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon.active {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+.itmgmt-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 10px;
+    margin-left: 10px;
+}
+  
+.itmgmt-content {
+    flex: 1;
+    margin-left: 80px;
+    width: 100%;
+    position: relative;
+}
+  
+  
+.highlight-text {
+    font-family: 'Poppins', sans-serif; /* Added font-family */
+    font-size: 60px; /* Updated font size */
+    font-weight: 700; /* Font weight */
+    line-height: 82px; /* Line height */
+    text-align: left; /* Text alignment */
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 70px 0px;
+}
+  
+.itmgmt-content p {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(18, 18, 18, 1);
+}
+  
+.itmgmt-image {
+    flex: 1;
+    margin-right: -140px;
+    margin-top: 40px;
+}
+  
+.itmgmt-image img {
+    width: 70%; /* Adjust the width to 100% to fill the container */
+    max-width: 740px; /* Optional: limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    
+}
+  
+  
+.freequote-btn {
+    padding: 10px 40px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Set the font family */
+    font-size: 16px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
+    line-height: 27px; /* Set the line height */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 40px;
+
+}
+  
+a {
+    text-decoration: none; /* Remove underline from all links */
+}
+
+
+.customitmgmtdesc {
+    margin-top: 70px;
+    width: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-container {
+    width: 70%; /* Text takes 60% width */
+}
+  
+.highlight-text1 {
+    font-weight: 600;
+    font-size: 36px;
+    background-image: linear-gradient(89deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 10px 0;
+}
+
+  
+.text-dark {
+    color: rgba(18, 18, 18, 1);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 85%; /* Make it span the full width */
+    margin: 20px 0; /* Add vertical spacing */
+}
+
+
+.customitmgmtdesc .bullet-points li {
+    font-size: 18px; /* Modify the font size of the points */
+    line-height: 1.6; /* Adjust vertical gap between points */
+    color: rgba(18, 18, 18, 1); /* Change text color (optional) */
+    margin-bottom: 14px; /* Vertical gap between points */
+}
+
+.image-container {
+    width: 30%; /* Image takes 35% width */
+}
+
+.image-container img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain image aspect ratio */
+}
+
+
+
+
+.hireadevdesc1 {
+    margin-top: 80px;
+    margin-left: 40px;
+    width: 100%;
+}
+
+  
+.highlight-text2 {
+    font-weight: 600;
+    font-size: 36px;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+.row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 55%;
+}
+
+.rowreverse {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+}
+
+.rowreverse .text {
+    text-align: left;
+    align-items: start;
+}
+
+.row .text {
+    text-align: left;
+    align-items: end;
+    margin-top: -260px;
+    margin-bottom: 70px;
+    margin-right: -610px;
+}
+.text h2 {
+    font-size: 32px;
+    font-weight: 600;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 18px;
+    color: rgba(18, 18, 18, 1);
+}
+
+.middot-list li {
+    margin-bottom: 10px; /* Adds space between each list item */
+    font-size: 18px; /* Adjusts font size */
+    color: rgba(18, 18, 18, 1);
+}
+
+
+.image-container-right {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin-left: 30px; /* Space between image and text */
+    margin-top: -20px;
+}
+.image-container-right img {
+    width: 100%; /* Make image responsive */
+    max-width: 700px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-container-left {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin-right: 0px; /* Space between image and text */
+    margin-top: 0px;
+}
+.image-container-left img {
+    width: 100%; /* Make image responsive */
+    max-width: 700px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    transform: scale(1.4);
+}
+
+
+
+
+/* Wrapper for the entire section */
+.contact-section {
+    background-color: black; /* Black background */
+    padding: 40px 0; /* 40px padding on top and bottom */
+    margin-top: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+/* Inner content container */
+.content1 {
+    text-align: center;
+    color: white; /* Default text color */
+}
+  
+/* Main text style */
+.main-text {
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(80, 63, 166, 1)); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text transparent to show the gradient */
+    font-size: 50px; /* Set font size */
+    font-weight: 600; /* Set font weight */
+    line-height: 65px; /* Set line height */
+    text-align: center; /* Center align the text */
+    text-underline-position: from-font; /* Text underline position */
+    text-decoration-skip-ink: none; /* Text decoration skip */
+    margin-bottom: 30px; /* Spacing between the elements */
+    width: 100%;
+}
+  
+  
+/* Sub-text style */
+.sub-text {
+    margin-bottom: 50px; /* Spacing between the sub-text and button */
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(254, 254, 254, 1);
+    text-align: center;
+}
+
+/* Button style */
+.contact-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers the button */
+    padding: 10px 30px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    color: white;
+    font-size: 16px; /* Set the font size */
+    font-weight: 550; /* Set the font weight */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.process-section {
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    margin-top: 100px;
+}
+
+
+.process-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 80px;
+    background-image: linear-gradient(89deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+
+.process-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.process-box {
+    width: 380px;
+    padding: 35px;
+    text-align: left; /* Align text to the left */
+    font-size: 14px;
+    color: rgba(0, 0, 0, 1);
+    position: relative;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;
+    margin-bottom: 60px;
+}
+
+.box1 {
+    height: 200px; /* Set height for box 1 */
+}
+  
+.box2 {
+    height: 200px; /* Set height for box 2 */
+}
+  
+.box3 {
+    height: 200px; /* Set height for box 3 */
+}
+  
+.box4 {
+    height: 200px; /* Set height for box 1 */
+}
+  
+.box5 {
+    height: 200px; /* Set height for box 2 */
+}
+.box6 {
+    height: 200px; /* Set height for box 2 */
+}
+.box7 {
+    height: 180px; /* Set height for box 2 */
+}
+.box8 {
+    height: 180px; /* Set height for box 2 */
+}
+.box9 {
+    height: 180px; /* Set height for box 2 */
+}
+.box10 {
+    height: 210px; /* Set height for box 2 */
+}
+.box11 {
+    height: 210px; /* Set height for box 2 */
+}
+.box12 {
+    height: 210px; /* Set height for box 2 */
+}
+
+
+.process-title-box {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 12px;
+    margin-top: -10px;
+    width: 80%;
+}
+
+.process-list {
+    list-style-type: none;
+    padding: 0;
+    line-height: 2;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.process-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;
+    position: absolute;
+    top: -30px;
+    left: 80%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.process-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.step-label {
+    position: absolute;
+    bottom: -80px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+}
+
+
+
+/* General Section Styling */
+.faq-section {
+    max-width: 1300px;
+    margin-top: 100px;
+    margin-left: 120px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+    padding: 20px;
+    text-align: center;
+}
+  
+/* FAQ Title & Lines */
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+  
+.faq-title {
+    font-size: 40px;
+    font-weight: 600;
+    background-image: linear-gradient(179deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+  
+.faq-lines {
+    display: flex;
+    gap: 15px;
+}
+  
+.line {
+    height: 5px;
+    background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(80, 63, 166, 1));
+}
+  
+.line-1 { width: 180px; }
+.line-2 { width: 35px; }
+.line-3 { width: 15px; }
+  
+/* FAQ Container */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+}
+  
+/* FAQ Box */
+.faq-box {
+    width: 100%;
+    max-width: 1500px;
+    border-radius: 18px;
+    border: 2px solid; /* Add a transparent base border */
+    border-color: rgb(5, 76, 124);
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    background: transparent; /* Removed background color */
+}
+  
+/* First box height is 270px (open by default), others start at 100px */
+.faq-box.open {
+    height: auto;
+}
+  
+.faq-box:not(.open) {
+    height: 70px;
+}
+  
+/* FAQ Question */
+.faq-question {
+    background-image: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin-left: 30px;
+}
+  
+/* FAQ Arrow */
+.faq-arrow {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+  
+/* Rotating Arrow when Expanded */
+.faq-box.open .faq-arrow {
+    transform: rotate(180deg);
+}
+
+.middot-list3 li {
+    margin-top: 12px;
+    margin-bottom: 10px; /* Adds space between each list item */
+    font-size: 18px; /* Adjusts font size */
+    color: rgba(18, 18, 18, 1);
+}
+  
+/* FAQ Answer */
+.faq-answer {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0px;
+    color: rgba(18, 18, 18, 1); /* Modify this to change answer text color */
+    display: block;
+    background: transparent;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 80px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+/* Mobile Styling */
+
+@media (max-width: 430px) {
+
+    /* General Styling for all text */
+    * {
+      font-size: 14px; /* Set a base font size for mobile */
+    }
+  
+    body, html {
+      overflow-x: hidden; /* Hide any horizontal overflow */
+    }
+
+    header .container img {
+        height: 40px; /* Keep the same height for the image */
+        margin-left: 25px; /* Adjust the left margin to position the image */
+        margin-top: 5px; /* Adjust the top margin for vertical positioning */
+    }
+
+    /* About Section */
+    .itmgmt-section {
+        flex-direction: column;  /* Stack content vertically */
+        padding: 20px;
+        align-items: center; /* Center content */
+        margin-right: 40px;
+    }
+
+    .itmgmt-content {
+        margin-left: 0;
+        text-align: center;  /* Center text for mobile */
+    }
+
+    .itmgmt-content h1 {
+        font-size: 8px; /* Adjust font size for smaller screens */
+        margin-bottom: 15px;
+        text-align: left;
+        align-items: left;
+    }
+
+    .highlight-text {
+        font-size: 30px; /* Scale down font size for mobile */
+        line-height: 40px;
+        background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .itmgmt-content p {
+        font-size: 14px;  /* Adjust font size for readability */
+        margin: 10px 0;
+        margin-left: 20px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .itmgmt-image {
+        display: none; /* Set the parent container to flexbox */
+    }
+
+    .freequote-btn{
+        font-size: 12px;
+        padding: 6px 20px;
+        margin-top: 14px;
+    }
+
+    /* Footer section */
+    /* Targeting image inside the footer section */
+   .footer-section .col-lg-3 img {
+        display: none;
+    }
+
+    .footer-section .col-lg-3 {
+        width: 100% !important;
+        margin-left: 0 !important;
+        text-align: center;
+    }
+
+    /* Target the Follow Us section */
+    .col-lg-3.text-end {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Center-align text inside the section */
+    }
+
+    .col-lg-3.text-end ul {
+        list-style-type: none; /* Remove default list styling */
+        padding: 0;
+    }
+
+    .col-lg-3.text-end ul li {
+        margin-bottom: 10px; /* Space between each list item */
+        display: flex;
+        justify-content: center; /* Align the list items in the center horizontally */
+        align-items: center; /* Align icon and text vertically */
+    }
+
+    .col-lg-3.text-end ul li i {
+        margin-right: 8px; /* Space between the icon and the text */
+    }
+
+
+    .footer-section .d-flex p.mb-0 {
+        text-align: center;
+        font-size: 14px;
+        width: 75vw;
+        margin-left: 40px;
+    }
+
+    .footer-section .d-flex a.text-white {
+        display: none;
+    }
+
+
+    .customitmgmtdesc h2 {
+        font-size: 22px; /* Adjust font size for mobile screens */
+        margin-bottom: 25px; /* Reduce space below the heading */
+        text-align: left;
+        margin-left: 10px;
+        margin-top: 60px;
+    }
+
+    .customitmgmtdesc p{
+        font-size: 14px;
+        width: 80vw;
+        margin-left: 10px;
+    }
+
+    .hireadevdesc1 {
+        margin-top: 80px;
+    }
+
+    .customitmgmtdesc .bullet-points li {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .hireadevdesc1 .row, .hireadevdesc1 .rowreverse {
+        display: flex;
+        flex-direction: column; /* Stack the content vertically on mobile */
+        align-items: flex-start; /* Ensure content is aligned to the left */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Adjust margins for the specific sections to ensure proper spacing */
+    .hireadevdesc1 .row {
+        display: none;
+    }
+
+    /* Adjust margins for individual row content */
+    .hireadevdesc1 .rowreverse:first-of-type {
+        margin-top: 0px; /* Margin top for the first section */
+        margin-bottom: -40px;
+    }
+
+    .hireadevdesc1 .rowreverse {
+        margin-bottom: 40px;
+    }
+    /* Set font sizes for mobile view */
+    .hireadevdesc1 h2 {
+        font-size: 18px; /* Adjust h2 font size */
+        width: 90vw;
+        margin-left: -30px;
+        margin-bottom: 10px;
+    }
+
+    .rowreverse .text {
+        margin-left: 10px;
+    }
+
+    .hireadevdesc1 p {
+        font-size: 12px; /* Adjust paragraph font size */
+        width: 80vw;
+    }
+
+    .middot-list li {
+        font-size: 12px; /* Adjust font size for the list items */
+        width: 70vw;
+    }
+
+    .middot {
+        font-size: 12px; /* Adjust the bullet size */
+    }
+
+    .process-container {
+        display: block;  /* Stack all the process boxes vertically */
+    }
+
+    .process-section .process-title{
+        font-size: 22px;
+        width: 90vw;
+        margin-left: -24px;
+    }
+
+    .process-section .section-description1 {
+        font-size: 16px;
+        width: 90vw;
+        margin-left: -70px;
+    }
+    
+    .process-box {
+        text-align: left;  /* Center the text for better presentation */
+        margin-bottom: 40px;  /* Add some spacing between the boxes */
+        padding: 20px;
+        margin-left: -50px;
+        height: 42vh;
+        width: 80vw;
+        margin-left: -10px;
+    }
+
+    .contact-section .main-text {
+        font-size: 26px;
+        line-height: 1.4;
+    }
+    .contact-section .sub-text {
+        font-size: 14px;
+    }
+    .contact-section .contact-btn {
+        font-size: 14px;
+        margin-top: 55px;
+    }
+
+    /* FAQ Title */
+    .faq-title {
+        font-size: 30px; /* Adjusted font size for mobile */
+        text-align: left;
+        margin-left: -100px;
+    }
+
+    /* FAQ Lines */
+    .line-1 { width: 120px; } /* Adjusted line width for mobile */
+
+    /* FAQ Container */
+    .faq-container {
+        gap: 15px; /* Adjusted gap for better spacing on mobile */
+        align-items: center; /* Centered FAQ boxes */
+    }
+
+    .faq-box {
+        width: 80vw;
+        margin-left: -40px;
+    }
+
+    /* FAQ Question */
+    .faq-question {
+        font-size: 18px; /* Adjusted font size for mobile */
+        text-align: left;
+        margin-left: 0px;
+        width: 80vw;
+    }
+
+    /* FAQ Arrow */
+    .faq-arrow {
+        font-size: 16px; /* Adjusted font size */
+    }
+
+    /* FAQ Answer */
+    .faq-answer {
+        font-size: 14px; /* Adjusted font size for mobile */
+        margin-left: 20px; /* Adjusted margin for mobile */
+        margin-right: 20px; /* Adjusted margin for mobile */
+    }
+
+    .middot-list3 li {
+        font-size: 14px; /* Adjust font size for the list items */
+        width: 60vw;
+    }
+}

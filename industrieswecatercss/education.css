@@ -76,15 +76,83 @@ body, html {
 }
 
 
-.social-icons {
-  display: flex; /* Use flexbox for horizontal alignment */
-  align-items: center; /* Align icons vertically */
-  gap: 20px; /* Adds space between each icon */
-  margin-right: 40px;
+.social-icons-container {
+  display: flex;
+  justify-content: center;
 }
 
-.social-icons a {
-  font-size: 1.5rem; /* Increase icon size */
+.social-icons {
+  display: flex;
+  gap: 20px;
+
+}
+
+.social-icon-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  position: absolute;
+  transition: opacity 0.7s ease;
+  margin-top: 10px;
+}
+
+.social-icon.active {
+  opacity: 0;
+}
+
+.social-icon-container:hover .inactive {
+  opacity: 0;
+}
+
+.social-icon-container:hover .active {
+  opacity: 1;
+}
+
+/* Control the Size of Specific Icons */
+.fb-icon {
+  width: 22px;  /* Set width of Facebook icon */
+  height: 22px; /* Set height of Facebook icon */
+  margin-top: 9.5px;
+}
+.fb-icon.active {
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+}
+
+.twitter-icon {
+  width: 20px;  /* Set width of Twitter icon */
+  height: 20px; /* Set height of Twitter icon */
+  margin-top: 10px;
+}
+.twitter-icon.active  {
+  width: 24px;
+  height: 24px;
+  margin-top: 9px;
+}
+
+.ig-icon {
+  width: 24px;  /* Set width of Instagram icon */
+  height: 24px; /* Set height of Instagram icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon {
+  width: 22px;  /* Set width of LinkedIn icon */
+  height: 22px; /* Set height of LinkedIn icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon.active {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
 }
 
 .itmgmt-section {
@@ -118,13 +186,14 @@ body, html {
   
 .itmgmt-content p {
     font-family: Poppins;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 33px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: rgba(18, 18, 18, 1);
+    width: 40vw;
 }
   
 .itmgmt-image {
@@ -143,15 +212,15 @@ body, html {
   
   
 .freequote-btn {
-    padding: 10px 20px;
+    padding: 10px 40px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
-    font-size: 18px; /* Set the font size */
-    font-weight: 700; /* Set the font weight */
+    font-size: 16px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
     line-height: 27px; /* Set the line height */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     margin-top: 40px;
@@ -163,7 +232,7 @@ a {
 }
 
 .hireadevdesc4 {
-    margin-top: 80px;
+    margin-top: 60px;
     margin-left: 10px;
     width: 100%;
 }
@@ -178,11 +247,12 @@ a {
     color: transparent;
 }
 
-.row {
+.row1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 70px;
+    margin-top: -30px;
 }
 
 
@@ -193,18 +263,17 @@ a {
 
 .text p {
     font-size: 18px;
-    color: #333;
+    color: rgba(18, 18, 18, 1);
 }
 
 .image {
-    width: 50%;
+    width: 45%;
     text-align: left;
 }
 
 .image img {
     max-width: 95%;
     height: auto;
-    border-radius: 8px;
 }
 
 
@@ -230,18 +299,6 @@ a {
     margin-top: 100px;
 }
 
-.process-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    z-index: -1;
-    padding: 2px;
-}
 
 .process-title {
     font-size: 36px;
@@ -276,7 +333,9 @@ a {
     background-color: white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border: 2px solid;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
     margin-bottom: 60px;
 }
 
@@ -310,7 +369,9 @@ a {
     height: 50px;
     border-radius: 50%;
     background-color: white;
-    border: 2px solid;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
     position: absolute;
     top: -30px;
     left: 80%;
@@ -412,7 +473,7 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto; /* Centers the button */
-    padding: 10px 30px;
+    padding: 10px 40px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
     color: white;
     font-size: 16px; /* Set the font size */
@@ -446,8 +507,8 @@ a {
 
 .row {
     display: flex;
-    align-items: left;
-    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: flex-end;
     width: 95%;
 }
 
@@ -461,6 +522,13 @@ a {
 .rowreverse .text {
     text-align: left;
     align-items: start;
+}
+
+.row .text {
+    text-align: left;
+    align-items: end;
+    margin-top: -220px;
+    margin-bottom: 70px;
 }
 
 .text h2 {
@@ -483,6 +551,32 @@ a {
     font-size: 18px; /* Adjusts font size */
     color: rgba(18, 18, 18, 1);
 }
+
+
+.image-container-right {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin-left: 150px; /* Space between image and text */
+    margin-top: 50px;
+}
+.image-container-right img {
+    width: 100%; /* Make image responsive */
+    max-width: 700px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    transform: scale(1.8);
+}
+
+.image-container-left {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin-right: 0px; /* Space between image and text */
+    margin-top: 80px;
+}
+.image-container-left img {
+    width: 100%; /* Make image responsive */
+    max-width: 700px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    transform: scale(1.7);
+}
+
 
 
 
@@ -543,9 +637,9 @@ a {
 .faq-box {
     width: 100%;
     max-width: 1500px;
-    border-radius: 10px;
+    border-radius: 18px;
     border: 2px solid; /* Add a transparent base border */
-    border-color: #333;
+    border-color: rgb(5, 76, 124);
     overflow: hidden;
     transition: height 0.3s ease-in-out;
     background: transparent; /* Removed background color */
@@ -627,7 +721,7 @@ a {
   
 /* Move the Services section */
 .footer-section .col-lg-3:nth-child(3) {
-    margin-left: -40px; /* Add top margin to Services */
+    margin-left: -40px;
     line-height: 2.6;
     margin-top: -70px;
 }

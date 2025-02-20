@@ -76,14 +76,83 @@ body, html {
   color: rgba(22, 5, 111, 1);
 }
 
-.social-icons {
-  display: flex; /* Use flexbox for horizontal alignment */
-  align-items: center; /* Align icons vertically */
-  gap: 20px; /* Adds space between each icon */
+.social-icons-container {
+  display: flex;
+  justify-content: center;
 }
 
-.social-icons a {
-  font-size: 1.5rem; /* Increase icon size */
+.social-icons {
+  display: flex;
+  gap: 20px;
+
+}
+
+.social-icon-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  position: absolute;
+  transition: opacity 0.7s ease;
+  margin-top: 10px;
+}
+
+.social-icon.active {
+  opacity: 0;
+}
+
+.social-icon-container:hover .inactive {
+  opacity: 0;
+}
+
+.social-icon-container:hover .active {
+  opacity: 1;
+}
+
+/* Control the Size of Specific Icons */
+.fb-icon {
+  width: 22px;  /* Set width of Facebook icon */
+  height: 22px; /* Set height of Facebook icon */
+  margin-top: 9.5px;
+}
+.fb-icon.active {
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+}
+
+.twitter-icon {
+  width: 20px;  /* Set width of Twitter icon */
+  height: 20px; /* Set height of Twitter icon */
+  margin-top: 10px;
+}
+.twitter-icon.active  {
+  width: 24px;
+  height: 24px;
+  margin-top: 9px;
+}
+
+.ig-icon {
+  width: 24px;  /* Set width of Instagram icon */
+  height: 24px; /* Set height of Instagram icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon {
+  width: 22px;  /* Set width of LinkedIn icon */
+  height: 22px; /* Set height of LinkedIn icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon.active {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
 }
 
 
@@ -110,11 +179,11 @@ body, html {
   position: relative;
   bottom: 160px; /* Adjust vertical placement */
   left: 115px;   /* Adjust horizontal placement */
-  padding: 8px 26px;
+  padding: 10px 35px;
   background-color: white;
   color: #028679; /* Teal color */
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
   border: 2px solid #008080; /* Teal border */
   border-radius: 12px;
   cursor: pointer;
@@ -231,14 +300,14 @@ a {
 
 .whoweare-content {
   flex: 1; /* Take up remaining space */
-  margin-left: 0; /* Removed margin-left to ensure content stays centered */
+  margin-left: 30px; /* Removed margin-left to ensure content stays centered */
 }
 
 .whoweare-image {
   position: relative;
   width: 40%; /* Adjust the width of the image section */
   height: 300px; /* Set a fixed height for the image container */
-  margin-right: 80px;
+  margin-right: 70px;
   border-top-left-radius: 60px 30px;   /* Horizontal: 30px, Vertical: 10px */
   border-top-right-radius: 60px 30px;  /* Horizontal: 15px, Vertical: 25px */
   border-bottom-left-radius: 60px 30px; /* Horizontal: 50px, Vertical: 20px */
@@ -310,12 +379,12 @@ p {
 }
 
 .read-more-btn {
-  padding: 8px 35px;
+  padding: 8px 40px;
   background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
   color: white; /* White text */
   font-family: 'Poppins', sans-serif; /* Set the font family */
   font-size: 16px; /* Set the font size */
-  font-weight: 550; /* Set the font weight */
+  font-weight: 600; /* Set the font weight */
   line-height: 27px; /* Set the line height */
   border: none;
   border-radius: 8px;
@@ -709,13 +778,12 @@ p {
   display: flex;
   justify-content: center; /* Center the content horizontally */
   align-items: center; /* Center the content vertically */
-  padding: 20px; /* Increased padding for larger cards */
-  background-color: white;
+  padding: 0px; /* Increased padding for larger cards */
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 180px; /* Increased max-width for larger cards */
-  height: 180px; /* Increased max-height for larger cards */
+  width: 160px; /* Increased max-width for larger cards */
+  height: 150px; /* Increased max-height for larger cards */
   overflow: hidden; /* Prevent overflow if SVGs are too large */
 }
  
@@ -748,18 +816,15 @@ p {
   background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
   color: white; /* White text */
   font-family: 'Poppins', sans-serif; /* Set the font family */
-  font-size: 16px;
   font-size: 16px; /* Set the font size */
   font-weight: 550;
   border: none;
-  padding: 10px 20px; /* Increased padding for larger button */
+  padding: 8px 30px; /* Increased padding for larger button */
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px; /* Larger button text */
+  font-size: 14px; /* Larger button text */
   transition: background 0.3s;
 }
-
-
 
 
 .industries-section {
@@ -777,6 +842,8 @@ p {
 .tab-content.active {
   display: flex; /* Ensures content is visible */
   flex-direction: row; /* Ensures grid and description align side by side */
+  width: 80vw;
+  margin-left: 80px;
 }
  
 .section-title {
@@ -790,15 +857,16 @@ p {
  
 .tabs {
   display: flex;
-  justify-content: center;
-  gap: 30px; /* Increased gap for tab spacing */
+  justify-content: left;
+  gap: 20px; /* Increased gap for tab spacing */
   margin-bottom: 30px; /* Increased margin for better spacing */
+  margin-left: 130px;
 }
  
 .tab {
   border: none;
   background: none;
-  font-size: 20px; /* Increased font size for tabs */
+  font-size: 18px; /* Increased font size for tabs */
   font-weight: 400;
   cursor: pointer;
   padding: 15px 25px; /* Increased padding for larger tabs */
@@ -888,9 +956,6 @@ p {
 }
 
 
-
-
-
 /* Project Section */
    
 .projects-section {
@@ -942,16 +1007,19 @@ p {
  
 .project-container {
   width: 100%;
+  position: relative;
 }
  
 .project-wrapper {
   text-align: center;
+  position: relative;
 }
  
 .project-wrapper img {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
+  display: block;
   transition: transform 0.3s ease; /* Smooth scaling */
 }
 
@@ -959,14 +1027,9 @@ p {
 .project-wrapper h3 {
   font-size: 18px;
   margin-top: 10px;
+  z-index: 100;
 }
  
-/* Basic header styling */
-/* .section-header {
-  text-align: center;
-  margin-bottom: 40px;
-  padding: 0 20px;
-} */
  
 .section-title {
   font-size: 32px;
@@ -994,6 +1057,42 @@ p {
   transition: background 0.3s;
   display: block;
   margin: 40px auto 0;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)); /* Corrected background property */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; /* Add opacity transition instead of background */
+  height: 100%;
+  opacity: 0; /* Initially, the overlay is hidden */
+}
+
+.overlay-text {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0; /* Initially, the text is hidden */
+  transition: opacity 0.3s ease;
+}
+
+.project-container:hover .overlay {
+  opacity: 1;
+}
+
+.project-container:hover .overlay-text {
+  opacity: 1; /* Text becomes visible */
+}
+
+.image-container {
+  position: relative;
 }
 
 
@@ -1467,6 +1566,10 @@ ul.list-unstyled a.btn-link:hover {
     margin-right: 0;
   }
 
+  .whoweare-content {
+    margin-left: 0px;
+  }
+
   .whoweare-content h1 {
     font-size: 22px;
   }
@@ -1695,12 +1798,20 @@ ul.list-unstyled a.btn-link:hover {
 
   /* Industries section */
   .industries-section {
-    margin-left: 20px;
+    margin-left: 0px;
   }
 
   .tab {
     padding: 10px 15px;
     font-size: 16px;
+  }
+
+  .tabs {
+    margin-left: 0px;
+  }
+
+  .tab-content.active {
+    margin-left: 20px;
   }
 
   /* Buttons adjustments */

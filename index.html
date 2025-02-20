@@ -48,19 +48,25 @@
           nav.classList.toggle('show');
           });
         </script>
-        
-        
-        <div class="social-icons">
-          <a href="#" class="me-2"
-            ><i class="bi bi-facebook" style="color: #1877f2"></i
-          ></a>
-          <a href="#" class="me-2"
-            ><i class="bi bi-envelope" style="color: #ea4335"></i
-          ></a>
-          <a href="#" class="me-2"
-            ><i class="bi bi-instagram" style="color: #c13584"></i
-          ></a>
-          <a href="#"><i class="bi bi-linkedin" style="color: #0077b5"></i></a>
+        <div class="social-icons-container">
+          <div class="social-icons">
+            <div class="social-icon-container">
+              <img src="img/home/fb1.png" alt="Icon 1" class="social-icon inactive fb-icon">
+              <img src="img/home/fb2.png" alt="Icon 5" class="social-icon active fb-icon">
+            </div>
+            <div class="social-icon-container">
+              <img src="img/home/twitter1.png" alt="Icon 2" class="social-icon inactive twitter-icon">
+              <img src="img/home/twitter2.png" alt="Icon 6" class="social-icon active twitter-icon">
+            </div>
+            <div class="social-icon-container">
+              <img src="img/home/ig1.png" alt="Icon 3" class="social-icon inactive ig-icon">
+              <img src="img/home/ig2.png" alt="Icon 7" class="social-icon active ig-icon">
+            </div>
+            <div class="social-icon-container">
+              <img src="img/home/linkedin1.png" alt="Icon 4" class="social-icon inactive linkedin-icon">
+              <img src="img/home/linkedin2.png" alt="Icon 8" class="social-icon active linkedin-icon">
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -401,7 +407,7 @@
         <!-- Left Side: Grid for Cards -->
         <div class="grid">
           <div class="card"><img src="img/home/healthcare/image.png" alt="Health Care Image 1"></div>
-          <div class="card"><img src="img/home/education/image-1.png" alt="Health Care Image 2"></div>
+          <div class="card"><img src="img/home/healthcare/image-1.png" alt="Health Care Image 2"></div>
           <div class="card"><img src="img/home/healthcare/image-2.png" alt="Health Care Image 3"></div>
           <div class="card"><img src="img/home/healthcare/image-3.png" alt="Health Care Image 4"></div>
         </div>
@@ -497,7 +503,7 @@
           <p>
             A successful app strategy is driven by market needs. Our agile development teams prioritize continuous value delivery to ensure your app’s success.
           </p>
-          <a href="retail.html">
+          <a href="startup.html">
             <button class="explore-btn">Explore more</button>
           </a>
         </div>
@@ -584,7 +590,6 @@ document.addEventListener("DOMContentLoaded", () => {
     <section class="projects-section">
       <div class="section-header">
           <h2 class="section-title">Our Projects</h2>
-        
           <p class="section-description">
               Enhance your projects, no matter how complex, with our vast expertise. Just as others have successfully done!
           </p>
@@ -594,8 +599,13 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Project Container 1 -->
           <div class="project-container">
               <div class="project-wrapper">
-                  <img src="img/home/proj1.png" alt="Project 1">
-                  <h3 style="font-weight: bold;">Business Analytics Dashboard</h3>
+              <div class="image-container">
+                <img src="img/home/proj1.png" alt="Project 1">
+                <div class="overlay">
+                  <p class="overlay-text">Business Analytics Dashboard</p>
+                </div>
+              </div>
+              <h3 style="font-weight: bold;">Business Analytics Dashboard</h3>
 
               </div>
           </div>
@@ -603,7 +613,12 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Project Container 2 -->
           <div class="project-container">
               <div class="project-wrapper">
-                  <img src="img/home/proj2.png" alt="Project 2">
+                <div class="image-container">
+                  <img src="img/home/proj2.png" alt="Project 1">
+                  <div class="overlay">
+                    <p class="overlay-text">Cloud SaaS Application</p>
+                  </div>
+                </div>
                   <h3 style="font-weight: bold;">Cloud SaaS Application</h3>
 
               </div>
@@ -612,7 +627,12 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Project Container 3 -->
           <div class="project-container">
               <div class="project-wrapper">
-                  <img src="img/home/proj3.png" alt="Project 3">
+                <div class="image-container">
+                  <img src="img/home/proj3.png" alt="Project 1">
+                  <div class="overlay">
+                    <p class="overlay-text">E-Commerce Platform</p>
+                  </div>
+                </div>
                   <h3 style="font-weight: bold;">E-Commerce Platform</h3>
 
               </div>
@@ -621,7 +641,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- Project Container 3 -->
         <div class="project-container">
           <div class="project-wrapper">
-              <img src="img/home/proj4.png" alt="Project 3">
+            <div class="image-container">
+              <img src="img/home/proj1.png" alt="Project 1">
+              <div class="overlay">
+                <p class="overlay-text">AI Chatbot & Automation</p>
+              </div>
+            </div>
               <h3 style="font-weight: bold;">AI Chatbot & Automation</h3>
 
           </div>
@@ -629,7 +654,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
 
-    <button class="explore-button">Explore More</button>
+    <button class="explore-button">Explore more</button>
 </section>
 
 <!--Testimonials-->
@@ -795,7 +820,7 @@ document.getElementById(tab.dataset.content).classList.add("active");
 <footer class="footer-section bg-black text-white py-5">
   <div class="container">
 
-    <hr class="bg-white opacity-50" style="height: 2px"/>
+    <!-- <hr class="bg-white opacity-50" style="height: 2px"/> -->
 
     <div class="row mt-4">
       <!-- Company Logo & Description -->

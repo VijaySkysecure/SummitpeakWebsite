@@ -99,6 +99,10 @@ body, html {
     width: 100%;
     position: relative;
 }
+
+.itmgmt-section h1 strong {
+    font-weight: 600;
+}
   
 .itmgmt-content h1 {
     font-size: 2rem; 
@@ -109,8 +113,8 @@ body, html {
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    margin-bottom: 75px;
-  
+    margin-bottom: 50px;
+    color: rgb(88, 88, 88);
 }
   
 .highlight-text {
@@ -153,15 +157,15 @@ body, html {
   
   
 .freequote-btn {
-    padding: 10px 20px;
+    padding: 10px 35px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
-    font-size: 18px; /* Set the font size */
-    font-weight: 700; /* Set the font weight */
+    font-size: 16px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
     line-height: 27px; /* Set the line height */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     margin-top: 40px;
@@ -232,18 +236,6 @@ a {
     margin-top: 100px;
 }
 
-.process-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    z-index: -1;
-    padding: 2px;
-}
 
 .process-title {
     font-size: 36px;
@@ -282,12 +274,13 @@ a {
     padding: 40px;
     text-align: left; /* Align text to the left */
     font-size: 14px;
-    color: rgba(0, 0, 0, 1);
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
     position: relative;
     background-color: white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border: 2px solid;
     margin-bottom: 60px;
 }
 
@@ -324,7 +317,9 @@ a {
     height: 50px;
     border-radius: 50%;
     background-color: white;
-    border: 2px solid;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
     position: absolute;
     top: -30px;
     left: 70%;
@@ -394,8 +389,8 @@ a {
 
 /* Each Industry Box */
 .industry-box {
-    width: 270px;
-    height: 270px;
+    width: 250px;
+    height: 250px;
     background-color: #fff;
     border: 1px solid #ddd; /* Light border for the box */
     padding: 20px;
@@ -416,8 +411,8 @@ a {
 
 /* Box Image */
 .box-image {
-    width: 130px;
-    height: 130px;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     margin-bottom: 5px;
 }
@@ -482,7 +477,8 @@ a {
     font-size: 20px;
     margin-bottom: 50px;
     color: rgba(0, 0, 0, 1);
-    width: 95%;
+    width: 85%;
+    margin-left: 80px;
 }
   
 .tiles-container {
@@ -494,7 +490,7 @@ a {
 }
   
 .tile {
-    width: 420px;
+    width: 400px;
     border-radius: 12px;
     padding: 30px;
     display: flex;
@@ -540,7 +536,7 @@ a {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     letter-spacing: 2px;
     text-align: left;
 }
@@ -553,11 +549,14 @@ a {
 }
   
 .tile-list li {
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
     position: relative;
+}
+.tile-list li:nth-child(1){
+    margin-top: -40px;
 }
   
 .tick {
@@ -604,7 +603,6 @@ hr {
   }
 
 
-
 .hire-button {
     padding: 8px 35px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
@@ -625,7 +623,7 @@ hr {
     display: block;
     position: relative;  /* Positioning it relative to its parent container */
     margin-bottom: 80px;  /* Adjust this value to control the vertical distance */
-    margin-top: 1600px;
+    margin-top: 1550px;
   }
   
   .carousel-wrapper1 {
@@ -648,8 +646,6 @@ hr {
   }
   
   
-
-
 
 /* Wrapper for the entire section */
 .contact-section {
@@ -675,7 +671,7 @@ hr {
     background-clip: text; /* Clip the background to the text */
     color: transparent; /* Make text transparent to show the gradient */
     font-size: 50px; /* Set font size */
-    font-weight: 700; /* Set font weight */
+    font-weight: 600; /* Set font weight */
     line-height: 65px; /* Set line height */
     text-align: center; /* Center align the text */
     text-underline-position: from-font; /* Text underline position */
@@ -686,10 +682,9 @@ hr {
   
   /* Sub-text style */
   .sub-text {
-    font-size: 0.9rem; /* 0.9rem font size */
     margin-bottom: 30px; /* Spacing between the sub-text and button */
     font-weight: 300;
-    font-size: 20px;
+    font-size: 18px;
   }
   
   /* Button style */

@@ -100,6 +100,11 @@ body, html {
     position: relative;
 }
   
+.itmgmt-content h1 strong {
+    font-weight: 600;
+    color: rgb(88,88,88);
+  }
+  
 .itmgmt-content h1 {
     font-size: 2rem; 
     font-family: Poppins;
@@ -109,8 +114,8 @@ body, html {
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    margin-bottom: 75px;
-  
+    margin-bottom: 50px;
+    color: rgb(88,88,88);
 }
   
 .highlight-text {
@@ -128,13 +133,14 @@ body, html {
   
 .itmgmt-content p {
     font-family: Poppins;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 33px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: rgba(18, 18, 18, 1);
+    width: 50vw;
 }
   
 .itmgmt-image {
@@ -153,15 +159,15 @@ body, html {
   
   
 .freequote-btn {
-    padding: 10px 20px;
+    padding: 10px 35px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
-    font-size: 18px; /* Set the font size */
-    font-weight: 700; /* Set the font weight */
+    font-size: 16px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
     line-height: 27px; /* Set the line height */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     margin-top: 40px;
@@ -175,7 +181,7 @@ a {
 
 .customitmgmtdesc {
     margin-top: 60px;
-    margin-left: 80px;
+    margin-left: 60px;
     width: 92%;
 }
 
@@ -505,8 +511,8 @@ a {
 
 /* Box Image */
 .box-image {
-    width: 130px;
-    height: 130px;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     margin-bottom: 5px;
 }
@@ -652,6 +658,7 @@ a {
     text-align: left;
     margin-left: 50px;
     margin-right: 80px;
+    margin-bottom: 20px;
 }
 
 

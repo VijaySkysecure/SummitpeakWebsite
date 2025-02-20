@@ -98,6 +98,10 @@ body, html {
     width: 100%;
     position: relative;
 }
+
+.itmgmt-section h1 strong {
+    font-weight: 600; /* Adjust the weight value to your preference (e.g., 400, 600, 700, etc.) */
+}
   
 .itmgmt-content h1 {
     font-size: 2rem; 
@@ -108,7 +112,8 @@ body, html {
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    margin-bottom: 75px;
+    margin-bottom: 55px;
+    color: rgb(88, 88, 88);
   
 }
   
@@ -152,15 +157,15 @@ body, html {
   
   
 .freequote-btn {
-    padding: 10px 20px;
+    padding: 10px 35px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
-    font-size: 18px; /* Set the font size */
-    font-weight: 700; /* Set the font weight */
+    font-size: 16px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
     line-height: 27px; /* Set the line height */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     margin-top: 40px;
@@ -226,29 +231,19 @@ a {
     position: relative;
     z-index: 1;
     border-radius: 10px; /* Rounded corners for the section */
-    border: 2px solid transparent; /* Base border, transparent */
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
 }
 
-.process-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px; /* Matching border radius for the section */
-    border: 2px solid transparent; /* Transparent base for the border */
-    z-index: -1;
-    padding: 2px; /* Make space for the gradient border */
-}
 
 .process-title {
     font-size: 36px;
     font-weight: 600;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 70px;
     text-align: center;
-    background-image: linear-gradient(89deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -275,16 +270,20 @@ a {
     background-color: white; /* Keep the box background white */
     border-top-left-radius: 20px; /* Rounded corners on the top-left */
     border-top-right-radius: 20px; /* Rounded corners on the top-right */
-    border: 2px solid; /* Transparent base for the border */
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
 }
 
 
 .process-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: white;
-    border: 2px solid;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
     position: absolute;
     top: -30px;
     left: 50%;
@@ -538,11 +537,11 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto; /* Centers the button */
-    padding: 10px 30px;
+    padding: 10px 45px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
     color: white;
-    font-size: 16px; /* Set the font size */
-    font-weight: 550; /* Set the font weight */
+    font-size: 16px;
+    font-weight: 550;
     border: none;
     border-radius: 8px;
     cursor: pointer;

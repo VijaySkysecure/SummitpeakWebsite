@@ -99,6 +99,11 @@ body, html {
     position: relative;
 }
   
+.itmgmt-content h1 strong {
+    font-weight: 600;
+    color: rgb(88,88,88);
+  }
+  
 .itmgmt-content h1 {
     font-size: 2rem; 
     font-family: Poppins;
@@ -109,7 +114,7 @@ body, html {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     margin-bottom: 75px;
-  
+    color: rgb(88,88,88);
 }
   
 .highlight-text {
@@ -152,15 +157,15 @@ body, html {
   
   
 .freequote-btn {
-    padding: 10px 20px;
+    padding: 10px 35px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
-    font-size: 18px; /* Set the font size */
-    font-weight: 700; /* Set the font weight */
+    font-size: 16px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
     line-height: 27px; /* Set the line height */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     margin-top: 40px;
@@ -203,6 +208,7 @@ a {
     display: flex;
     align-items: left;
     justify-content: space-between;
+
 }
 
 .rowreverse .text {
@@ -224,11 +230,12 @@ a {
     font-size: 18px;
     color: rgba(18, 18, 18, 1);
     line-height: 1.7;
+    width: 40vw;
 }
 
-.middot-list li {
+.middot-list7 li {
     position: relative; /* Make sure the custom bullets can be placed */
-    padding-left: 10px; /* Create space for the custom bullet */
+    padding-left: 5px; /* Create space for the custom bullet */
     font-size: 18px; /* Adjust text size */
     font-weight: 400;
     line-height: 1.5; /* Increase line height for better readability */
@@ -237,12 +244,27 @@ a {
 }
 
 /* Custom bullet point */
-.middot-list li::before {
+.middot-list7 li::before {
     position: absolute;
-    left: 0;
-    top: 50%; /* Vertically center the bullet */
-    font-size: 22px; /* Make the dot a bit bigger */
+    left: -5px;
+    top: -10%; /* Vertically center the bullet */
+    font-size: 24px; /* Make the dot a bit bigger */
 }
+
+
+.list-with-image1 {
+    display: flex;
+    align-items: flex-start; /* Align list items and image properly */
+}
+
+/* Ensure the image is positioned correctly to the right of the list */
+.list-image1 {
+    margin-left: -1400px; /* Space between the list and the image */
+    margin-top: -60px;
+    max-width: 500px; /* Adjust the image size */
+    height: auto; /* Maintain image aspect ratio */
+}
+
 
 
 .process-section {
@@ -312,7 +334,9 @@ a {
     background-color: white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border: 2px solid;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
     margin-bottom: 60px;
 }
 
@@ -346,7 +370,9 @@ a {
     height: 50px;
     border-radius: 50%;
     background-color: white;
-    border: 2px solid;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
     position: absolute;
     top: -30px;
     left: 80%;
@@ -408,6 +434,7 @@ a {
     list-style-type: none;
     padding-left: 60px;
     margin-bottom: 30px; /* Vertical gap between list and paragraph */
+    width: 60%; 
 }
 
 .middot-list li {
@@ -424,6 +451,35 @@ a {
     color: rgba(18, 18, 18, 1);  /* Black color for the middle dot */
     margin-right: 10px; /* Space between middle dot and text */
 }
+
+/* Ensure the container of the list and image are displayed inline */
+.list-with-image {
+    display: flex;
+    align-items: flex-start; /* Align list items and image properly */
+}
+
+/* Ensure the image is positioned correctly to the right of the list */
+.list-image {
+    margin-left: -190px; /* Space between the list and the image */
+    margin-top: 40px;
+    max-width: 500px; /* Adjust the image size */
+    height: auto; /* Maintain image aspect ratio */
+}
+
+
+.list-with-image2 {
+    display: flex;
+    align-items: flex-start; /* Align list items and image properly */
+}
+
+/* Ensure the image is positioned correctly to the right of the list */
+.list-image2 {
+    margin-left: 30px; /* Space between the list and the image */
+    margin-top: -20px;
+    max-width: 300px; /* Adjust the image size */
+    height: auto; /* Maintain image aspect ratio */
+}
+
 
 
 
@@ -493,8 +549,8 @@ a {
 
 /* Box Image */
 .box-image {
-    width: 130px;
-    height: 130px;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     margin-bottom: 5px;
 }
@@ -643,9 +699,9 @@ a {
 .faq-box {
     width: 100%;
     max-width: 1500px;
-    border-radius: 10px;
+    border-radius: 18px;
     border: 2px solid; /* Add a transparent base border */
-    border-color: #333;
+    border-color: rgb(5, 76, 124);
     overflow: hidden;
     transition: height 0.3s ease-in-out;
     background: transparent; /* Removed background color */
@@ -698,6 +754,7 @@ a {
     text-align: left;
     margin-left: 50px;
     margin-right: 80px;
+    margin-bottom: 20px;
 }
 
 

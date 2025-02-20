@@ -89,7 +89,7 @@ body, html {
     justify-content: space-between;
     align-items: flex-start;
     padding: 40px 10px;
-    margin-left: 30px;
+    margin-left: 0px;
 }
   
 .itmgmt-content {
@@ -98,6 +98,11 @@ body, html {
     width: 100%;
     position: relative;
 }
+
+.itmgmt-section h1 strong {
+    font-weight: 600;
+}
+  
   
 .itmgmt-content h1 {
     font-size: 2rem; 
@@ -109,7 +114,7 @@ body, html {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     margin-bottom: 75px;
-  
+    color: rgb(88, 88, 88);
 }
   
 .highlight-text {
@@ -152,15 +157,15 @@ body, html {
   
   
 .freequote-btn {
-    padding: 10px 20px;
+    padding: 10px 35px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
-    font-size: 18px; /* Set the font size */
-    font-weight: 700; /* Set the font weight */
+    font-size: 16px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
     line-height: 27px; /* Set the line height */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     margin-top: 40px;
@@ -260,28 +265,19 @@ a {
 
 .process-section {
     background-color: white;
-    max-width: 100%;
+    width: 85%;
     padding: 40px;
     position: relative;
     z-index: 1;
     border-radius: 10px;
-    border: 2px solid transparent;
     margin-bottom: 20px;
     margin-top: 100px;
+    margin-left: 120px;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
 }
 
-.process-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    z-index: -1;
-    padding: 2px;
-}
 
 .process-title {
     font-size: 36px;
@@ -309,12 +305,13 @@ a {
     padding: 40px;
     text-align: left; /* Align text to the left */
     font-size: 14px;
-    color: rgba(0, 0, 0, 1);
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
     position: relative;
     background-color: white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border: 2px solid;
 }
 
 .process-title-box {
@@ -349,9 +346,10 @@ a {
 .process-icon {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border: 2px solid transparent;  /* Define the border thickness */
+    border-image: linear-gradient(94.41deg, #009788 19.7%, #190474 100%); /* Apply gradient to border */
+    border-image-slice: 1;  /* Ensures the gradient is applied evenly along the border */
     background-color: white;
-    border: 2px solid;
     position: absolute;
     top: -30px;
     left: 70%;
@@ -378,7 +376,7 @@ a {
 }
 
 .hire-btn {
-    padding: 12px 35px;
+    padding: 10px 40px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
@@ -388,7 +386,8 @@ a {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-left: 660px;
+    margin-left: 490px;
+    margin-top: 50px;
 }
 
 
@@ -439,7 +438,7 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto; /* Centers the button */
-    padding: 10px 30px;
+    padding: 10px 45px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
     color: white;
     font-size: 16px; /* Set the font size */
