@@ -118,8 +118,14 @@ body, html {
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    margin-bottom: 75px; 
-  }
+    margin-bottom: 75px;
+    color: rgb(88,88,88);
+}
+
+.itmgmt-content h1 strong {
+    font-weight: 600;
+    color: rgb(88,88,88);
+}
   
   
 .highlight-text {
@@ -995,12 +1001,13 @@ hr {
 /* FAQ Arrow */
 .faq-arrow {
     font-size: 14px;
+    color: rgb(6, 49, 78);
     transition: transform 0.3s ease;
 }
 
 /* Rotating Arrow when Expanded */
 .faq-box.open .faq-arrow {
-    transform: rotate(180deg);
+    transform: scaleY(-1); /* Flip the arrow vertically */
 }
 
 /* FAQ Answer */

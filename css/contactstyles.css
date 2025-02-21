@@ -233,6 +233,7 @@
       height: 550px;
       display: block; /* ensures image is displayed as a block-level element */
       cursor: pointer; /* changes cursor to indicate it's clickable */
+      border-radius: 10px;
 }
 
 

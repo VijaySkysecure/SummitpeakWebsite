@@ -327,9 +327,9 @@ header {
 }
 
 .team-member img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 190px;
+  height: 185px;
+  border-radius: 4%;
   object-fit: cover;
   margin-bottom: 20px;
 }

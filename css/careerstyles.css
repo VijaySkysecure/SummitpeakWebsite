@@ -200,7 +200,7 @@ color: rgba(22, 5, 111, 1);
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    margin-top: -140px;
+    margin-top: -80px;
   
 }
   
@@ -219,7 +219,7 @@ color: rgba(22, 5, 111, 1);
   
 .about-content p {
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 33px;
     text-align: left;
@@ -227,7 +227,7 @@ color: rgba(22, 5, 111, 1);
     text-decoration-skip-ink: none;
     color: rgba(18, 18, 18, 1);
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     width: 90%;
 }
   
@@ -239,14 +239,15 @@ color: rgba(22, 5, 111, 1);
 }
   
 .about-image img {
-    width: 95%; /* Make the image fill its container */
-    max-width: 680px; /* Optional: Limit the maximum width of the image */
+    width: 100%; /* Make the image fill its container */
+    max-width: 720px; /* Optional: Limit the maximum width of the image */
     height: auto; /* Maintain the aspect ratio of the image */
     display: block; /* Remove extra space below the image */
+    z-index: -1;
 }
 
 .openings-btn {
-    padding: 10px 20px;
+    padding: 10px 30px;
     background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1)); /* Custom gradient */
     color: white; /* White text */
     font-family: 'Poppins', sans-serif; /* Set the font family */
@@ -254,11 +255,11 @@ color: rgba(22, 5, 111, 1);
     font-weight: 600; /* Set the font weight */
     line-height: 27px; /* Set the line height */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
-    margin-left: -756px;
-    margin-bottom: 73px;
+    margin-top: 50px;
+    margin-bottom: 0px;
 }
 
 .stats-section {
@@ -268,6 +269,7 @@ color: rgba(22, 5, 111, 1);
     padding: 40px 20px;
     display: flex;
     justify-content: space-around;
+    margin-top: -90px;
 }
   
   
@@ -415,11 +417,12 @@ color: rgba(22, 5, 111, 1);
     font-size: 14px;
     font-weight: bold;
     color: #131313; /* Gray color */
-    text-transform: uppercase;
+    text-transform: uppercase;   
 }
+
   
-  /* Style for job location value */
-  .job-location {
+/* Style for job location value */
+.job-location {
     margin: 0;
     font-size: 20px;
     font-weight: 600;
@@ -430,9 +433,10 @@ color: rgba(22, 5, 111, 1);
     white-space: nowrap; /* Prevent text from wrapping */
     margin-bottom: 10px; /* Blue for location */
 }
-  
-  /* Style for job experience value */
-  .job-experience {
+
+
+/* Style for job experience value */
+.job-experience {
     margin: 0;
     font-size: 20px;
     font-weight: 600;
@@ -452,7 +456,7 @@ color: rgba(22, 5, 111, 1);
     border-radius: 6px;
     display: flex;
     justify-content: space-between; /* Align items with space between them */
-    align-items: center; /* Vertically center items */
+    align-items: left; /* Vertically center items */
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }

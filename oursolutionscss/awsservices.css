@@ -391,6 +391,129 @@ a {
 }
 
 
+
+/* Container and section title */
+.container4 {
+    background: rgb(245,245,245,1);
+    padding: 20px;
+    text-align: center;
+    margin-top: 80px;
+    width: 85vw;
+    margin-left: 120px;
+}
+
+.section-title4 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Tabs styling */
+.tabs4 {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
+.tab-btn {
+    width: 90%;
+    background: none;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn img {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+    width: 30%;
+}
+
+.tab-text {
+    text-align: left;
+    width: 55%;
+}
+
+.tab-text h3 {
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+}
+
+.tab-text p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.tab-btn.active {
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Tab content styling */
+.tab-content {
+    display: none;
+    text-align: left;
+    padding: 20px;
+}
+
+.tab-content h3 {
+    background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.tab-content p {
+    color: rgba(18, 18, 18, 1);
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Layout for tab content */
+.tab-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.tab-img {
+    width: 40%;
+    max-width: 300px;
+    margin-right: 20px;
+    margin-left: 120px;
+}
+
+.tab-text {
+    width: 55%;
+    text-align: left;
+}
+
+
+
+
 /* Wrapper for the entire section */
 .contact-section {
     background-color: black; /* Black background */

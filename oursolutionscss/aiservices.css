@@ -102,7 +102,7 @@ body, html {
 .itmgmt-content h1 strong {
     font-weight: 600;
     color: rgb(88,88,88);
-  }
+}
   
 .itmgmt-content h1 {
     font-size: 2rem; 
@@ -364,8 +364,8 @@ a {
 
 /* Each Industry Box */
 .industry-box {
-    width: 230px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
     background-color: #fff;
     border: 1px solid #ddd; /* Light border for the box */
     padding: 20px;
@@ -580,12 +580,13 @@ strong {
 /* FAQ Arrow */
 .faq-arrow {
     font-size: 14px;
+    color: rgb(6, 49, 78);
     transition: transform 0.3s ease;
 }
 
 /* Rotating Arrow when Expanded */
 .faq-box.open .faq-arrow {
-    transform: rotate(180deg);
+    transform: scaleY(-1); /* Flip the arrow vertically */
 }
 
 /* FAQ Answer */
