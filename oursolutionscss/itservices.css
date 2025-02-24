@@ -75,15 +75,83 @@ body, html {
   color: rgba(22, 5, 111, 1);
 }
 
-.social-icons {
-  display: flex; /* Use flexbox for horizontal alignment */
-  align-items: center; /* Align icons vertically */
-  gap: 20px; /* Adds space between each icon */
-  margin-right: 40px;
+.social-icons-container {
+  display: flex;
+  justify-content: center;
 }
 
-.social-icons a {
-  font-size: 1.5rem; /* Increase icon size */
+.social-icons {
+  display: flex;
+  gap: 20px;
+
+}
+
+.social-icon-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  position: absolute;
+  transition: opacity 0.7s ease;
+  margin-top: 10px;
+}
+
+.social-icon.active {
+  opacity: 0;
+}
+
+.social-icon-container:hover .inactive {
+  opacity: 0;
+}
+
+.social-icon-container:hover .active {
+  opacity: 1;
+}
+
+/* Control the Size of Specific Icons */
+.fb-icon {
+  width: 22px;  /* Set width of Facebook icon */
+  height: 22px; /* Set height of Facebook icon */
+  margin-top: 9.5px;
+}
+.fb-icon.active {
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+}
+
+.twitter-icon {
+  width: 20px;  /* Set width of Twitter icon */
+  height: 20px; /* Set height of Twitter icon */
+  margin-top: 10px;
+}
+.twitter-icon.active  {
+  width: 24px;
+  height: 24px;
+  margin-top: 9px;
+}
+
+.ig-icon {
+  width: 24px;  /* Set width of Instagram icon */
+  height: 24px; /* Set height of Instagram icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon {
+  width: 22px;  /* Set width of LinkedIn icon */
+  height: 22px; /* Set height of LinkedIn icon */
+  margin-top: 9.5px;
+}
+
+.linkedin-icon.active {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
 }
 
 .itmgmt-section {
@@ -421,12 +489,77 @@ li {
 
 
 
+.tab-container {
+  text-align: center;
+  background-color: rgb(245,245,245,1);
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.tab-buttons button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  margin-top: 80px;
+}
+
+.tab-buttons button.active {
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+
+.tab-buttons::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 226px;
+  width: 70%;
+  height: 1px;
+  background-color: grey;
+}
+
+
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.image-container img {
+  display: none;
+  width: 70vw;
+  height: auto;
+  object-fit: cover;
+  margin: 10px;
+  margin-bottom: 90px;
+}
+
+.image-container img.active {
+  display: block;
+}
+
+
 
 /* Wrapper for the entire section */
 .contact-section {
     background-color: black; /* Black background */
     padding: 40px 0; /* 40px padding on top and bottom */
-    margin-top: 120px;
+    margin-top: 100px;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
@@ -481,46 +614,140 @@ li {
 }
   
 
-.footer-section {
-    margin-top: -80px; /* Remove any top margin */
+.footer-custom-section {
+  margin-top: -30px;  /* Remove any top margin */
+  padding: 40px 0;    /* Add padding for spacing */
+  background-color: #000; /* Black background for the footer */
+  color: #fff; /* Text color set to white */
+  
 }
-  
-  
-.footer-section .col-lg-3:nth-child(1) {
-    width: 34%;
-    line-height: 2;
+
+/* Footer Container (Flexbox layout for columns) */
+.footer-custom-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-  
-/* Move the Categories section */
-.footer-section .col-lg-3:nth-child(2) {
-    margin-left: 100px; /* Add top margin to Categories */
-    line-height: 2.5;
+
+/* Each Column (responsible for making them evenly distributed) */
+.footer-custom-column {
+  flex: 1 1 22%; /* Allow columns to be flexible but no less than 22% of the container */
+  margin-bottom: 20px;
+  padding: 0 20px;
 }
-  
-/* Move the Services section */
-.footer-section .col-lg-3:nth-child(3) {
-    margin-left: -40px; /* Add top margin to Services */
-    line-height: 2.6;
+
+/* Company Logo & Description */
+.footer-custom-column.logo-description img {
+  height: 70px; /* Control logo height */
+  margin-bottom: 15px;
 }
-  
-/* Move the Follow Us section */
-.footer-section .col-lg-3:nth-child(4) {
-    margin-left: -190px; /* Add top margin to Follow Us */
-    line-height: 2.5;
+
+.footer-custom-column h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-left: 170px;
 }
-  
-/* Style the links to look like normal text */
-ul.list-unstyled a.btn-link {
-    text-decoration: none; /* Remove underline */
-    color: white;
-    font-weight: normal; /* Normal weight for text */
-    padding: 0; /* Remove padding */
-    border-radius: 0; /* Remove any border radius */
+
+.footer-custom-column p {
+  font-size: 14px;
+  width: 150%;
+  line-height: 2;
 }
-  
-/* For the Follow Us section */
-.col-lg-3 ul.list-unstyled li {
-    color: white; /* Set text color to white */
+
+.footer-custom-list:nth-child(2) {
+  width: 100%
+}
+
+.footer-custom-column:nth-child(2) {
+  margin-right: -60px;
+  margin-left: 60px;
+}
+
+.footer-custom-column:nth-child(3) {
+  margin-right: -80px;
+}
+
+
+
+/* Remove bullet points and left-align the list items in Categories and Services */
+.footer-custom-list {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding */
+  margin-left: 160px; /* Remove margin */
+
+}
+
+/* Control line height/gap between list items (for Categories and Services) */
+.footer-custom-list li {
+  margin-bottom: 14px; /* You can adjust this value to control the gap */
+  line-height: 1.6; /* Adjust the line height for the desired gap between items */
+  text-align: left;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-custom-list li a {
+  color: white;  /* Set link color to white */
+  text-decoration: none; /* Remove underline */
+  font-size: 14px;
+}
+
+.footer-custom-column.footer-custom-social h4 {
+  margin-left: 220px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-custom-social li {
+  list-style: none;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.footer-custom-social i {
+  margin-right: 10px;
+}
+
+/* Styling the bottom section */
+.footer-custom-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 15px;
+}
+
+.footer-custom-bottom p {
+  margin: 0;
+}
+
+.footer-custom-bottom a {
+  color: #fff;
+  margin-left: 15px;
+}
+
+.gradient-line {
+  height: 2px;
+  border: none;
+  background: linear-gradient(to left, transparent 10%, rgb(255, 255, 255) 50%, transparent 90%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  width: 125vw;
+  margin-left: -200px;
+  margin-top: -10px;
+  margin-bottom: -15px;
+}
+
+.gradient-line1 {
+  height: 2px;
+  border: none;
+  background: linear-gradient(to left, transparent 10%, rgb(255, 255, 255) 50%, transparent 90%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  width: 125vw;
+  margin-left: -200px;
+  margin-top: -35px;
+  margin-bottom: 40px;
 }
 
 

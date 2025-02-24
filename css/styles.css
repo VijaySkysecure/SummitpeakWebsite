@@ -463,7 +463,7 @@ p {
   display: none;
   width: 90%;
   margin: 0 auto 30px;
-  max-height: 300px;
+  height: 300px;
   object-fit: contain;
 }
 
@@ -476,7 +476,7 @@ p {
   display: block;
   margin-top: 50px;
   margin-left: auto;
-  margin-right: 665px;
+  margin-right: 625px;
   margin-bottom: 150px;
   padding: 10px 35px;
   background: linear-gradient(to right, rgba(13, 148, 136, 1), rgba(22, 5, 111, 1));
@@ -512,29 +512,29 @@ p {
 
 
 .webapparea {
-  top: 47%; /* Adjust based on where you want the clickable area */
-  left: 5%;
+  top: 44%; /* Adjust based on where you want the clickable area */
+  left: 7%;
   width: 15%;
   height: 49%;
 }
 
 .mobapparea {
   top: 46%;
-  left: 26%;
+  left: 28%;
   width: 18%;
   height: 49%;
 }
 
 .desthinkarea {
   top: 46%;
-  left: 51%;
+  left: 53%;
   width: 14%;
   height: 49%;
 }
 
 .hireadevarea {
   top: 45%;
-  left: 74%;
+  left: 76%;
   width: 15%;
   height: 50%;
 }
@@ -664,16 +664,21 @@ p {
 }
 
 .tab-button-tech.active {
-  color: rgba(18, 18, 18, 1);
-  border-radius: 20px;
+  color: rgb(0, 4, 66);
   font-weight: 600;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 5px;
 }
 
 .tech-image-tech {
   display: none;
   width: 80%;
   margin: 0 auto 30px;
-  max-height: 300px;
+  height: 200px;
   object-fit: contain;
 }
 
@@ -1426,57 +1431,140 @@ p {
 }
 
 
-.footer-section {
-  margin-top: -40px; /* Remove any top margin */
+.footer-custom-section {
+  margin-top: -30px;  /* Remove any top margin */
+  padding: 40px 0;    /* Add padding for spacing */
+  background-color: #000; /* Black background for the footer */
+  color: #fff; /* Text color set to white */
+  
 }
 
-
-.footer-section .col-lg-3:nth-child(1) {
-  width: 34%;
+/* Footer Container (Flexbox layout for columns) */
+.footer-custom-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.footer-section .col-lg-3:nth-child(1) p {
+/* Each Column (responsible for making them evenly distributed) */
+.footer-custom-column {
+  flex: 1 1 22%; /* Allow columns to be flexible but no less than 22% of the container */
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+/* Company Logo & Description */
+.footer-custom-column.logo-description img {
+  height: 70px; /* Control logo height */
+  margin-bottom: 15px;
+}
+
+.footer-custom-column h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-left: 170px;
+}
+
+.footer-custom-column p {
+  font-size: 14px;
+  width: 150%;
   line-height: 2;
 }
 
-/* Move the Categories section */
-.footer-section .col-lg-3:nth-child(2) {
-  margin-left: 100px; /* Add top margin to Categories */
-  line-height: 2.5;
+.footer-custom-list:nth-child(2) {
+  width: 100%
 }
 
-/* Move the Services section */
-.footer-section .col-lg-3:nth-child(3) {
-  margin-left: -40px; /* Add top margin to Services */
-  line-height: 2.6;
+.footer-custom-column:nth-child(2) {
+  margin-right: -60px;
+  margin-left: 60px;
 }
 
-/* Move the Follow Us section */
-.footer-section .col-lg-3:nth-child(4) {
-  margin-left: -190px; /* Add top margin to Follow Us */
-  line-height: 2.5;
+.footer-custom-column:nth-child(3) {
+  margin-right: -80px;
 }
 
-/* Style the links to look like normal text */
-ul.list-unstyled a.btn-link {
+
+
+/* Remove bullet points and left-align the list items in Categories and Services */
+.footer-custom-list {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding */
+  margin-left: 160px; /* Remove margin */
+
+}
+
+/* Control line height/gap between list items (for Categories and Services) */
+.footer-custom-list li {
+  margin-bottom: 14px; /* You can adjust this value to control the gap */
+  line-height: 1.6; /* Adjust the line height for the desired gap between items */
+  text-align: left;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-custom-list li a {
+  color: white;  /* Set link color to white */
   text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit the color from the parent */
-  font-weight: normal; /* Normal weight for text */
-  padding: 0; /* Remove padding */
-  border-radius: 0; /* Remove any border radius */
+  font-size: 14px;
 }
 
-ul.list-unstyled a.btn-link:hover {
-  color: inherit; /* Keep the color unchanged on hover */
-  background-color: transparent; /* No background color on hover */
+.footer-custom-column.footer-custom-social h4 {
+  margin-left: 220px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-/* Create a gradient line that is thick in the middle and thin at the sides */
+.footer-custom-social li {
+  list-style: none;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.footer-custom-social i {
+  margin-right: 10px;
+}
+
+/* Styling the bottom section */
+.footer-custom-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 15px;
+}
+
+.footer-custom-bottom p {
+  margin: 0;
+}
+
+.footer-custom-bottom a {
+  color: #fff;
+  margin-left: 15px;
+}
+
 .gradient-line {
   height: 2px;
   border: none;
   background: linear-gradient(to left, transparent 10%, rgb(255, 255, 255) 50%, transparent 90%);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  width: 125vw;
+  margin-left: -200px;
+  margin-top: -10px;
+  margin-bottom: -15px;
+}
+
+.gradient-line1 {
+  height: 2px;
+  border: none;
+  background: linear-gradient(to left, transparent 10%, rgb(255, 255, 255) 50%, transparent 90%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  width: 125vw;
+  margin-left: -200px;
+  margin-top: -35px;
+  margin-bottom: 40px;
 }
 
 
