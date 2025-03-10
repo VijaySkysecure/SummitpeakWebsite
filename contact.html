@@ -208,45 +208,65 @@
           </div>
 
           <script>
-            document.getElementById("enquiryForm").addEventListener("submit", function (e) {
-              e.preventDefault(); // Prevent form submission
-          
+            document.getElementById("enquiryForm").addEventListener("submit", async function (e) {
+              e.preventDefault(); // Prevent default form submission
+            
               // Get values of inputs
-              const name = document.getElementById("name").value;
-              const email = document.getElementById("email").value;
-              const mobile = document.getElementById("mobile").value;
-              const services = document.querySelectorAll(".badge-checkbox");
-              let serviceSelected = false;
-          
-              // Check if at least one checkbox is selected
-              services.forEach(function (checkbox) {
-                if (checkbox.checked) {
-                  serviceSelected = true;
-                }
-              });
-          
-              // Check if all fields are filled and at least one service is selected
-              if (name && email && mobile && serviceSelected) {
-                alert("Enquiry submitted successfully!");
-                // You can replace the alert with actual form submission logic here
-              } else {
+              const name = document.getElementById("name").value.trim();
+              const email = document.getElementById("email").value.trim();
+              const mobile = document.getElementById("mobile").value.trim();
+            
+              // Get selected services
+              const services = Array.from(document.querySelectorAll(".badge-checkbox:checked")).map(
+                (checkbox) => checkbox.nextElementSibling.innerText
+              );
+            
+              // Validate input fields
+              if (!name || !email || !mobile || services.length === 0) {
                 alert("Please fill out all fields.");
+                return;
+              }
+            
+              // Prepare form data
+              const formData = new FormData();
+              formData.append("name", name);
+              formData.append("email", email);
+              formData.append("mobile", mobile);
+              formData.append("services", services.join(", "));
+              formData.append("_captcha", "false"); // Disable CAPTCHA for smoother submission
+              formData.append("_template", "table"); // Format email nicely in a table layout
+            
+              try {
+                const response = await fetch("https://formsubmit.co/contact@summitpeaksoftware.com", {
+                  method: "POST",
+                  body: formData,
+                });
+            
+                if (response.ok) {
+                  alert("Enquiry submitted successfully!");
+                  document.getElementById("enquiryForm").reset(); // Clear form after submission
+                } else {
+                  alert("Failed to send enquiry. Please try again.");
+                }
+              } catch (error) {
+                alert("Error submitting the enquiry.");
               }
             });
-          </script>
+            </script>
+            
  
           <!-- Right Boxes -->
           <div class="col-lg-4">
             <div class="p-4 border rounded bg-light mb-5">
               <h4 class="fw-bold text-black">For Jobs & Internships</h4>
-              <p><i class="bi bi-telephone"></i> (808) 998-34256</p>
+              <p><i class="bi bi-telephone"></i> +91 7353355529</p>
               <p><i class="bi bi-envelope"></i> contact@summitpeaksoftware.com</p>
             </div>
             <br />
             <br />
             <div class="p-4 border rounded bg-light mb-5">
               <h4 class="fw-bold text-black">For Sales Enquiries</h4>
-              <p><i class="bi bi-telephone"></i> (808) 998-34256</p>
+              <p><i class="bi bi-telephone"></i> +91 7353355529</p>
               <p><i class="bi bi-envelope"></i> contact@summitpeaksoftware.com</p>
             </div>
             <br />
@@ -257,7 +277,7 @@
                 <i class="bi bi-geo-alt"></i> 3rd Floor, AGR Plaza,
                 Bellandur,<br />Bengaluru, Karnataka 560103
               </p>
-              <p><i class="bi bi-telephone"></i> (808) 998-34256</p>
+              <p><i class="bi bi-telephone"></i> +91 7353355529</p>
               <p><i class="bi bi-envelope"></i> contact@summitpeaksoftware.com</p>
             </div>
           </div>

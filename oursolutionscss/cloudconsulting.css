@@ -798,17 +798,16 @@ a {
       margin-right: 40px;
     }
 
-  .itmgmt-content {
-      margin-left: 0;
-      text-align: center;  /* Center text for mobile */
+    .itmgmt-content {
+        margin-left: 0;
+        text-align: center;  /* Center text for mobile */
     }
-
-  .itmgmt-content h1 {
-      font-size: 7px; /* Adjust font size for smaller screens */
+  
+    .itmgmt-content h1, .itmgmt-section h1 strong {
+      font-size: 8px; /* Adjust font size for smaller screens */
       margin-bottom: 15px;
       text-align: left;
       align-items: left;
-      margin-left: -30px;
     }
 
   .highlight-text {
@@ -840,42 +839,6 @@ a {
       margin-top: 14px;
     }
 
-    /* Footer section */
-    /* Targeting image inside the footer section */
-    .footer-section .col-lg-3 img {
-        display: none;
-    }
-
-    .footer-section .col-lg-3:nth-child(1) {
-        width: 100% !important;
-        margin-left: -50px !important;
-        text-align: center;
-    }
-
-    .footer-section .col-lg-3:nth-child(2) {
-        margin-left: 50px;
-    }
-
-    .footer-section .col-lg-3:nth-child(3) {
-        margin-left: 50px;
-    }
-
-    .footer-section .col-lg-3:nth-child(4) {
-        margin-left: -140px;
-    }
-
-
-    .footer-section .d-flex p.mb-0 {
-        text-align: center;
-        font-size: 14px;
-        width: 75vw;
-        margin-left: 40px;
-    }
-
-    .footer-section .d-flex a.text-white {
-        display: none;
-    }
-
     .customitmgmtdesc h2 {
         font-size: 22px; /* Adjust font size for mobile screens */
         margin-bottom: 25px; /* Reduce space below the heading */
@@ -892,12 +855,12 @@ a {
 
     .customitmgmtdesc .sub-title {
         font-size: 18px;
-        margin-left: 10px;
+        margin-left: 20px;
     }
 
     .customitmgmtdesc .bullet-points li {
         font-size: 14px;
-        margin-left: 10px;
+        margin-left: 200px;
         line-height: 1.6;
     }
 
@@ -910,7 +873,7 @@ a {
         font-size: 22px;
         width: 90vw;
         margin-left: -100px;
-        margin-top: -20px;
+        margin-top: 0px;
     }
 
 
@@ -926,7 +889,7 @@ a {
         margin-bottom: 40px;  /* Add some spacing between the boxes */
         padding: 20px;
         margin-left: -50px;
-        height: 14vh;
+        height: 18vh;
         width: 45vw;
         margin-left: -10px;
     }
@@ -1023,24 +986,136 @@ a {
         text-align: center; /* Center-align the text in the boxes */
     }
     
-      .service-title {
+    .service-title {
         font-size: 18px; /* Reduce font size for the service titles */
         margin-bottom: 10px; /* Space below the title */
         width: 90vw;
         margin-left: -170px;
-      }
+    }
     
-      .bullet-points {
+    .bullet-points {
         list-style-type: none; /* Remove default bullet points */
         padding: 0; /* Remove padding */
         margin: 0; /* Remove margin */
         width: 90vw;
         margin-left: -150px;
-      }
+    }
     
-      .bullet-points li {
+    .bullet-points li {
         font-size: 14px; /* Reduce font size for bullet points */
         margin-bottom: 8px; /* Space between the bullet points */
         text-align: left; /* Align the bullet points to the left */
-      }
+    }
+}
+
+
+
+/* Mobile Footer Customization for Screen Width 430px */
+@media screen and (max-width: 430px) {
+
+    /* Remove the logo and gradient lines */
+    .footer-custom-section {
+      padding: 30px 10px;  /* Adjust padding for mobile view */
+      background-color: #000; /* Keep background color black */
+      color: #fff;
+    }
+  
+    .footer-custom-column.logo-description img {
+      display: none; /* Hide the company logo image */
+    }
+    .footer-custom-column.footer-custom-column.logo-description p {
+      width: 90vw;
+    }
+  
+    /* Make everything stack vertically */
+    .footer-custom-container {
+      display: block; /* Stack elements vertically */
+      width: 100%; /* Full width for mobile view */
+    }
+  
+    .footer-custom-column {
+      flex: 1 1 100%; /* Make each column 100% width for stacking */
+      padding: 10px 0; /* Add padding for spacing between stacked sections */
+      text-align: center; /* Center-align all text */
+      margin-bottom: 20px; /* Add space between sections */
+    }
+  
+    .footer-custom-column h4 {
+      font-size: 18px; /* Adjust heading font size */
+      margin-bottom: 10px; /* Add space below headings */
+      margin-left: -110px;
+      text-align: center;
+    }
+  
+    .footer-custom-column:nth-child(3) {
+      margin-left: 50px;
+    }
+  
+    .footer-custom-list li {
+      margin-bottom: 12px; /* Adjust gap between items */
+      font-size: 14px; /* Adjust text size for better readability */
+      align-items: center;
+      margin-left: -200px;
+      text-align: center;
+    }
+  
+    .footer-custom-list li a {
+      font-size: 14px;
+    }
+  
+    .footer-custom-column.footer-custom-social h4 {
+      margin-left: 10px;
+    }
+  
+    .footer-custom-column.footer-custom-social li {
+      margin-bottom: 15px; /* Reduce gap for mobile view */
+      margin-left: -25px; /* Remove left margin for social links */
+    }
+  
+    .footer-custom-column.footer-custom-social i {
+      margin-right: 5px; /* Reduce space between icon and text */
+    }
+  
+    /* Bottom Section: Align the copyright and Terms & Conditions */
+    .footer-custom-bottom {
+      display: flex;
+      flex-direction: row; /* Align elements horizontally */
+      justify-content: space-between;
+      align-items: center;
+      width: 100%; /* Full width for the bottom section */
+      margin-top: 20px; /* Add margin for spacing */
+    }
+  
+    .footer-custom-bottom p {
+      font-size: 10px; /* Make the copyright text smaller */
+      margin-left: -10px;
+      text-align: center;
+      width: 50vw;
+    }
+  
+    .footer-custom-bottom a {
+      font-size: 10px; /* Make the link text smaller */
+      text-align: center;
+      
+    }
+  
+    .footer-custom-bottom a:nth-child(2) {
+      margin-right: 0px; /* Add space between copyright and terms link */
+      text-align: right;
+      line-height: 0.5;
+      width: 40vw;
+  
+    }
+    .footer-custom-bottom a:nth-child(1) {
+      display: none; /* Hide the second link, which is the Privacy Policy */
+    }
+  
+    .gradient-line {
+      margin-top: 10px;
+      margin-left: -70px;
+    }
+  
+    .blogs, .image-wrapper, .images-container, .back-image, .front-image {
+      display: none;
+    }
 }

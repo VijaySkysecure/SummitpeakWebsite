@@ -478,6 +478,11 @@
       color: transparent;
   }
 
+  .map-image {
+    width: 100vw;
+    height: 27vh;
+  }
+
   /* Contact Section Wrapper */
   .contact-section1 {
       background-color: black; /* Black background */
@@ -508,52 +513,114 @@
       margin-bottom: 20px; /* Adjusted spacing */
   }
 
-  /* Footer section */
-  /* Targeting image inside the footer section */
-  .footer-section .col-lg-3 img {
-    display: none;
+}
+
+
+
+
+/* Mobile Footer Customization for Screen Width 430px */
+@media screen and (max-width: 430px) {
+
+  /* Remove the logo and gradient lines */
+  .footer-custom-section {
+    padding: 30px 10px;  /* Adjust padding for mobile view */
+    background-color: #000; /* Keep background color black */
+    color: #fff;
   }
 
-  .footer-section .col-lg-3 {
-    width: 100% !important;
-    margin-left: 0 !important;
+  .footer-custom-column.logo-description img {
+    display: none; /* Hide the company logo image */
+  }
+  .footer-custom-column.footer-custom-column.logo-description p {
+    width: 90vw;
+  }
+
+  /* Make everything stack vertically */
+  .footer-custom-container {
+    display: block; /* Stack elements vertically */
+    width: 100%; /* Full width for mobile view */
+  }
+
+  .footer-custom-column {
+    flex: 1 1 100%; /* Make each column 100% width for stacking */
+    padding: 10px 0; /* Add padding for spacing between stacked sections */
+    text-align: center; /* Center-align all text */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .footer-custom-column h4 {
+    font-size: 18px; /* Adjust heading font size */
+    margin-bottom: 10px; /* Add space below headings */
+    margin-left: -110px;
     text-align: center;
   }
 
-  /* Target the Follow Us section */
-  .col-lg-3.text-end {
-    display: flex;
-    flex-direction: column;
+  .footer-custom-column:nth-child(3) {
+    margin-left: 50px;
+  }
+
+  .footer-custom-list li {
+    margin-bottom: 12px; /* Adjust gap between items */
+    font-size: 14px; /* Adjust text size for better readability */
     align-items: center;
-    text-align: center; /* Center-align text inside the section */
-  }
-
-  .col-lg-3.text-end ul {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0;
-  }
-
-  .col-lg-3.text-end ul li {
-    margin-bottom: 10px; /* Space between each list item */
-    display: flex;
-    justify-content: center; /* Align the list items in the center horizontally */
-    align-items: center; /* Align icon and text vertically */
-  }
-
-  .col-lg-3.text-end ul li i {
-    margin-right: 8px; /* Space between the icon and the text */
-  }
-
-
-  .footer-section .d-flex p.mb-0 {
+    margin-left: -430px;
     text-align: center;
-    font-size: 14px;
-    width: 75vw;
-    margin-left: 40px;
   }
 
-  .footer-section .d-flex a.text-white {
-    display: none;
+  .footer-custom-list li a {
+    font-size: 14px;
+  }
+
+  .footer-custom-column.footer-custom-social h4 {
+    margin-left: 10px;
+  }
+
+  .footer-custom-column.footer-custom-social li {
+    margin-bottom: 15px; /* Reduce gap for mobile view */
+    margin-left: -25px; /* Remove left margin for social links */
+  }
+
+  .footer-custom-column.footer-custom-social i {
+    margin-right: 5px; /* Reduce space between icon and text */
+  }
+
+  /* Bottom Section: Align the copyright and Terms & Conditions */
+  .footer-custom-bottom {
+    display: flex;
+    flex-direction: row; /* Align elements horizontally */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Full width for the bottom section */
+    margin-top: 20px; /* Add margin for spacing */
+  }
+
+  .footer-custom-bottom p {
+    font-size: 10px; /* Make the copyright text smaller */
+    margin-left: -10px;
+    text-align: center;
+    width: 50vw;
+  }
+
+  .footer-custom-bottom a {
+    font-size: 10px; /* Make the link text smaller */
+    text-align: center;
+    
+  }
+
+  .footer-custom-bottom a:nth-child(2) {
+    margin-right: 0px; /* Add space between copyright and terms link */
+    text-align: right;
+    line-height: 0.5;
+    width: 40vw;
+
+  }
+  .footer-custom-bottom a:nth-child(1) {
+    display: none; /* Hide the second link, which is the Privacy Policy */
+  }
+
+  .gradient-line {
+    margin-top: 10px;
+    margin-left: -70px;
   }
 }
 
