@@ -8,6 +8,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
 /* Hide the hamburger icon in desktop view */
 .navbar-toggler {
   display: none;
@@ -623,7 +628,7 @@ a {
   .about-content p {
     font-size: 14px;  /* Adjust font size for readability */
     margin: 10px 0;
-    margin-left: 20px;
+    margin-left: 10px;
     line-height: 22px;
     text-align: center;
   }

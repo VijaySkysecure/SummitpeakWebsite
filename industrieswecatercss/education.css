@@ -903,6 +903,12 @@ a {
         align-items: left;
     }
 
+    .itmgmt-content h1, .itmgmt-section h1 strong {
+        font-size: 8px; /* Adjust font size for smaller screens */
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
     .highlight-text {
         font-size: 30px; /* Scale down font size for mobile */
         line-height: 40px;
@@ -917,38 +923,37 @@ a {
     .itmgmt-content p {
         font-size: 14px;  /* Adjust font size for readability */
         margin: 10px 0;
-        margin-left: 20px;
+        margin-left: 50px;
         line-height: 22px;
         text-align: center;
+        width: 50vw;
     }
 
     .itmgmt-image {
         display: none; /* Set the parent container to flexbox */
     }
+
     .freequote-btn{
         font-size: 12px;
         padding: 6px 20px;
         margin-top: 14px;
     }
-
-
-  /* Footer section */
-  /* Targeting image inside the footer section */
-    .footer-section {
-        display: none;
-    }
-
     
     .hireadevdesc4 h2 {
         font-size: 22px; /* Adjust font size for mobile screens */
-        margin-bottom: 25px; /* Reduce space below the heading */
+        margin-bottom: 40px; /* Reduce space below the heading */
         text-align: left;
         margin-left: 0px;
     }
 
     .hireadevdesc4 p{
-        font-size: 14px;
-        width: 80vw;
+        font-size: 12px;
+        width: 85vw;
+        line-height: 20px;
+    }
+
+    .row1 .image {
+        display: none;
     }
 
     .process-container {
@@ -1014,10 +1019,12 @@ a {
         font-size: 16px; /* Adjust h2 font size */
         width: 90vw;
         margin-left: -30px;
+        margin-bottom: 10px;
     }
 
     .rowreverse .text {
         margin-left: 10px;
+        margin-top: 20px;
     }
 
     .hireadevdesc1 p {
@@ -1032,6 +1039,10 @@ a {
 
     .middot {
         font-size: 12px; /* Adjust the bullet size */
+    }
+
+    .image-container-left, .image-container-right {
+        display: none;
     }
 
 
@@ -1080,6 +1091,119 @@ a {
             font-size: 14px; /* Adjust font size for the list items */
             width: 60vw;
         }
+}
+
+
+
+
+/* Mobile Footer Customization for Screen Width 430px */
+@media screen and (max-width: 430px) {
+
+  /* Remove the logo and gradient lines */
+  .footer-custom-section {
+    padding: 30px 10px;  /* Adjust padding for mobile view */
+    background-color: #000; /* Keep background color black */
+    color: #fff;
+  }
+
+  .footer-custom-column.logo-description img {
+    display: none; /* Hide the company logo image */
+  }
+  .footer-custom-column.footer-custom-column.logo-description p {
+    width: 90vw;
+  }
+
+  /* Make everything stack vertically */
+  .footer-custom-container {
+    display: block; /* Stack elements vertically */
+    width: 100%; /* Full width for mobile view */
+  }
+
+  .footer-custom-column {
+    flex: 1 1 100%; /* Make each column 100% width for stacking */
+    padding: 10px 0; /* Add padding for spacing between stacked sections */
+    text-align: center; /* Center-align all text */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .footer-custom-column h4 {
+    font-size: 18px; /* Adjust heading font size */
+    margin-bottom: 10px; /* Add space below headings */
+    margin-left: -110px;
+    text-align: center;
+  }
+
+  .footer-custom-column:nth-child(3) {
+    margin-left: 50px;
+  }
+
+  .footer-custom-list li {
+    margin-bottom: 12px; /* Adjust gap between items */
+    font-size: 14px; /* Adjust text size for better readability */
+    align-items: center;
+    margin-left: -450px;
+    text-align: center;
+  }
+
+  .footer-custom-list li a {
+    font-size: 14px;
+  }
+
+  .footer-custom-column.footer-custom-social h4 {
+    margin-left: 10px;
+  }
+
+  .footer-custom-column.footer-custom-social li {
+    margin-bottom: 15px; /* Reduce gap for mobile view */
+    margin-left: -25px; /* Remove left margin for social links */
+  }
+
+  .footer-custom-column.footer-custom-social i {
+    margin-right: 5px; /* Reduce space between icon and text */
+  }
+
+  /* Bottom Section: Align the copyright and Terms & Conditions */
+  .footer-custom-bottom {
+    display: flex;
+    flex-direction: row; /* Align elements horizontally */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Full width for the bottom section */
+    margin-top: 20px; /* Add margin for spacing */
+  }
+
+  .footer-custom-bottom p {
+    font-size: 10px; /* Make the copyright text smaller */
+    margin-left: -10px;
+    text-align: center;
+    width: 50vw;
+  }
+
+  .footer-custom-bottom a {
+    font-size: 10px; /* Make the link text smaller */
+    text-align: center;
+    
+  }
+
+  .footer-custom-bottom a:nth-child(2) {
+    margin-right: 0px; /* Add space between copyright and terms link */
+    text-align: right;
+    line-height: 0.5;
+    width: 40vw;
+
+  }
+  .footer-custom-bottom a:nth-child(1) {
+    display: none; /* Hide the second link, which is the Privacy Policy */
+  }
+
+  .gradient-line {
+    margin-top: 10px;
+    margin-left: -70px;
+  }
+
+  .blogs, .image-wrapper, .images-container, .back-image, .front-image {
+    display: none;
+  }
 }
   
 

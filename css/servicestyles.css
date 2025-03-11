@@ -508,9 +508,14 @@
 }
 
 .tab-button-tech.active {
-  color: rgba(18, 18, 18, 1);
-  border-radius: 20px;
+  color: rgb(0, 4, 66);
   font-weight: 600;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 5px;
 }
 
 .tech-image-tech {
@@ -1287,7 +1292,7 @@
   .about-content p {
     font-size: 14px;  /* Adjust font size for readability */
     margin: 10px 0;
-    margin-left: 20px;
+    margin-left: 0px;
     line-height: 22px;
     text-align: center;
   }
