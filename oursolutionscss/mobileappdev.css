@@ -1088,11 +1088,7 @@ color: transparent;
   }
 
   .app-services {
-    color: rgba(18, 18, 18, 1); /* Adjust the text color */
-    line-height: 1; /* Increase line height for better readability */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    text-align: left;
+    display: none;
   }
   
   /* Target each individual service item */
@@ -1145,6 +1141,18 @@ color: transparent;
 
   .image {
     display: none;
+  }
+
+  .middot-list {
+    margin-left: -60px;
+  }
+
+  .middot-list li {
+    font-size: 12px;
+  }
+
+  .middot {
+    font-size: 14px;
   }
 
 
