@@ -276,14 +276,14 @@ a {
 
 .whoweare-content p {
   font-family: Poppins;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 33px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: rgba(18, 18, 18, 1);
-
+  width: 44vw;
 }
 
 
@@ -1675,6 +1675,7 @@ p {
   .whoweare-content p {
     font-size: 16px;
     line-height: 1.5;
+    width: 80vw;
   }
 
   /* Statistics section */
