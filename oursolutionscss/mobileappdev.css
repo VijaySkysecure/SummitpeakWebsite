@@ -183,6 +183,11 @@ body, html {
     margin-bottom: 75px;
     color: rgb(88,88,88);
 }
+
+.webapp-content h1 a {
+  color: inherit; /* Inherits the text color from the parent */
+  text-decoration: none; /* Removes underline */
+}
   
 .highlight-text {
     font-family: 'Poppins', sans-serif; /* Added font-family */
@@ -875,16 +880,23 @@ color: transparent;
 }
 
 /* Company Logo & Description */
+.footer-custom-column.footer-custom-column.logo-description p {
+  margin-left: -80px;
+  width: 25vw;
+}
+
 .footer-custom-column.logo-description img {
     height: 70px; /* Control logo height */
     margin-bottom: 15px;
+    margin-left: -80px;
 }
 
 .footer-custom-column h4 {
     font-size: 20px;
     margin-bottom: 15px;
-    margin-left: 170px;
+    margin-left: -100px;
 }
+
 
 .footer-custom-column p {
     font-size: 14px;
@@ -893,13 +905,10 @@ color: transparent;
 }
 
 .footer-custom-list:nth-child(2) {
-    width: 100%
+    width: 100%;
+    margin-left: -100px;
 }
 
-.footer-custom-column:nth-child(2) {
-    margin-right: -60px;
-    margin-left: 60px;
-}
 
 .footer-custom-column:nth-child(3) {
     margin-right: -80px;
@@ -1030,6 +1039,13 @@ color: transparent;
     margin-bottom: 15px;
     text-align: left;
   }
+
+  .webapp-content h1 a {
+    font-size: 8px;
+    color: inherit; /* Inherits the text color from the parent */
+    text-decoration: none; /* Removes underline */
+  }
+
 
   .highlight-text {
     font-size: 30px; /* Scale down font size for mobile */

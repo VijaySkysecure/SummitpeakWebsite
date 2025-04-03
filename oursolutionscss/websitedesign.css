@@ -186,7 +186,16 @@ body, html {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     margin-bottom: 75px;
-  
+    color: rgb(88, 88, 88);
+}
+
+.itmgmt-section h1 strong {
+    font-weight: 600; /* Adjust the weight value to your preference (e.g., 400, 600, 700, etc.) */
+}
+
+.itmgmt-content h1 a {
+    color: inherit; /* Inherits the text color from the parent */
+    text-decoration: none; /* Removes underline */
 }
   
 .highlight-text {
@@ -1001,6 +1010,18 @@ hr {
         text-align: left;
         align-items: left;
         margin-left: -30px;
+    }
+
+    .itmgmt-content h1 a {
+      font-size: 8px;
+      color: inherit; /* Inherits the text color from the parent */
+      text-decoration: none; /* Removes underline */
+    }
+  
+    .itmgmt-content h1, .itmgmt-section h1 strong {
+      font-size: 8px; /* Adjust font size for smaller screens */
+      margin-bottom: 15px;
+      text-align: left;
     }
   
     .highlight-text {

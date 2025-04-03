@@ -193,6 +193,11 @@ body, html {
     margin-bottom: 75px;
     color: rgb(88,88,88);
 }
+
+.itmgmt-content h1 a {
+  color: inherit; /* Inherits the text color from the parent */
+  text-decoration: none; /* Removes underline */
+}
   
 .highlight-text {
     font-family: 'Poppins', sans-serif; /* Added font-family */
@@ -651,6 +656,12 @@ a {
     text-align: left;
   }
 
+  .itmgmt-content h1 a {
+    font-size: 8px;
+    color: inherit; /* Inherits the text color from the parent */
+    text-decoration: none; /* Removes underline */
+  }
+
   .highlight-text {
       font-size: 30px; /* Scale down font size for mobile */
       line-height: 40px;
@@ -877,6 +888,3 @@ a {
     display: none;
   }
 }
-  
-  
-
