@@ -7,6 +7,27 @@
     <meta name="description" content="Explore career opportunities at SummitPeak Software. Innovate, collaborate, and grow with us in a dynamic tech environment." />
     <title>Summitpeak</title>
     <link rel="icon" type="image/png" sizes="32x32" href="img/titlelogo.png">
+    <!-- JSON-LD Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://summitpeaksoftware.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Career",
+            "item": "https://summitpeaksoftware.com/career"
+          }
+        ]
+      }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTNCBXQ51B"></script>
     <script>
@@ -41,7 +62,47 @@
           <ul class="nav">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item position-relative services-dropdown">
+              <a href="services.html" class="nav-link">Services</a>
+              <ul class="services-menu">
+                <li class="category-item">
+                  <a href="service1.html" class="dropdown-title">Build an Application</a>
+                  <ul class="sub-menu">
+                    <li><a href="web-application-development-bangalore.html">Web App Development</a></li>
+                    <li><a href="mobile-app-development-bangalore.html">Mobile App Development</a></li>
+                    <li><a href="designthinking.html">Design Thinking</a></li>
+                    <li><a href="hireadeveloper.html">Hire a Developer</a></li>
+                  </ul>
+                </li>
+                <li class="category-item">
+                  <a href="service2.html" class="dropdown-title">Cloud Adoption</a>
+                  <ul class="sub-menu">
+                    <li><a href="itmanagementservices.html">24/7 Managed IT</a></li>
+                    <li><a href="cloudmanagedservices.html">Cloud Managed Services</a></li>
+                    <li><a href="cloudconsulting.html">Cloud Consulting</a></li>
+                    <li><a href="devops.html">DevOps</a></li>
+                  </ul>
+                </li>
+                <li class="category-item">
+                  <a href="service3.html" class="dropdown-title">Web Prescence Solutions</a>
+                  <ul class="sub-menu">
+                    <li><a href="websitedesign.html">Web Design</a></li>
+                    <li><a href="seo.html">SEO</a></li>
+                    <li><a href="internetmarketing.html">Internet Marketing</a></li>
+                    <li><a href="marketingautomation.html">Marketing Automation</a></li>
+                  </ul>
+                </li>
+                <li class="category-item">
+                  <a href="service4.html" class="dropdown-title">Trending Technology</a>
+                  <ul class="sub-menu">
+                    <li><a href="aiservices.html">Artificial Intelligence</a></li>
+                    <li><a href="mldev.html">Machine Learning</a></li>
+                    <li><a href="arappdev.html">Augmented Reality</a></li>
+                    <li><a href="vrappdev.html">Virtual Reality</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
             <li class="nav-item"><a href="career.html" class="nav-link active">Career</a></li>
             <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
             <li class="nav-item"><a href="process.html" class="nav-link">Our Process</a></li>

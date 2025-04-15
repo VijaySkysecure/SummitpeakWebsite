@@ -178,6 +178,86 @@ color: rgba(22, 5, 111, 1);
   margin-top: 10px;
 }
 
+
+/* Base dropdown (first level under Services) */
+.services-dropdown {
+  position: relative;
+}
+
+.services-menu {
+  display: none;
+  position: absolute;
+  top: 103%;
+  left: 0;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+  z-index: 1000;
+  min-width: 180px;
+  font-size: 14px;
+}
+
+.services-dropdown:hover .services-menu {
+  display: block;
+}
+
+/* Category items (vertical list) */
+.category-item {
+  position: relative;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.category-item > .dropdown-title {
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 0.2rem 0;
+}
+
+/* Sub-menu appears on hover of a category */
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100.5%;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 0.5rem 1rem;
+  min-width: 160px;
+}
+
+.category-item:hover .sub-menu {
+  display: block;
+}
+
+/* Sub-menu items */
+.sub-menu li {
+  margin: 0.6rem 0.8rem;
+}
+
+.sub-menu li a {
+  color: #555;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.sub-menu li a:hover {
+  color: #000;
+}
+
+.services-menu,
+.sub-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
 .about-section {
     display: flex;
     justify-content: space-between;
