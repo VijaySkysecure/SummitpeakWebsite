@@ -641,6 +641,7 @@ body, html {
   color: #333;
   display: block;
   padding: 0.2rem 0;
+  cursor: pointer;
 }
 
 /* Sub-menu appears on hover of a category */

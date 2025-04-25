@@ -215,6 +215,7 @@ color: rgba(22, 5, 111, 1);
   color: #333;
   display: block;
   padding: 0.2rem 0;
+  cursor: pointer;
 }
 
 /* Sub-menu appears on hover of a category */
