@@ -235,6 +235,24 @@ body, html {
   padding: 0;
 }
 
+/* Add your existing styles here */
+
+.nested-sub-menu {
+  display: none;
+  position: absolute;
+  left: 100.5%;
+  top: 0;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  list-style: none;
+}
+
+.nested-dropdown:hover .nested-sub-menu {
+  display: block;
+}
+
 
 
 .home-banner {
