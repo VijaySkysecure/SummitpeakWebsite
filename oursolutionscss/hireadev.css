@@ -203,6 +203,19 @@ body, html {
     color: transparent;
     margin: 40px 0px;
 }
+
+.highlight-text2{
+    width: 100%;
+    margin-right: 80px;
+    margin-left: 80px;
+    margin-top: 40px;
+    font-family: Poppins;
+    font-size: 20px;    
+    font-weight: 400;
+    line-height: 33px;
+    text-decoration-skip-ink: none;
+    color: rgba(18, 18, 18, 1);
+}
   
 .itmgmt-content p {
     font-family: Poppins;
@@ -263,7 +276,7 @@ a {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin-left: 60px;
+    margin-left: 80px;
 }
 
 .custommobapp {
