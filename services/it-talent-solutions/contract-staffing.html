@@ -321,6 +321,106 @@
     </div>
     </section>
 
+    <!-- Industries We Serve -->
+    <section class="industries-section">
+    <h2 class="industries-title">Industries We Serve</h2>
+  <div class="slider-containerr">
+    <button class="nav-arrow prev" onclick="slide(-1)">&#8592;</button>
+    <div class="sliderr" id="sliderr">
+      <div class="cards">
+  <!-- Inline SVG directly -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="10" y="28" width="44" height="16" rx="4" ry="4" />
+    <path d="M14 28 L22 18 H42 L50 28" />
+    <circle cx="18" cy="48" r="6" />
+    <circle cx="46" cy="48" r="6" />
+    <circle cx="10" cy="32" r="2" />
+    <circle cx="54" cy="32" r="2" />
+  </svg>
+  
+  <h3>Identifying and shortlisting</h3>
+  <p>Our dedicated, expert team will get in touch with you to understand your workforce and manpower needs...</p>
+</div>
+      <div class="cards">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="10" y="28" width="44" height="16" rx="4" ry="4" />
+          <path d="M14 28 L22 18 H42 L50 28" />
+          <circle cx="18" cy="48" r="6" />
+          <circle cx="46" cy="48" r="6" />
+          <circle cx="10" cy="32" r="2" />
+          <circle cx="54" cy="32" r="2" />
+        </svg>
+        <h3>Agritech</h3>
+        <p>Hiring a regenerative agriculture specialist, a research head or toxicologist? We hear from you!</p>
+      </div>
+      <div class="cards">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="10" y="28" width="44" height="16" rx="4" ry="4" />
+            <path d="M14 28 L22 18 H42 L50 28" />
+            <circle cx="18" cy="48" r="6" />
+            <circle cx="46" cy="48" r="6" />
+            <circle cx="10" cy="32" r="2" />
+            <circle cx="54" cy="32" r="2" />
+          </svg>
+        <h3>Automobile</h3>
+        <p>Design engineers, automation experts, and battery specialists could make all the difference</p>
+      </div>
+      <div class="cards">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="10" y="28" width="44" height="16" rx="4" ry="4" />
+            <path d="M14 28 L22 18 H42 L50 28" />
+            <circle cx="18" cy="48" r="6" />
+            <circle cx="46" cy="48" r="6" />
+            <circle cx="10" cy="32" r="2" />
+            <circle cx="54" cy="32" r="2" />
+          </svg>
+        <h3>Automobile</h3>
+        <p>Design engineers, automation experts, and battery specialists could make all the difference</p>
+      </div>
+      <div class="cards">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="10" y="28" width="44" height="16" rx="4" ry="4" />
+            <path d="M14 28 L22 18 H42 L50 28" />
+            <circle cx="18" cy="48" r="6" />
+            <circle cx="46" cy="48" r="6" />
+            <circle cx="10" cy="32" r="2" />
+            <circle cx="54" cy="32" r="2" />
+          </svg>
+        <h3>Automobile</h3>
+        <p>Design engineers, automation experts, and battery specialists could make all the difference</p>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+    <button class="nav-arrow next" onclick="slide(1)">&#8594;</button>
+  </div>
+  </section>
+
+  <script>
+    function slide(direction) {
+      const slider = document.getElementById('sliderr');
+      const scrollAmount = 320; // approx width of one card + gap
+      slider.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+    <!-- Our value Proposition -->
+    <section class="value-proposition">
+      <h1>Our Value Proposition</h1>
+          <ol>
+            <li>A structured approach with increased operational efficiency and a well-defined TAT that accommodates all customer requirements.</li>
+            <li>The ability to ramp up quickly and increase/decrease candidates on the team and swiftly as per your business need.</li>
+            <li>Offer a customized recruitment model to consistently find a better match from the shortlisted candidates.</li>
+            <li>Follow an error-free, timely payroll process, with on-time disbursements and pay-slip generation.</li>
+            <li>Handle statutory compliance with care and adhere to all the rules, thereby boasting a 100% compliance score.</li>
+            <li>Cost-effective contract staffing solutions with the flexibility to upscale or downsize as per the organization’s need.</li>
+            <li>Robust HRMS system that ensures accurate data, as well as access to different types of data at a single click.</li>
+          </ol>
+          <a href="../../contact.html" class="bttn">Enquire Now</a>
+    </section>
+
 
     <!--Project Section-->
     <section class="projects-section">
