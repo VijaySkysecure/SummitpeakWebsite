@@ -661,6 +661,13 @@ body {
   border-radius: 6px;
 }
 
+.footer-custom-social img{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: -3px;
+}
+
 .itmgmt-section {
   display: flex;
   justify-content: space-between;
@@ -1465,12 +1472,6 @@ ol {
   margin-right: 10px;
 }
 
-.footer-custom-social img{
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  margin-left: -3px;
-}
 
 /* Styling the bottom section */
 .footer-custom-bottom {
