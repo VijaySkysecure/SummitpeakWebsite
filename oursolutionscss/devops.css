@@ -87,7 +87,7 @@ body, html {
 
 .social-icons {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 
 }
 
@@ -158,6 +158,41 @@ body, html {
   height: 25px;
   margin-top: 10px;
 }
+
+.bluesky-icon {
+  width: 22px; /* Set width of LinkedIn icon */
+  height: 22px; /* Set height of LinkedIn icon */
+  margin-top: px;
+}
+
+.bluesky-icon.active {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.pinterest-icon {
+  width: 25px; /* Set width of LinkedIn icon */
+  height: 22px; /* Set height of LinkedIn icon */
+  margin-top: px;
+}
+
+.pinterest-icon.active {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.footer-custom-social img{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: -3px;
+}
+
+
 .social-icons a {
   font-size: 1.5rem; /* Increase icon size */
 }
