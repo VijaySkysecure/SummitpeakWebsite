@@ -155,7 +155,6 @@ h1 {
   color: transparent;
   margin-left: -5px;
   text-align: center;
-  font-size: 2rem;
   margin-bottom: 30px;
 }
 
@@ -564,7 +563,7 @@ body {
 
 .social-icons {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   margin-right: 90px;
 }
 
@@ -634,6 +633,32 @@ body {
   width: 25px;
   height: 25px;
   margin-top: 10px;
+}
+
+.bluesky-icon {
+  width: 22px; /* Set width of LinkedIn icon */
+  height: 22px; /* Set height of LinkedIn icon */
+  margin-top: px;
+}
+
+.bluesky-icon.active {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.pinterest-icon {
+  width: 25px; /* Set width of LinkedIn icon */
+  height: 22px; /* Set height of LinkedIn icon */
+  margin-top: px;
+}
+
+.pinterest-icon.active {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 6px;
 }
 
 .itmgmt-section {
@@ -1438,6 +1463,13 @@ ol {
 
 .footer-custom-social i {
   margin-right: 10px;
+}
+
+.footer-custom-social img{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: -3px;
 }
 
 /* Styling the bottom section */

@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: /img/
+Allow: /
+Sitemap: https://summitpeaksoftware.com/sitemap.xml
