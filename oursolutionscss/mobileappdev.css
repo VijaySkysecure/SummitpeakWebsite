@@ -890,150 +890,140 @@ color: transparent;
 
 
 .footer-custom-section {
-    margin-top: -30px;  /* Remove any top margin */
-    padding: 40px 0;    /* Add padding for spacing */
-    background-color: #000; /* Black background for the footer */
-    color: #fff; /* Text color set to white */
-    width: 100vw;
-    
+  margin-top: -30px;  /* Remove any top margin */
+  padding: 40px 0;    /* Add padding for spacing */
+  background-color: #000; /* Black background for the footer */
+  color: #fff; /* Text color set to white */
+  
 }
 
 /* Footer Container (Flexbox layout for columns) */
 .footer-custom-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /* Each Column (responsible for making them evenly distributed) */
 .footer-custom-column {
-    flex: 1 1 22%; /* Allow columns to be flexible but no less than 22% of the container */
-    margin-bottom: 20px;
-    padding: 0 20px;
-    width: 100vw;
+  flex: 1 1 22%; /* Allow columns to be flexible but no less than 22% of the container */
+  margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 /* Company Logo & Description */
-.footer-custom-column.footer-custom-column.logo-description p {
-  margin-left: -80px;
-  width: 25vw;
-}
-
 .footer-custom-column.logo-description img {
-    height: 70px; /* Control logo height */
-    margin-bottom: 15px;
-    margin-left: -80px;
+  height: 70px; /* Control logo height */
+  margin-bottom: 15px;
 }
 
 .footer-custom-column h4 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    margin-left: -100px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-left: 170px;
 }
 
-
 .footer-custom-column p {
-    font-size: 14px;
-    width: 150%;
-    line-height: 2;
+  font-size: 14px;
+  width: 150%;
+  line-height: 2;
 }
 
 .footer-custom-list:nth-child(2) {
-    width: 100%;
-    margin-left: -100px;
+  width: 100%
 }
 
+.footer-custom-column:nth-child(2) {
+  margin-right: -60px;
+  margin-left: 60px;
+}
 
 .footer-custom-column:nth-child(3) {
-    margin-right: -80px;
+  margin-right: -80px;
 }
 
 
 
 /* Remove bullet points and left-align the list items in Categories and Services */
 .footer-custom-list {
-    list-style-type: none; /* Remove bullet points */
-    padding-left: 0; /* Remove padding */
-    margin-left: 160px; /* Remove margin */
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding */
+  margin-left: 160px; /* Remove margin */
 
 }
 
 /* Control line height/gap between list items (for Categories and Services) */
 .footer-custom-list li {
-    margin-bottom: 14px; /* You can adjust this value to control the gap */
-    line-height: 1.6; /* Adjust the line height for the desired gap between items */
-    text-align: left;
-    color: white;
-    font-size: 14px;
+  margin-bottom: 14px; /* You can adjust this value to control the gap */
+  line-height: 1.6; /* Adjust the line height for the desired gap between items */
+  text-align: left;
+  color: white;
+  font-size: 14px;
 }
 
 .footer-custom-list li a {
-    color: white;  /* Set link color to white */
-    text-decoration: none; /* Remove underline */
-    font-size: 14px;
+  color: white;  /* Set link color to white */
+  text-decoration: none; /* Remove underline */
+  font-size: 14px;
 }
 
 .footer-custom-column.footer-custom-social h4 {
-    margin-left: 220px;
-    width: 100%;
-    margin-bottom: 20px;
+  margin-left: 220px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .footer-custom-social li {
-    list-style: none;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    margin-left: 60px;
+  list-style: none;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
 }
 
 .footer-custom-social i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 /* Styling the bottom section */
 .footer-custom-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
-    padding-top: 15px;
-    width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 15px;
 }
 
 .footer-custom-bottom p {
-    margin: 0;
+  margin: 0;
 }
 
 .footer-custom-bottom a {
-    color: #fff;
-    margin-left: 15px;
+  color: #fff;
+  margin-left: 15px;
 }
 
 .gradient-line {
-    height: 2px;
-    border: none;
-    background: linear-gradient(to left, transparent 10%, rgb(255, 255, 255) 50%, transparent 90%);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    width: 125vw;
-    margin-left: -200px;
-    margin-top: -10px;
-    margin-bottom: -15px;
+  height: 2px;
+  border: none;
+  background: linear-gradient(to left, transparent 10%, rgb(255, 255, 255) 50%, transparent 90%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  width: 125vw;
+  margin-left: -200px;
+  margin-top: -10px;
+  margin-bottom: -15px;
 }
 
 .gradient-line1 {
-    height: 2px;
-    border: none;
-    background: linear-gradient(to left, transparent 10%, rgb(255, 255, 255) 50%, transparent 90%);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    width: 125vw;
-    margin-left: -200px;
-    margin-top: -35px;
-    margin-bottom: 40px;
+  height: 2px;
+  border: none;
+  background: linear-gradient(to left, transparent 10%, rgb(255, 255, 255) 50%, transparent 90%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  width: 125vw;
+  margin-left: -200px;
+  margin-top: -35px;
+  margin-bottom: 40px;
 }
-
-
-
 
 
 
@@ -1050,12 +1040,6 @@ color: transparent;
     overflow-x: hidden; /* Hide any horizontal overflow */
   }
 
-  header .container img {
-    height: 40px; /* You can adjust the height as needed */
-    margin-left: 80px; /* Same as the inline style in the HTML */
-  }
-  
-
   /* About Section */
   .webapp-section {
     flex-direction: column;  /* Stack content vertically */
@@ -1068,7 +1052,7 @@ color: transparent;
     text-align: center;  /* Center text for mobile */
   }
 
-  .webapp-content h1 {
+  .webapp-content h1, .webapp-section h1 strong {
     font-size: 8px; /* Adjust font size for smaller screens */
     margin-bottom: 15px;
     text-align: left;
@@ -1080,7 +1064,6 @@ color: transparent;
     text-decoration: none; /* Removes underline */
   }
 
-
   .highlight-text {
     font-size: 30px; /* Scale down font size for mobile */
     line-height: 40px;
@@ -1090,12 +1073,6 @@ color: transparent;
     color: transparent;
     margin: 15px 0;
     text-align: center;
-  }
-
-  .webapp-content h1, .webapp-section h1 strong {
-    font-size: 8px; /* Adjust font size for smaller screens */
-    margin-bottom: 15px;
-    text-align: left;
   }
 
   .webapp-content p {
@@ -1115,144 +1092,163 @@ color: transparent;
     margin-top: 14px;
   }
 
-  .mobappdesc{
+
+
+  .webappdesc{
     margin-left: 10px;
-    text-align: left;
-    margin-top: 50px;
   }
-  .mobappdesc h2 {
+  .webappdesc h2 {
     font-size: 24px;
     line-height: 1.4;
     text-align: left;
   }
 
-  .mobappdesc p {
+  .webappdesc p {
     font-size: 12px;
     line-height: 1.8;
   }
 
-  .hiremobapp-btn {
-    width: 80vw;
-    height: 7vh;
-    margin-left: 20px;
+
+  .points1 .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .points1 .content-wrapper li {
+    width: 100%; /* Adjusts to 2 items per row */
+    box-sizing: border-box;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: -120px;
   }
 
-  .app-services {
+  .points1 .content-wrapper .list-image {
     display: none;
   }
   
-  /* Target each individual service item */
-  .app-services div {
-    display: flex; /* Align items in a row */
-    font-size: 12px;
-    align-items: left; /* Vertically center the content */
-    margin-bottom: 3px; /* Space between items */
-  }
-  .app-services .middot {
-    margin-right: 8px; /* Space between the bullet and text */
-    font-size: 24px; /* Adjust size of the bullet */
+  
+
+  .points1 .text-content ul li::before {
+    font-size: 4px; /* Smaller bullet point size for mobile */
+    
   }
 
-  .custommobapp {
-    padding: 20px 0;
-  }
-
-  .row:nth-of-type(2) {
-    margin-top: 20px; 
-  }
-
-  .container {
-    padding-left: 10px;
-    padding-right: 10px;
-    max-width: 100%;
-  }
-
-  .row {
-    display: block; /* Stack rows vertically */
-    align-items: flex-start; /* Align content to the left */
-    justify-content: flex-start;
-    margin-bottom: 20px; /* Reduced spacing between rows */
-  }
-
-  .text {
-    width: 100%; /* Make text section full width */
-    margin-bottom: 15px; /* Space between text and image */
-  }
-
-  .text h2 {
-    font-size: 14px; /* Adjust text size for better readability */
-    line-height: 1.4; /* Adjust line height */
-  }
-
-  .text p {
-    font-size: 12px; /* Smaller text for mobile */
-    line-height: 1.6; /* Increase line-height for readability */
-  }
-
-  .image {
+  .appconsultant-btn{
     display: none;
   }
 
-  .middot-list {
-    margin-left: -60px;
+  .webdevservice {
+    margin-top: 30px;
+    margin-left: 10px;
   }
 
-  .middot-list li {
+  .webdevservice h2 {
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .webdevservice p {
     font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: -15px;
   }
 
-  .middot {
-    font-size: 14px;
+  .points1{
+    margin-top: 0px;
   }
 
-
-  /* Specific adjustments for certain rows if needed */
-  .row:nth-of-type(3),
-  .row:nth-of-type(4) {
-    margin-bottom: 50px; /* Reduce the bottom margin */
+  .points2 .text-content ul li {
+    font-size: 12px; /* Slightly smaller font size for mobile */
+    margin-bottom: 10px; /* Reduced space between items */
   }
 
-  .codeqa-section {
-    padding: 10px 0px; /* Reduced padding for mobile view */
-    margin-left: 20px;
-    width: 90vw;
-    margin-top: 40px;
-  }
-
-  .image-content2 {
-    display: none; /* Hide image for mobile view */
-  }
-
-  .section-header2 {
-    text-align: left; /* Left align the header text */
-  }
-
-  .section-title2 {
-    font-size: 18px; /* Slightly larger font for the title */
-    line-height: 1.4; /* Adjust line-height for better readability */
-    margin-left: 0px;
-    width: 80vw;
-  }
-
-  .section-description2 {
-    font-size: 14px; /* Smaller font for description */
-    line-height: 1.6; /* Increase line-height for readability */
-    text-align: left; /* Ensure description is left-aligned */
-    margin-left: 0px;
-  }
-
-  .points2 .text-content2 ul li {
-    font-size: 12px; /* Smaller font size for list items */
-    margin-bottom: 8px; /* Reduced space between items */
-  }
-
-  .points2 .text-content2 ul li::before {
+  .points2 .text-content ul li::before {
     font-size: 4px; /* Smaller bullet point size for mobile */
   }
 
-  .points2 .content-wrapper2 {
-    margin: 0; /* Remove unnecessary margin */
-    padding: 0; /* Remove unnecessary padding */
+  .section-description11 {
+    margin-left: 30px;
+    font-size: 12px;
+  }
+
+  .image-content1{
+    margin-top: 20px;
+    transform: scale(1.4);
+  }
+
+  .approachtowebdev-section12 .container12 {
+    display: block; /* Stack the left and right sections */
+    text-align: left; /* Align the items to the left */
+    width: 95%;
+    margin-left: 10px;
+  }
+  
+  .approachtowebdev-section12 .left,
+  .approachtowebdev-section12 .right {
+    display: block; /* Stack the points vertically */
+    width: 100%; /* Ensure they take full width */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+  
+  .approachtowebdev-section12 .point12 {
+    display: flex;
+    align-items: left;
+    margin-bottom: 15px; /* Adjust space between items */
+  }
+
+  .approachtowebdev-section12 .point12 img {
+    margin-right: 10px; /* Space between image and text */
+    width: 10vw;
+    height: auto;
+  }
+
+  .point12 p {
+    font-size: 12px;
+  }
+
+  .codeqa-section {
+    display: none;
+  }
+
+  /* Our Services section */
+  .our-services,
+  .our-services-tech-stack h2.highlight-text-tech,
+  .our-services-tech-stack p.services-description-tech {
+    margin-left: 20px;
+  }
+
+  .centered-tab-container2{
+    margin-left: -25px;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  .our-services-tab,
+  .tab-button-tech {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .tech-image.active {
+    position: relative;
+    align-items: center;
+    margin-left: 5px;
+    width: 95%;
+  }
+
+  .contact-section .main-text {
+    font-size: 26px;
+  }
+  .contact-section .sub-text {
+    font-size: 16px;
+  }
+  .contact-section .contact-btn {
+    font-size: 14px;
+    margin-top: 55px;
   }
 
   /* Projects section */
@@ -1266,18 +1262,23 @@ color: transparent;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .contact-section .main-text {
-    font-size: 26px;
+  /* Carousel adjustments */
+  .carousel-container1 {
+      margin-top: 40px;
+      transform: scale(2);
   }
-  .contact-section .sub-text {
-    font-size: 16px;
-  }
-  .contact-section .contact-btn {
-    font-size: 14px;
-    margin-top: 55px;
-  }
-  
 
+  /* Testimonials section */
+  .testimonials {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .slider {
+    width: 100%;
+  }
 }
 
 
@@ -1386,10 +1387,5 @@ color: transparent;
     margin-top: 10px;
     margin-left: -70px;
   }
-
-  .blogs, .image-wrapper, .images-container, .back-image, .front-image {
-    display: none;
-  }
 }
-  
-  
+
