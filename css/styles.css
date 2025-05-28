@@ -1576,7 +1576,7 @@ p {
 .footer-custom-container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 /* Each Column (responsible for making them evenly distributed) */
@@ -1595,7 +1595,11 @@ p {
 .footer-custom-column h4 {
   font-size: 20px;
   margin-bottom: 15px;
-  margin-left: 170px;
+  margin-left: 110px;
+}
+
+.footer-custom-column .footer-contact-us {
+  margin-left: 160px !important; /* Match the list's margin-left for perfect alignment */
 }
 
 .footer-custom-column p {
@@ -1609,12 +1613,12 @@ p {
 }
 
 .footer-custom-column:nth-child(2) {
-  margin-right: -60px;
+  margin-right: -100px;
   margin-left: 60px;
 }
 
 .footer-custom-column:nth-child(3) {
-  margin-right: -80px;
+  margin-right: -65px;
 }
 
 
@@ -1623,8 +1627,16 @@ p {
 .footer-custom-list {
   list-style-type: none; /* Remove bullet points */
   padding-left: 0; /* Remove padding */
-  margin-left: 160px; /* Remove margin */
+  margin-left: 100px; /* Remove margin */
 
+}
+
+/* Remove bullet points and left-align the list items in Categories and Services */
+.footer-custom-listt {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding */
+  margin-left: 160px; /* Remove margin */
+  width: 80%;
 }
 
 /* Control line height/gap between list items (for Categories and Services) */
@@ -1636,14 +1648,29 @@ p {
   font-size: 14px;
 }
 
+/* Control line height/gap between list items (for Categories and Services) */
+.footer-custom-listt li {
+  margin-bottom: 14px; /* You can adjust this value to control the gap */
+  line-height: 1.7; /* Adjust the line height for the desired gap between items */
+  text-align: left;
+  color: white;
+  font-size: 14px;
+}
+
 .footer-custom-list li a {
   color: white;  /* Set link color to white */
   text-decoration: none; /* Remove underline */
   font-size: 14px;
 }
 
+.footer-custom-listt li a {
+  color: white;  /* Set link color to white */
+  text-decoration: none; /* Remove underline */
+  font-size: 14px;
+}
+
 .footer-custom-column.footer-custom-social h4 {
-  margin-left: 220px;
+  margin-left: 130px;
   width: 100%;
   margin-bottom: 20px;
 }
@@ -1653,7 +1680,7 @@ p {
   margin-bottom: 25px;
   display: flex;
   align-items: center;
-  margin-left: 60px;
+  margin-left: 30px;
 }
 
 .footer-custom-social i {
@@ -1699,13 +1726,6 @@ p {
   margin-top: -35px;
   margin-bottom: 40px;
 }
-
-
-
-
-
-
-
 
 
 /* Responsive Code */
