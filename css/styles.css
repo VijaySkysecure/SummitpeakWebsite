@@ -1599,7 +1599,7 @@ p {
 }
 
 .footer-custom-column .footer-contact-us {
-  margin-left: 160px !important; /* Match the list's margin-left for perfect alignment */
+  margin-left: 160px;
 }
 
 .footer-custom-column p {
@@ -1998,18 +1998,6 @@ p {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  /* Testimonials section */
-  .testimonials {
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    padding: 20px;
-  }
-
-  .slider {
-    width: 100%;
-  }
 }
 
 
@@ -2110,15 +2098,6 @@ p {
   .contact-btn {
     width: 90%;
   }
-
-  /* Testimonials section */
-  .testimonials .text-content h2 {
-    font-size: 24px;
-  }
-
-  .testimonials .text-content h3 {
-    font-size: 28px;
-  }
 }
 
 /* Small Mobile Devices (360px and below) */
@@ -2153,6 +2132,10 @@ p {
   .popup p {
     font-size: 12px;
   }
+
+  .testimonials{
+    display: none;
+  }
 }
 
 
@@ -2166,6 +2149,7 @@ p {
     padding: 30px 10px;  /* Adjust padding for mobile view */
     background-color: #000; /* Keep background color black */
     color: #fff;
+    margin-top: 40px;
   }
 
   .footer-custom-column.logo-description img {
@@ -2188,22 +2172,22 @@ p {
     margin-bottom: 20px; /* Add space between sections */
   }
 
-  .footer-custom-column h4 {
-    font-size: 18px; /* Adjust heading font size */
-    margin-bottom: 10px; /* Add space below headings */
-    margin-left: -110px;
+  /*.footer-custom-column h4 {
+    /*font-size: 18px; Adjust heading font size */
+    /*margin-bottom: 10px;  Add space below headings */
+    /* margin-left: -130px;
     text-align: center;
-  }
+  } */
 
   .footer-custom-column:nth-child(3) {
-    margin-left: 50px;
+    margin-right: 110px;
   }
 
-  .footer-custom-list li {
-    margin-bottom: 12px; /* Adjust gap between items */
-    font-size: 14px; /* Adjust text size for better readability */
+  /* .footer-custom-list li {
+    margin-bottom: 12px;
+    font-size: 14px; 
     align-items: center;
-    margin-left: -430px;
+    margin-left: -350px;
     text-align: center;
   }
 
@@ -2213,16 +2197,46 @@ p {
 
   .footer-custom-column.footer-custom-social h4 {
     margin-left: 10px;
-  }
+  } */
 
-  .footer-custom-column.footer-custom-social li {
-    margin-bottom: 15px; /* Reduce gap for mobile view */
-    margin-left: -25px; /* Remove left margin for social links */
+  /* .footer-custom-column.footer-custom-social li {
+    margin-bottom: 15px; 
+    margin-left: -25px; 
   }
 
   .footer-custom-column.footer-custom-social i {
-    margin-right: 5px; /* Reduce space between icon and text */
+    margin-right: 5px; 
+  } */
+
+  .footer-custom-container .footer-custom-column:nth-of-type(2) h4 {
+    margin-left: -150px;
+    margin-right: 0px;
   }
+
+  .footer-custom-container .footer-custom-column:nth-of-type(2) ul {
+    margin-left: 60px;
+    margin-right: 80px;
+  }
+
+  .footer-custom-container .footer-custom-column:nth-of-type(4) ul {
+    margin-left: 60px;
+    margin-right: 80px;
+  }
+
+  .footer-custom-container .footer-custom-column:nth-of-type(5) h4 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .footer-contact-us {
+    display: none;
+  }
+
+  .footer-custom-listt{
+    display: none;
+  }
+
+
 
   /* Bottom Section: Align the copyright and Terms & Conditions */
   .footer-custom-bottom {
@@ -2264,6 +2278,10 @@ p {
   }
 
   .blogs, .image-wrapper, .images-container, .back-image, .front-image {
+    display: none;
+  }
+
+  .testimonials{
     display: none;
   }
 }
